@@ -1,0 +1,81 @@
+sylius_fixtures:
+    suites:
+        webgriffe:
+            fixtures:
+                product_review:
+                    options:
+                        random: 40
+
+                similar_product_association:
+                    options:
+                        amount: 3
+
+                address:
+                    options:
+                        # The random ones are generated with an English faker, the Italian ones are explicit.
+                        random: 4
+                        prototype:
+                            country_code: 'IT'
+                        custom:
+                            -   first_name: 'Mario'
+                                last_name: 'Rossi'
+                                street: 'Via Emilia Ovest, 12'
+                                city: 'Reggio Emilia'
+                                postcode: '42123'
+                                country_code: 'IT'
+                                phone_number: '+39 0522 445566'
+                                customer: 'cliente@webgriffe.com'
+
+                            -   first_name: 'Giulia'
+                                last_name: 'Ferrari'
+                                street: 'Corso Vittorio Emanuele II, 48'
+                                city: 'Torino'
+                                postcode: '10121'
+                                country_code: 'IT'
+                                phone_number: '+39 011 2233445'
+                                customer: 'giulia.ferrari@example.com'
+
+                            -   first_name: 'Luca'
+                                last_name: 'Bianchi'
+                                street: 'Via Garibaldi, 7'
+                                city: 'Bologna'
+                                postcode: '40124'
+                                country_code: 'IT'
+                                phone_number: '+39 051 998877'
+                                customer: 'luca.bianchi@example.com'
+
+                            -   first_name: 'Chiara'
+                                last_name: 'Esposito'
+                                street: 'Via Toledo, 210'
+                                city: 'Napoli'
+                                postcode: '80132'
+                                country_code: 'IT'
+                                phone_number: '+39 081 5566778'
+                                customer: 'chiara.esposito@example.com'
+
+                            -   first_name: 'Marco'
+                                last_name: 'Romano'
+                                street: 'Viale Certosa, 33'
+                                city: 'Milano'
+                                postcode: '20155'
+                                country_code: 'IT'
+                                phone_number: '+39 02 33445566'
+                                customer: 'marco.romano@example.com'
+
+                            -   first_name: 'Paolo'
+                                last_name: 'Fontana'
+                                street: 'Piazza del Popolo, 4'
+                                city: 'Ascoli Piceno'
+                                postcode: '63100'
+                                country_code: 'IT'
+                                phone_number: '+39 0736 112233'
+                                customer: 'osteria.delborgo@example.com'
+
+                order:
+                    options:
+                        amount: 20
+                        channel: 'ecommerce'
+
+                payments:
+                    options:
+                        percentage_completed: 75

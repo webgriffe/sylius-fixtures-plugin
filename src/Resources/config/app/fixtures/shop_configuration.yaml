@@ -1,0 +1,395 @@
+sylius_fixtures:
+    suites:
+        webgriffe:
+            listeners:
+                orm_purger: ~
+                images_purger: ~
+                logger: ~
+
+            fixtures:
+                locale:
+                    options:
+                        locales:
+                            - 'it_IT'
+                            - 'en_US'
+                            - 'fr_FR'
+
+                currency:
+                    options:
+                        currencies:
+                            - 'EUR'
+
+                geographical:
+                    options:
+                        countries:
+                            - 'IT'
+                            - 'AT'
+                            - 'BE'
+                            - 'BG'
+                            - 'HR'
+                            - 'CY'
+                            - 'CZ'
+                            - 'DK'
+                            - 'EE'
+                            - 'FI'
+                            - 'FR'
+                            - 'DE'
+                            - 'GR'
+                            - 'IE'
+                            - 'LV'
+                            - 'LT'
+                            - 'LU'
+                            - 'MT'
+                            - 'NL'
+                            - 'PL'
+                            - 'PT'
+                            - 'RO'
+                            - 'SK'
+                            - 'SI'
+                            - 'ES'
+                            - 'SE'
+                            - 'HU'
+                            - 'CH'
+                            - 'NO'
+                            - 'GB'
+                        zones:
+                            IT:
+                                name: 'Italia'
+                                countries:
+                                    - 'IT'
+                            EU:
+                                name: 'Unione Europea'
+                                countries:
+                                    - 'IT'
+                                    - 'AT'
+                                    - 'BE'
+                                    - 'BG'
+                                    - 'HR'
+                                    - 'CY'
+                                    - 'CZ'
+                                    - 'DK'
+                                    - 'EE'
+                                    - 'FI'
+                                    - 'FR'
+                                    - 'DE'
+                                    - 'GR'
+                                    - 'IE'
+                                    - 'LV'
+                                    - 'LT'
+                                    - 'LU'
+                                    - 'MT'
+                                    - 'NL'
+                                    - 'PL'
+                                    - 'PT'
+                                    - 'RO'
+                                    - 'SK'
+                                    - 'SI'
+                                    - 'ES'
+                                    - 'SE'
+                                    - 'HU'
+                            EUROPE:
+                                name: 'Europa'
+                                countries:
+                                    - 'CH'
+                                    - 'NO'
+                                    - 'GB'
+
+                menu_taxon:
+                    name: taxon
+                    options:
+                        custom:
+                            category:
+                                code: 'category'
+                                name: 'Categoria'
+                                translations:
+                                    it_IT:
+                                        name: 'Categoria'
+                                        slug: 'categoria'
+                                    en_US:
+                                        name: 'Category'
+                                        slug: 'category'
+                                    fr_FR:
+                                        name: 'Catégorie'
+                                        slug: 'categorie'
+
+                channel:
+                    options:
+                        custom:
+                            ecommerce:
+                                name: 'Enoteca Webgriffe'
+                                code: 'ecommerce'
+                                locales:
+                                    - 'it_IT'
+                                    - 'en_US'
+                                    - 'fr_FR'
+                                default_locale: 'it_IT'
+                                currencies:
+                                    - 'EUR'
+                                base_currency: 'EUR'
+                                default_tax_zone: 'EU'
+                                tax_calculation_strategy: 'order_items_based'
+                                enabled: true
+                                hostname: '%env(resolve:SYLIUS_FIXTURES_HOSTNAME)%'
+                                theme_name: '%env(resolve:SYLIUS_FIXTURES_THEME_NAME)%'
+                                shop_billing_data:
+                                    company: 'Webgriffe Srl'
+                                    tax_id: 'IT02277170359'
+                                    country_code: 'IT'
+                                    street: 'Viottolo Peloso, 1'
+                                    city: 'Casalgrande (RE)'
+                                    postcode: '42013'
+                                menu_taxon: 'category'
+                                contact_email: 'info@webgriffe.com'
+
+                payment_method:
+                    options:
+                        custom:
+                            bank_transfer:
+                                code: 'bank_transfer'
+                                name: 'Bonifico bancario'
+                                enabled: true
+                                channels:
+                                    - 'ecommerce'
+                            cash_on_delivery:
+                                code: 'cash_on_delivery'
+                                name: 'Contrassegno'
+                                enabled: true
+                                channels:
+                                    - 'ecommerce'
+
+                shipping_category:
+                    options:
+                        custom:
+                            bottles:
+                                code: 'bottiglie'
+                                name: 'Bottiglie'
+                            fragile:
+                                code: 'fragile'
+                                name: 'Fragile'
+
+                shipping_method:
+                    options:
+                        custom:
+                            standard_it:
+                                code: 'corriere_italia'
+                                name: 'Corriere espresso Italia'
+                                description: 'Consegna in 24/48 ore in tutta Italia.'
+                                enabled: true
+                                zone: 'IT'
+                                # only for orders made of bottles: anything fragile needs the dedicated method
+                                category: 'bottiglie'
+                                category_requirement: 'match_all'
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 690
+                            standard_eu:
+                                code: 'corriere_europa'
+                                name: 'Corriere espresso Europa'
+                                description: 'Consegna in 3/5 giorni lavorativi nei paesi europei.'
+                                enabled: true
+                                zone: 'EU'
+                                category: 'bottiglie'
+                                category_requirement: 'match_all'
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 1490
+                            fragile_it:
+                                code: 'corriere_fragile_italia'
+                                name: 'Corriere con imballo antiurto Italia'
+                                description: 'Imballo rinforzato per i calici, consegna in 24/48 ore in Italia.'
+                                enabled: true
+                                zone: 'IT'
+                                # as soon as one glass is in the cart, the whole order travels protected
+                                category: 'fragile'
+                                category_requirement: 'match_any'
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 1290
+                            fragile_eu:
+                                code: 'corriere_fragile_europa'
+                                name: 'Corriere con imballo antiurto Europa'
+                                description: 'Imballo rinforzato per i calici, consegna in 3/5 giorni lavorativi in Europa.'
+                                enabled: true
+                                zone: 'EU'
+                                category: 'fragile'
+                                category_requirement: 'match_any'
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 2490
+                            pickup:
+                                code: 'ritiro_in_sede'
+                                name: 'Ritiro in sede'
+                                description: 'Ritiro gratuito presso la nostra sede di Casalgrande (RE).'
+                                enabled: true
+                                zone: 'IT'
+                                # no category: available whatever the cart contains
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 0
+
+                customer_group:
+                    options:
+                        custom:
+                            retail:
+                                code: 'privati'
+                                name: 'Privati'
+                            wholesale:
+                                code: 'ristorazione'
+                                name: 'Ristorazione e rivendita'
+
+                shop_user:
+                    options:
+                        # The random ones are generated with an English faker, the Italian customers are explicit.
+                        random: 8
+                        custom:
+                            -   email: 'cliente@webgriffe.com'
+                                first_name: 'Mario'
+                                last_name: 'Rossi'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'giulia.ferrari@example.com'
+                                first_name: 'Giulia'
+                                last_name: 'Ferrari'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'luca.bianchi@example.com'
+                                first_name: 'Luca'
+                                last_name: 'Bianchi'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'chiara.esposito@example.com'
+                                first_name: 'Chiara'
+                                last_name: 'Esposito'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'marco.romano@example.com'
+                                first_name: 'Marco'
+                                last_name: 'Romano'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'francesca.greco@example.com'
+                                first_name: 'Francesca'
+                                last_name: 'Greco'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'alessandro.conti@example.com'
+                                first_name: 'Alessandro'
+                                last_name: 'Conti'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'sara.moretti@example.com'
+                                first_name: 'Sara'
+                                last_name: 'Moretti'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'davide.barbieri@example.com'
+                                first_name: 'Davide'
+                                last_name: 'Barbieri'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'valentina.rizzo@example.com'
+                                first_name: 'Valentina'
+                                last_name: 'Rizzo'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+
+                            -   email: 'osteria.delborgo@example.com'
+                                first_name: 'Paolo'
+                                last_name: 'Fontana'
+                                password: 'webgriffe'
+                                customer_group: 'ristorazione'
+
+                            -   email: 'enoteca.centrale@example.com'
+                                first_name: 'Elena'
+                                last_name: 'Gallo'
+                                password: 'webgriffe'
+                                customer_group: 'ristorazione'
+
+                admin_user:
+                    options:
+                        custom:
+                            -   email: 'admin@webgriffe.com'
+                                username: 'admin'
+                                password: 'webgriffe'
+                                enabled: true
+                                locale_code: 'it_IT'
+                                first_name: 'Admin'
+                                last_name: 'Webgriffe'
+
+                            -   email: 'api@webgriffe.com'
+                                username: 'api'
+                                password: 'webgriffe-api'
+                                enabled: true
+                                locale_code: 'it_IT'
+                                first_name: 'Api'
+                                last_name: 'Webgriffe'
+                                api: true
+
+                tax_category:
+                    options:
+                        custom:
+                            wine:
+                                code: 'vino'
+                                name: 'Vino'
+                            other:
+                                code: 'altro'
+                                name: 'Altro'
+                            experiences:
+                                code: 'esperienze'
+                                name: 'Servizi turistici'
+
+                tax_rate:
+                    options:
+                        custom:
+                            wine_vat:
+                                code: 'iva_22_vino'
+                                name: 'IVA 22% vino'
+                                zone: 'EU'
+                                category: 'vino'
+                                amount: 0.22
+                                included_in_price: true
+
+                            default_vat:
+                                code: 'iva_22'
+                                name: 'IVA 22%'
+                                zone: 'EU'
+                                category: 'altro'
+                                amount: 0.22
+                                included_in_price: true
+
+                            experiences_vat:
+                                code: 'iva_10_esperienze'
+                                name: 'IVA 10% servizi turistici'
+                                zone: 'EU'
+                                category: 'esperienze'
+                                amount: 0.1
+                                included_in_price: true

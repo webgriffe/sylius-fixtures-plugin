@@ -1,0 +1,95 @@
+sylius_fixtures:
+    suites:
+        webgriffe:
+            listeners:
+                catalog_promotion_processor_executor: ~
+            fixtures:
+                promotion:
+                    options:
+                        custom:
+                            free_shipping:
+                                code: 'spedizione_gratuita'
+                                name: 'Spedizione gratuita sopra 100 €'
+                                priority: 1
+                                channels:
+                                    - 'ecommerce'
+                                rules:
+                                    -   type: 'item_total'
+                                        configuration:
+                                            ecommerce:
+                                                amount: 100.00
+                                actions:
+                                    -   type: 'shipping_percentage_discount'
+                                        configuration:
+                                            # the fixtures divide it by 100: 100 means the whole shipping cost
+                                            percentage: 100
+
+                            welcome_coupon:
+                                code: 'benvenuto'
+                                name: 'Benvenuto in enoteca'
+                                coupon_based: true
+                                channels:
+                                    - 'ecommerce'
+                                coupons:
+                                    -   code: 'BENVENUTO10'
+                                        usage_limit: 500
+                                        per_customer_usage_limit: 1
+                                actions:
+                                    -   type: 'order_percentage_discount'
+                                        configuration:
+                                            percentage: 10
+
+                            case_discount:
+                                code: 'sconto_cartone'
+                                name: 'Sconto 20 € sopra 200 €'
+                                priority: 2
+                                channels:
+                                    - 'ecommerce'
+                                rules:
+                                    -   type: 'item_total'
+                                        configuration:
+                                            ecommerce:
+                                                amount: 200.00
+                                actions:
+                                    -   type: 'order_fixed_discount'
+                                        configuration:
+                                            ecommerce:
+                                                amount: 20.00
+
+                catalog_promotion:
+                    options:
+                        custom:
+                            white_wines_sale:
+                                code: 'promo_bianchi'
+                                name: 'Settimana dei bianchi'
+                                channels:
+                                    - 'ecommerce'
+                                priority: 1
+                                scopes:
+                                    -   type: 'for_taxons'
+                                        configuration:
+                                            taxons:
+                                                - 'vini_bianchi'
+                                actions:
+                                    -   type: 'percentage_discount'
+                                        configuration:
+                                            amount: 0.1
+
+                            sparkling_sale:
+                                code: 'promo_bollicine'
+                                name: 'Bollicine in festa'
+                                channels:
+                                    - 'ecommerce'
+                                priority: 2
+                                start_date: '-2 days'
+                                end_date: '14 days'
+                                scopes:
+                                    -   type: 'for_taxons'
+                                        configuration:
+                                            taxons:
+                                                - 'bollicine'
+                                actions:
+                                    -   type: 'fixed_discount'
+                                        configuration:
+                                            ecommerce:
+                                                amount: 5.00

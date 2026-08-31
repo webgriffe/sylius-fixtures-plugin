@@ -1,0 +1,233 @@
+sylius_fixtures:
+    suites:
+        webgriffe:
+            fixtures:
+                experience_taxon:
+                    name: taxon
+                    options:
+                        custom:
+                            category:
+                                code: 'category'
+                                name: 'Categoria'
+                                children:
+                                    -   code: 'esperienze'
+                                        translations:
+                                            it_IT:
+                                                name: 'Esperienze'
+                                                slug: 'esperienze'
+                                            en_US:
+                                                name: 'Experiences'
+                                                slug: 'experiences'
+                                            fr_FR:
+                                                name: 'Expériences'
+                                                slug: 'experiences'
+
+                experience_attribute:
+                    name: product_attribute
+                    options:
+                        custom:
+                            -   name: 'Località'
+                                code: 'esperienza_localita'
+                                type: 'text'
+
+                            -   name: 'Punto di incontro'
+                                code: 'esperienza_punto_incontro'
+                                type: 'text'
+
+                            -   name: 'La quota comprende'
+                                code: 'esperienza_incluso'
+                                type: 'text'
+
+                            -   name: 'Lingue della guida'
+                                code: 'esperienza_lingue'
+                                type: 'text'
+
+                            -   name: 'Periodo consigliato'
+                                code: 'esperienza_stagione'
+                                type: 'text'
+
+                experience_option:
+                    name: product_option
+                    options:
+                        custom:
+                            -   name: 'Durata'
+                                code: 'durata_esperienza'
+                                values:
+                                    esperienza_1_giorno: '1 giorno'
+                                    esperienza_2_giorni: '2 giorni / 1 notte'
+                                    esperienza_3_giorni: '3 giorni / 2 notti'
+
+                            -   name: 'Partecipanti'
+                                code: 'numero_partecipanti'
+                                values:
+                                    partecipanti_2: '2 persone'
+                                    partecipanti_4: '4 persone'
+                                    partecipanti_6: '6 persone'
+
+                experience_product:
+                    name: product
+                    options:
+                        custom:
+                            -   code: 'esperienza_chianti'
+                                name: 'Full immersion nel Chianti Classico'
+                                shipping_required: false
+                                tax_category: 'esperienze'
+                                channels: ['ecommerce']
+                                main_taxon: 'esperienze'
+                                taxons: ['esperienze']
+                                product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_prices:
+                                    esperienza_1_giorno+partecipanti_2: 190.00
+                                    esperienza_1_giorno+partecipanti_4: 360.00
+                                    esperienza_1_giorno+partecipanti_6: 510.00
+                                    esperienza_2_giorni+partecipanti_2: 420.00
+                                    esperienza_2_giorni+partecipanti_4: 800.00
+                                    esperienza_2_giorni+partecipanti_6: 1140.00
+                                    esperienza_3_giorni+partecipanti_2: 690.00
+                                    esperienza_3_giorni+partecipanti_4: 1320.00
+                                    esperienza_3_giorni+partecipanti_6: 1890.00
+                                product_attributes:
+                                    esperienza_localita: 'Greve in Chianti (FI), Toscana'
+                                    esperienza_punto_incontro: 'Piazza Matteotti, Greve in Chianti'
+                                    esperienza_incluso: 'Visita in tre cantine, pranzo in fattoria, degustazione guidata, trasferimenti locali'
+                                    esperienza_lingue: 'Italiano, inglese'
+                                    esperienza_stagione: 'Da aprile a ottobre'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/chianti_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/degustazione_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Full immersion nel Chianti Classico'
+                                        short_description: 'Tre cantine del Gallo Nero, un pranzo in fattoria e la vendemmia vista da dentro.'
+                                        description: 'Si parte da Greve in Chianti per attraversare i vigneti storici del Chianti Classico. Due giornate tra botti, oliveti e cucina toscana, con degustazione verticale di Riserva e Gran Selezione insieme al produttore.'
+                                    en_US:
+                                        name: 'Full immersion in Chianti Classico'
+                                        short_description: 'Three Gallo Nero wineries, lunch at the farm and the harvest seen from the inside.'
+                                        description: 'Starting from Greve in Chianti, the tour crosses the historic vineyards of Chianti Classico. Two days among casks, olive groves and Tuscan cooking, with a vertical tasting of Riserva and Gran Selezione alongside the producer.'
+                                    fr_FR:
+                                        name: 'Immersion dans le Chianti Classico'
+                                        short_description: "Trois domaines du Gallo Nero, un déjeuner à la ferme et les vendanges vues de l'intérieur."
+                                        description: 'Le départ se fait de Greve in Chianti pour traverser les vignobles historiques du Chianti Classico. Deux journées entre foudres, oliveraies et cuisine toscane, avec une dégustation verticale de Riserva et Gran Selezione en compagnie du vigneron.'
+
+                            -   code: 'esperienza_appennino'
+                                name: "Weekend sull'Appennino Tosco-Emiliano"
+                                shipping_required: false
+                                tax_category: 'esperienze'
+                                channels: ['ecommerce']
+                                main_taxon: 'esperienze'
+                                taxons: ['esperienze']
+                                product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_prices:
+                                    esperienza_1_giorno+partecipanti_2: 140.00
+                                    esperienza_1_giorno+partecipanti_4: 265.00
+                                    esperienza_1_giorno+partecipanti_6: 375.00
+                                    esperienza_2_giorni+partecipanti_2: 320.00
+                                    esperienza_2_giorni+partecipanti_4: 610.00
+                                    esperienza_2_giorni+partecipanti_6: 870.00
+                                    esperienza_3_giorni+partecipanti_2: 520.00
+                                    esperienza_3_giorni+partecipanti_4: 990.00
+                                    esperienza_3_giorni+partecipanti_6: 1410.00
+                                product_attributes:
+                                    esperienza_localita: "Castelnovo ne' Monti (RE), Emilia-Romagna"
+                                    esperienza_punto_incontro: 'Piazza Gramsci, Castelnovo né Monti'
+                                    esperienza_incluso: 'Visita al caseificio, pranzo in rifugio, escursione alla Pietra di Bismantova, degustazione di Lambrusco'
+                                    esperienza_lingue: 'Italiano, inglese'
+                                    esperienza_stagione: 'Da maggio a settembre'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/appennino_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/formaggi_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Weekend sull'Appennino Tosco-Emiliano"
+                                        short_description: 'Parmigiano Reggiano di montagna, Lambrusco e la Pietra di Bismantova.'
+                                        description: 'Sveglia presto per la caldaia del caseificio, poi escursione sulla Pietra di Bismantova e pranzo in rifugio. Il pomeriggio è dedicato alle cantine della pedecollina reggiana, tra Lambrusco e Spergola.'
+                                    en_US:
+                                        name: 'A weekend in the Tuscan-Emilian Apennines'
+                                        short_description: 'Mountain Parmigiano Reggiano, Lambrusco and the Pietra di Bismantova.'
+                                        description: 'An early start at the cheese dairy, then a hike up the Pietra di Bismantova and lunch at a mountain hut. The afternoon goes to the cellars of the Reggio hills, between Lambrusco and Spergola.'
+                                    fr_FR:
+                                        name: 'Un week-end dans les Apennins tosco-émiliens'
+                                        short_description: 'Parmigiano Reggiano de montagne, lambrusco et la Pietra di Bismantova.'
+                                        description: "Lever tôt pour la chaudière de la fromagerie, puis randonnée sur la Pietra di Bismantova et déjeuner au refuge. L'après-midi est consacré aux caves des collines de Reggio, entre lambrusco et spergola."
+
+                            -   code: 'esperienza_valpolicella'
+                                name: 'Amarone e corti venete in Valpolicella'
+                                shipping_required: false
+                                tax_category: 'esperienze'
+                                channels: ['ecommerce']
+                                main_taxon: 'esperienze'
+                                taxons: ['esperienze']
+                                product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_prices:
+                                    esperienza_1_giorno+partecipanti_2: 210.00
+                                    esperienza_1_giorno+partecipanti_4: 400.00
+                                    esperienza_1_giorno+partecipanti_6: 570.00
+                                    esperienza_2_giorni+partecipanti_2: 460.00
+                                    esperienza_2_giorni+partecipanti_4: 880.00
+                                    esperienza_2_giorni+partecipanti_6: 1260.00
+                                    esperienza_3_giorni+partecipanti_2: 750.00
+                                    esperienza_3_giorni+partecipanti_4: 1440.00
+                                    esperienza_3_giorni+partecipanti_6: 2070.00
+                                product_attributes:
+                                    esperienza_localita: 'Negrar di Valpolicella (VR), Veneto'
+                                    esperienza_punto_incontro: 'Villa Rizzardi, Negrar di Valpolicella'
+                                    esperienza_incluso: 'Visita ai fruttai, degustazione di Amarone e Recioto, cena in villa, pernottamento in agriturismo'
+                                    esperienza_lingue: 'Italiano, inglese, francese'
+                                    esperienza_stagione: 'Da settembre a novembre'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/vigneto_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/degustazione_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Amarone e corti venete in Valpolicella'
+                                        short_description: "I fruttai dell'appassimento e le ville della Valpolicella Classica."
+                                        description: 'Si entra nei fruttai dove le uve riposano cento giorni prima di diventare Amarone. Visita alle corti venete, cena in villa e degustazione verticale di Recioto con il cellar master.'
+                                    en_US:
+                                        name: 'Amarone and Venetian villas in Valpolicella'
+                                        short_description: 'The drying lofts and the villas of Valpolicella Classica.'
+                                        description: 'A walk through the lofts where the grapes rest for a hundred days before becoming Amarone. Visit to the Venetian courts, dinner at the villa and a vertical tasting of Recioto with the cellar master.'
+                                    fr_FR:
+                                        name: 'Amarone et villas vénitiennes en Valpolicella'
+                                        short_description: 'Les fruitiers du passerillage et les villas de la Valpolicella Classica.'
+                                        description: 'On entre dans les séchoirs où les raisins reposent cent jours avant de devenir Amarone. Visite des cours vénitiennes, dîner à la villa et dégustation verticale de Recioto avec le maître de chai.'
+
+                            -   code: 'esperienza_langhe'
+                                name: 'Tartufo e Barolo nelle Langhe'
+                                shipping_required: false
+                                tax_category: 'esperienze'
+                                channels: ['ecommerce']
+                                main_taxon: 'esperienze'
+                                taxons: ['esperienze']
+                                product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_prices:
+                                    esperienza_1_giorno+partecipanti_2: 260.00
+                                    esperienza_1_giorno+partecipanti_4: 500.00
+                                    esperienza_1_giorno+partecipanti_6: 720.00
+                                    esperienza_2_giorni+partecipanti_2: 580.00
+                                    esperienza_2_giorni+partecipanti_4: 1120.00
+                                    esperienza_2_giorni+partecipanti_6: 1620.00
+                                    esperienza_3_giorni+partecipanti_2: 950.00
+                                    esperienza_3_giorni+partecipanti_4: 1840.00
+                                    esperienza_3_giorni+partecipanti_6: 2670.00
+                                product_attributes:
+                                    esperienza_localita: 'Barolo (CN), Piemonte'
+                                    esperienza_punto_incontro: 'Castello di Barolo'
+                                    esperienza_incluso: 'Cerca del tartufo con il trifolau, pranzo tipico, visita a due cantine di Barolo, pernottamento in cascina'
+                                    esperienza_lingue: 'Italiano, inglese'
+                                    esperienza_stagione: 'Da ottobre a dicembre'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/colline_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/formaggi_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Tartufo e Barolo nelle Langhe'
+                                        short_description: 'A caccia di tartufo bianco con il trifolau, poi due cantine storiche di Barolo.'
+                                        description: "All'alba si va nei boschi con il trifolau e il suo cane, al ritorno il bottino finisce sui tajarin. Il pomeriggio si scende nelle cantine di Barolo per una verticale di annate storiche."
+                                    en_US:
+                                        name: 'Truffle and Barolo in the Langhe'
+                                        short_description: 'White truffle hunting with the trifolau, then two historic Barolo cellars.'
+                                        description: 'At dawn you walk into the woods with the trifolau and his dog; back home the catch goes over the tajarin. The afternoon is spent in the Barolo cellars for a vertical of historic vintages.'
+                                    fr_FR:
+                                        name: 'Truffe et Barolo dans les Langhe'
+                                        short_description: 'À la chasse à la truffe blanche avec le trifolau, puis deux caves historiques de Barolo.'
+                                        description: "À l'aube, direction les bois avec le trifolau et son chien ; au retour, la récolte finit sur les tajarin. L'après-midi se passe dans les caves de Barolo pour une verticale de millésimes historiques."

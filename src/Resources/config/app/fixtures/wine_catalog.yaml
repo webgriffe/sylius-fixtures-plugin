@@ -1,0 +1,113 @@
+sylius_fixtures:
+    suites:
+        webgriffe:
+            fixtures:
+                taxon:
+                    options:
+                        custom:
+                            category:
+                                code: 'category'
+                                name: 'Categoria'
+                                translations:
+                                    it_IT:
+                                        name: 'Categoria'
+                                        slug: 'categoria'
+                                    en_US:
+                                        name: 'Category'
+                                        slug: 'category'
+                                    fr_FR:
+                                        name: 'Catégorie'
+                                        slug: 'categorie'
+                                children:
+                                    -   code: 'vini'
+                                        translations:
+                                            it_IT:
+                                                name: 'Vini'
+                                                slug: 'vini'
+                                            en_US:
+                                                name: 'Wines'
+                                                slug: 'wines'
+                                            fr_FR:
+                                                name: 'Vins'
+                                                slug: 'vins'
+                                        children:
+                                            -   code: 'vini_rossi'
+                                                translations:
+                                                    it_IT:
+                                                        name: 'Vini rossi'
+                                                        slug: 'vini/vini-rossi'
+                                                    en_US:
+                                                        name: 'Red wines'
+                                                        slug: 'wines/red-wines'
+                                                    fr_FR:
+                                                        name: 'Vins rouges'
+                                                        slug: 'vins/vins-rouges'
+
+                                            -   code: 'vini_bianchi'
+                                                translations:
+                                                    it_IT:
+                                                        name: 'Vini bianchi'
+                                                        slug: 'vini/vini-bianchi'
+                                                    en_US:
+                                                        name: 'White wines'
+                                                        slug: 'wines/white-wines'
+                                                    fr_FR:
+                                                        name: 'Vins blancs'
+                                                        slug: 'vins/vins-blancs'
+
+                                            -   code: 'bollicine'
+                                                translations:
+                                                    it_IT:
+                                                        name: 'Bollicine'
+                                                        slug: 'vini/bollicine'
+                                                    en_US:
+                                                        name: 'Sparkling wines'
+                                                        slug: 'wines/sparkling-wines'
+                                                    fr_FR:
+                                                        name: 'Vins pétillants'
+                                                        slug: 'vins/vins-petillants'
+
+                                            -   code: 'vini_dolci'
+                                                translations:
+                                                    it_IT:
+                                                        name: 'Vini dolci'
+                                                        slug: 'vini/vini-dolci'
+                                                    en_US:
+                                                        name: 'Dessert wines'
+                                                        slug: 'wines/dessert-wines'
+                                                    fr_FR:
+                                                        name: 'Vins doux'
+                                                        slug: 'vins/vins-doux'
+
+                product_attribute:
+                    options:
+                        custom:
+                            -   name: 'Cantina'
+                                code: 'vino_cantina'
+                                type: 'text'
+
+                            -   name: 'Denominazione'
+                                code: 'vino_denominazione'
+                                type: 'text'
+
+                            -   name: 'Annata'
+                                code: 'vino_annata'
+                                type: 'integer'
+                                translatable: false
+
+                            -   name: 'Vitigni'
+                                code: 'vino_vitigni'
+                                type: 'text'
+
+                            -   name: 'Regione'
+                                code: 'vino_regione'
+                                type: 'text'
+
+                            -   name: 'Gradazione alcolica'
+                                code: 'vino_gradazione'
+                                type: 'percent'
+                                translatable: false
+
+                            -   name: 'Formato'
+                                code: 'vino_formato'
+                                type: 'text'

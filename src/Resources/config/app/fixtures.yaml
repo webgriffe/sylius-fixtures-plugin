@@ -1,0 +1,15 @@
+# Demo store of the plugin: an Italian wine shop, with wines, glassware and food and wine experiences.
+# Import this file to get the "webgriffe" fixtures suite:
+#
+#     imports:
+#         - { resource: '@WebgriffeSyliusFixturesPlugin/Resources/config/app/fixtures.yaml' }
+#
+#     bin/console sylius:fixtures:load webgriffe
+imports:
+    - { resource: 'fixtures/shop_configuration.yaml' }
+    - { resource: 'fixtures/wine_catalog.yaml' }
+    - { resource: 'fixtures/wines.yaml' }
+    - { resource: 'fixtures/glassware.yaml' }
+    - { resource: 'fixtures/experiences.yaml' }
+    - { resource: 'fixtures/promotions.yaml' }
+    - { resource: 'fixtures/demo_data.yaml' }

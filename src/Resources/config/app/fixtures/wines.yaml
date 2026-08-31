@@ -1,0 +1,925 @@
+sylius_fixtures:
+    suites:
+        webgriffe:
+            fixtures:
+                product:
+                    options:
+                        custom:
+                            # ---------------------------------------------------------------- Vini rossi
+                            -   code: 'montepulciano_dabruzzo_zaccagnini'
+                                name: "Montepulciano d'Abruzzo DOC Zaccagnini"
+                                price: 8.90
+                                on_hand: 240
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Cantina Zaccagnini'
+                                    vino_denominazione: "Montepulciano d'Abruzzo DOC"
+                                    vino_annata: 2022
+                                    vino_vitigni: 'Montepulciano'
+                                    vino_regione: 'Abruzzo'
+                                    vino_gradazione: 0.13
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Montepulciano d'Abruzzo DOC Zaccagnini"
+                                        short_description: 'Rosso quotidiano, morbido e fruttato, con il classico tralcetto di vite sul collo.'
+                                        description: "Un Montepulciano d'Abruzzo dal colore rubino intenso, con profumi di amarena e viola. Al palato è caldo e avvolgente, con tannini dolci: perfetto su pasta al ragù, salumi e carni bianche."
+                                    en_US:
+                                        name: "Montepulciano d'Abruzzo DOC Zaccagnini"
+                                        short_description: 'An easy-drinking Italian red, soft and fruity, with its iconic hand-tied vine shoot.'
+                                        description: "Deep ruby in colour, with sour cherry and violet on the nose. Warm and rounded on the palate with soft tannins: a natural match for ragù pasta, cured meats and white meats."
+                                    fr_FR:
+                                        name: "Montepulciano d'Abruzzo DOC Zaccagnini"
+                                        short_description: 'Un rouge de tous les jours, souple et fruité, avec son célèbre sarment de vigne.'
+                                        description: "Robe rubis intense, nez de griotte et de violette. En bouche, il est chaleureux et enveloppant, aux tanins fondus : idéal sur des pâtes au ragù, de la charcuterie et des viandes blanches."
+
+                            -   code: 'chianti_docg_ruffino'
+                                name: 'Chianti DOCG Ruffino'
+                                price: 9.50
+                                on_hand: 180
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Ruffino'
+                                    vino_denominazione: 'Chianti DOCG'
+                                    vino_annata: 2022
+                                    vino_vitigni: 'Sangiovese, Merlot'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Chianti DOCG Ruffino'
+                                        short_description: 'Il Chianti classico da tavola: sangiovese fresco, sapido e immediato.'
+                                        description: 'Rubino vivace, naso di ciliegia e mammola con un tocco speziato. Bocca asciutta e di buona acidità, chiude sapida: da servire a 16 °C con pizza, pasta al pomodoro e formaggi di media stagionatura.'
+                                    en_US:
+                                        name: 'Chianti DOCG Ruffino'
+                                        short_description: 'The everyday Chianti: fresh, savoury and immediately drinkable Sangiovese.'
+                                        description: 'Bright ruby, with cherry and violet aromas and a hint of spice. Dry and lively on the palate with a savoury finish: serve at 16 °C with pizza, tomato pasta and medium-aged cheeses.'
+                                    fr_FR:
+                                        name: 'Chianti DOCG Ruffino'
+                                        short_description: 'Le Chianti de tous les jours : un sangiovese frais, savoureux et immédiat.'
+                                        description: "Robe rubis vif, nez de cerise et de violette relevé d'une touche épicée. Bouche sèche et vive, finale sapide : à servir à 16 °C sur une pizza, des pâtes à la tomate ou des fromages de garde moyenne."
+
+                            -   code: 'valpolicella_classico_bertani'
+                                name: 'Valpolicella Classico DOC Bertani'
+                                price: 12.00
+                                on_hand: 150
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Bertani'
+                                    vino_denominazione: 'Valpolicella Classico DOC'
+                                    vino_annata: 2022
+                                    vino_vitigni: 'Corvina, Rondinella, Molinara'
+                                    vino_regione: 'Veneto'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Valpolicella Classico DOC Bertani'
+                                        short_description: 'Veronese di scuola classica: leggero, croccante, di grande bevibilità.'
+                                        description: 'Corvina e Rondinella regalano un rosso dal frutto croccante di ciliegia e ribes, con un finale lievemente ammandorlato. Ottimo anche leggermente fresco, a 14-16 °C, su antipasti di terra e risotti.'
+                                    en_US:
+                                        name: 'Valpolicella Classico DOC Bertani'
+                                        short_description: 'A classic Veronese red: light, crunchy and highly drinkable.'
+                                        description: 'Corvina and Rondinella give crunchy cherry and redcurrant fruit with a gently almondy finish. Excellent served slightly cool, at 14-16 °C, with antipasti and risotto.'
+                                    fr_FR:
+                                        name: 'Valpolicella Classico DOC Bertani'
+                                        short_description: 'Un véronais de facture classique : léger, croquant, très digeste.'
+                                        description: "La corvina et la rondinella offrent un fruit croquant de cerise et de groseille, avec une finale légèrement amandée. Excellent légèrement rafraîchi, à 14-16 °C, sur des antipasti et des risottos."
+
+                            -   code: 'barbera_dasti_michele_chiarlo'
+                                name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
+                                price: 14.50
+                                on_hand: 120
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Michele Chiarlo'
+                                    vino_denominazione: "Barbera d'Asti DOCG Superiore"
+                                    vino_annata: 2021
+                                    vino_vitigni: 'Barbera'
+                                    vino_regione: 'Piemonte'
+                                    vino_gradazione: 0.14
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
+                                        short_description: 'Barbera di razza, affinata in legno: polposa e di bella freschezza.'
+                                        description: "Frutta rossa matura, prugna e vaniglia dolce da un breve passaggio in rovere. L'acidità tipica del vitigno lo rende ideale su agnolotti, brasati leggeri e formaggi piemontesi."
+                                    en_US:
+                                        name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
+                                        short_description: 'A serious oak-aged Barbera: fleshy fruit backed by bright acidity.'
+                                        description: 'Ripe red fruit, plum and sweet vanilla from a short stay in oak. The variety''s trademark acidity makes it perfect with filled pasta, light braises and Piedmontese cheeses.'
+                                    fr_FR:
+                                        name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
+                                        short_description: 'Une barbera de caractère, élevée en fût : charnue et bien fraîche.'
+                                        description: "Fruits rouges mûrs, prune et vanille douce apportée par un court élevage en chêne. Son acidité typique l'accorde parfaitement aux pâtes farcies, aux braisés légers et aux fromages piémontais."
+
+                            -   code: 'nero_davola_planeta'
+                                name: "Nero d'Avola Sicilia DOC Planeta"
+                                price: 15.00
+                                on_hand: 130
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Planeta'
+                                    vino_denominazione: 'Sicilia DOC'
+                                    vino_annata: 2022
+                                    vino_vitigni: "Nero d'Avola"
+                                    vino_regione: 'Sicilia'
+                                    vino_gradazione: 0.135
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Nero d'Avola Sicilia DOC Planeta"
+                                        short_description: 'Il rosso simbolo della Sicilia: caldo, speziato, generoso.'
+                                        description: "Profumi di mora, prugna e macchia mediterranea, con una nota balsamica. Tannino levigato e finale lungo: si abbina a carni alla brace, caponata e formaggi stagionati."
+                                    en_US:
+                                        name: "Nero d'Avola Sicilia DOC Planeta"
+                                        short_description: 'Sicily''s flagship red: warm, spicy and generous.'
+                                        description: 'Blackberry, plum and Mediterranean scrub on the nose, with a balsamic lift. Polished tannins and a long finish: pairs with grilled meats, caponata and aged cheeses.'
+                                    fr_FR:
+                                        name: "Nero d'Avola Sicilia DOC Planeta"
+                                        short_description: 'Le rouge emblématique de la Sicile : chaleureux, épicé, généreux.'
+                                        description: "Arômes de mûre, de prune et de garrigue, avec une note balsamique. Tanins polis et longue finale : parfait sur des grillades, une caponata ou des fromages affinés."
+
+                            -   code: 'chianti_classico_riserva_ducale'
+                                name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
+                                price: 24.00
+                                on_hand: 90
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Ruffino'
+                                    vino_denominazione: 'Chianti Classico DOCG Riserva'
+                                    vino_annata: 2020
+                                    vino_vitigni: 'Sangiovese, Merlot, Cabernet Sauvignon'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.135
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
+                                        short_description: 'Una Riserva storica del Gallo Nero, elegante e pronta.'
+                                        description: 'Ventiquattro mesi tra rovere di Slavonia e barrique donano note di ciliegia sotto spirito, tabacco e cuoio. Tannino fine e lunga persistenza: ideale su fiorentina, arrosti e pecorino toscano.'
+                                    en_US:
+                                        name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
+                                        short_description: 'A historic Gallo Nero Riserva: elegant and ready to drink.'
+                                        description: 'Twenty-four months between Slavonian oak and barriques bring cherry liqueur, tobacco and leather. Fine tannins and a long finish: perfect with T-bone steak, roasts and Tuscan pecorino.'
+                                    fr_FR:
+                                        name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
+                                        short_description: 'Une Riserva historique du Gallo Nero, élégante et prête à boire.'
+                                        description: "Vingt-quatre mois entre chêne de Slavonie et barriques apportent cerise à l'eau-de-vie, tabac et cuir. Tanins fins et grande persistance : idéale sur une côte de bœuf, des rôtis et un pecorino toscan."
+
+                            -   code: 'primitivo_sessantanni_san_marzano'
+                                name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
+                                price: 29.00
+                                on_hand: 80
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Cantine San Marzano'
+                                    vino_denominazione: 'Primitivo di Manduria DOP'
+                                    vino_annata: 2020
+                                    vino_vitigni: 'Primitivo'
+                                    vino_regione: 'Puglia'
+                                    vino_gradazione: 0.145
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
+                                        short_description: 'Da vigne ad alberello di sessant’anni: potente, dolce di frutto, avvolgente.'
+                                        description: 'Confettura di prugna, cioccolato e vaniglia, sostenuti da un sorso pieno e caldo. Dodici mesi in barrique lo rendono perfetto su brasati, selvaggina e formaggi erborinati.'
+                                    en_US:
+                                        name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
+                                        short_description: 'From sixty-year-old bush vines: powerful, sweetly fruited and enveloping.'
+                                        description: 'Plum jam, chocolate and vanilla carried by a full, warm palate. Twelve months in barrique make it ideal with braised meats, game and blue cheeses.'
+                                    fr_FR:
+                                        name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
+                                        short_description: 'Issu de vignes en gobelet de soixante ans : puissant, fruité et enveloppant.'
+                                        description: "Confiture de prune, chocolat et vanille portés par une bouche pleine et chaleureuse. Douze mois en barrique : parfait sur des braisés, du gibier et des fromages persillés."
+
+                            -   code: 'brunello_montalcino_col_dorcia'
+                                name: "Brunello di Montalcino DOCG Col d'Orcia"
+                                price: 48.00
+                                on_hand: 60
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: "Col d'Orcia"
+                                    vino_denominazione: 'Brunello di Montalcino DOCG'
+                                    vino_annata: 2019
+                                    vino_vitigni: 'Sangiovese Grosso'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.14
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Brunello di Montalcino DOCG Col d'Orcia"
+                                        short_description: 'Uno dei grandi classici toscani, da cinque anni di attesa.'
+                                        description: "Sangiovese Grosso in purezza, affinato tre anni in botte grande. Frutta rossa matura, sottobosco e spezie dolci, con un tannino nobile che promette almeno vent'anni di evoluzione."
+                                    en_US:
+                                        name: "Brunello di Montalcino DOCG Col d'Orcia"
+                                        short_description: 'One of Tuscany''s great classics, released after five years.'
+                                        description: 'Pure Sangiovese Grosso aged three years in large casks. Ripe red fruit, forest floor and sweet spice, with noble tannins promising at least two decades of development.'
+                                    fr_FR:
+                                        name: "Brunello di Montalcino DOCG Col d'Orcia"
+                                        short_description: 'Un des grands classiques toscans, après cinq ans de patience.'
+                                        description: "Sangiovese Grosso pur, élevé trois ans en foudre. Fruits rouges mûrs, sous-bois et épices douces, avec des tanins nobles promettant au moins vingt ans de garde."
+
+                            -   code: 'barolo_pio_cesare'
+                                name: 'Barolo DOCG Pio Cesare'
+                                price: 69.00
+                                on_hand: 48
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Pio Cesare'
+                                    vino_denominazione: 'Barolo DOCG'
+                                    vino_annata: 2019
+                                    vino_vitigni: 'Nebbiolo'
+                                    vino_regione: 'Piemonte'
+                                    vino_gradazione: 0.145
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Barolo DOCG Pio Cesare'
+                                        short_description: 'Il re dei vini italiani, in versione tradizionale delle Langhe.'
+                                        description: 'Nebbiolo da vigneti storici di Serralunga, La Morra e Barolo. Rosa appassita, catrame e liquirizia, tannino austero e finale interminabile: da attendere o da servire su brasato al Barolo e tartufo bianco.'
+                                    en_US:
+                                        name: 'Barolo DOCG Pio Cesare'
+                                        short_description: 'The king of Italian wines, in a traditional Langhe style.'
+                                        description: 'Nebbiolo from historic vineyards in Serralunga, La Morra and Barolo. Dried rose, tar and liquorice, austere tannins and an endless finish: cellar it, or serve with beef braised in Barolo and white truffle.'
+                                    fr_FR:
+                                        name: 'Barolo DOCG Pio Cesare'
+                                        short_description: 'Le roi des vins italiens, dans un style traditionnel des Langhe.'
+                                        description: "Nebbiolo issu de vignobles historiques de Serralunga, La Morra et Barolo. Rose fanée, goudron et réglisse, tanins austères et finale interminable : à garder ou à servir sur un braisé au Barolo et à la truffe blanche."
+
+                            -   code: 'amarone_valpolicella_allegrini'
+                                name: 'Amarone della Valpolicella DOCG Allegrini'
+                                price: 72.00
+                                on_hand: 40
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Allegrini'
+                                    vino_denominazione: 'Amarone della Valpolicella Classico DOCG'
+                                    vino_annata: 2019
+                                    vino_vitigni: 'Corvina, Corvinone, Rondinella'
+                                    vino_regione: 'Veneto'
+                                    vino_gradazione: 0.155
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Amarone della Valpolicella DOCG Allegrini'
+                                        short_description: 'Uve appassite per oltre cento giorni: concentrazione e potenza veronese.'
+                                        description: 'Ciliegia sotto spirito, cacao, tabacco e spezie orientali. Sorso denso e vellutato, di grande calore alcolico: perfetto su selvaggina, formaggi molto stagionati o da solo, come vino da meditazione.'
+                                    en_US:
+                                        name: 'Amarone della Valpolicella DOCG Allegrini'
+                                        short_description: 'Grapes dried for over a hundred days: Veronese concentration and power.'
+                                        description: 'Cherry in spirit, cocoa, tobacco and oriental spice. Dense, velvety and warming: perfect with game, long-aged cheeses, or on its own as a meditation wine.'
+                                    fr_FR:
+                                        name: 'Amarone della Valpolicella DOCG Allegrini'
+                                        short_description: 'Raisins passerillés plus de cent jours : concentration et puissance véronaises.'
+                                        description: "Cerise à l'eau-de-vie, cacao, tabac et épices orientales. Bouche dense et veloutée, très chaleureuse : idéal sur du gibier, des fromages très affinés ou seul, en vin de méditation."
+
+                            -   code: 'tignanello_antinori'
+                                name: 'Tignanello IGT Toscana Antinori'
+                                price: 135.00
+                                on_hand: 30
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Marchesi Antinori'
+                                    vino_denominazione: 'Toscana IGT'
+                                    vino_annata: 2021
+                                    vino_vitigni: 'Sangiovese, Cabernet Sauvignon, Cabernet Franc'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.14
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Tignanello IGT Toscana Antinori'
+                                        short_description: 'Il Supertuscan che nel 1971 cambiò per sempre il vino italiano.'
+                                        description: 'Sangiovese con Cabernet, affinato quattordici mesi in barrique. Frutti rossi, grafite e spezie dolci in un sorso elegante e serrato, capace di invecchiare due decenni.'
+                                    en_US:
+                                        name: 'Tignanello IGT Toscana Antinori'
+                                        short_description: 'The Supertuscan that changed Italian wine forever in 1971.'
+                                        description: 'Sangiovese with Cabernet, aged fourteen months in barrique. Red fruit, graphite and sweet spice in an elegant, tightly knit palate built to age for two decades.'
+                                    fr_FR:
+                                        name: 'Tignanello IGT Toscana Antinori'
+                                        short_description: "Le Supertoscan qui, en 1971, a changé à jamais le vin italien."
+                                        description: "Sangiovese complété de cabernets, élevé quatorze mois en barrique. Fruits rouges, graphite et épices douces dans une bouche élégante et serrée, taillée pour vingt ans de garde."
+
+                            -   code: 'sassicaia_tenuta_san_guido'
+                                name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
+                                price: 320.00
+                                on_hand: 18
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Tenuta San Guido'
+                                    vino_denominazione: 'Bolgheri Sassicaia DOC'
+                                    vino_annata: 2021
+                                    vino_vitigni: 'Cabernet Sauvignon, Cabernet Franc'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.14
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
+                                        short_description: "L'icona di Bolgheri, unico vino italiano con una DOC tutta sua."
+                                        description: 'Cabernet allevati a pochi chilometri dal mare, ventiquattro mesi in barrique. Ribes nero, erbe mediterranee e mina di grafite, con tannini di seta e una freschezza salina inconfondibile.'
+                                    en_US:
+                                        name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
+                                        short_description: 'The Bolgheri icon, the only Italian wine with a DOC of its own.'
+                                        description: 'Cabernet grown a few kilometres from the sea, aged twenty-four months in barrique. Blackcurrant, Mediterranean herbs and graphite, with silky tannins and unmistakable saline freshness.'
+                                    fr_FR:
+                                        name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
+                                        short_description: "L'icône de Bolgheri, seul vin italien à posséder sa propre DOC."
+                                        description: "Cabernets cultivés à quelques kilomètres de la mer, élevés vingt-quatre mois en barrique. Cassis, herbes méditerranéennes et mine de graphite, tanins soyeux et fraîcheur saline inimitable."
+
+                            -   code: 'barolo_monfortino_giacomo_conterno'
+                                name: 'Barolo Riserva Monfortino Giacomo Conterno'
+                                price: 950.00
+                                on_hand: 6
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Giacomo Conterno'
+                                    vino_denominazione: 'Barolo DOCG Riserva'
+                                    vino_annata: 2016
+                                    vino_vitigni: 'Nebbiolo'
+                                    vino_regione: 'Piemonte'
+                                    vino_gradazione: 0.145
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Barolo Riserva Monfortino Giacomo Conterno'
+                                        short_description: 'Il Barolo più leggendario delle Langhe, prodotto solo nelle grandi annate.'
+                                        description: "Sette anni in botti di rovere di Slavonia prima dell'uscita. Un vino monumentale, di austerità assoluta da giovane e di complessità infinita dopo vent'anni di cantina."
+                                    en_US:
+                                        name: 'Barolo Riserva Monfortino Giacomo Conterno'
+                                        short_description: 'The most legendary Barolo of the Langhe, made only in great vintages.'
+                                        description: 'Seven years in Slavonian oak casks before release. A monumental wine: austere in youth, endlessly complex after two decades in the cellar.'
+                                    fr_FR:
+                                        name: 'Barolo Riserva Monfortino Giacomo Conterno'
+                                        short_description: 'Le Barolo le plus légendaire des Langhe, produit uniquement dans les grands millésimes.'
+                                        description: "Sept ans en foudres de chêne de Slavonie avant la mise sur le marché. Un vin monumental : austère dans sa jeunesse, d'une complexité infinie après vingt ans de cave."
+
+                            -   code: 'masseto_toscana'
+                                name: 'Masseto Toscana IGT'
+                                price: 1200.00
+                                on_hand: 4
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_rossi'
+                                taxons: ['vini', 'vini_rossi']
+                                product_attributes:
+                                    vino_cantina: 'Masseto'
+                                    vino_denominazione: 'Toscana IGT'
+                                    vino_annata: 2019
+                                    vino_vitigni: 'Merlot'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.145
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Masseto Toscana IGT'
+                                        short_description: 'Il merlot più ambito del mondo, da sette ettari di argilla blu a Bolgheri.'
+                                        description: "Un vino raro e ricercatissimo, affinato ventiquattro mesi in barrique nuove. Frutto nero purissimo, cioccolato, grafite e una texture vellutata che lo rende un'esperienza da collezione."
+                                    en_US:
+                                        name: 'Masseto Toscana IGT'
+                                        short_description: 'The world''s most sought-after Merlot, from seven hectares of blue clay in Bolgheri.'
+                                        description: 'A rare and highly collectable wine, aged twenty-four months in new barriques. Pure black fruit, chocolate and graphite with a velvet texture that makes every bottle an event.'
+                                    fr_FR:
+                                        name: 'Masseto Toscana IGT'
+                                        short_description: 'Le merlot le plus convoité au monde, né de sept hectares d''argile bleue à Bolgheri.'
+                                        description: "Un vin rare et très recherché, élevé vingt-quatre mois en barriques neuves. Fruit noir d'une pureté absolue, chocolat, graphite et texture veloutée : une expérience de collection."
+
+                            # ---------------------------------------------------------------- Vini bianchi
+                            -   code: 'verdicchio_villa_bianchi_umani_ronchi'
+                                name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
+                                price: 9.00
+                                on_hand: 200
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_bianchi'
+                                taxons: ['vini', 'vini_bianchi']
+                                product_attributes:
+                                    vino_cantina: 'Umani Ronchi'
+                                    vino_denominazione: 'Verdicchio dei Castelli di Jesi DOC Classico'
+                                    vino_annata: 2023
+                                    vino_vitigni: 'Verdicchio'
+                                    vino_regione: 'Marche'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
+                                        short_description: 'Il bianco marchigiano per eccellenza: agrumato, sapido, dal finale ammandorlato.'
+                                        description: 'Paglierino con riflessi verdolini, naso di mela verde, agrumi e fiori bianchi. Fresco e minerale, chiude con la tipica nota di mandorla: perfetto su crudi di mare, fritture e primi ai frutti di mare.'
+                                    en_US:
+                                        name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
+                                        short_description: 'The white of the Marche: citrus, savoury and gently almondy.'
+                                        description: 'Straw yellow with green highlights, green apple, citrus and white flowers on the nose. Fresh and mineral with the classic almond finish: ideal with raw seafood, fritto misto and shellfish pasta.'
+                                    fr_FR:
+                                        name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
+                                        short_description: 'Le blanc des Marches par excellence : agrumes, salinité et finale amandée.'
+                                        description: "Jaune paille aux reflets verts, nez de pomme verte, d'agrumes et de fleurs blanches. Frais et minéral, finale amandée typique : parfait sur des fruits de mer crus, des fritures et des pâtes aux coquillages."
+
+                            -   code: 'vermentino_la_cala_sella_mosca'
+                                name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
+                                price: 10.50
+                                on_hand: 160
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_bianchi'
+                                taxons: ['vini', 'vini_bianchi']
+                                product_attributes:
+                                    vino_cantina: 'Sella & Mosca'
+                                    vino_denominazione: 'Vermentino di Sardegna DOC'
+                                    vino_annata: 2023
+                                    vino_vitigni: 'Vermentino'
+                                    vino_regione: 'Sardegna'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
+                                        short_description: 'Mare, sale e agrumi: il bianco sardo da bere tutta estate.'
+                                        description: 'Profumi di pompelmo, pesca bianca e macchia mediterranea. Sorso teso e salino, di grande immediatezza: ideale con crostacei, pesce alla griglia e bottarga.'
+                                    en_US:
+                                        name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
+                                        short_description: 'Sea, salt and citrus: the Sardinian white for the whole summer.'
+                                        description: 'Grapefruit, white peach and Mediterranean scrub on the nose. Taut and saline on the palate: excellent with shellfish, grilled fish and bottarga.'
+                                    fr_FR:
+                                        name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
+                                        short_description: 'Mer, sel et agrumes : le blanc sarde de tout un été.'
+                                        description: "Pamplemousse, pêche blanche et garrigue au nez. Bouche tendue et saline, très immédiate : idéal sur des crustacés, du poisson grillé et de la poutargue."
+
+                            -   code: 'pinot_grigio_santa_margherita'
+                                name: 'Pinot Grigio DOC Santa Margherita'
+                                price: 11.00
+                                on_hand: 170
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_bianchi'
+                                taxons: ['vini', 'vini_bianchi']
+                                product_attributes:
+                                    vino_cantina: 'Santa Margherita'
+                                    vino_denominazione: 'Valdadige DOC'
+                                    vino_annata: 2023
+                                    vino_vitigni: 'Pinot Grigio'
+                                    vino_regione: 'Veneto'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Pinot Grigio DOC Santa Margherita'
+                                        short_description: 'Il pinot grigio che ha reso famoso lo stile italiano nel mondo.'
+                                        description: 'Vinificato in bianco per preservare finezza e freschezza. Mela golden, pera e fiori di acacia, sorso asciutto ed equilibrato: ottimo aperitivo e compagno di antipasti e piatti di pesce.'
+                                    en_US:
+                                        name: 'Pinot Grigio DOC Santa Margherita'
+                                        short_description: 'The Pinot Grigio that made the Italian style famous worldwide.'
+                                        description: 'Vinified off the skins to keep it fine and fresh. Golden apple, pear and acacia blossom, dry and balanced: a great aperitif and partner to antipasti and fish dishes.'
+                                    fr_FR:
+                                        name: 'Pinot Grigio DOC Santa Margherita'
+                                        short_description: 'Le pinot gris qui a fait connaître le style italien dans le monde entier.'
+                                        description: "Vinifié en blanc pour préserver finesse et fraîcheur. Pomme golden, poire et fleur d'acacia, bouche sèche et équilibrée : excellent à l'apéritif, sur des antipasti et des poissons."
+
+                            -   code: 'gavi_docg_la_scolca'
+                                name: 'Gavi DOCG La Scolca Etichetta Bianca'
+                                price: 18.00
+                                on_hand: 110
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_bianchi'
+                                taxons: ['vini', 'vini_bianchi']
+                                product_attributes:
+                                    vino_cantina: 'La Scolca'
+                                    vino_denominazione: 'Gavi dei Gavi DOCG'
+                                    vino_annata: 2023
+                                    vino_vitigni: 'Cortese'
+                                    vino_regione: 'Piemonte'
+                                    vino_gradazione: 0.12
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Gavi DOCG La Scolca Etichetta Bianca'
+                                        short_description: 'Cortese in purezza da una delle cantine storiche del Gavi.'
+                                        description: 'Naso delicato di agrumi, fiori bianchi e pietra focaia. Sorso asciutto, teso e persistente, con una mineralità che invita al sorso successivo: perfetto con pesce di lago, risotti e formaggi freschi.'
+                                    en_US:
+                                        name: 'Gavi DOCG La Scolca Etichetta Bianca'
+                                        short_description: 'Pure Cortese from one of the historic estates of Gavi.'
+                                        description: 'A delicate nose of citrus, white flowers and flint. Dry, taut and persistent with a mineral edge that keeps you pouring: great with freshwater fish, risotto and fresh cheeses.'
+                                    fr_FR:
+                                        name: 'Gavi DOCG La Scolca Etichetta Bianca'
+                                        short_description: 'Cortese pur, issu d''un domaine historique de Gavi.'
+                                        description: "Nez délicat d'agrumes, de fleurs blanches et de pierre à fusil. Bouche sèche, tendue et persistante, à la minéralité entraînante : parfait sur des poissons de lac, des risottos et des fromages frais."
+
+                            -   code: 'cervaro_della_sala_antinori'
+                                name: 'Cervaro della Sala IGT Castello della Sala'
+                                price: 65.00
+                                on_hand: 45
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_bianchi'
+                                taxons: ['vini', 'vini_bianchi']
+                                product_attributes:
+                                    vino_cantina: 'Castello della Sala - Antinori'
+                                    vino_denominazione: 'Umbria IGT'
+                                    vino_annata: 2022
+                                    vino_vitigni: 'Chardonnay, Grechetto'
+                                    vino_regione: 'Umbria'
+                                    vino_gradazione: 0.13
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Cervaro della Sala IGT Castello della Sala'
+                                        short_description: 'Il grande bianco italiano da invecchiamento, chardonnay e grechetto in barrique.'
+                                        description: 'Fermentato e affinato in legno con lieviti indigeni. Frutta bianca matura, nocciola, burro e una spina acida che ne garantisce la longevità: eccellente su crostacei, pollame e formaggi cremosi.'
+                                    en_US:
+                                        name: 'Cervaro della Sala IGT Castello della Sala'
+                                        short_description: 'Italy''s great age-worthy white: Chardonnay and Grechetto in barrique.'
+                                        description: 'Fermented and aged in oak with indigenous yeasts. Ripe orchard fruit, hazelnut and butter over an acid backbone built for the long haul: superb with shellfish, poultry and creamy cheeses.'
+                                    fr_FR:
+                                        name: 'Cervaro della Sala IGT Castello della Sala'
+                                        short_description: 'Le grand blanc de garde italien : chardonnay et grechetto élevés en barrique.'
+                                        description: "Fermenté et élevé en fût avec des levures indigènes. Fruits blancs mûrs, noisette, beurre et une belle acidité garante de longévité : excellent sur des crustacés, des volailles et des fromages crémeux."
+
+                            # ---------------------------------------------------------------- Bollicine
+                            -   code: 'prosecco_doc_jeio_bisol'
+                                name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
+                                price: 10.00
+                                on_hand: 220
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'bollicine'
+                                taxons: ['vini', 'bollicine']
+                                product_attributes:
+                                    vino_cantina: 'Bisol 1542'
+                                    vino_denominazione: 'Prosecco DOC Treviso Extra Dry'
+                                    vino_vitigni: 'Glera'
+                                    vino_regione: 'Veneto'
+                                    vino_gradazione: 0.11
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
+                                        short_description: 'La bollicina italiana per l’aperitivo di tutti i giorni.'
+                                        description: 'Perlage fine e persistente, profumi di mela verde, glicine e agrumi. Extra dry, morbido ma fresco: perfetto come aperitivo, con finger food e fritture di pesce.'
+                                    en_US:
+                                        name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
+                                        short_description: 'The everyday Italian sparkler for aperitivo hour.'
+                                        description: 'Fine, persistent bubbles with green apple, wisteria and citrus aromas. Extra dry, soft yet fresh: ideal as an aperitif, with finger food and fried fish.'
+                                    fr_FR:
+                                        name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
+                                        short_description: "La bulle italienne de l'apéritif quotidien."
+                                        description: "Perlage fin et persistant, arômes de pomme verte, de glycine et d'agrumes. Extra dry, souple et frais : parfait à l'apéritif, sur des amuse-bouches et des fritures de poisson."
+
+                            -   code: 'franciacorta_cuvee_prestige_ca_del_bosco'
+                                name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
+                                price: 32.00
+                                on_hand: 95
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'bollicine'
+                                taxons: ['vini', 'bollicine']
+                                product_attributes:
+                                    vino_cantina: "Ca' del Bosco"
+                                    vino_denominazione: 'Franciacorta DOCG Extra Brut'
+                                    vino_vitigni: 'Chardonnay, Pinot Nero, Pinot Bianco'
+                                    vino_regione: 'Lombardia'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
+                                        short_description: 'Metodo classico lombardo, il Franciacorta più conosciuto d’Italia.'
+                                        description: 'Almeno venticinque mesi sui lieviti per una bollicina cremosa e precisa. Crosta di pane, agrumi canditi e frutta bianca: si beve dall’aperitivo al pesce, fino ai primi piatti delicati.'
+                                    en_US:
+                                        name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
+                                        short_description: 'Lombardy''s traditional-method sparkler, Italy''s best known Franciacorta.'
+                                        description: 'At least twenty-five months on the lees give a creamy, precise mousse. Bread crust, candied citrus and orchard fruit: from aperitif to fish courses and delicate pasta.'
+                                    fr_FR:
+                                        name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
+                                        short_description: 'La méthode traditionnelle lombarde, le Franciacorta le plus connu d''Italie.'
+                                        description: "Au moins vingt-cinq mois sur lies pour une bulle crémeuse et précise. Croûte de pain, agrumes confits et fruits blancs : de l'apéritif aux poissons et aux pâtes délicates."
+
+                            -   code: 'ferrari_perle_trentodoc'
+                                name: 'Trentodoc Perlé Ferrari'
+                                price: 45.00
+                                on_hand: 70
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'bollicine'
+                                taxons: ['vini', 'bollicine']
+                                product_attributes:
+                                    vino_cantina: 'Ferrari Trento'
+                                    vino_denominazione: 'Trentodoc Millesimato'
+                                    vino_annata: 2018
+                                    vino_vitigni: 'Chardonnay'
+                                    vino_regione: 'Trentino'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Trentodoc Perlé Ferrari'
+                                        short_description: 'Blanc de blancs di montagna, cinque anni sui lieviti.'
+                                        description: 'Chardonnay da vigneti d’alta quota in Trentino. Note di mela, agrumi, crosta di pane e nocciola, con una bollicina finissima e un finale lungo e minerale.'
+                                    en_US:
+                                        name: 'Trentodoc Perlé Ferrari'
+                                        short_description: 'A mountain blanc de blancs, five years on the lees.'
+                                        description: 'Chardonnay from high-altitude vineyards in Trentino. Apple, citrus, bread crust and hazelnut, with an extremely fine mousse and a long, mineral finish.'
+                                    fr_FR:
+                                        name: 'Trentodoc Perlé Ferrari'
+                                        short_description: 'Un blanc de blancs de montagne, cinq ans sur lattes.'
+                                        description: "Chardonnay issu de vignobles d'altitude du Trentin. Pomme, agrumes, croûte de pain et noisette, avec une bulle très fine et une finale longue et minérale."
+
+                            -   code: 'moet_chandon_brut_imperial'
+                                name: 'Champagne Brut Impérial Moët & Chandon'
+                                price: 55.00
+                                on_hand: 60
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'bollicine'
+                                taxons: ['vini', 'bollicine']
+                                product_attributes:
+                                    vino_cantina: 'Moët & Chandon'
+                                    vino_denominazione: 'Champagne AOC Brut'
+                                    vino_vitigni: 'Pinot Nero, Pinot Meunier, Chardonnay'
+                                    vino_regione: 'Champagne'
+                                    vino_gradazione: 0.12
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Champagne Brut Impérial Moët & Chandon'
+                                        short_description: 'Lo champagne più celebre al mondo, sinonimo di festa.'
+                                        description: 'Assemblaggio di oltre cento vini base: pera, agrumi e brioche, con un finale fresco e vibrante. Da servire ghiacciato in ogni occasione da celebrare.'
+                                    en_US:
+                                        name: 'Champagne Brut Impérial Moët & Chandon'
+                                        short_description: 'The world''s most famous champagne, a byword for celebration.'
+                                        description: 'A blend of more than a hundred base wines: pear, citrus and brioche with a fresh, vibrant finish. Serve well chilled whenever there is something to celebrate.'
+                                    fr_FR:
+                                        name: 'Champagne Brut Impérial Moët & Chandon'
+                                        short_description: 'Le champagne le plus célèbre au monde, synonyme de fête.'
+                                        description: "Assemblage de plus de cent vins de base : poire, agrumes et brioche, finale fraîche et vibrante. À servir bien frais pour toutes les occasions à célébrer."
+
+                            -   code: 'dom_perignon_vintage'
+                                name: 'Champagne Dom Pérignon Vintage'
+                                price: 230.00
+                                on_hand: 24
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'bollicine'
+                                taxons: ['vini', 'bollicine']
+                                product_attributes:
+                                    vino_cantina: 'Dom Pérignon'
+                                    vino_denominazione: 'Champagne AOC Millesimato'
+                                    vino_annata: 2013
+                                    vino_vitigni: 'Chardonnay, Pinot Nero'
+                                    vino_regione: 'Champagne'
+                                    vino_gradazione: 0.125
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Champagne Dom Pérignon Vintage'
+                                        short_description: 'Solo nelle grandi annate, dopo almeno otto anni sui lieviti.'
+                                        description: 'Un millesimato di assoluta precisione: agrumi canditi, mandorla tostata, spezie e una texture setosa. Champagne da grande tavola, da abbinare a crostacei, pesce nobile e ricette di alta cucina.'
+                                    en_US:
+                                        name: 'Champagne Dom Pérignon Vintage'
+                                        short_description: 'Made only in great vintages, after at least eight years on the lees.'
+                                        description: 'A vintage champagne of absolute precision: candied citrus, toasted almond, spice and a silky texture. A fine-dining champagne for shellfish, noble fish and haute cuisine.'
+                                    fr_FR:
+                                        name: 'Champagne Dom Pérignon Vintage'
+                                        short_description: 'Uniquement dans les grands millésimes, après huit ans minimum sur lattes.'
+                                        description: "Un millésime d'une précision absolue : agrumes confits, amande grillée, épices et texture soyeuse. Un champagne de grande table, sur des crustacés, des poissons nobles et une cuisine gastronomique."
+
+                            # ---------------------------------------------------------------- Vini dolci
+                            -   code: 'moscato_dasti_araldica'
+                                name: "Moscato d'Asti DOCG Araldica"
+                                price: 9.50
+                                on_hand: 140
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_dolci'
+                                taxons: ['vini', 'vini_dolci']
+                                product_attributes:
+                                    vino_cantina: 'Araldica'
+                                    vino_denominazione: "Moscato d'Asti DOCG"
+                                    vino_annata: 2023
+                                    vino_vitigni: 'Moscato Bianco'
+                                    vino_regione: 'Piemonte'
+                                    vino_gradazione: 0.055
+                                    vino_formato: '0,75 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: "Moscato d'Asti DOCG Araldica"
+                                        short_description: 'Dolce, leggero e aromatico: il fine pasto piemontese per eccellenza.'
+                                        description: 'Salvia, pesca bianca e uva moscato, con una bollicina sottile e appena accennata. Solo 5,5% vol: perfetto su panettone, crostate di frutta e pasticceria secca.'
+                                    en_US:
+                                        name: "Moscato d'Asti DOCG Araldica"
+                                        short_description: 'Sweet, light and aromatic: the classic Piedmontese dessert wine.'
+                                        description: 'Sage, white peach and muscat grape, with a barely there sparkle. Just 5.5% abv: perfect with panettone, fruit tarts and dry pastries.'
+                                    fr_FR:
+                                        name: "Moscato d'Asti DOCG Araldica"
+                                        short_description: 'Doux, léger et aromatique : le vin de dessert piémontais par excellence.'
+                                        description: "Sauge, pêche blanche et raisin muscat, avec une bulle fine et discrète. Seulement 5,5 % vol : parfait sur un panettone, des tartes aux fruits et des petits fours."
+
+                            -   code: 'vin_santo_serelle_ruffino'
+                                name: 'Vin Santo del Chianti DOC Serelle Ruffino'
+                                price: 22.00
+                                on_hand: 65
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_dolci'
+                                taxons: ['vini', 'vini_dolci']
+                                product_attributes:
+                                    vino_cantina: 'Ruffino'
+                                    vino_denominazione: 'Vin Santo del Chianti DOC'
+                                    vino_annata: 2018
+                                    vino_vitigni: 'Trebbiano, Malvasia'
+                                    vino_regione: 'Toscana'
+                                    vino_gradazione: 0.15
+                                    vino_formato: '0,375 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Vin Santo del Chianti DOC Serelle Ruffino'
+                                        short_description: 'Uve appassite e caratelli di rovere: il rito toscano dei cantucci.'
+                                        description: 'Ambrato luminoso, con note di miele, fichi secchi, noce e scorza d’arancia. Dolce ma bilanciato da una vena acida: da servire a 14 °C con cantucci, pasticceria secca e formaggi erborinati.'
+                                    en_US:
+                                        name: 'Vin Santo del Chianti DOC Serelle Ruffino'
+                                        short_description: 'Dried grapes and small oak casks: the Tuscan ritual with cantucci.'
+                                        description: 'Bright amber, with honey, dried figs, walnut and orange peel. Sweet but balanced by fresh acidity: serve at 14 °C with cantucci, dry pastries and blue cheeses.'
+                                    fr_FR:
+                                        name: 'Vin Santo del Chianti DOC Serelle Ruffino'
+                                        short_description: 'Raisins passerillés et petits fûts de chêne : le rituel toscan des cantucci.'
+                                        description: "Ambre lumineux, notes de miel, de figue sèche, de noix et d'écorce d'orange. Doux mais équilibré par une belle acidité : à servir à 14 °C avec des cantucci, des petits fours et des fromages persillés."
+
+                            -   code: 'ben_rye_donnafugata'
+                                name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
+                                price: 48.00
+                                on_hand: 50
+                                tax_category: 'vino'
+                                shipping_category: 'bottiglie'
+                                channels: ['ecommerce']
+                                main_taxon: 'vini_dolci'
+                                taxons: ['vini', 'vini_dolci']
+                                product_attributes:
+                                    vino_cantina: 'Donnafugata'
+                                    vino_denominazione: 'Passito di Pantelleria DOC'
+                                    vino_annata: 2021
+                                    vino_vitigni: 'Zibibbo'
+                                    vino_regione: 'Sicilia'
+                                    vino_gradazione: 0.145
+                                    vino_formato: '0,375 L'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                translations:
+                                    it_IT:
+                                        name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
+                                        short_description: 'Zibibbo appassito al sole di Pantelleria, uno dei dolci italiani più premiati.'
+                                        description: 'Albicocca secca, miele, erbe mediterranee e una sferzata salina che asciuga il finale. Ottimo con pasticceria secca, formaggi erborinati e fegato grasso, o semplicemente da meditazione.'
+                                    en_US:
+                                        name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
+                                        short_description: 'Zibibbo dried under the Pantelleria sun, one of Italy''s most awarded sweet wines.'
+                                        description: 'Dried apricot, honey, Mediterranean herbs and a saline snap that dries the finish. Excellent with dry pastries, blue cheeses and foie gras, or simply on its own.'
+                                    fr_FR:
+                                        name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
+                                        short_description: "Zibibbo passerillé au soleil de Pantelleria, l'un des liquoreux italiens les plus primés."
+                                        description: "Abricot sec, miel, herbes méditerranéennes et une pointe saline qui assèche la finale. Excellent sur des petits fours, des fromages persillés et du foie gras, ou seul en vin de méditation."

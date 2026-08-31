@@ -93,6 +93,89 @@ final class ProductExampleFactoryTest extends TestCase
         self::assertSame(2000, $channelPricing->getPrice());
     }
 
+    public function testItComputesTheMinimumPriceFromTheRatio(): void
+    {
+        $channelPricing = $this->createChannelPricing();
+        $variant = $this->createVariant($channelPricing);
+
+        $this->createFactory($this->createProduct($variant))->create([
+            'price' => 20.0,
+            'minimum_price_ratio' => 0.75,
+        ]);
+
+        self::assertSame(1500, $channelPricing->getMinimumPrice());
+    }
+
+    public function testItPrefersTheExplicitMinimumPriceOverTheRatio(): void
+    {
+        $channelPricing = $this->createChannelPricing();
+        $variant = $this->createVariant($channelPricing);
+
+        $this->createFactory($this->createProduct($variant))->create([
+            'price' => 20.0,
+            'minimum_price' => 18.0,
+            'minimum_price_ratio' => 0.75,
+        ]);
+
+        self::assertSame(1800, $channelPricing->getMinimumPrice());
+    }
+
+    public function testItSizesTheVariants(): void
+    {
+        $variant = $this->createVariant($this->createChannelPricing());
+
+        $this->createFactory($this->createProduct($variant))->create([
+            'width' => 8.0,
+            'height' => 32.0,
+            'depth' => 8.0,
+            'weight' => 1.3,
+        ]);
+
+        self::assertSame(8.0, $variant->getWidth());
+        self::assertSame(32.0, $variant->getHeight());
+        self::assertSame(8.0, $variant->getDepth());
+        self::assertSame(1.3, $variant->getWeight());
+    }
+
+    public function testItSizesEveryVariantOnItsOwnProductOptionValue(): void
+    {
+        $twoGlasses = $this->createVariant($this->createChannelPricing());
+        $twoGlasses->addOptionValue($this->createOptionValue('numero_calici_2'));
+
+        $sixGlasses = $this->createVariant($this->createChannelPricing());
+        $sixGlasses->addOptionValue($this->createOptionValue('numero_calici_6'));
+
+        $product = $this->createProduct($twoGlasses);
+        $product->addVariant($sixGlasses);
+
+        $this->createFactory($product)->create([
+            'weight' => 1.0,
+            'variant_dimensions' => [
+                'numero_calici_6' => ['weight' => 3.0, 'height' => 30.0],
+            ],
+        ]);
+
+        self::assertSame(1.0, $twoGlasses->getWeight());
+        self::assertSame(3.0, $sixGlasses->getWeight());
+        self::assertSame(30.0, $sixGlasses->getHeight());
+    }
+
+    public function testItTranslatesTheMetaFields(): void
+    {
+        $product = $this->createProduct($this->createVariant($this->createChannelPricing()));
+
+        $this->createFactory($product)->create([
+            'translations' => [
+                'it_IT' => ['meta_keywords' => 'chianti, vino rosso', 'meta_description' => 'Chianti DOCG in enoteca.'],
+            ],
+        ]);
+
+        $product->setCurrentLocale('it_IT');
+        $product->setFallbackLocale('it_IT');
+        self::assertSame('chianti, vino rosso', $product->getMetaKeywords());
+        self::assertSame('Chianti DOCG in enoteca.', $product->getMetaDescription());
+    }
+
     public function testItSetsTheShippingCategoryOnEveryVariant(): void
     {
         $variant = $this->createVariant($this->createChannelPricing());

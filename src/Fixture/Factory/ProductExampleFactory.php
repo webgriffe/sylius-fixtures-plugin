@@ -16,14 +16,32 @@ use Webmozart\Assert\Assert;
  * Adds fixed prices, per locale translations and stock to the Sylius product example factory,
  * which otherwise generates random prices and the same translation for every locale.
  *
- * Configurable products can price each variant through "variant_prices", keyed by product option value.
- * It also assigns the shipping category, which the Sylius factory never sets on the variants.
+ * Configurable products can price each variant through "variant_prices", keyed by product option value,
+ * and size it through "variant_dimensions".
+ * It also assigns the minimum price, the dimensions and the shipping category, which the Sylius factory
+ * never sets on the variants.
  *
  * @implements ExampleFactoryInterface<ProductInterface>
  */
 final readonly class ProductExampleFactory implements ExampleFactoryInterface
 {
-    private const EXTRA_OPTIONS = ['price', 'variant_prices', 'original_price', 'on_hand', 'shipping_category', 'translations'];
+    private const EXTRA_OPTIONS = [
+        'price',
+        'variant_prices',
+        'minimum_price',
+        'minimum_price_ratio',
+        'original_price',
+        'on_hand',
+        'shipping_category',
+        'width',
+        'height',
+        'depth',
+        'weight',
+        'variant_dimensions',
+        'translations',
+    ];
+
+    private const DIMENSIONS = ['width', 'height', 'depth', 'weight'];
 
     /**
      * @param ExampleFactoryInterface<ProductInterface> $decoratedFactory
@@ -55,6 +73,7 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             $this->applyStock($variant, $extraOptions);
             $this->applyPrices($variant, $extraOptions);
             $this->applyShippingCategory($variant, $extraOptions);
+            $this->applyDimensions($variant, $extraOptions);
         }
 
         return $product;
@@ -79,6 +98,12 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             }
             if (isset($translation['description'])) {
                 $product->setDescription($translation['description']);
+            }
+            if (isset($translation['meta_keywords'])) {
+                $product->setMetaKeywords($translation['meta_keywords']);
+            }
+            if (isset($translation['meta_description'])) {
+                $product->setMetaDescription($translation['meta_description']);
             }
         }
     }
@@ -116,6 +141,7 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
     private function applyPrices(ProductVariantInterface $variant, array $options): void
     {
         $price = $this->priceOf($variant, $options);
+        $minimumPrice = $this->minimumPriceOf($price, $options);
 
         /** @var ChannelPricingInterface $channelPricing */
         foreach ($variant->getChannelPricings() as $channelPricing) {
@@ -125,6 +151,64 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             if (isset($options['original_price'])) {
                 $channelPricing->setOriginalPrice($this->toMinorUnit($options['original_price']));
             }
+            if (null !== $minimumPrice) {
+                $channelPricing->setMinimumPrice($minimumPrice);
+            }
+        }
+    }
+
+    /**
+     * The minimum price is the floor the catalog promotions cannot go below. It is either given as is with
+     * "minimum_price", or computed from the price of the variant with "minimum_price_ratio".
+     *
+     * @param array<string, mixed> $options
+     */
+    private function minimumPriceOf(mixed $price, array $options): ?int
+    {
+        if (isset($options['minimum_price'])) {
+            return $this->toMinorUnit($options['minimum_price']);
+        }
+
+        if (!isset($options['minimum_price_ratio']) || null === $price) {
+            return null;
+        }
+
+        $ratio = $options['minimum_price_ratio'];
+        Assert::numeric($ratio);
+
+        return (int) round($this->toMinorUnit($price) * (float) $ratio);
+    }
+
+    /** @param array<string, mixed> $options */
+    private function applyDimensions(ProductVariantInterface $variant, array $options): void
+    {
+        /** @var array<array-key, mixed> $configuredDimensions */
+        $configuredDimensions = $options['variant_dimensions'] ?? [];
+        /** @var array<string, mixed> $variantDimensions */
+        $variantDimensions = $this->matchOptionValues($configuredDimensions, $variant) ?? [];
+
+        $dimensions = [];
+        foreach (self::DIMENSIONS as $dimension) {
+            $value = $variantDimensions[$dimension] ?? $options[$dimension] ?? null;
+            if (null === $value) {
+                continue;
+            }
+
+            Assert::numeric($value);
+            $dimensions[$dimension] = (float) $value;
+        }
+
+        if (isset($dimensions['width'])) {
+            $variant->setWidth($dimensions['width']);
+        }
+        if (isset($dimensions['height'])) {
+            $variant->setHeight($dimensions['height']);
+        }
+        if (isset($dimensions['depth'])) {
+            $variant->setDepth($dimensions['depth']);
+        }
+        if (isset($dimensions['weight'])) {
+            $variant->setWeight($dimensions['weight']);
         }
     }
 
@@ -138,17 +222,27 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
      */
     private function priceOf(ProductVariantInterface $variant, array $options): mixed
     {
-        /** @var array<string, mixed> $variantPrices */
+        /** @var array<array-key, mixed> $variantPrices */
         $variantPrices = $options['variant_prices'] ?? [];
 
+        return $this->matchOptionValues($variantPrices, $variant) ?? $options['price'] ?? null;
+    }
+
+    /**
+     * @param array<array-key, mixed> $valuesByOptionValues
+     *
+     * @return mixed the value whose key lists the option values of the variant, null when there is none
+     */
+    private function matchOptionValues(array $valuesByOptionValues, ProductVariantInterface $variant): mixed
+    {
         $variantKey = $this->optionValuesKey($variant);
-        foreach ($variantPrices as $key => $price) {
-            if ($this->normalizeKey($key) === $variantKey) {
-                return $price;
+        foreach ($valuesByOptionValues as $key => $value) {
+            if ($this->normalizeKey((string) $key) === $variantKey) {
+                return $value;
             }
         }
 
-        return $options['price'] ?? null;
+        return null;
     }
 
     private function optionValuesKey(ProductVariantInterface $variant): string

@@ -71,12 +71,39 @@ sylius_fixtures:
                         custom:
                             -   code: 'calici_bordeaux_riedel_vinum'
                                 name: 'Calici Bordeaux Riedel Vinum'
-                                on_hand: 40
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 24.0
+                                height: 25.0
+                                depth: 12.0
+                                weight: 1.0
                                 variant_prices:
                                     numero_calici_2: 49.00
                                     numero_calici_4: 94.00
                                     numero_calici_6: 132.00
                                     numero_calici_8: 168.00
+                                variant_dimensions:
+                                    numero_calici_2:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 12.0
+                                        weight: 1.0
+                                    numero_calici_4:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 2.0
+                                    numero_calici_6:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 3.0
+                                    numero_calici_8:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 32.0
+                                        weight: 4.0
                                 tax_category: 'altro'
                                 shipping_category: 'fragile'
                                 channels: ['ecommerce']
@@ -98,23 +125,56 @@ sylius_fixtures:
                                         name: 'Calici Bordeaux Riedel Vinum'
                                         short_description: 'Il calice da rossi strutturati per eccellenza, soffiato a macchina in cristallo.'
                                         description: 'Il baloon ampio della serie Vinum apre i tannini dei grandi Cabernet e Bordeaux. Stelo alto e bevante sottile, lavabile in lavastoviglie: la scelta più diffusa nelle enoteche.'
+                                        meta_keywords: 'calici bordeaux, riedel vinum, bicchieri vino rosso, cristallo, set calici'
+                                        meta_description: 'Calici Bordeaux Riedel Vinum in cristallo: baloon ampio da 610 ml per Cabernet e grandi rossi. Set da 2, 4, 6 o 8, lavabili in lavastoviglie.'
                                     en_US:
                                         name: 'Riedel Vinum Bordeaux glasses'
                                         short_description: 'The reference glass for structured reds, machine blown in fine crystal.'
                                         description: 'The wide Vinum bowl opens up the tannins of great Cabernet and Bordeaux. Tall stem and thin rim, dishwasher safe: the most common choice in wine shops.'
+                                        meta_keywords: 'bordeaux glasses, riedel vinum, red wine glasses, crystal, glass set'
+                                        meta_description: 'Riedel Vinum Bordeaux crystal glasses: a wide 610 ml bowl for Cabernet and structured reds. Packs of 2, 4, 6 or 8, dishwasher safe.'
                                     fr_FR:
                                         name: 'Verres Bordeaux Riedel Vinum'
                                         short_description: 'Le verre de référence pour les rouges structurés, soufflé à la machine en cristallin.'
                                         description: "Le large ballon de la série Vinum ouvre les tanins des grands cabernets et bordeaux. Pied haut et buvant fin, lavable au lave-vaisselle : le choix le plus répandu chez les cavistes."
+                                        meta_keywords: 'verres bordeaux, riedel vinum, verres à vin rouge, cristallin, coffret verres'
+                                        meta_description: 'Verres Bordeaux Riedel Vinum en cristallin : large ballon de 610 ml pour cabernets et grands rouges. Coffrets de 2, 4, 6 ou 8, lavables au lave-vaisselle.'
 
                             -   code: 'calici_borgogna_zwiesel_pure'
                                 name: 'Calici Borgogna Zwiesel Pure'
-                                on_hand: 45
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 24.0
+                                height: 25.0
+                                depth: 12.0
+                                weight: 1.05
                                 variant_prices:
                                     numero_calici_2: 39.90
                                     numero_calici_4: 75.00
                                     numero_calici_6: 108.00
                                     numero_calici_8: 138.00
+                                variant_dimensions:
+                                    numero_calici_2:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 12.0
+                                        weight: 1.04
+                                    numero_calici_4:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 2.08
+                                    numero_calici_6:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 3.12
+                                    numero_calici_8:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 32.0
+                                        weight: 4.16
                                 tax_category: 'altro'
                                 shipping_category: 'fragile'
                                 channels: ['ecommerce']
@@ -136,23 +196,56 @@ sylius_fixtures:
                                         name: 'Calici Borgogna Zwiesel Pure'
                                         short_description: 'Coppa larga per pinot nero e nebbiolo, in cristallo Tritan resistente.'
                                         description: 'La coppa a tulipano concentra i profumi dei rossi eleganti e dei bianchi affinati in legno. Il cristallo Tritan resiste a graffi e urti: ideale anche per la ristorazione.'
+                                        meta_keywords: 'calici borgogna, zwiesel pure, tritan, bicchieri pinot nero, set calici'
+                                        meta_description: 'Calici Borgogna Zwiesel Pure in cristallo Tritan: coppa da 692 ml per pinot nero e nebbiolo, resistente a graffi e urti. Set da 2 a 8 pezzi.'
                                     en_US:
                                         name: 'Zwiesel Pure Burgundy glasses'
                                         short_description: 'A wide bowl for Pinot Noir and Nebbiolo, in resistant Tritan crystal.'
                                         description: 'The tulip bowl concentrates the aromas of elegant reds and oak-aged whites. Tritan crystal resists scratches and knocks: a good fit for restaurants too.'
+                                        meta_keywords: 'burgundy glasses, zwiesel pure, tritan, pinot noir glasses, glass set'
+                                        meta_description: 'Zwiesel Pure Burgundy glasses in Tritan crystal: a 692 ml bowl for Pinot Noir and Nebbiolo, scratch and knock resistant. Packs of 2 to 8.'
                                     fr_FR:
                                         name: 'Verres Bourgogne Zwiesel Pure'
                                         short_description: "Un large ballon pour pinot noir et nebbiolo, en cristal Tritan résistant."
                                         description: "Le calice tulipe concentre les arômes des rouges élégants et des blancs élevés en fût. Le cristal Tritan résiste aux rayures et aux chocs : parfait aussi pour la restauration."
+                                        meta_keywords: 'verres bourgogne, zwiesel pure, tritan, verres pinot noir, coffret verres'
+                                        meta_description: 'Verres Bourgogne Zwiesel Pure en cristal Tritan : calice de 692 ml pour pinot noir et nebbiolo, résistant aux rayures. Coffrets de 2 à 8 pièces.'
 
                             -   code: 'flute_spiegelau_style'
                                 name: 'Flûte Spiegelau Style'
-                                on_hand: 60
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 20.0
+                                height: 25.0
+                                depth: 10.0
+                                weight: 0.8
                                 variant_prices:
                                     numero_calici_2: 24.90
                                     numero_calici_4: 46.00
                                     numero_calici_6: 66.00
                                     numero_calici_8: 84.00
+                                variant_dimensions:
+                                    numero_calici_2:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 12.0
+                                        weight: 0.8
+                                    numero_calici_4:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 1.6
+                                    numero_calici_6:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 2.4
+                                    numero_calici_8:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 32.0
+                                        weight: 3.2
                                 tax_category: 'altro'
                                 shipping_category: 'fragile'
                                 channels: ['ecommerce']
@@ -174,23 +267,56 @@ sylius_fixtures:
                                         name: 'Flûte Spiegelau Style'
                                         short_description: 'Flûte slanciata con punto di effervescenza per prosecco, franciacorta e champagne.'
                                         description: 'Il calice stretto e alto preserva il perlage e convoglia i profumi verso il naso. Il fondo satinato genera un flusso di bollicine continuo e regolare.'
+                                        meta_keywords: 'flûte spiegelau, bicchieri spumante, calici champagne, punto di effervescenza, set flûte'
+                                        meta_description: 'Flûte Spiegelau Style da 310 ml: calice alto con fondo satinato che alimenta il perlage. Per prosecco, franciacorta e champagne. Set da 2 a 8.'
                                     en_US:
                                         name: 'Spiegelau Style flutes'
                                         short_description: 'A slender flute with an effervescence point for Prosecco, Franciacorta and Champagne.'
                                         description: 'The tall, narrow bowl preserves the mousse and channels the aromas towards the nose. The etched base keeps a steady, continuous stream of bubbles.'
+                                        meta_keywords: 'spiegelau flutes, sparkling wine glasses, champagne flutes, effervescence point, flute set'
+                                        meta_description: 'Spiegelau Style 310 ml flutes: a tall bowl with an etched base that feeds the mousse. For Prosecco, Franciacorta and Champagne. Packs of 2 to 8.'
                                     fr_FR:
                                         name: 'Flûtes Spiegelau Style'
                                         short_description: "Une flûte élancée avec point d'effervescence pour prosecco, franciacorta et champagne."
                                         description: "Le calice haut et étroit préserve le perlage et dirige les arômes vers le nez. Le fond satiné entretient un cordon de bulles régulier et continu."
+                                        meta_keywords: "flûtes spiegelau, verres à mousseux, flûtes champagne, point d'effervescence, coffret flûtes"
+                                        meta_description: 'Flûtes Spiegelau Style de 310 ml : calice haut au fond satiné qui entretient le perlage. Pour prosecco, franciacorta et champagne. Coffrets de 2 à 8.'
 
                             -   code: 'calici_degustazione_iso'
                                 name: 'Calici da degustazione ISO Bormioli Rocco'
-                                on_hand: 80
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 18.0
+                                height: 18.0
+                                depth: 9.0
+                                weight: 0.7
                                 variant_prices:
                                     numero_calici_2: 11.90
                                     numero_calici_4: 21.90
                                     numero_calici_6: 30.00
                                     numero_calici_8: 38.00
+                                variant_dimensions:
+                                    numero_calici_2:
+                                        width: 18.0
+                                        height: 18.0
+                                        depth: 9.0
+                                        weight: 0.7
+                                    numero_calici_4:
+                                        width: 18.0
+                                        height: 18.0
+                                        depth: 18.0
+                                        weight: 1.4
+                                    numero_calici_6:
+                                        width: 27.0
+                                        height: 18.0
+                                        depth: 18.0
+                                        weight: 2.1
+                                    numero_calici_8:
+                                        width: 27.0
+                                        height: 18.0
+                                        depth: 24.0
+                                        weight: 2.8
                                 tax_category: 'altro'
                                 shipping_category: 'fragile'
                                 channels: ['ecommerce']
@@ -212,23 +338,56 @@ sylius_fixtures:
                                         name: 'Calici da degustazione ISO Bormioli Rocco'
                                         short_description: 'Il calice normato ISO 3591, quello dei corsi da sommelier.'
                                         description: 'Forma e dimensioni standardizzate per valutare colore, profumo e sapore senza che il bicchiere influenzi il giudizio. Da avere in sei o otto pezzi per le degustazioni comparative.'
+                                        meta_keywords: 'calici iso 3591, bormioli rocco, bicchieri degustazione, corso sommelier, set calici'
+                                        meta_description: 'Calici da degustazione ISO 3591 Bormioli Rocco da 215 ml: forma normata per valutare colore, profumo e sapore. Quelli usati ai corsi da sommelier.'
                                     en_US:
                                         name: 'Bormioli Rocco ISO tasting glasses'
                                         short_description: 'The ISO 3591 standard glass, the one used in sommelier courses.'
                                         description: 'Standardised shape and size to judge colour, nose and palate without the glass getting in the way. Best bought in sixes or eights for comparative tastings.'
+                                        meta_keywords: 'iso 3591 glasses, bormioli rocco, tasting glasses, sommelier course, glass set'
+                                        meta_description: 'Bormioli Rocco ISO 3591 tasting glasses, 215 ml: the standard shape to judge colour, nose and palate. The ones used in sommelier courses.'
                                     fr_FR:
                                         name: 'Verres de dégustation ISO Bormioli Rocco'
                                         short_description: "Le verre normalisé ISO 3591, celui des cours de sommellerie."
                                         description: "Forme et dimensions standardisées pour juger la robe, le nez et la bouche sans que le verre influence l'appréciation. À prendre par six ou huit pour les dégustations comparatives."
+                                        meta_keywords: 'verres iso 3591, bormioli rocco, verres de dégustation, cours de sommellerie, coffret verres'
+                                        meta_description: 'Verres de dégustation ISO 3591 Bormioli Rocco de 215 ml : forme normalisée pour juger robe, nez et bouche. Ceux des cours de sommellerie.'
 
                             -   code: 'calici_universali_luigi_bormioli_vinoteque'
                                 name: 'Calici universali Luigi Bormioli Vinoteque'
-                                on_hand: 70
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 22.0
+                                height: 23.0
+                                depth: 11.0
+                                weight: 0.9
                                 variant_prices:
                                     numero_calici_2: 17.90
                                     numero_calici_4: 33.90
                                     numero_calici_6: 48.00
                                     numero_calici_8: 62.00
+                                variant_dimensions:
+                                    numero_calici_2:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 12.0
+                                        weight: 0.9
+                                    numero_calici_4:
+                                        width: 24.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 1.8
+                                    numero_calici_6:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 24.0
+                                        weight: 2.7
+                                    numero_calici_8:
+                                        width: 36.0
+                                        height: 25.0
+                                        depth: 32.0
+                                        weight: 3.6
                                 tax_category: 'altro'
                                 shipping_category: 'fragile'
                                 channels: ['ecommerce']
@@ -250,11 +409,17 @@ sylius_fixtures:
                                         name: 'Calici universali Luigi Bormioli Vinoteque'
                                         short_description: 'Un solo calice per tutta la tavola: rossi, bianchi e bollicine.'
                                         description: 'Il compromesso migliore quando non si vuole un servizio per ogni tipologia. Cristallino resistente al graffio e alla scheggiatura, con bevante tagliato a laser.'
+                                        meta_keywords: 'calici universali, luigi bormioli vinoteque, bicchieri vino, cristallino, set calici'
+                                        meta_description: 'Calici universali Luigi Bormioli Vinoteque da 450 ml: un solo calice per rossi, bianchi e bollicine. Cristallino resistente con bevante tagliato a laser.'
                                     en_US:
                                         name: 'Luigi Bormioli Vinoteque universal glasses'
                                         short_description: 'One glass for the whole table: reds, whites and sparkling.'
                                         description: 'The best compromise when you do not want a different set for every style. Scratch and chip resistant crystalline with a laser-cut rim.'
+                                        meta_keywords: 'universal glasses, luigi bormioli vinoteque, wine glasses, crystalline, glass set'
+                                        meta_description: 'Luigi Bormioli Vinoteque universal glasses, 450 ml: one glass for reds, whites and sparkling. Resistant crystalline with a laser-cut rim.'
                                     fr_FR:
                                         name: 'Verres universels Luigi Bormioli Vinoteque'
                                         short_description: "Un seul verre pour toute la table : rouges, blancs et bulles."
                                         description: "Le meilleur compromis quand on ne veut pas un service par type de vin. Cristallin résistant aux rayures et aux éclats, buvant découpé au laser."
+                                        meta_keywords: 'verres universels, luigi bormioli vinoteque, verres à vin, cristallin, coffret verres'
+                                        meta_description: 'Verres universels Luigi Bormioli Vinoteque de 450 ml : un seul verre pour rouges, blancs et bulles. Cristallin résistant, buvant découpé au laser.'

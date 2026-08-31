@@ -71,6 +71,7 @@ sylius_fixtures:
                             -   code: 'esperienza_chianti'
                                 name: 'Full immersion nel Chianti Classico'
                                 shipping_required: false
+                                minimum_price_ratio: 0.85
                                 tax_category: 'esperienze'
                                 channels: ['ecommerce']
                                 main_taxon: 'esperienze'
@@ -100,18 +101,25 @@ sylius_fixtures:
                                         name: 'Full immersion nel Chianti Classico'
                                         short_description: 'Tre cantine del Gallo Nero, un pranzo in fattoria e la vendemmia vista da dentro.'
                                         description: 'Si parte da Greve in Chianti per attraversare i vigneti storici del Chianti Classico. Due giornate tra botti, oliveti e cucina toscana, con degustazione verticale di Riserva e Gran Selezione insieme al produttore.'
+                                        meta_keywords: 'esperienza chianti classico, degustazione vino toscana, weekend enogastronomico, greve in chianti, visita cantine'
+                                        meta_description: 'Due giorni nel Chianti Classico: tre cantine del Gallo Nero, pranzo in fattoria e degustazione verticale di Riserva con il produttore. Da 190 €.'
                                     en_US:
                                         name: 'Full immersion in Chianti Classico'
                                         short_description: 'Three Gallo Nero wineries, lunch at the farm and the harvest seen from the inside.'
                                         description: 'Starting from Greve in Chianti, the tour crosses the historic vineyards of Chianti Classico. Two days among casks, olive groves and Tuscan cooking, with a vertical tasting of Riserva and Gran Selezione alongside the producer.'
+                                        meta_keywords: 'chianti classico experience, tuscany wine tasting, food and wine weekend, greve in chianti, winery tour'
+                                        meta_description: 'Two days in Chianti Classico: three Gallo Nero wineries, lunch at the farm and a vertical tasting of Riserva with the producer. From €190.'
                                     fr_FR:
                                         name: 'Immersion dans le Chianti Classico'
                                         short_description: "Trois domaines du Gallo Nero, un déjeuner à la ferme et les vendanges vues de l'intérieur."
                                         description: 'Le départ se fait de Greve in Chianti pour traverser les vignobles historiques du Chianti Classico. Deux journées entre foudres, oliveraies et cuisine toscane, avec une dégustation verticale de Riserva et Gran Selezione en compagnie du vigneron.'
+                                        meta_keywords: 'expérience chianti classico, dégustation toscane, week-end œnogastronomique, greve in chianti, visite de domaines'
+                                        meta_description: 'Deux jours dans le Chianti Classico : trois domaines du Gallo Nero, déjeuner à la ferme et dégustation verticale de Riserva. À partir de 190 €.'
 
                             -   code: 'esperienza_appennino'
                                 name: "Weekend sull'Appennino Tosco-Emiliano"
                                 shipping_required: false
+                                minimum_price_ratio: 0.85
                                 tax_category: 'esperienze'
                                 channels: ['ecommerce']
                                 main_taxon: 'esperienze'
@@ -129,7 +137,7 @@ sylius_fixtures:
                                     esperienza_3_giorni+partecipanti_6: 1410.00
                                 product_attributes:
                                     esperienza_localita: "Castelnovo ne' Monti (RE), Emilia-Romagna"
-                                    esperienza_punto_incontro: 'Piazza Gramsci, Castelnovo né Monti'
+                                    esperienza_punto_incontro: "Piazza Gramsci, Castelnovo ne' Monti"
                                     esperienza_incluso: 'Visita al caseificio, pranzo in rifugio, escursione alla Pietra di Bismantova, degustazione di Lambrusco'
                                     esperienza_lingue: 'Italiano, inglese'
                                     esperienza_stagione: 'Da maggio a settembre'
@@ -141,18 +149,25 @@ sylius_fixtures:
                                         name: "Weekend sull'Appennino Tosco-Emiliano"
                                         short_description: 'Parmigiano Reggiano di montagna, Lambrusco e la Pietra di Bismantova.'
                                         description: 'Sveglia presto per la caldaia del caseificio, poi escursione sulla Pietra di Bismantova e pranzo in rifugio. Il pomeriggio è dedicato alle cantine della pedecollina reggiana, tra Lambrusco e Spergola.'
+                                        meta_keywords: 'esperienza appennino tosco emiliano, parmigiano reggiano di montagna, lambrusco, pietra di bismantova, weekend emilia'
+                                        meta_description: "Weekend sull'Appennino Tosco-Emiliano: caseificio all'alba, escursione alla Pietra di Bismantova e cantine della pedecollina reggiana. Da 140 €."
                                     en_US:
                                         name: 'A weekend in the Tuscan-Emilian Apennines'
                                         short_description: 'Mountain Parmigiano Reggiano, Lambrusco and the Pietra di Bismantova.'
                                         description: 'An early start at the cheese dairy, then a hike up the Pietra di Bismantova and lunch at a mountain hut. The afternoon goes to the cellars of the Reggio hills, between Lambrusco and Spergola.'
+                                        meta_keywords: 'tuscan emilian apennines experience, mountain parmigiano reggiano, lambrusco, pietra di bismantova, emilia weekend'
+                                        meta_description: 'A weekend in the Tuscan-Emilian Apennines: the dairy at dawn, a hike up the Pietra di Bismantova and the cellars of the Reggio hills. From €140.'
                                     fr_FR:
                                         name: 'Un week-end dans les Apennins tosco-émiliens'
                                         short_description: 'Parmigiano Reggiano de montagne, lambrusco et la Pietra di Bismantova.'
                                         description: "Lever tôt pour la chaudière de la fromagerie, puis randonnée sur la Pietra di Bismantova et déjeuner au refuge. L'après-midi est consacré aux caves des collines de Reggio, entre lambrusco et spergola."
+                                        meta_keywords: 'expérience apennins tosco-émiliens, parmigiano reggiano de montagne, lambrusco, pietra di bismantova, week-end émilie'
+                                        meta_description: "Week-end dans les Apennins tosco-émiliens : fromagerie à l'aube, randonnée à la Pietra di Bismantova et caves des collines de Reggio. Dès 140 €."
 
                             -   code: 'esperienza_valpolicella'
                                 name: 'Amarone e corti venete in Valpolicella'
                                 shipping_required: false
+                                minimum_price_ratio: 0.85
                                 tax_category: 'esperienze'
                                 channels: ['ecommerce']
                                 main_taxon: 'esperienze'
@@ -182,18 +197,25 @@ sylius_fixtures:
                                         name: 'Amarone e corti venete in Valpolicella'
                                         short_description: "I fruttai dell'appassimento e le ville della Valpolicella Classica."
                                         description: 'Si entra nei fruttai dove le uve riposano cento giorni prima di diventare Amarone. Visita alle corti venete, cena in villa e degustazione verticale di Recioto con il cellar master.'
+                                        meta_keywords: 'esperienza valpolicella, degustazione amarone, fruttai appassimento, corti venete, weekend verona'
+                                        meta_description: 'Tre giorni in Valpolicella: i fruttai dove le uve riposano cento giorni, le ville venete, cena in villa e verticale di Recioto. Da 210 €.'
                                     en_US:
                                         name: 'Amarone and Venetian villas in Valpolicella'
                                         short_description: 'The drying lofts and the villas of Valpolicella Classica.'
                                         description: 'A walk through the lofts where the grapes rest for a hundred days before becoming Amarone. Visit to the Venetian courts, dinner at the villa and a vertical tasting of Recioto with the cellar master.'
+                                        meta_keywords: 'valpolicella experience, amarone tasting, drying lofts, venetian villas, verona weekend'
+                                        meta_description: 'Three days in Valpolicella: the lofts where grapes rest for a hundred days, the Venetian villas, dinner at the villa and a Recioto vertical. From €210.'
                                     fr_FR:
                                         name: 'Amarone et villas vénitiennes en Valpolicella'
                                         short_description: 'Les fruitiers du passerillage et les villas de la Valpolicella Classica.'
                                         description: 'On entre dans les séchoirs où les raisins reposent cent jours avant de devenir Amarone. Visite des cours vénitiennes, dîner à la villa et dégustation verticale de Recioto avec le maître de chai.'
+                                        meta_keywords: 'expérience valpolicella, dégustation amarone, séchoirs de passerillage, villas vénitiennes, week-end vérone'
+                                        meta_description: 'Trois jours en Valpolicella : les séchoirs où les raisins reposent cent jours, les villas vénitiennes, dîner et verticale de Recioto. Dès 210 €.'
 
                             -   code: 'esperienza_langhe'
                                 name: 'Tartufo e Barolo nelle Langhe'
                                 shipping_required: false
+                                minimum_price_ratio: 0.85
                                 tax_category: 'esperienze'
                                 channels: ['ecommerce']
                                 main_taxon: 'esperienze'
@@ -223,11 +245,17 @@ sylius_fixtures:
                                         name: 'Tartufo e Barolo nelle Langhe'
                                         short_description: 'A caccia di tartufo bianco con il trifolau, poi due cantine storiche di Barolo.'
                                         description: "All'alba si va nei boschi con il trifolau e il suo cane, al ritorno il bottino finisce sui tajarin. Il pomeriggio si scende nelle cantine di Barolo per una verticale di annate storiche."
+                                        meta_keywords: 'esperienza langhe, cerca del tartufo bianco, degustazione barolo, trifolau, weekend piemonte'
+                                        meta_description: "Nelle Langhe con il trifolau: cerca del tartufo bianco all'alba, tajarin a pranzo e verticale di Barolo in due cantine storiche. Da 260 €."
                                     en_US:
                                         name: 'Truffle and Barolo in the Langhe'
                                         short_description: 'White truffle hunting with the trifolau, then two historic Barolo cellars.'
                                         description: 'At dawn you walk into the woods with the trifolau and his dog; back home the catch goes over the tajarin. The afternoon is spent in the Barolo cellars for a vertical of historic vintages.'
+                                        meta_keywords: 'langhe experience, white truffle hunting, barolo tasting, trifolau, piedmont weekend'
+                                        meta_description: 'In the Langhe with the trifolau: white truffle hunting at dawn, tajarin for lunch and a Barolo vertical in two historic cellars. From €260.'
                                     fr_FR:
                                         name: 'Truffe et Barolo dans les Langhe'
                                         short_description: 'À la chasse à la truffe blanche avec le trifolau, puis deux caves historiques de Barolo.'
                                         description: "À l'aube, direction les bois avec le trifolau et son chien ; au retour, la récolte finit sur les tajarin. L'après-midi se passe dans les caves de Barolo pour une verticale de millésimes historiques."
+                                        meta_keywords: 'expérience langhe, chasse à la truffe blanche, dégustation barolo, trifolau, week-end piémont'
+                                        meta_description: "Dans les Langhe avec le trifolau : chasse à la truffe blanche à l'aube, tajarin au déjeuner et verticale de Barolo dans deux caves. Dès 260 €."

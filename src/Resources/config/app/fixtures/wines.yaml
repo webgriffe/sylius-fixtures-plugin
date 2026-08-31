@@ -10,6 +10,12 @@ sylius_fixtures:
                                 name: "Montepulciano d'Abruzzo DOC Zaccagnini"
                                 price: 8.90
                                 on_hand: 240
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -31,19 +37,31 @@ sylius_fixtures:
                                         name: "Montepulciano d'Abruzzo DOC Zaccagnini"
                                         short_description: 'Rosso quotidiano, morbido e fruttato, con il classico tralcetto di vite sul collo.'
                                         description: "Un Montepulciano d'Abruzzo dal colore rubino intenso, con profumi di amarena e viola. Al palato è caldo e avvolgente, con tannini dolci: perfetto su pasta al ragù, salumi e carni bianche."
+                                        meta_keywords: "montepulciano d'abruzzo, zaccagnini, vino rosso abruzzese, montepulciano, vino da pasto"
+                                        meta_description: "Montepulciano d'Abruzzo DOC Zaccagnini 2022: rubino intenso, amarena e viola, tannini dolci. Il rosso di tutti i giorni su pasta al ragù e salumi."
                                     en_US:
                                         name: "Montepulciano d'Abruzzo DOC Zaccagnini"
                                         short_description: 'An easy-drinking Italian red, soft and fruity, with its iconic hand-tied vine shoot.'
                                         description: "Deep ruby in colour, with sour cherry and violet on the nose. Warm and rounded on the palate with soft tannins: a natural match for ragù pasta, cured meats and white meats."
+                                        meta_keywords: "montepulciano d'abruzzo, zaccagnini, italian red wine, montepulciano grape, everyday red"
+                                        meta_description: "Montepulciano d'Abruzzo DOC Zaccagnini 2022: deep ruby, sour cherry and violet, soft tannins. The everyday red for ragù pasta and cured meats."
                                     fr_FR:
                                         name: "Montepulciano d'Abruzzo DOC Zaccagnini"
                                         short_description: 'Un rouge de tous les jours, souple et fruité, avec son célèbre sarment de vigne.'
                                         description: "Robe rubis intense, nez de griotte et de violette. En bouche, il est chaleureux et enveloppant, aux tanins fondus : idéal sur des pâtes au ragù, de la charcuterie et des viandes blanches."
+                                        meta_keywords: "montepulciano d'abruzzo, zaccagnini, vin rouge italien, montepulciano, vin de table"
+                                        meta_description: "Montepulciano d'Abruzzo DOC Zaccagnini 2022 : rubis intense, griotte et violette, tanins fondus. Le rouge quotidien sur pâtes au ragù et charcuterie."
 
                             -   code: 'chianti_docg_ruffino'
                                 name: 'Chianti DOCG Ruffino'
                                 price: 9.50
-                                on_hand: 180
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -65,19 +83,31 @@ sylius_fixtures:
                                         name: 'Chianti DOCG Ruffino'
                                         short_description: 'Il Chianti classico da tavola: sangiovese fresco, sapido e immediato.'
                                         description: 'Rubino vivace, naso di ciliegia e mammola con un tocco speziato. Bocca asciutta e di buona acidità, chiude sapida: da servire a 16 °C con pizza, pasta al pomodoro e formaggi di media stagionatura.'
+                                        meta_keywords: 'chianti docg, ruffino, sangiovese, vino rosso toscano, vino per pizza'
+                                        meta_description: 'Chianti DOCG Ruffino 2022: sangiovese toscano fresco e sapido, ciliegia e mammola. Da servire a 16 °C su pizza, pasta al pomodoro e formaggi.'
                                     en_US:
                                         name: 'Chianti DOCG Ruffino'
                                         short_description: 'The everyday Chianti: fresh, savoury and immediately drinkable Sangiovese.'
                                         description: 'Bright ruby, with cherry and violet aromas and a hint of spice. Dry and lively on the palate with a savoury finish: serve at 16 °C with pizza, tomato pasta and medium-aged cheeses.'
+                                        meta_keywords: 'chianti docg, ruffino, sangiovese, tuscan red wine, pizza wine'
+                                        meta_description: 'Chianti DOCG Ruffino 2022: fresh and savoury Tuscan Sangiovese, cherry and violet. Serve at 16 °C with pizza, tomato pasta and cheese.'
                                     fr_FR:
                                         name: 'Chianti DOCG Ruffino'
                                         short_description: 'Le Chianti de tous les jours : un sangiovese frais, savoureux et immédiat.'
                                         description: "Robe rubis vif, nez de cerise et de violette relevé d'une touche épicée. Bouche sèche et vive, finale sapide : à servir à 16 °C sur une pizza, des pâtes à la tomate ou des fromages de garde moyenne."
+                                        meta_keywords: 'chianti docg, ruffino, sangiovese, vin rouge toscan, vin pour pizza'
+                                        meta_description: 'Chianti DOCG Ruffino 2022 : sangiovese toscan frais et sapide, cerise et violette. À servir à 16 °C sur pizza, pâtes à la tomate et fromages.'
 
                             -   code: 'valpolicella_classico_bertani'
                                 name: 'Valpolicella Classico DOC Bertani'
                                 price: 12.00
-                                on_hand: 150
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -99,19 +129,31 @@ sylius_fixtures:
                                         name: 'Valpolicella Classico DOC Bertani'
                                         short_description: 'Veronese di scuola classica: leggero, croccante, di grande bevibilità.'
                                         description: 'Corvina e Rondinella regalano un rosso dal frutto croccante di ciliegia e ribes, con un finale lievemente ammandorlato. Ottimo anche leggermente fresco, a 14-16 °C, su antipasti di terra e risotti.'
+                                        meta_keywords: 'valpolicella classico, bertani, corvina, vino rosso veneto, vino leggero'
+                                        meta_description: 'Valpolicella Classico DOC Bertani 2022: corvina e rondinella, ciliegia croccante e finale ammandorlato. Ottimo anche fresco a 14-16 °C.'
                                     en_US:
                                         name: 'Valpolicella Classico DOC Bertani'
                                         short_description: 'A classic Veronese red: light, crunchy and highly drinkable.'
                                         description: 'Corvina and Rondinella give crunchy cherry and redcurrant fruit with a gently almondy finish. Excellent served slightly cool, at 14-16 °C, with antipasti and risotto.'
+                                        meta_keywords: 'valpolicella classico, bertani, corvina, veneto red wine, light red'
+                                        meta_description: 'Valpolicella Classico DOC Bertani 2022: corvina and rondinella, crunchy cherry and an almondy finish. Great served cool at 14-16 °C.'
                                     fr_FR:
                                         name: 'Valpolicella Classico DOC Bertani'
                                         short_description: 'Un véronais de facture classique : léger, croquant, très digeste.'
                                         description: "La corvina et la rondinella offrent un fruit croquant de cerise et de groseille, avec une finale légèrement amandée. Excellent légèrement rafraîchi, à 14-16 °C, sur des antipasti et des risottos."
+                                        meta_keywords: 'valpolicella classico, bertani, corvina, vin rouge vénitien, vin léger'
+                                        meta_description: 'Valpolicella Classico DOC Bertani 2022 : corvina et rondinella, cerise croquante et finale amandée. Excellent rafraîchi à 14-16 °C.'
 
                             -   code: 'barbera_dasti_michele_chiarlo'
                                 name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
                                 price: 14.50
-                                on_hand: 120
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -133,19 +175,31 @@ sylius_fixtures:
                                         name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
                                         short_description: 'Barbera di razza, affinata in legno: polposa e di bella freschezza.'
                                         description: "Frutta rossa matura, prugna e vaniglia dolce da un breve passaggio in rovere. L'acidità tipica del vitigno lo rende ideale su agnolotti, brasati leggeri e formaggi piemontesi."
+                                        meta_keywords: "barbera d'asti docg, michele chiarlo, barbera, vino rosso piemontese, vino con agnolotti"
+                                        meta_description: "Barbera d'Asti DOCG Superiore Michele Chiarlo 2021: frutta rossa matura, prugna e vaniglia da rovere, acidità viva. Perfetta su agnolotti e brasati."
                                     en_US:
                                         name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
                                         short_description: 'A serious oak-aged Barbera: fleshy fruit backed by bright acidity.'
                                         description: 'Ripe red fruit, plum and sweet vanilla from a short stay in oak. The variety''s trademark acidity makes it perfect with filled pasta, light braises and Piedmontese cheeses.'
+                                        meta_keywords: "barbera d'asti docg, michele chiarlo, barbera, piedmont red wine, filled pasta wine"
+                                        meta_description: "Barbera d'Asti DOCG Superiore Michele Chiarlo 2021: ripe red fruit, plum and oak vanilla, bright acidity. Perfect with filled pasta and braises."
                                     fr_FR:
                                         name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
                                         short_description: 'Une barbera de caractère, élevée en fût : charnue et bien fraîche.'
                                         description: "Fruits rouges mûrs, prune et vanille douce apportée par un court élevage en chêne. Son acidité typique l'accorde parfaitement aux pâtes farcies, aux braisés légers et aux fromages piémontais."
+                                        meta_keywords: "barbera d'asti docg, michele chiarlo, barbera, vin rouge piémontais, vin pour pâtes farcies"
+                                        meta_description: "Barbera d'Asti DOCG Superiore Michele Chiarlo 2021 : fruits rouges mûrs, prune et vanille, acidité vive. Parfaite sur pâtes farcies et braisés."
 
                             -   code: 'nero_davola_planeta'
                                 name: "Nero d'Avola Sicilia DOC Planeta"
                                 price: 15.00
-                                on_hand: 130
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -167,19 +221,31 @@ sylius_fixtures:
                                         name: "Nero d'Avola Sicilia DOC Planeta"
                                         short_description: 'Il rosso simbolo della Sicilia: caldo, speziato, generoso.'
                                         description: "Profumi di mora, prugna e macchia mediterranea, con una nota balsamica. Tannino levigato e finale lungo: si abbina a carni alla brace, caponata e formaggi stagionati."
+                                        meta_keywords: "nero d'avola, planeta, sicilia doc, vino rosso siciliano, vino per grigliate"
+                                        meta_description: "Nero d'Avola Sicilia DOC Planeta 2022: mora, prugna e macchia mediterranea, tannino levigato. Il rosso siciliano per carni alla brace e caponata."
                                     en_US:
                                         name: "Nero d'Avola Sicilia DOC Planeta"
                                         short_description: 'Sicily''s flagship red: warm, spicy and generous.'
                                         description: 'Blackberry, plum and Mediterranean scrub on the nose, with a balsamic lift. Polished tannins and a long finish: pairs with grilled meats, caponata and aged cheeses.'
+                                        meta_keywords: "nero d'avola, planeta, sicilia doc, sicilian red wine, barbecue wine"
+                                        meta_description: "Nero d'Avola Sicilia DOC Planeta 2022: blackberry, plum and Mediterranean scrub, polished tannins. The Sicilian red for grilled meats and caponata."
                                     fr_FR:
                                         name: "Nero d'Avola Sicilia DOC Planeta"
                                         short_description: 'Le rouge emblématique de la Sicile : chaleureux, épicé, généreux.'
                                         description: "Arômes de mûre, de prune et de garrigue, avec une note balsamique. Tanins polis et longue finale : parfait sur des grillades, une caponata ou des fromages affinés."
+                                        meta_keywords: "nero d'avola, planeta, sicilia doc, vin rouge sicilien, vin pour grillades"
+                                        meta_description: "Nero d'Avola Sicilia DOC Planeta 2022 : mûre, prune et garrigue, tanins polis. Le rouge sicilien des grillades et de la caponata."
 
                             -   code: 'chianti_classico_riserva_ducale'
                                 name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
                                 price: 24.00
-                                on_hand: 90
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.72
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -201,19 +267,31 @@ sylius_fixtures:
                                         name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
                                         short_description: 'Una Riserva storica del Gallo Nero, elegante e pronta.'
                                         description: 'Ventiquattro mesi tra rovere di Slavonia e barrique donano note di ciliegia sotto spirito, tabacco e cuoio. Tannino fine e lunga persistenza: ideale su fiorentina, arrosti e pecorino toscano.'
+                                        meta_keywords: 'chianti classico riserva, riserva ducale, ruffino, gallo nero, vino rosso toscano'
+                                        meta_description: 'Chianti Classico DOCG Riserva Ducale Ruffino 2020: 24 mesi tra rovere e barrique, ciliegia sotto spirito, tabacco e cuoio. Su fiorentina e arrosti.'
                                     en_US:
                                         name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
                                         short_description: 'A historic Gallo Nero Riserva: elegant and ready to drink.'
                                         description: 'Twenty-four months between Slavonian oak and barriques bring cherry liqueur, tobacco and leather. Fine tannins and a long finish: perfect with T-bone steak, roasts and Tuscan pecorino.'
+                                        meta_keywords: 'chianti classico riserva, riserva ducale, ruffino, gallo nero, tuscan red wine'
+                                        meta_description: 'Chianti Classico DOCG Riserva Ducale Ruffino 2020: 24 months in oak, cherry liqueur, tobacco and leather. For T-bone steak and roasts.'
                                     fr_FR:
                                         name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
                                         short_description: 'Une Riserva historique du Gallo Nero, élégante et prête à boire.'
                                         description: "Vingt-quatre mois entre chêne de Slavonie et barriques apportent cerise à l'eau-de-vie, tabac et cuir. Tanins fins et grande persistance : idéale sur une côte de bœuf, des rôtis et un pecorino toscan."
+                                        meta_keywords: 'chianti classico riserva, riserva ducale, ruffino, gallo nero, vin rouge toscan'
+                                        meta_description: "Chianti Classico DOCG Riserva Ducale Ruffino 2020 : 24 mois sous bois, cerise à l'eau-de-vie, tabac et cuir. Sur côte de bœuf et rôtis."
 
                             -   code: 'primitivo_sessantanni_san_marzano'
                                 name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
                                 price: 29.00
-                                on_hand: 80
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.72
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -235,19 +313,31 @@ sylius_fixtures:
                                         name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
                                         short_description: 'Da vigne ad alberello di sessant’anni: potente, dolce di frutto, avvolgente.'
                                         description: 'Confettura di prugna, cioccolato e vaniglia, sostenuti da un sorso pieno e caldo. Dodici mesi in barrique lo rendono perfetto su brasati, selvaggina e formaggi erborinati.'
+                                        meta_keywords: 'primitivo di manduria, sessantanni, san marzano, vino rosso pugliese, primitivo'
+                                        meta_description: 'Primitivo di Manduria DOP Sessantanni 2020: da vigne ad alberello di 60 anni, confettura di prugna, cioccolato e vaniglia. Su brasati e erborinati.'
                                     en_US:
                                         name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
                                         short_description: 'From sixty-year-old bush vines: powerful, sweetly fruited and enveloping.'
                                         description: 'Plum jam, chocolate and vanilla carried by a full, warm palate. Twelve months in barrique make it ideal with braised meats, game and blue cheeses.'
+                                        meta_keywords: 'primitivo di manduria, sessantanni, san marzano, apulian red wine, primitivo'
+                                        meta_description: 'Primitivo di Manduria DOP Sessantanni 2020: from 60 year old bush vines, plum jam, chocolate and vanilla. For braised meats and blue cheese.'
                                     fr_FR:
                                         name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
                                         short_description: 'Issu de vignes en gobelet de soixante ans : puissant, fruité et enveloppant.'
                                         description: "Confiture de prune, chocolat et vanille portés par une bouche pleine et chaleureuse. Douze mois en barrique : parfait sur des braisés, du gibier et des fromages persillés."
+                                        meta_keywords: 'primitivo di manduria, sessantanni, san marzano, vin rouge des pouilles, primitivo'
+                                        meta_description: 'Primitivo di Manduria DOP Sessantanni 2020 : vignes en gobelet de 60 ans, confiture de prune, chocolat et vanille. Sur braisés et fromages persillés.'
 
                             -   code: 'brunello_montalcino_col_dorcia'
                                 name: "Brunello di Montalcino DOCG Col d'Orcia"
                                 price: 48.00
-                                on_hand: 60
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -269,19 +359,31 @@ sylius_fixtures:
                                         name: "Brunello di Montalcino DOCG Col d'Orcia"
                                         short_description: 'Uno dei grandi classici toscani, da cinque anni di attesa.'
                                         description: "Sangiovese Grosso in purezza, affinato tre anni in botte grande. Frutta rossa matura, sottobosco e spezie dolci, con un tannino nobile che promette almeno vent'anni di evoluzione."
+                                        meta_keywords: "brunello di montalcino, col d'orcia, sangiovese grosso, vino da invecchiamento, docg toscana"
+                                        meta_description: "Brunello di Montalcino DOCG Col d'Orcia 2019: sangiovese grosso, tre anni in botte grande, frutta rossa matura e spezie dolci. Da attendere vent'anni."
                                     en_US:
                                         name: "Brunello di Montalcino DOCG Col d'Orcia"
                                         short_description: 'One of Tuscany''s great classics, released after five years.'
                                         description: 'Pure Sangiovese Grosso aged three years in large casks. Ripe red fruit, forest floor and sweet spice, with noble tannins promising at least two decades of development.'
+                                        meta_keywords: "brunello di montalcino, col d'orcia, sangiovese grosso, age worthy wine, tuscan docg"
+                                        meta_description: "Brunello di Montalcino DOCG Col d'Orcia 2019: pure Sangiovese Grosso, three years in large casks, ripe red fruit and sweet spice. Cellar for decades."
                                     fr_FR:
                                         name: "Brunello di Montalcino DOCG Col d'Orcia"
                                         short_description: 'Un des grands classiques toscans, après cinq ans de patience.'
                                         description: "Sangiovese Grosso pur, élevé trois ans en foudre. Fruits rouges mûrs, sous-bois et épices douces, avec des tanins nobles promettant au moins vingt ans de garde."
+                                        meta_keywords: "brunello di montalcino, col d'orcia, sangiovese grosso, vin de garde, docg toscane"
+                                        meta_description: "Brunello di Montalcino DOCG Col d'Orcia 2019 : sangiovese grosso, trois ans en foudre, fruits rouges mûrs et épices douces. À garder vingt ans."
 
                             -   code: 'barolo_pio_cesare'
                                 name: 'Barolo DOCG Pio Cesare'
                                 price: 69.00
-                                on_hand: 48
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -303,19 +405,31 @@ sylius_fixtures:
                                         name: 'Barolo DOCG Pio Cesare'
                                         short_description: 'Il re dei vini italiani, in versione tradizionale delle Langhe.'
                                         description: 'Nebbiolo da vigneti storici di Serralunga, La Morra e Barolo. Rosa appassita, catrame e liquirizia, tannino austero e finale interminabile: da attendere o da servire su brasato al Barolo e tartufo bianco.'
+                                        meta_keywords: 'barolo docg, pio cesare, nebbiolo, langhe, vino rosso piemontese'
+                                        meta_description: 'Barolo DOCG Pio Cesare 2019: nebbiolo da Serralunga, La Morra e Barolo. Rosa appassita, catrame e liquirizia, tannino austero. Su brasato e tartufo.'
                                     en_US:
                                         name: 'Barolo DOCG Pio Cesare'
                                         short_description: 'The king of Italian wines, in a traditional Langhe style.'
                                         description: 'Nebbiolo from historic vineyards in Serralunga, La Morra and Barolo. Dried rose, tar and liquorice, austere tannins and an endless finish: cellar it, or serve with beef braised in Barolo and white truffle.'
+                                        meta_keywords: 'barolo docg, pio cesare, nebbiolo, langhe, piedmont red wine'
+                                        meta_description: 'Barolo DOCG Pio Cesare 2019: Nebbiolo from Serralunga, La Morra and Barolo. Dried rose, tar and liquorice, austere tannins. For braised beef and truffle.'
                                     fr_FR:
                                         name: 'Barolo DOCG Pio Cesare'
                                         short_description: 'Le roi des vins italiens, dans un style traditionnel des Langhe.'
                                         description: "Nebbiolo issu de vignobles historiques de Serralunga, La Morra et Barolo. Rose fanée, goudron et réglisse, tanins austères et finale interminable : à garder ou à servir sur un braisé au Barolo et à la truffe blanche."
+                                        meta_keywords: 'barolo docg, pio cesare, nebbiolo, langhe, vin rouge piémontais'
+                                        meta_description: 'Barolo DOCG Pio Cesare 2019 : nebbiolo de Serralunga, La Morra et Barolo. Rose fanée, goudron et réglisse, tanins austères. Sur braisé et truffe.'
 
                             -   code: 'amarone_valpolicella_allegrini'
                                 name: 'Amarone della Valpolicella DOCG Allegrini'
                                 price: 72.00
-                                on_hand: 40
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -337,19 +451,31 @@ sylius_fixtures:
                                         name: 'Amarone della Valpolicella DOCG Allegrini'
                                         short_description: 'Uve appassite per oltre cento giorni: concentrazione e potenza veronese.'
                                         description: 'Ciliegia sotto spirito, cacao, tabacco e spezie orientali. Sorso denso e vellutato, di grande calore alcolico: perfetto su selvaggina, formaggi molto stagionati o da solo, come vino da meditazione.'
+                                        meta_keywords: 'amarone della valpolicella, allegrini, appassimento, vino da meditazione, docg veneto'
+                                        meta_description: 'Amarone della Valpolicella DOCG Allegrini 2019: uve appassite oltre cento giorni, ciliegia sotto spirito, cacao e spezie. Denso, vellutato, 15,5% vol.'
                                     en_US:
                                         name: 'Amarone della Valpolicella DOCG Allegrini'
                                         short_description: 'Grapes dried for over a hundred days: Veronese concentration and power.'
                                         description: 'Cherry in spirit, cocoa, tobacco and oriental spice. Dense, velvety and warming: perfect with game, long-aged cheeses, or on its own as a meditation wine.'
+                                        meta_keywords: 'amarone della valpolicella, allegrini, dried grapes, meditation wine, veneto docg'
+                                        meta_description: 'Amarone della Valpolicella DOCG Allegrini 2019: grapes dried for over a hundred days, cherry liqueur, cocoa and spice. Dense, velvety, 15.5% abv.'
                                     fr_FR:
                                         name: 'Amarone della Valpolicella DOCG Allegrini'
                                         short_description: 'Raisins passerillés plus de cent jours : concentration et puissance véronaises.'
                                         description: "Cerise à l'eau-de-vie, cacao, tabac et épices orientales. Bouche dense et veloutée, très chaleureuse : idéal sur du gibier, des fromages très affinés ou seul, en vin de méditation."
+                                        meta_keywords: 'amarone della valpolicella, allegrini, passerillage, vin de méditation, docg vénétie'
+                                        meta_description: "Amarone della Valpolicella DOCG Allegrini 2019 : raisins passerillés cent jours, cerise à l'eau-de-vie, cacao et épices. Dense, velouté, 15,5% vol."
 
                             -   code: 'tignanello_antinori'
                                 name: 'Tignanello IGT Toscana Antinori'
                                 price: 135.00
-                                on_hand: 30
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -371,19 +497,31 @@ sylius_fixtures:
                                         name: 'Tignanello IGT Toscana Antinori'
                                         short_description: 'Il Supertuscan che nel 1971 cambiò per sempre il vino italiano.'
                                         description: 'Sangiovese con Cabernet, affinato quattordici mesi in barrique. Frutti rossi, grafite e spezie dolci in un sorso elegante e serrato, capace di invecchiare due decenni.'
+                                        meta_keywords: 'tignanello, antinori, supertuscan, sangiovese cabernet, vino da collezione'
+                                        meta_description: 'Tignanello IGT Toscana Antinori 2021: il supertuscan che nel 1971 cambiò il vino italiano. Sangiovese e cabernet, 14 mesi in barrique, frutto e grafite.'
                                     en_US:
                                         name: 'Tignanello IGT Toscana Antinori'
                                         short_description: 'The Supertuscan that changed Italian wine forever in 1971.'
                                         description: 'Sangiovese with Cabernet, aged fourteen months in barrique. Red fruit, graphite and sweet spice in an elegant, tightly knit palate built to age for two decades.'
+                                        meta_keywords: 'tignanello, antinori, supertuscan, sangiovese cabernet, collectible wine'
+                                        meta_description: 'Tignanello IGT Toscana Antinori 2021: the Supertuscan that changed Italian wine in 1971. Sangiovese and Cabernet, 14 months in barrique, fruit and graphite.'
                                     fr_FR:
                                         name: 'Tignanello IGT Toscana Antinori'
                                         short_description: "Le Supertoscan qui, en 1971, a changé à jamais le vin italien."
                                         description: "Sangiovese complété de cabernets, élevé quatorze mois en barrique. Fruits rouges, graphite et épices douces dans une bouche élégante et serrée, taillée pour vingt ans de garde."
+                                        meta_keywords: 'tignanello, antinori, supertoscan, sangiovese cabernet, vin de collection'
+                                        meta_description: 'Tignanello IGT Toscana Antinori 2021 : le supertoscan qui a changé le vin italien en 1971. Sangiovese et cabernet, 14 mois en barrique, fruit et graphite.'
 
                             -   code: 'sassicaia_tenuta_san_guido'
                                 name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
                                 price: 320.00
-                                on_hand: 18
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -405,19 +543,31 @@ sylius_fixtures:
                                         name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
                                         short_description: "L'icona di Bolgheri, unico vino italiano con una DOC tutta sua."
                                         description: 'Cabernet allevati a pochi chilometri dal mare, ventiquattro mesi in barrique. Ribes nero, erbe mediterranee e mina di grafite, con tannini di seta e una freschezza salina inconfondibile.'
+                                        meta_keywords: 'sassicaia, bolgheri doc, tenuta san guido, cabernet sauvignon, vino icona'
+                                        meta_description: 'Sassicaia Bolgheri DOC Tenuta San Guido 2021: cabernet a pochi km dal mare, 24 mesi in barrique. Ribes nero, erbe mediterranee e freschezza salina.'
                                     en_US:
                                         name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
                                         short_description: 'The Bolgheri icon, the only Italian wine with a DOC of its own.'
                                         description: 'Cabernet grown a few kilometres from the sea, aged twenty-four months in barrique. Blackcurrant, Mediterranean herbs and graphite, with silky tannins and unmistakable saline freshness.'
+                                        meta_keywords: 'sassicaia, bolgheri doc, tenuta san guido, cabernet sauvignon, icon wine'
+                                        meta_description: 'Sassicaia Bolgheri DOC Tenuta San Guido 2021: Cabernet grown by the sea, 24 months in barrique. Blackcurrant, Mediterranean herbs and saline freshness.'
                                     fr_FR:
                                         name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
                                         short_description: "L'icône de Bolgheri, seul vin italien à posséder sa propre DOC."
                                         description: "Cabernets cultivés à quelques kilomètres de la mer, élevés vingt-quatre mois en barrique. Cassis, herbes méditerranéennes et mine de graphite, tanins soyeux et fraîcheur saline inimitable."
+                                        meta_keywords: 'sassicaia, bolgheri doc, tenuta san guido, cabernet sauvignon, vin icône'
+                                        meta_description: 'Sassicaia Bolgheri DOC Tenuta San Guido 2021 : cabernets près de la mer, 24 mois en barrique. Cassis, herbes méditerranéennes et fraîcheur saline.'
 
                             -   code: 'barolo_monfortino_giacomo_conterno'
                                 name: 'Barolo Riserva Monfortino Giacomo Conterno'
                                 price: 950.00
-                                on_hand: 6
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -439,19 +589,31 @@ sylius_fixtures:
                                         name: 'Barolo Riserva Monfortino Giacomo Conterno'
                                         short_description: 'Il Barolo più leggendario delle Langhe, prodotto solo nelle grandi annate.'
                                         description: "Sette anni in botti di rovere di Slavonia prima dell'uscita. Un vino monumentale, di austerità assoluta da giovane e di complessità infinita dopo vent'anni di cantina."
+                                        meta_keywords: 'monfortino, giacomo conterno, barolo riserva, nebbiolo, vino da collezione'
+                                        meta_description: 'Barolo Riserva Monfortino Giacomo Conterno 2016: sette anni in botte di rovere di Slavonia, solo nelle grandi annate. Austero da giovane, infinito dopo.'
                                     en_US:
                                         name: 'Barolo Riserva Monfortino Giacomo Conterno'
                                         short_description: 'The most legendary Barolo of the Langhe, made only in great vintages.'
                                         description: 'Seven years in Slavonian oak casks before release. A monumental wine: austere in youth, endlessly complex after two decades in the cellar.'
+                                        meta_keywords: 'monfortino, giacomo conterno, barolo riserva, nebbiolo, collectible wine'
+                                        meta_description: 'Barolo Riserva Monfortino Giacomo Conterno 2016: seven years in Slavonian oak, made only in great vintages. Austere young, endless with time.'
                                     fr_FR:
                                         name: 'Barolo Riserva Monfortino Giacomo Conterno'
                                         short_description: 'Le Barolo le plus légendaire des Langhe, produit uniquement dans les grands millésimes.'
                                         description: "Sept ans en foudres de chêne de Slavonie avant la mise sur le marché. Un vin monumental : austère dans sa jeunesse, d'une complexité infinie après vingt ans de cave."
+                                        meta_keywords: 'monfortino, giacomo conterno, barolo riserva, nebbiolo, vin de collection'
+                                        meta_description: 'Barolo Riserva Monfortino Giacomo Conterno 2016 : sept ans en foudre de Slavonie, seulement dans les grands millésimes. Austère jeune, infini ensuite.'
 
                             -   code: 'masseto_toscana'
                                 name: 'Masseto Toscana IGT'
                                 price: 1200.00
-                                on_hand: 4
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -473,20 +635,32 @@ sylius_fixtures:
                                         name: 'Masseto Toscana IGT'
                                         short_description: 'Il merlot più ambito del mondo, da sette ettari di argilla blu a Bolgheri.'
                                         description: "Un vino raro e ricercatissimo, affinato ventiquattro mesi in barrique nuove. Frutto nero purissimo, cioccolato, grafite e una texture vellutata che lo rende un'esperienza da collezione."
+                                        meta_keywords: 'masseto, merlot, bolgheri, vino da collezione, toscana igt'
+                                        meta_description: 'Masseto Toscana IGT 2019: il merlot più ambito al mondo, da sette ettari di argilla blu a Bolgheri. 24 mesi in barrique nuove, texture vellutata.'
                                     en_US:
                                         name: 'Masseto Toscana IGT'
                                         short_description: 'The world''s most sought-after Merlot, from seven hectares of blue clay in Bolgheri.'
                                         description: 'A rare and highly collectable wine, aged twenty-four months in new barriques. Pure black fruit, chocolate and graphite with a velvet texture that makes every bottle an event.'
+                                        meta_keywords: 'masseto, merlot, bolgheri, collectible wine, toscana igt'
+                                        meta_description: "Masseto Toscana IGT 2019: the world's most sought-after Merlot, from seven hectares of blue clay in Bolgheri. 24 months in new barriques, velvet texture."
                                     fr_FR:
                                         name: 'Masseto Toscana IGT'
                                         short_description: 'Le merlot le plus convoité au monde, né de sept hectares d''argile bleue à Bolgheri.'
                                         description: "Un vin rare et très recherché, élevé vingt-quatre mois en barriques neuves. Fruit noir d'une pureté absolue, chocolat, graphite et texture veloutée : une expérience de collection."
+                                        meta_keywords: 'masseto, merlot, bolgheri, vin de collection, toscana igt'
+                                        meta_description: "Masseto Toscana IGT 2019 : le merlot le plus convoité au monde, sept hectares d'argile bleue à Bolgheri. 24 mois en barriques neuves, texture veloutée."
 
                             # ---------------------------------------------------------------- Vini bianchi
                             -   code: 'verdicchio_villa_bianchi_umani_ronchi'
                                 name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
                                 price: 9.00
                                 on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -508,19 +682,31 @@ sylius_fixtures:
                                         name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
                                         short_description: 'Il bianco marchigiano per eccellenza: agrumato, sapido, dal finale ammandorlato.'
                                         description: 'Paglierino con riflessi verdolini, naso di mela verde, agrumi e fiori bianchi. Fresco e minerale, chiude con la tipica nota di mandorla: perfetto su crudi di mare, fritture e primi ai frutti di mare.'
+                                        meta_keywords: 'verdicchio dei castelli di jesi, villa bianchi, umani ronchi, vino bianco marche, vino per pesce'
+                                        meta_description: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi 2023: mela verde, agrumi e fiori bianchi, finale ammandorlato. Su crudi di mare e fritture.'
                                     en_US:
                                         name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
                                         short_description: 'The white of the Marche: citrus, savoury and gently almondy.'
                                         description: 'Straw yellow with green highlights, green apple, citrus and white flowers on the nose. Fresh and mineral with the classic almond finish: ideal with raw seafood, fritto misto and shellfish pasta.'
+                                        meta_keywords: 'verdicchio dei castelli di jesi, villa bianchi, umani ronchi, marche white wine, seafood wine'
+                                        meta_description: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi 2023: green apple, citrus and white flowers, almondy finish. For raw seafood and fritto misto.'
                                     fr_FR:
                                         name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
                                         short_description: 'Le blanc des Marches par excellence : agrumes, salinité et finale amandée.'
                                         description: "Jaune paille aux reflets verts, nez de pomme verte, d'agrumes et de fleurs blanches. Frais et minéral, finale amandée typique : parfait sur des fruits de mer crus, des fritures et des pâtes aux coquillages."
+                                        meta_keywords: 'verdicchio dei castelli di jesi, villa bianchi, umani ronchi, vin blanc des marches, vin pour poisson'
+                                        meta_description: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi 2023 : pomme verte, agrumes et fleurs blanches, finale amandée. Sur fruits de mer et fritures.'
 
                             -   code: 'vermentino_la_cala_sella_mosca'
                                 name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
                                 price: 10.50
-                                on_hand: 160
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -542,19 +728,31 @@ sylius_fixtures:
                                         name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
                                         short_description: 'Mare, sale e agrumi: il bianco sardo da bere tutta estate.'
                                         description: 'Profumi di pompelmo, pesca bianca e macchia mediterranea. Sorso teso e salino, di grande immediatezza: ideale con crostacei, pesce alla griglia e bottarga.'
+                                        meta_keywords: 'vermentino di sardegna, la cala, sella e mosca, vino bianco sardo, vino estivo'
+                                        meta_description: 'Vermentino di Sardegna DOC La Cala 2023: pompelmo, pesca bianca e macchia mediterranea, sorso salino. Il bianco sardo per crostacei e bottarga.'
                                     en_US:
                                         name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
                                         short_description: 'Sea, salt and citrus: the Sardinian white for the whole summer.'
                                         description: 'Grapefruit, white peach and Mediterranean scrub on the nose. Taut and saline on the palate: excellent with shellfish, grilled fish and bottarga.'
+                                        meta_keywords: 'vermentino di sardegna, la cala, sella e mosca, sardinian white wine, summer wine'
+                                        meta_description: 'Vermentino di Sardegna DOC La Cala 2023: grapefruit, white peach and Mediterranean scrub, saline palate. The Sardinian white for shellfish and bottarga.'
                                     fr_FR:
                                         name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
                                         short_description: 'Mer, sel et agrumes : le blanc sarde de tout un été.'
                                         description: "Pamplemousse, pêche blanche et garrigue au nez. Bouche tendue et saline, très immédiate : idéal sur des crustacés, du poisson grillé et de la poutargue."
+                                        meta_keywords: "vermentino di sardegna, la cala, sella e mosca, vin blanc sarde, vin d'été"
+                                        meta_description: 'Vermentino di Sardegna DOC La Cala 2023 : pamplemousse, pêche blanche et garrigue, bouche saline. Le blanc sarde des crustacés et de la poutargue.'
 
                             -   code: 'pinot_grigio_santa_margherita'
                                 name: 'Pinot Grigio DOC Santa Margherita'
                                 price: 11.00
-                                on_hand: 170
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -565,7 +763,7 @@ sylius_fixtures:
                                     vino_denominazione: 'Valdadige DOC'
                                     vino_annata: 2023
                                     vino_vitigni: 'Pinot Grigio'
-                                    vino_regione: 'Veneto'
+                                    vino_regione: 'Trentino-Alto Adige'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -576,19 +774,31 @@ sylius_fixtures:
                                         name: 'Pinot Grigio DOC Santa Margherita'
                                         short_description: 'Il pinot grigio che ha reso famoso lo stile italiano nel mondo.'
                                         description: 'Vinificato in bianco per preservare finezza e freschezza. Mela golden, pera e fiori di acacia, sorso asciutto ed equilibrato: ottimo aperitivo e compagno di antipasti e piatti di pesce.'
+                                        meta_keywords: 'pinot grigio, santa margherita, valdadige doc, vino bianco, aperitivo'
+                                        meta_description: 'Pinot Grigio DOC Santa Margherita 2023: vinificato in bianco, mela golden, pera e fiori di acacia. Asciutto ed equilibrato, ottimo come aperitivo.'
                                     en_US:
                                         name: 'Pinot Grigio DOC Santa Margherita'
                                         short_description: 'The Pinot Grigio that made the Italian style famous worldwide.'
                                         description: 'Vinified off the skins to keep it fine and fresh. Golden apple, pear and acacia blossom, dry and balanced: a great aperitif and partner to antipasti and fish dishes.'
+                                        meta_keywords: 'pinot grigio, santa margherita, valdadige doc, white wine, aperitif'
+                                        meta_description: 'Pinot Grigio DOC Santa Margherita 2023: vinified off the skins, golden apple, pear and acacia blossom. Dry and balanced, a great aperitif.'
                                     fr_FR:
                                         name: 'Pinot Grigio DOC Santa Margherita'
                                         short_description: 'Le pinot gris qui a fait connaître le style italien dans le monde entier.'
                                         description: "Vinifié en blanc pour préserver finesse et fraîcheur. Pomme golden, poire et fleur d'acacia, bouche sèche et équilibrée : excellent à l'apéritif, sur des antipasti et des poissons."
+                                        meta_keywords: 'pinot gris, santa margherita, valdadige doc, vin blanc, apéritif'
+                                        meta_description: "Pinot Grigio DOC Santa Margherita 2023 : vinifié en blanc, pomme golden, poire et fleur d'acacia. Sec et équilibré, excellent à l'apéritif."
 
                             -   code: 'gavi_docg_la_scolca'
                                 name: 'Gavi DOCG La Scolca Etichetta Bianca'
                                 price: 18.00
-                                on_hand: 110
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.73
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -596,7 +806,7 @@ sylius_fixtures:
                                 taxons: ['vini', 'vini_bianchi']
                                 product_attributes:
                                     vino_cantina: 'La Scolca'
-                                    vino_denominazione: 'Gavi dei Gavi DOCG'
+                                    vino_denominazione: 'Gavi DOCG'
                                     vino_annata: 2023
                                     vino_vitigni: 'Cortese'
                                     vino_regione: 'Piemonte'
@@ -610,19 +820,31 @@ sylius_fixtures:
                                         name: 'Gavi DOCG La Scolca Etichetta Bianca'
                                         short_description: 'Cortese in purezza da una delle cantine storiche del Gavi.'
                                         description: 'Naso delicato di agrumi, fiori bianchi e pietra focaia. Sorso asciutto, teso e persistente, con una mineralità che invita al sorso successivo: perfetto con pesce di lago, risotti e formaggi freschi.'
+                                        meta_keywords: 'gavi docg, la scolca, cortese, vino bianco piemontese, vino minerale'
+                                        meta_description: 'Gavi DOCG La Scolca Etichetta Bianca 2023: cortese in purezza, agrumi, fiori bianchi e pietra focaia. Teso e persistente, su pesce di lago e risotti.'
                                     en_US:
                                         name: 'Gavi DOCG La Scolca Etichetta Bianca'
                                         short_description: 'Pure Cortese from one of the historic estates of Gavi.'
                                         description: 'A delicate nose of citrus, white flowers and flint. Dry, taut and persistent with a mineral edge that keeps you pouring: great with freshwater fish, risotto and fresh cheeses.'
+                                        meta_keywords: 'gavi docg, la scolca, cortese, piedmont white wine, mineral wine'
+                                        meta_description: 'Gavi DOCG La Scolca Etichetta Bianca 2023: pure Cortese, citrus, white flowers and flint. Taut and persistent, for freshwater fish and risotto.'
                                     fr_FR:
                                         name: 'Gavi DOCG La Scolca Etichetta Bianca'
                                         short_description: 'Cortese pur, issu d''un domaine historique de Gavi.'
                                         description: "Nez délicat d'agrumes, de fleurs blanches et de pierre à fusil. Bouche sèche, tendue et persistante, à la minéralité entraînante : parfait sur des poissons de lac, des risottos et des fromages frais."
+                                        meta_keywords: 'gavi docg, la scolca, cortese, vin blanc piémontais, vin minéral'
+                                        meta_description: 'Gavi DOCG La Scolca Etichetta Bianca 2023 : cortese pur, agrumes, fleurs blanches et pierre à fusil. Tendu et persistant, sur poissons de lac et risottos.'
 
                             -   code: 'cervaro_della_sala_antinori'
                                 name: 'Cervaro della Sala IGT Castello della Sala'
                                 price: 65.00
-                                on_hand: 45
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 8.5
+                                height: 33.0
+                                depth: 8.5
+                                weight: 1.5
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -644,20 +866,32 @@ sylius_fixtures:
                                         name: 'Cervaro della Sala IGT Castello della Sala'
                                         short_description: 'Il grande bianco italiano da invecchiamento, chardonnay e grechetto in barrique.'
                                         description: 'Fermentato e affinato in legno con lieviti indigeni. Frutta bianca matura, nocciola, burro e una spina acida che ne garantisce la longevità: eccellente su crostacei, pollame e formaggi cremosi.'
+                                        meta_keywords: 'cervaro della sala, castello della sala, antinori, chardonnay, bianco da invecchiamento'
+                                        meta_description: 'Cervaro della Sala IGT 2022: chardonnay e grechetto fermentati in legno con lieviti indigeni. Frutta bianca matura, nocciola e spina acida da lungo affinamento.'
                                     en_US:
                                         name: 'Cervaro della Sala IGT Castello della Sala'
                                         short_description: 'Italy''s great age-worthy white: Chardonnay and Grechetto in barrique.'
                                         description: 'Fermented and aged in oak with indigenous yeasts. Ripe orchard fruit, hazelnut and butter over an acid backbone built for the long haul: superb with shellfish, poultry and creamy cheeses.'
+                                        meta_keywords: 'cervaro della sala, castello della sala, antinori, chardonnay, age worthy white'
+                                        meta_description: 'Cervaro della Sala IGT 2022: Chardonnay and Grechetto fermented in oak with indigenous yeasts. Ripe orchard fruit, hazelnut and a long ageing backbone.'
                                     fr_FR:
                                         name: 'Cervaro della Sala IGT Castello della Sala'
                                         short_description: 'Le grand blanc de garde italien : chardonnay et grechetto élevés en barrique.'
                                         description: "Fermenté et élevé en fût avec des levures indigènes. Fruits blancs mûrs, noisette, beurre et une belle acidité garante de longévité : excellent sur des crustacés, des volailles et des fromages crémeux."
+                                        meta_keywords: 'cervaro della sala, castello della sala, antinori, chardonnay, blanc de garde'
+                                        meta_description: 'Cervaro della Sala IGT 2022 : chardonnay et grechetto fermentés en fût avec levures indigènes. Fruits blancs mûrs, noisette et belle acidité de garde.'
 
                             # ---------------------------------------------------------------- Bollicine
                             -   code: 'prosecco_doc_jeio_bisol'
                                 name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
                                 price: 10.00
                                 on_hand: 220
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 9.0
+                                height: 32.0
+                                depth: 9.0
+                                weight: 1.6
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -678,19 +912,31 @@ sylius_fixtures:
                                         name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
                                         short_description: 'La bollicina italiana per l’aperitivo di tutti i giorni.'
                                         description: 'Perlage fine e persistente, profumi di mela verde, glicine e agrumi. Extra dry, morbido ma fresco: perfetto come aperitivo, con finger food e fritture di pesce.'
+                                        meta_keywords: 'prosecco doc treviso, jeio, bisol, extra dry, spumante aperitivo'
+                                        meta_description: "Prosecco DOC Treviso Extra Dry Jeio Bisol: perlage fine, mela verde, glicine e agrumi. La bollicina italiana per l'aperitivo e le fritture di pesce."
                                     en_US:
                                         name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
                                         short_description: 'The everyday Italian sparkler for aperitivo hour.'
                                         description: 'Fine, persistent bubbles with green apple, wisteria and citrus aromas. Extra dry, soft yet fresh: ideal as an aperitif, with finger food and fried fish.'
+                                        meta_keywords: 'prosecco doc treviso, jeio, bisol, extra dry, sparkling aperitif'
+                                        meta_description: 'Prosecco DOC Treviso Extra Dry Jeio Bisol: fine bubbles, green apple, wisteria and citrus. The Italian sparkler for aperitivo and fried fish.'
                                     fr_FR:
                                         name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
                                         short_description: "La bulle italienne de l'apéritif quotidien."
                                         description: "Perlage fin et persistant, arômes de pomme verte, de glycine et d'agrumes. Extra dry, souple et frais : parfait à l'apéritif, sur des amuse-bouches et des fritures de poisson."
+                                        meta_keywords: 'prosecco doc treviso, jeio, bisol, extra dry, mousseux apéritif'
+                                        meta_description: "Prosecco DOC Treviso Extra Dry Jeio Bisol : perlage fin, pomme verte, glycine et agrumes. La bulle italienne de l'apéritif et des fritures."
 
                             -   code: 'franciacorta_cuvee_prestige_ca_del_bosco'
                                 name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
                                 price: 32.00
-                                on_hand: 95
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.72
+                                width: 9.0
+                                height: 32.0
+                                depth: 9.0
+                                weight: 1.6
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -711,19 +957,31 @@ sylius_fixtures:
                                         name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
                                         short_description: 'Metodo classico lombardo, il Franciacorta più conosciuto d’Italia.'
                                         description: 'Almeno venticinque mesi sui lieviti per una bollicina cremosa e precisa. Crosta di pane, agrumi canditi e frutta bianca: si beve dall’aperitivo al pesce, fino ai primi piatti delicati.'
+                                        meta_keywords: "franciacorta docg, ca' del bosco, cuvée prestige, metodo classico, extra brut"
+                                        meta_description: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco: almeno 25 mesi sui lieviti, crosta di pane, agrumi canditi e frutta bianca. Bollicina cremosa e precisa."
                                     en_US:
                                         name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
                                         short_description: 'Lombardy''s traditional-method sparkler, Italy''s best known Franciacorta.'
                                         description: 'At least twenty-five months on the lees give a creamy, precise mousse. Bread crust, candied citrus and orchard fruit: from aperitif to fish courses and delicate pasta.'
+                                        meta_keywords: "franciacorta docg, ca' del bosco, cuvée prestige, traditional method, extra brut"
+                                        meta_description: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco: at least 25 months on the lees, bread crust, candied citrus and orchard fruit. Creamy, precise mousse."
                                     fr_FR:
                                         name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
                                         short_description: 'La méthode traditionnelle lombarde, le Franciacorta le plus connu d''Italie.'
                                         description: "Au moins vingt-cinq mois sur lies pour une bulle crémeuse et précise. Croûte de pain, agrumes confits et fruits blancs : de l'apéritif aux poissons et aux pâtes délicates."
+                                        meta_keywords: "franciacorta docg, ca' del bosco, cuvée prestige, méthode traditionnelle, extra brut"
+                                        meta_description: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco : 25 mois minimum sur lies, croûte de pain, agrumes confits et fruits blancs. Bulle crémeuse et précise."
 
                             -   code: 'ferrari_perle_trentodoc'
                                 name: 'Trentodoc Perlé Ferrari'
                                 price: 45.00
-                                on_hand: 70
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.72
+                                width: 9.0
+                                height: 32.0
+                                depth: 9.0
+                                weight: 1.6
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -745,19 +1003,31 @@ sylius_fixtures:
                                         name: 'Trentodoc Perlé Ferrari'
                                         short_description: 'Blanc de blancs di montagna, cinque anni sui lieviti.'
                                         description: 'Chardonnay da vigneti d’alta quota in Trentino. Note di mela, agrumi, crosta di pane e nocciola, con una bollicina finissima e un finale lungo e minerale.'
+                                        meta_keywords: 'trentodoc, ferrari perlé, blanc de blancs, chardonnay di montagna, millesimato'
+                                        meta_description: "Trentodoc Perlé Ferrari 2018: chardonnay d'alta quota, cinque anni sui lieviti. Mela, agrumi, crosta di pane e nocciola, finale lungo e minerale."
                                     en_US:
                                         name: 'Trentodoc Perlé Ferrari'
                                         short_description: 'A mountain blanc de blancs, five years on the lees.'
                                         description: 'Chardonnay from high-altitude vineyards in Trentino. Apple, citrus, bread crust and hazelnut, with an extremely fine mousse and a long, mineral finish.'
+                                        meta_keywords: 'trentodoc, ferrari perlé, blanc de blancs, mountain chardonnay, vintage sparkling'
+                                        meta_description: 'Trentodoc Perlé Ferrari 2018: high altitude Chardonnay, five years on the lees. Apple, citrus, bread crust and hazelnut, long mineral finish.'
                                     fr_FR:
                                         name: 'Trentodoc Perlé Ferrari'
                                         short_description: 'Un blanc de blancs de montagne, cinq ans sur lattes.'
                                         description: "Chardonnay issu de vignobles d'altitude du Trentin. Pomme, agrumes, croûte de pain et noisette, avec une bulle très fine et une finale longue et minérale."
+                                        meta_keywords: 'trentodoc, ferrari perlé, blanc de blancs, chardonnay de montagne, millésimé'
+                                        meta_description: "Trentodoc Perlé Ferrari 2018 : chardonnay d'altitude, cinq ans sur lattes. Pomme, agrumes, croûte de pain et noisette, finale longue et minérale."
 
                             -   code: 'moet_chandon_brut_imperial'
                                 name: 'Champagne Brut Impérial Moët & Chandon'
                                 price: 55.00
-                                on_hand: 60
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.72
+                                width: 9.0
+                                height: 32.0
+                                depth: 9.0
+                                weight: 1.6
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -778,19 +1048,31 @@ sylius_fixtures:
                                         name: 'Champagne Brut Impérial Moët & Chandon'
                                         short_description: 'Lo champagne più celebre al mondo, sinonimo di festa.'
                                         description: 'Assemblaggio di oltre cento vini base: pera, agrumi e brioche, con un finale fresco e vibrante. Da servire ghiacciato in ogni occasione da celebrare.'
+                                        meta_keywords: 'champagne moët & chandon, brut impérial, champagne brut, bollicine francesi, regalo'
+                                        meta_description: 'Champagne Brut Impérial Moët & Chandon: assemblaggio di oltre cento vini base, pera, agrumi e brioche. Da servire ghiacciato in ogni occasione.'
                                     en_US:
                                         name: 'Champagne Brut Impérial Moët & Chandon'
                                         short_description: 'The world''s most famous champagne, a byword for celebration.'
                                         description: 'A blend of more than a hundred base wines: pear, citrus and brioche with a fresh, vibrant finish. Serve well chilled whenever there is something to celebrate.'
+                                        meta_keywords: 'moët & chandon champagne, brut impérial, brut champagne, french sparkling, gift'
+                                        meta_description: 'Champagne Brut Impérial Moët & Chandon: a blend of more than a hundred base wines, pear, citrus and brioche. Serve well chilled on any occasion.'
                                     fr_FR:
                                         name: 'Champagne Brut Impérial Moët & Chandon'
                                         short_description: 'Le champagne le plus célèbre au monde, synonyme de fête.'
                                         description: "Assemblage de plus de cent vins de base : poire, agrumes et brioche, finale fraîche et vibrante. À servir bien frais pour toutes les occasions à célébrer."
+                                        meta_keywords: 'champagne moët & chandon, brut impérial, champagne brut, bulles françaises, cadeau'
+                                        meta_description: 'Champagne Brut Impérial Moët & Chandon : assemblage de plus de cent vins de base, poire, agrumes et brioche. À servir bien frais en toute occasion.'
 
                             -   code: 'dom_perignon_vintage'
                                 name: 'Champagne Dom Pérignon Vintage'
                                 price: 230.00
-                                on_hand: 24
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 9.0
+                                height: 32.0
+                                depth: 9.0
+                                weight: 1.6
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -812,20 +1094,32 @@ sylius_fixtures:
                                         name: 'Champagne Dom Pérignon Vintage'
                                         short_description: 'Solo nelle grandi annate, dopo almeno otto anni sui lieviti.'
                                         description: 'Un millesimato di assoluta precisione: agrumi canditi, mandorla tostata, spezie e una texture setosa. Champagne da grande tavola, da abbinare a crostacei, pesce nobile e ricette di alta cucina.'
+                                        meta_keywords: 'dom pérignon, champagne millesimato, champagne di lusso, regalo prestigio, 2013'
+                                        meta_description: 'Champagne Dom Pérignon Vintage 2013: solo nelle grandi annate, oltre otto anni sui lieviti. Agrumi canditi, mandorla tostata e texture setosa.'
                                     en_US:
                                         name: 'Champagne Dom Pérignon Vintage'
                                         short_description: 'Made only in great vintages, after at least eight years on the lees.'
                                         description: 'A vintage champagne of absolute precision: candied citrus, toasted almond, spice and a silky texture. A fine-dining champagne for shellfish, noble fish and haute cuisine.'
+                                        meta_keywords: 'dom pérignon, vintage champagne, luxury champagne, prestige gift, 2013'
+                                        meta_description: 'Champagne Dom Pérignon Vintage 2013: made only in great vintages, over eight years on the lees. Candied citrus, toasted almond and a silky texture.'
                                     fr_FR:
                                         name: 'Champagne Dom Pérignon Vintage'
                                         short_description: 'Uniquement dans les grands millésimes, après huit ans minimum sur lattes.'
                                         description: "Un millésime d'une précision absolue : agrumes confits, amande grillée, épices et texture soyeuse. Un champagne de grande table, sur des crustacés, des poissons nobles et une cuisine gastronomique."
+                                        meta_keywords: 'dom pérignon, champagne millésimé, champagne de luxe, cadeau prestige, 2013'
+                                        meta_description: 'Champagne Dom Pérignon Vintage 2013 : uniquement dans les grands millésimes, plus de huit ans sur lattes. Agrumes confits, amande grillée, texture soyeuse.'
 
                             # ---------------------------------------------------------------- Vini dolci
                             -   code: 'moscato_dasti_araldica'
                                 name: "Moscato d'Asti DOCG Araldica"
                                 price: 9.50
-                                on_hand: 140
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.75
+                                width: 8.0
+                                height: 32.0
+                                depth: 8.0
+                                weight: 1.3
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -847,19 +1141,31 @@ sylius_fixtures:
                                         name: "Moscato d'Asti DOCG Araldica"
                                         short_description: 'Dolce, leggero e aromatico: il fine pasto piemontese per eccellenza.'
                                         description: 'Salvia, pesca bianca e uva moscato, con una bollicina sottile e appena accennata. Solo 5,5% vol: perfetto su panettone, crostate di frutta e pasticceria secca.'
+                                        meta_keywords: "moscato d'asti docg, araldica, vino dolce, vino da dessert, panettone"
+                                        meta_description: "Moscato d'Asti DOCG Araldica 2023: salvia, pesca bianca e uva moscato, bollicina appena accennata. Solo 5,5% vol, perfetto su panettone e crostate."
                                     en_US:
                                         name: "Moscato d'Asti DOCG Araldica"
                                         short_description: 'Sweet, light and aromatic: the classic Piedmontese dessert wine.'
                                         description: 'Sage, white peach and muscat grape, with a barely there sparkle. Just 5.5% abv: perfect with panettone, fruit tarts and dry pastries.'
+                                        meta_keywords: "moscato d'asti docg, araldica, sweet wine, dessert wine, panettone"
+                                        meta_description: "Moscato d'Asti DOCG Araldica 2023: sage, white peach and muscat grape, barely there sparkle. Just 5.5% abv, perfect with panettone and fruit tarts."
                                     fr_FR:
                                         name: "Moscato d'Asti DOCG Araldica"
                                         short_description: 'Doux, léger et aromatique : le vin de dessert piémontais par excellence.'
                                         description: "Sauge, pêche blanche et raisin muscat, avec une bulle fine et discrète. Seulement 5,5 % vol : parfait sur un panettone, des tartes aux fruits et des petits fours."
+                                        meta_keywords: "moscato d'asti docg, araldica, vin doux, vin de dessert, panettone"
+                                        meta_description: "Moscato d'Asti DOCG Araldica 2023 : sauge, pêche blanche et raisin muscat, bulle discrète. Seulement 5,5% vol, parfait sur panettone et tartes."
 
                             -   code: 'vin_santo_serelle_ruffino'
                                 name: 'Vin Santo del Chianti DOC Serelle Ruffino'
                                 price: 22.00
-                                on_hand: 65
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.73
+                                width: 6.0
+                                height: 26.0
+                                depth: 6.0
+                                weight: 0.75
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -881,19 +1187,31 @@ sylius_fixtures:
                                         name: 'Vin Santo del Chianti DOC Serelle Ruffino'
                                         short_description: 'Uve appassite e caratelli di rovere: il rito toscano dei cantucci.'
                                         description: 'Ambrato luminoso, con note di miele, fichi secchi, noce e scorza d’arancia. Dolce ma bilanciato da una vena acida: da servire a 14 °C con cantucci, pasticceria secca e formaggi erborinati.'
+                                        meta_keywords: 'vin santo del chianti, serelle, ruffino, vino da dessert toscano, cantucci'
+                                        meta_description: "Vin Santo del Chianti DOC Serelle Ruffino 2018: uve appassite e caratelli di rovere, miele, fichi secchi e scorza d'arancia. Da servire a 14 °C sui cantucci."
                                     en_US:
                                         name: 'Vin Santo del Chianti DOC Serelle Ruffino'
                                         short_description: 'Dried grapes and small oak casks: the Tuscan ritual with cantucci.'
                                         description: 'Bright amber, with honey, dried figs, walnut and orange peel. Sweet but balanced by fresh acidity: serve at 14 °C with cantucci, dry pastries and blue cheeses.'
+                                        meta_keywords: 'vin santo del chianti, serelle, ruffino, tuscan dessert wine, cantucci'
+                                        meta_description: 'Vin Santo del Chianti DOC Serelle Ruffino 2018: dried grapes and small oak casks, honey, dried figs and orange peel. Serve at 14 °C with cantucci.'
                                     fr_FR:
                                         name: 'Vin Santo del Chianti DOC Serelle Ruffino'
                                         short_description: 'Raisins passerillés et petits fûts de chêne : le rituel toscan des cantucci.'
                                         description: "Ambre lumineux, notes de miel, de figue sèche, de noix et d'écorce d'orange. Doux mais équilibré par une belle acidité : à servir à 14 °C avec des cantucci, des petits fours et des fromages persillés."
+                                        meta_keywords: 'vin santo del chianti, serelle, ruffino, vin de dessert toscan, cantucci'
+                                        meta_description: "Vin Santo del Chianti DOC Serelle Ruffino 2018 : raisins passerillés et petits fûts, miel, figue sèche et écorce d'orange. À servir à 14 °C sur cantucci."
 
                             -   code: 'ben_rye_donnafugata'
                                 name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
                                 price: 48.00
-                                on_hand: 50
+                                on_hand: 200
+                                tracked: true
+                                minimum_price_ratio: 0.7
+                                width: 6.0
+                                height: 26.0
+                                depth: 6.0
+                                weight: 0.75
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -915,11 +1233,17 @@ sylius_fixtures:
                                         name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
                                         short_description: 'Zibibbo appassito al sole di Pantelleria, uno dei dolci italiani più premiati.'
                                         description: 'Albicocca secca, miele, erbe mediterranee e una sferzata salina che asciuga il finale. Ottimo con pasticceria secca, formaggi erborinati e fegato grasso, o semplicemente da meditazione.'
+                                        meta_keywords: 'ben ryé, passito di pantelleria, donnafugata, zibibbo, vino dolce siciliano'
+                                        meta_description: 'Passito di Pantelleria DOC Ben Ryé Donnafugata 2021: zibibbo appassito al sole, albicocca secca, miele ed erbe mediterranee con finale salino.'
                                     en_US:
                                         name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
                                         short_description: 'Zibibbo dried under the Pantelleria sun, one of Italy''s most awarded sweet wines.'
                                         description: 'Dried apricot, honey, Mediterranean herbs and a saline snap that dries the finish. Excellent with dry pastries, blue cheeses and foie gras, or simply on its own.'
+                                        meta_keywords: 'ben ryé, passito di pantelleria, donnafugata, zibibbo, sicilian sweet wine'
+                                        meta_description: 'Passito di Pantelleria DOC Ben Ryé Donnafugata 2021: sun-dried Zibibbo, dried apricot, honey and Mediterranean herbs with a saline finish.'
                                     fr_FR:
                                         name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'
                                         short_description: "Zibibbo passerillé au soleil de Pantelleria, l'un des liquoreux italiens les plus primés."
                                         description: "Abricot sec, miel, herbes méditerranéennes et une pointe saline qui assèche la finale. Excellent sur des petits fours, des fromages persillés et du foie gras, ou seul en vin de méditation."
+                                        meta_keywords: 'ben ryé, passito di pantelleria, donnafugata, zibibbo, liquoreux sicilien'
+                                        meta_description: 'Passito di Pantelleria DOC Ben Ryé Donnafugata 2021 : zibibbo passerillé au soleil, abricot sec, miel et herbes méditerranéennes, finale saline.'

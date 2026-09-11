@@ -112,30 +112,58 @@ sylius_fixtures:
                         custom:
                             -   name: 'Cantina'
                                 code: 'vino_cantina'
+                                translations:
+                                    it_IT: 'Cantina'
+                                    en_US: 'Winery'
+                                    fr_FR: 'Domaine'
                                 type: 'text'
 
                             -   name: 'Denominazione'
                                 code: 'vino_denominazione'
+                                translations:
+                                    it_IT: 'Denominazione'
+                                    en_US: 'Appellation'
+                                    fr_FR: 'Appellation'
                                 type: 'text'
 
                             -   name: 'Annata'
                                 code: 'vino_annata'
+                                translations:
+                                    it_IT: 'Annata'
+                                    en_US: 'Vintage'
+                                    fr_FR: 'Millésime'
                                 type: 'integer'
                                 translatable: false
 
                             -   name: 'Vitigni'
                                 code: 'vino_vitigni'
+                                translations:
+                                    it_IT: 'Vitigni'
+                                    en_US: 'Grape varieties'
+                                    fr_FR: 'Cépages'
                                 type: 'text'
 
                             -   name: 'Regione'
                                 code: 'vino_regione'
+                                translations:
+                                    it_IT: 'Regione'
+                                    en_US: 'Region'
+                                    fr_FR: 'Région'
                                 type: 'text'
 
                             -   name: 'Gradazione alcolica'
                                 code: 'vino_gradazione'
+                                translations:
+                                    it_IT: 'Gradazione alcolica'
+                                    en_US: 'Alcohol content'
+                                    fr_FR: 'Degré alcoolique'
                                 type: 'percent'
                                 translatable: false
 
                             -   name: 'Formato'
                                 code: 'vino_formato'
+                                translations:
+                                    it_IT: 'Formato'
+                                    en_US: 'Bottle size'
+                                    fr_FR: 'Contenance'
                                 type: 'text'

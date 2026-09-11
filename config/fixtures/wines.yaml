@@ -26,7 +26,10 @@ sylius_fixtures:
                                     vino_denominazione: "Montepulciano d'Abruzzo DOC"
                                     vino_annata: 2022
                                     vino_vitigni: 'Montepulciano'
-                                    vino_regione: 'Abruzzo'
+                                    vino_regione:
+                                        it_IT: 'Abruzzo'
+                                        en_US: 'Abruzzo'
+                                        fr_FR: 'Abruzzes'
                                     vino_gradazione: 0.13
                                     vino_formato: '0,75 L'
                                 images:
@@ -72,7 +75,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Chianti DOCG'
                                     vino_annata: 2022
                                     vino_vitigni: 'Sangiovese, Merlot'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -119,7 +125,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Valpolicella Classico DOC'
                                     vino_annata: 2022
                                     vino_vitigni: 'Corvina, Rondinella, Molinara'
-                                    vino_regione: 'Veneto'
+                                    vino_regione:
+                                        it_IT: 'Veneto'
+                                        en_US: 'Veneto'
+                                        fr_FR: 'Vénétie'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -165,7 +174,10 @@ sylius_fixtures:
                                     vino_denominazione: "Barbera d'Asti DOCG Superiore"
                                     vino_annata: 2021
                                     vino_vitigni: 'Barbera'
-                                    vino_regione: 'Piemonte'
+                                    vino_regione:
+                                        it_IT: 'Piemonte'
+                                        en_US: 'Piedmont'
+                                        fr_FR: 'Piémont'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
@@ -211,7 +223,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Sicilia DOC'
                                     vino_annata: 2022
                                     vino_vitigni: "Nero d'Avola"
-                                    vino_regione: 'Sicilia'
+                                    vino_regione:
+                                        it_IT: 'Sicilia'
+                                        en_US: 'Sicily'
+                                        fr_FR: 'Sicile'
                                     vino_gradazione: 0.135
                                     vino_formato: '0,75 L'
                                 images:
@@ -257,7 +272,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Chianti Classico DOCG Riserva'
                                     vino_annata: 2020
                                     vino_vitigni: 'Sangiovese, Merlot, Cabernet Sauvignon'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.135
                                     vino_formato: '0,75 L'
                                 images:
@@ -304,7 +322,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Primitivo di Manduria DOP'
                                     vino_annata: 2020
                                     vino_vitigni: 'Primitivo'
-                                    vino_regione: 'Puglia'
+                                    vino_regione:
+                                        it_IT: 'Puglia'
+                                        en_US: 'Apulia'
+                                        fr_FR: 'Pouilles'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
@@ -350,7 +371,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Brunello di Montalcino DOCG'
                                     vino_annata: 2019
                                     vino_vitigni: 'Sangiovese Grosso'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
@@ -396,7 +420,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Barolo DOCG'
                                     vino_annata: 2019
                                     vino_vitigni: 'Nebbiolo'
-                                    vino_regione: 'Piemonte'
+                                    vino_regione:
+                                        it_IT: 'Piemonte'
+                                        en_US: 'Piedmont'
+                                        fr_FR: 'Piémont'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
@@ -443,7 +470,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Amarone della Valpolicella Classico DOCG'
                                     vino_annata: 2019
                                     vino_vitigni: 'Corvina, Corvinone, Rondinella'
-                                    vino_regione: 'Veneto'
+                                    vino_regione:
+                                        it_IT: 'Veneto'
+                                        en_US: 'Veneto'
+                                        fr_FR: 'Vénétie'
                                     vino_gradazione: 0.155
                                     vino_formato: '0,75 L'
                                 images:
@@ -489,7 +519,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Toscana IGT'
                                     vino_annata: 2021
                                     vino_vitigni: 'Sangiovese, Cabernet Sauvignon, Cabernet Franc'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
@@ -535,7 +568,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Bolgheri Sassicaia DOC'
                                     vino_annata: 2021
                                     vino_vitigni: 'Cabernet Sauvignon, Cabernet Franc'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
@@ -581,7 +617,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Barolo DOCG Riserva'
                                     vino_annata: 2016
                                     vino_vitigni: 'Nebbiolo'
-                                    vino_regione: 'Piemonte'
+                                    vino_regione:
+                                        it_IT: 'Piemonte'
+                                        en_US: 'Piedmont'
+                                        fr_FR: 'Piémont'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
@@ -627,7 +666,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Toscana IGT'
                                     vino_annata: 2019
                                     vino_vitigni: 'Merlot'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
@@ -674,7 +716,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Verdicchio dei Castelli di Jesi DOC Classico'
                                     vino_annata: 2023
                                     vino_vitigni: 'Verdicchio'
-                                    vino_regione: 'Marche'
+                                    vino_regione:
+                                        it_IT: 'Marche'
+                                        en_US: 'Marche'
+                                        fr_FR: 'Marches'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -720,7 +765,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Vermentino di Sardegna DOC'
                                     vino_annata: 2023
                                     vino_vitigni: 'Vermentino'
-                                    vino_regione: 'Sardegna'
+                                    vino_regione:
+                                        it_IT: 'Sardegna'
+                                        en_US: 'Sardinia'
+                                        fr_FR: 'Sardaigne'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -766,7 +814,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Valdadige DOC'
                                     vino_annata: 2023
                                     vino_vitigni: 'Pinot Grigio'
-                                    vino_regione: 'Trentino-Alto Adige'
+                                    vino_regione:
+                                        it_IT: 'Trentino-Alto Adige'
+                                        en_US: 'Trentino-Alto Adige'
+                                        fr_FR: 'Trentin-Haut-Adige'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -812,7 +863,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Gavi DOCG'
                                     vino_annata: 2023
                                     vino_vitigni: 'Cortese'
-                                    vino_regione: 'Piemonte'
+                                    vino_regione:
+                                        it_IT: 'Piemonte'
+                                        en_US: 'Piedmont'
+                                        fr_FR: 'Piémont'
                                     vino_gradazione: 0.12
                                     vino_formato: '0,75 L'
                                 images:
@@ -858,7 +912,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Umbria IGT'
                                     vino_annata: 2022
                                     vino_vitigni: 'Chardonnay, Grechetto'
-                                    vino_regione: 'Umbria'
+                                    vino_regione:
+                                        it_IT: 'Umbria'
+                                        en_US: 'Umbria'
+                                        fr_FR: 'Ombrie'
                                     vino_gradazione: 0.13
                                     vino_formato: '0,75 L'
                                 images:
@@ -904,7 +961,10 @@ sylius_fixtures:
                                     vino_cantina: 'Bisol 1542'
                                     vino_denominazione: 'Prosecco DOC Treviso Extra Dry'
                                     vino_vitigni: 'Glera'
-                                    vino_regione: 'Veneto'
+                                    vino_regione:
+                                        it_IT: 'Veneto'
+                                        en_US: 'Veneto'
+                                        fr_FR: 'Vénétie'
                                     vino_gradazione: 0.11
                                     vino_formato: '0,75 L'
                                 images:
@@ -949,7 +1009,10 @@ sylius_fixtures:
                                     vino_cantina: "Ca' del Bosco"
                                     vino_denominazione: 'Franciacorta DOCG Extra Brut'
                                     vino_vitigni: 'Chardonnay, Pinot Nero, Pinot Bianco'
-                                    vino_regione: 'Lombardia'
+                                    vino_regione:
+                                        it_IT: 'Lombardia'
+                                        en_US: 'Lombardy'
+                                        fr_FR: 'Lombardie'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -995,7 +1058,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Trentodoc Millesimato'
                                     vino_annata: 2018
                                     vino_vitigni: 'Chardonnay'
-                                    vino_regione: 'Trentino'
+                                    vino_regione:
+                                        it_IT: 'Trentino'
+                                        en_US: 'Trentino'
+                                        fr_FR: 'Trentin'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -1040,7 +1106,10 @@ sylius_fixtures:
                                     vino_cantina: 'Moët & Chandon'
                                     vino_denominazione: 'Champagne AOC Brut'
                                     vino_vitigni: 'Pinot Nero, Pinot Meunier, Chardonnay'
-                                    vino_regione: 'Champagne'
+                                    vino_regione:
+                                        it_IT: 'Champagne'
+                                        en_US: 'Champagne'
+                                        fr_FR: 'Champagne'
                                     vino_gradazione: 0.12
                                     vino_formato: '0,75 L'
                                 images:
@@ -1086,7 +1155,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Champagne AOC Millesimato'
                                     vino_annata: 2013
                                     vino_vitigni: 'Chardonnay, Pinot Nero'
-                                    vino_regione: 'Champagne'
+                                    vino_regione:
+                                        it_IT: 'Champagne'
+                                        en_US: 'Champagne'
+                                        fr_FR: 'Champagne'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
@@ -1133,7 +1205,10 @@ sylius_fixtures:
                                     vino_denominazione: "Moscato d'Asti DOCG"
                                     vino_annata: 2023
                                     vino_vitigni: 'Moscato Bianco'
-                                    vino_regione: 'Piemonte'
+                                    vino_regione:
+                                        it_IT: 'Piemonte'
+                                        en_US: 'Piedmont'
+                                        fr_FR: 'Piémont'
                                     vino_gradazione: 0.055
                                     vino_formato: '0,75 L'
                                 images:
@@ -1179,7 +1254,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Vin Santo del Chianti DOC'
                                     vino_annata: 2018
                                     vino_vitigni: 'Trebbiano, Malvasia'
-                                    vino_regione: 'Toscana'
+                                    vino_regione:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
                                     vino_gradazione: 0.15
                                     vino_formato: '0,375 L'
                                 images:
@@ -1225,7 +1303,10 @@ sylius_fixtures:
                                     vino_denominazione: 'Passito di Pantelleria DOC'
                                     vino_annata: 2021
                                     vino_vitigni: 'Zibibbo'
-                                    vino_regione: 'Sicilia'
+                                    vino_regione:
+                                        it_IT: 'Sicilia'
+                                        en_US: 'Sicily'
+                                        fr_FR: 'Sicile'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,375 L'
                                 images:

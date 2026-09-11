@@ -46,28 +46,52 @@ sylius_fixtures:
                         custom:
                             -   name: 'Produttore'
                                 code: 'calice_produttore'
+                                translations:
+                                    it_IT: 'Produttore'
+                                    en_US: 'Manufacturer'
+                                    fr_FR: 'Fabricant'
                                 type: 'text'
 
                             -   name: 'Collezione'
                                 code: 'calice_collezione'
+                                translations:
+                                    it_IT: 'Collezione'
+                                    en_US: 'Collection'
+                                    fr_FR: 'Collection'
                                 type: 'text'
 
                             -   name: 'Materiale'
                                 code: 'calice_materiale'
+                                translations:
+                                    it_IT: 'Materiale'
+                                    en_US: 'Material'
+                                    fr_FR: 'Matière'
                                 type: 'text'
 
                             -   name: 'Capacità (ml)'
                                 code: 'calice_capacita'
+                                translations:
+                                    it_IT: 'Capacità (ml)'
+                                    en_US: 'Capacity (ml)'
+                                    fr_FR: 'Contenance (ml)'
                                 type: 'integer'
                                 translatable: false
 
                             -   name: 'Altezza (mm)'
                                 code: 'calice_altezza'
+                                translations:
+                                    it_IT: 'Altezza (mm)'
+                                    en_US: 'Height (mm)'
+                                    fr_FR: 'Hauteur (mm)'
                                 type: 'integer'
                                 translatable: false
 
                             -   name: 'Lavabile in lavastoviglie'
                                 code: 'calice_lavastoviglie'
+                                translations:
+                                    it_IT: 'Lavabile in lavastoviglie'
+                                    en_US: 'Dishwasher safe'
+                                    fr_FR: 'Lavable au lave-vaisselle'
                                 type: 'checkbox'
                                 translatable: false
 
@@ -147,7 +171,10 @@ sylius_fixtures:
                                 product_attributes:
                                     calice_produttore: 'Riedel'
                                     calice_collezione: 'Vinum'
-                                    calice_materiale: 'Cristallo senza piombo'
+                                    calice_materiale:
+                                        it_IT: 'Cristallo senza piombo'
+                                        en_US: 'Lead-free crystal'
+                                        fr_FR: 'Cristallin sans plomb'
                                     calice_capacita: 610
                                     calice_altezza: 223
                                     calice_lavastoviglie: true
@@ -218,7 +245,10 @@ sylius_fixtures:
                                 product_attributes:
                                     calice_produttore: 'Zwiesel Glas'
                                     calice_collezione: 'Pure'
-                                    calice_materiale: 'Tritan Protect'
+                                    calice_materiale:
+                                        it_IT: 'Tritan Protect'
+                                        en_US: 'Tritan Protect'
+                                        fr_FR: 'Tritan Protect'
                                     calice_capacita: 692
                                     calice_altezza: 233
                                     calice_lavastoviglie: true
@@ -289,7 +319,10 @@ sylius_fixtures:
                                 product_attributes:
                                     calice_produttore: 'Spiegelau'
                                     calice_collezione: 'Style'
-                                    calice_materiale: 'Cristallo senza piombo'
+                                    calice_materiale:
+                                        it_IT: 'Cristallo senza piombo'
+                                        en_US: 'Lead-free crystal'
+                                        fr_FR: 'Cristallin sans plomb'
                                     calice_capacita: 310
                                     calice_altezza: 233
                                     calice_lavastoviglie: true
@@ -360,7 +393,10 @@ sylius_fixtures:
                                 product_attributes:
                                     calice_produttore: 'Bormioli Rocco'
                                     calice_collezione: 'Riserva'
-                                    calice_materiale: 'Vetro sonoro'
+                                    calice_materiale:
+                                        it_IT: 'Vetro sonoro'
+                                        en_US: 'Sonorous glass'
+                                        fr_FR: 'Verre sonore'
                                     calice_capacita: 215
                                     calice_altezza: 155
                                     calice_lavastoviglie: true
@@ -431,7 +467,10 @@ sylius_fixtures:
                                 product_attributes:
                                     calice_produttore: 'Luigi Bormioli'
                                     calice_collezione: 'Vinoteque'
-                                    calice_materiale: 'Cristallino SON.hyx'
+                                    calice_materiale:
+                                        it_IT: 'Cristallino SON.hyx'
+                                        en_US: 'SON.hyx crystalline'
+                                        fr_FR: 'Cristallin SON.hyx'
                                     calice_capacita: 450
                                     calice_altezza: 218
                                     calice_lavastoviglie: true

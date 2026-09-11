@@ -46,22 +46,42 @@ sylius_fixtures:
                         custom:
                             -   name: 'Località'
                                 code: 'esperienza_localita'
+                                translations:
+                                    it_IT: 'Località'
+                                    en_US: 'Location'
+                                    fr_FR: 'Lieu'
                                 type: 'text'
 
                             -   name: 'Punto di incontro'
                                 code: 'esperienza_punto_incontro'
+                                translations:
+                                    it_IT: 'Punto di incontro'
+                                    en_US: 'Meeting point'
+                                    fr_FR: 'Point de rendez-vous'
                                 type: 'text'
 
                             -   name: 'La quota comprende'
                                 code: 'esperienza_incluso'
+                                translations:
+                                    it_IT: 'La quota comprende'
+                                    en_US: 'The price includes'
+                                    fr_FR: 'Le tarif comprend'
                                 type: 'text'
 
                             -   name: 'Lingue della guida'
                                 code: 'esperienza_lingue'
+                                translations:
+                                    it_IT: 'Lingue della guida'
+                                    en_US: 'Languages of the guide'
+                                    fr_FR: 'Langues du guide'
                                 type: 'text'
 
                             -   name: 'Periodo consigliato'
                                 code: 'esperienza_stagione'
+                                translations:
+                                    it_IT: 'Periodo consigliato'
+                                    en_US: 'Best season'
+                                    fr_FR: 'Période conseillée'
                                 type: 'text'
 
                 experience_option:
@@ -132,11 +152,23 @@ sylius_fixtures:
                                     esperienza_3_giorni+partecipanti_4: 1320.00
                                     esperienza_3_giorni+partecipanti_6: 1890.00
                                 product_attributes:
-                                    esperienza_localita: 'Greve in Chianti (FI), Toscana'
+                                    esperienza_localita:
+                                        it_IT: 'Greve in Chianti (FI), Toscana'
+                                        en_US: 'Greve in Chianti (FI), Tuscany'
+                                        fr_FR: 'Greve in Chianti (FI), Toscane'
                                     esperienza_punto_incontro: 'Piazza Matteotti, Greve in Chianti'
-                                    esperienza_incluso: 'Visita in tre cantine, pranzo in fattoria, degustazione guidata, trasferimenti locali'
-                                    esperienza_lingue: 'Italiano, inglese'
-                                    esperienza_stagione: 'Da aprile a ottobre'
+                                    esperienza_incluso:
+                                        it_IT: 'Visita in tre cantine, pranzo in fattoria, degustazione guidata, trasferimenti locali'
+                                        en_US: 'Three winery visits, lunch at the farm, guided tasting, local transfers'
+                                        fr_FR: 'Visite de trois domaines, déjeuner à la ferme, dégustation guidée, transferts locaux'
+                                    esperienza_lingue:
+                                        it_IT: 'Italiano, inglese'
+                                        en_US: 'Italian, English'
+                                        fr_FR: 'Italien, anglais'
+                                    esperienza_stagione:
+                                        it_IT: 'Da aprile a ottobre'
+                                        en_US: 'From April to October'
+                                        fr_FR: "D'avril à octobre"
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/chianti_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/degustazione_1.webp' }
@@ -180,11 +212,23 @@ sylius_fixtures:
                                     esperienza_3_giorni+partecipanti_4: 990.00
                                     esperienza_3_giorni+partecipanti_6: 1410.00
                                 product_attributes:
-                                    esperienza_localita: "Castelnovo ne' Monti (RE), Emilia-Romagna"
+                                    esperienza_localita:
+                                        it_IT: "Castelnovo ne' Monti (RE), Emilia-Romagna"
+                                        en_US: "Castelnovo ne' Monti (RE), Emilia-Romagna"
+                                        fr_FR: "Castelnovo ne' Monti (RE), Émilie-Romagne"
                                     esperienza_punto_incontro: "Piazza Gramsci, Castelnovo ne' Monti"
-                                    esperienza_incluso: 'Visita al caseificio, pranzo in rifugio, escursione alla Pietra di Bismantova, degustazione di Lambrusco'
-                                    esperienza_lingue: 'Italiano, inglese'
-                                    esperienza_stagione: 'Da maggio a settembre'
+                                    esperienza_incluso:
+                                        it_IT: 'Visita al caseificio, pranzo in rifugio, escursione alla Pietra di Bismantova, degustazione di Lambrusco'
+                                        en_US: 'Dairy visit, lunch at a mountain hut, hike to the Pietra di Bismantova, Lambrusco tasting'
+                                        fr_FR: 'Visite de la fromagerie, déjeuner au refuge, randonnée à la Pietra di Bismantova, dégustation de lambrusco'
+                                    esperienza_lingue:
+                                        it_IT: 'Italiano, inglese'
+                                        en_US: 'Italian, English'
+                                        fr_FR: 'Italien, anglais'
+                                    esperienza_stagione:
+                                        it_IT: 'Da maggio a settembre'
+                                        en_US: 'From May to September'
+                                        fr_FR: 'De mai à septembre'
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/appennino_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/formaggi_1.webp' }
@@ -228,11 +272,23 @@ sylius_fixtures:
                                     esperienza_3_giorni+partecipanti_4: 1440.00
                                     esperienza_3_giorni+partecipanti_6: 2070.00
                                 product_attributes:
-                                    esperienza_localita: 'Negrar di Valpolicella (VR), Veneto'
+                                    esperienza_localita:
+                                        it_IT: 'Negrar di Valpolicella (VR), Veneto'
+                                        en_US: 'Negrar di Valpolicella (VR), Veneto'
+                                        fr_FR: 'Negrar di Valpolicella (VR), Vénétie'
                                     esperienza_punto_incontro: 'Villa Rizzardi, Negrar di Valpolicella'
-                                    esperienza_incluso: 'Visita ai fruttai, degustazione di Amarone e Recioto, cena in villa, pernottamento in agriturismo'
-                                    esperienza_lingue: 'Italiano, inglese, francese'
-                                    esperienza_stagione: 'Da settembre a novembre'
+                                    esperienza_incluso:
+                                        it_IT: 'Visita ai fruttai, degustazione di Amarone e Recioto, cena in villa, pernottamento in agriturismo'
+                                        en_US: 'Drying lofts visit, Amarone and Recioto tasting, dinner at the villa, night at a farmhouse'
+                                        fr_FR: 'Visite des séchoirs, dégustation d’Amarone et de Recioto, dîner à la villa, nuit en agritourisme'
+                                    esperienza_lingue:
+                                        it_IT: 'Italiano, inglese, francese'
+                                        en_US: 'Italian, English, French'
+                                        fr_FR: 'Italien, anglais, français'
+                                    esperienza_stagione:
+                                        it_IT: 'Da settembre a novembre'
+                                        en_US: 'From September to November'
+                                        fr_FR: 'De septembre à novembre'
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/vigneto_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/degustazione_1.webp' }
@@ -276,11 +332,23 @@ sylius_fixtures:
                                     esperienza_3_giorni+partecipanti_4: 1840.00
                                     esperienza_3_giorni+partecipanti_6: 2670.00
                                 product_attributes:
-                                    esperienza_localita: 'Barolo (CN), Piemonte'
+                                    esperienza_localita:
+                                        it_IT: 'Barolo (CN), Piemonte'
+                                        en_US: 'Barolo (CN), Piedmont'
+                                        fr_FR: 'Barolo (CN), Piémont'
                                     esperienza_punto_incontro: 'Castello di Barolo'
-                                    esperienza_incluso: 'Cerca del tartufo con il trifolau, pranzo tipico, visita a due cantine di Barolo, pernottamento in cascina'
-                                    esperienza_lingue: 'Italiano, inglese'
-                                    esperienza_stagione: 'Da ottobre a dicembre'
+                                    esperienza_incluso:
+                                        it_IT: 'Cerca del tartufo con il trifolau, pranzo tipico, visita a due cantine di Barolo, pernottamento in cascina'
+                                        en_US: 'Truffle hunting with the trifolau, local lunch, two Barolo cellars, night at a farmhouse'
+                                        fr_FR: 'Chasse à la truffe avec le trifolau, déjeuner du terroir, deux caves de Barolo, nuit à la ferme'
+                                    esperienza_lingue:
+                                        it_IT: 'Italiano, inglese'
+                                        en_US: 'Italian, English'
+                                        fr_FR: 'Italien, anglais'
+                                    esperienza_stagione:
+                                        it_IT: 'Da ottobre a dicembre'
+                                        en_US: 'From October to December'
+                                        fr_FR: "D'octobre à décembre"
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/colline_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/formaggi_1.webp' }

@@ -13,6 +13,13 @@ final class WebgriffeSyliusFixturesPlugin extends Bundle
 {
     use SyliusPluginTrait;
 
+    #[\Override]
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
+
+    #[\Override]
     public function build(ContainerBuilder $container): void
     {
         parent::build($container);

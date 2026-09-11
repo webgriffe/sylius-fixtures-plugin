@@ -118,8 +118,8 @@ sylius_fixtures:
                                     calice_altezza: 223
                                     calice_lavastoviglie: true
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Calici Bordeaux Riedel Vinum'
@@ -189,8 +189,8 @@ sylius_fixtures:
                                     calice_altezza: 233
                                     calice_lavastoviglie: true
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_3.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_3.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Calici Borgogna Zwiesel Pure'
@@ -260,8 +260,8 @@ sylius_fixtures:
                                     calice_altezza: 233
                                     calice_lavastoviglie: true
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_3.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Flûte Spiegelau Style'
@@ -331,8 +331,8 @@ sylius_fixtures:
                                     calice_altezza: 155
                                     calice_lavastoviglie: true
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_3.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_3.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Calici da degustazione ISO Bormioli Rocco'
@@ -402,8 +402,8 @@ sylius_fixtures:
                                     calice_altezza: 218
                                     calice_lavastoviglie: true
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/calici/calici_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Calici universali Luigi Bormioli Vinoteque'

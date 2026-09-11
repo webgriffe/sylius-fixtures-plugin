@@ -1,0 +1,5 @@
+webgriffe_sylius_fixtures_admin:
+    resource: "@WebgriffeSyliusFixturesPlugin/config/routes/admin.yaml"
+
+webgriffe_sylius_fixtures_shop:
+    resource: "@WebgriffeSyliusFixturesPlugin/config/routes/shop.yaml"

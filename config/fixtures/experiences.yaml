@@ -94,8 +94,8 @@ sylius_fixtures:
                                     esperienza_lingue: 'Italiano, inglese'
                                     esperienza_stagione: 'Da aprile a ottobre'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/chianti_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/degustazione_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/chianti_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/degustazione_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Full immersion nel Chianti Classico'
@@ -142,8 +142,8 @@ sylius_fixtures:
                                     esperienza_lingue: 'Italiano, inglese'
                                     esperienza_stagione: 'Da maggio a settembre'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/appennino_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/formaggi_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/appennino_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/formaggi_1.webp' }
                                 translations:
                                     it_IT:
                                         name: "Weekend sull'Appennino Tosco-Emiliano"
@@ -190,8 +190,8 @@ sylius_fixtures:
                                     esperienza_lingue: 'Italiano, inglese, francese'
                                     esperienza_stagione: 'Da settembre a novembre'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/vigneto_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/degustazione_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/vigneto_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/degustazione_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Amarone e corti venete in Valpolicella'
@@ -238,8 +238,8 @@ sylius_fixtures:
                                     esperienza_lingue: 'Italiano, inglese'
                                     esperienza_stagione: 'Da ottobre a dicembre'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/colline_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/esperienze/formaggi_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/colline_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/formaggi_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Tartufo e Barolo nelle Langhe'

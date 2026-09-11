@@ -30,8 +30,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.13
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: "Montepulciano d'Abruzzo DOC Zaccagnini"
@@ -76,8 +76,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Chianti DOCG Ruffino'
@@ -122,8 +122,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Valpolicella Classico DOC Bertani'
@@ -168,8 +168,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: "Barbera d'Asti DOCG Superiore Michele Chiarlo"
@@ -214,8 +214,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.135
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: "Nero d'Avola Sicilia DOC Planeta"
@@ -260,8 +260,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.135
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Chianti Classico DOCG Riserva Ducale Ruffino'
@@ -306,8 +306,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
@@ -352,8 +352,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: "Brunello di Montalcino DOCG Col d'Orcia"
@@ -398,8 +398,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Barolo DOCG Pio Cesare'
@@ -444,8 +444,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.155
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Amarone della Valpolicella DOCG Allegrini'
@@ -490,8 +490,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Tignanello IGT Toscana Antinori'
@@ -536,8 +536,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Sassicaia Bolgheri DOC Tenuta San Guido'
@@ -582,8 +582,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Barolo Riserva Monfortino Giacomo Conterno'
@@ -628,8 +628,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Masseto Toscana IGT'
@@ -675,8 +675,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Verdicchio dei Castelli di Jesi DOC Classico Villa Bianchi'
@@ -721,8 +721,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Vermentino di Sardegna DOC La Cala Sella & Mosca'
@@ -767,8 +767,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Pinot Grigio DOC Santa Margherita'
@@ -813,8 +813,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.12
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Gavi DOCG La Scolca Etichetta Bianca'
@@ -859,8 +859,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.13
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Cervaro della Sala IGT Castello della Sala'
@@ -905,8 +905,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.11
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Prosecco DOC Treviso Extra Dry Jeio Bisol'
@@ -950,8 +950,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: "Franciacorta DOCG Cuvée Prestige Ca' del Bosco"
@@ -996,8 +996,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_3.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_3.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Trentodoc Perlé Ferrari'
@@ -1041,8 +1041,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.12
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Champagne Brut Impérial Moët & Chandon'
@@ -1087,8 +1087,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/bollicine_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Champagne Dom Pérignon Vintage'
@@ -1134,8 +1134,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.055
                                     vino_formato: '0,75 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: "Moscato d'Asti DOCG Araldica"
@@ -1180,8 +1180,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.15
                                     vino_formato: '0,375 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_2.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Vin Santo del Chianti DOC Serelle Ruffino'
@@ -1226,8 +1226,8 @@ sylius_fixtures:
                                     vino_gradazione: 0.145
                                     vino_formato: '0,375 L'
                                 images:
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
-                                    - { path: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/wines/enoteca_1.webp' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
                                 translations:
                                     it_IT:
                                         name: 'Passito di Pantelleria DOC Ben Ryé Donnafugata'

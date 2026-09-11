@@ -70,17 +70,43 @@ sylius_fixtures:
                         custom:
                             -   name: 'Durata'
                                 code: 'durata_esperienza'
+                                translations:
+                                    it_IT: 'Durata'
+                                    en_US: 'Duration'
+                                    fr_FR: 'Durée'
                                 values:
-                                    esperienza_1_giorno: '1 giorno'
-                                    esperienza_2_giorni: '2 giorni / 1 notte'
-                                    esperienza_3_giorni: '3 giorni / 2 notti'
+                                    esperienza_1_giorno:
+                                        it_IT: '1 giorno'
+                                        en_US: '1 day'
+                                        fr_FR: '1 jour'
+                                    esperienza_2_giorni:
+                                        it_IT: '2 giorni / 1 notte'
+                                        en_US: '2 days / 1 night'
+                                        fr_FR: '2 jours / 1 nuit'
+                                    esperienza_3_giorni:
+                                        it_IT: '3 giorni / 2 notti'
+                                        en_US: '3 days / 2 nights'
+                                        fr_FR: '3 jours / 2 nuits'
 
                             -   name: 'Partecipanti'
                                 code: 'numero_partecipanti'
+                                translations:
+                                    it_IT: 'Partecipanti'
+                                    en_US: 'Participants'
+                                    fr_FR: 'Participants'
                                 values:
-                                    partecipanti_2: '2 persone'
-                                    partecipanti_4: '4 persone'
-                                    partecipanti_6: '6 persone'
+                                    partecipanti_2:
+                                        it_IT: '2 persone'
+                                        en_US: '2 people'
+                                        fr_FR: '2 personnes'
+                                    partecipanti_4:
+                                        it_IT: '4 persone'
+                                        en_US: '4 people'
+                                        fr_FR: '4 personnes'
+                                    partecipanti_6:
+                                        it_IT: '6 persone'
+                                        en_US: '6 people'
+                                        fr_FR: '6 personnes'
 
                 experience_product:
                     name: product

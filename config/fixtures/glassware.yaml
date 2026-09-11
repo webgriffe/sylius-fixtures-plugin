@@ -77,11 +77,27 @@ sylius_fixtures:
                         custom:
                             -   name: 'Numero di calici'
                                 code: 'numero_calici'
+                                translations:
+                                    it_IT: 'Numero di calici'
+                                    en_US: 'Number of glasses'
+                                    fr_FR: 'Nombre de verres'
                                 values:
-                                    numero_calici_2: '2 calici'
-                                    numero_calici_4: '4 calici'
-                                    numero_calici_6: '6 calici'
-                                    numero_calici_8: '8 calici'
+                                    numero_calici_2:
+                                        it_IT: '2 calici'
+                                        en_US: '2 glasses'
+                                        fr_FR: '2 verres'
+                                    numero_calici_4:
+                                        it_IT: '4 calici'
+                                        en_US: '4 glasses'
+                                        fr_FR: '4 verres'
+                                    numero_calici_6:
+                                        it_IT: '6 calici'
+                                        en_US: '6 glasses'
+                                        fr_FR: '6 verres'
+                                    numero_calici_8:
+                                        it_IT: '8 calici'
+                                        en_US: '8 glasses'
+                                        fr_FR: '8 verres'
 
                 glassware_product:
                     name: product

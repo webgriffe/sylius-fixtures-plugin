@@ -17,6 +17,15 @@
             <argument type="service" id="sylius.repository.shipping_category" />
         </service>
 
+        <service id="webgriffe_sylius_fixtures.fixture.example_factory.taxon"
+                 class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\TaxonExampleFactory"
+                 decorates="sylius.fixture.example_factory.taxon">
+            <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.taxon.inner" />
+            <argument type="service" id="sylius.factory.taxon_image" />
+            <argument type="service" id="sylius.uploader.image" />
+            <argument type="service" id="file_locator" />
+        </service>
+
         <service id="webgriffe_sylius_fixtures.fixture.example_factory.shipping_method"
                  class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ShippingMethodExampleFactory"
                  decorates="sylius.fixture.example_factory.shipping_method">

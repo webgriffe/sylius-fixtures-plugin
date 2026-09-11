@@ -60,6 +60,29 @@ sylius_fixtures:
                                         short_description: 'Fresh and savoury Sangiovese.'
 ```
 
+### Taxons
+
+| Option | Description |
+|---|---|
+| `images` | Images of the taxon, at any level of the tree. Sylius ignores them completely in its own fixtures |
+
+```yaml
+                taxon:
+                    options:
+                        custom:
+                            category:
+                                code: 'category'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp', type: 'main' }
+                                children:
+                                    -   code: 'red_wines'
+                                        images:
+                                            - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
+```
+
+> A taxon declared in several fixtures files gets its images added **once per declaration**: keep them in a
+> single file, as the demo store does with its root category.
+
 ### Shipping methods
 
 | Option | Description |

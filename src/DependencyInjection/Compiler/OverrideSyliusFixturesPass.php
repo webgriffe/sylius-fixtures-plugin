@@ -9,6 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\OrderExampleFactory;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ShippingMethodFixture;
+use Webgriffe\SyliusFixturesPlugin\Fixture\TaxonFixture;
 
 /**
  * Replaces the class of some Sylius fixtures services, keeping their arguments: the fixtures of this plugin
@@ -19,6 +20,7 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
     private const OVERRIDDEN_CLASSES = [
         'sylius.fixture.product' => ProductFixture::class,
         'sylius.fixture.shipping_method' => ShippingMethodFixture::class,
+        'sylius.fixture.taxon' => TaxonFixture::class,
         'sylius.fixture.example_factory.order' => OrderExampleFactory::class,
     ];
 

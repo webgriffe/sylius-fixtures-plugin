@@ -101,6 +101,7 @@ sylius_fixtures:
                             -   code: 'valpolicella_classico_bertani'
                                 name: 'Valpolicella Classico DOC Bertani'
                                 price: 12.00
+                                original_price: 15.9
                                 on_hand: 200
                                 tracked: true
                                 minimum_price_ratio: 0.75
@@ -285,6 +286,7 @@ sylius_fixtures:
                             -   code: 'primitivo_sessantanni_san_marzano'
                                 name: 'Primitivo di Manduria DOP Sessantanni San Marzano'
                                 price: 29.00
+                                original_price: 34.0
                                 on_hand: 200
                                 tracked: true
                                 minimum_price_ratio: 0.72
@@ -423,6 +425,7 @@ sylius_fixtures:
                             -   code: 'amarone_valpolicella_allegrini'
                                 name: 'Amarone della Valpolicella DOCG Allegrini'
                                 price: 72.00
+                                original_price: 85.00
                                 on_hand: 200
                                 tracked: true
                                 minimum_price_ratio: 0.7

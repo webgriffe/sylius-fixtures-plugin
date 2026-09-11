@@ -8,6 +8,7 @@ use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
 use Sylius\Component\Core\Model\ChannelPricingInterface;
 use Sylius\Component\Core\Model\ProductInterface;
 use Sylius\Component\Core\Model\ProductVariantInterface;
+use Sylius\Component\Locale\Model\LocaleInterface;
 use Sylius\Component\Shipping\Model\ShippingCategoryInterface;
 use Sylius\Resource\Doctrine\Persistence\RepositoryInterface;
 use Webmozart\Assert\Assert;
@@ -46,10 +47,12 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
     /**
      * @param ExampleFactoryInterface<ProductInterface> $decoratedFactory
      * @param RepositoryInterface<ShippingCategoryInterface> $shippingCategoryRepository
+     * @param RepositoryInterface<LocaleInterface> $localeRepository
      */
     public function __construct(
         private ExampleFactoryInterface $decoratedFactory,
         private RepositoryInterface $shippingCategoryRepository,
+        private RepositoryInterface $localeRepository,
     ) {
     }
 
@@ -61,7 +64,16 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
     {
         $extraOptions = array_intersect_key($options, array_flip(self::EXTRA_OPTIONS));
 
+        /** @var array<string, mixed> $attributes */
+        $attributes = $options['product_attributes'] ?? [];
+        $options['product_attributes'] = array_map($this->defaultAttributeValueOf(...), $attributes);
+        if ([] === $options['product_attributes']) {
+            unset($options['product_attributes']);
+        }
+
         $product = $this->decoratedFactory->create(array_diff_key($options, $extraOptions));
+
+        $this->translateAttributeValues($product, $attributes);
 
         /** @var array<string, array<string, string>> $translations */
         $translations = $extraOptions['translations'] ?? [];
@@ -74,9 +86,47 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             $this->applyPrices($variant, $extraOptions);
             $this->applyShippingCategory($variant, $extraOptions);
             $this->applyDimensions($variant, $extraOptions);
+            $this->nameVariant($variant);
         }
 
         return $product;
+    }
+
+    /**
+     * The Sylius factory writes the same value of an attribute in every locale, so the value of the first
+     * locale is the one it writes everywhere before the translations below replace it.
+     */
+    private function defaultAttributeValueOf(mixed $value): mixed
+    {
+        if (!is_array($value) || [] === $value) {
+            return $value;
+        }
+
+        return reset($value);
+    }
+
+    /**
+     * An attribute value given as a map of locale to value is translated here, one attribute value per locale
+     * as Sylius stores them.
+     *
+     * @param array<string, mixed> $attributes
+     */
+    private function translateAttributeValues(ProductInterface $product, array $attributes): void
+    {
+        foreach ($product->getAttributes() as $attributeValue) {
+            $attribute = $attributeValue->getAttribute();
+            $localeCode = $attributeValue->getLocaleCode();
+            if (null === $attribute || null === $localeCode) {
+                continue;
+            }
+
+            $translations = $attributes[(string) $attribute->getCode()] ?? null;
+            if (!is_array($translations) || !isset($translations[$localeCode])) {
+                continue;
+            }
+
+            $attributeValue->setValue($translations[$localeCode]);
+        }
     }
 
     /** @param array<string, array<string, string>> $translations */
@@ -119,6 +169,34 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
         Assert::integer($onHand);
 
         $variant->setOnHand($onHand);
+    }
+
+    /**
+     * Sylius names a variant after its option values once, in whatever locale the entity happens to be in,
+     * so a configurable product ends up with a single translation for its variants.
+     */
+    private function nameVariant(ProductVariantInterface $variant): void
+    {
+        if ($variant->getOptionValues()->isEmpty()) {
+            return;
+        }
+
+        foreach ($this->localeRepository->findAll() as $locale) {
+            $localeCode = $locale->getCode();
+            Assert::string($localeCode);
+
+            $names = [];
+            foreach ($variant->getOptionValues() as $optionValue) {
+                $optionValue->setCurrentLocale($localeCode);
+                $optionValue->setFallbackLocale($localeCode);
+
+                $names[] = (string) $optionValue->getValue();
+            }
+
+            $variant->setCurrentLocale($localeCode);
+            $variant->setFallbackLocale($localeCode);
+            $variant->setName(implode(' ', $names));
+        }
     }
 
     /** @param array<string, mixed> $options */

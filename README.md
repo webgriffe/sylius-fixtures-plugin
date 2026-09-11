@@ -60,6 +60,50 @@ sylius_fixtures:
                                         short_description: 'Fresh and savoury Sangiovese.'
 ```
 
+### Product attributes
+
+| Option | Description |
+|---|---|
+| `translations` | Name of the attribute per locale |
+
+The **values** of the attributes are translated from the product, where a value is either a scalar, written in
+every locale as Sylius does, or a map of locale to value:
+
+```yaml
+                                product_attributes:
+                                    winery: 'Ruffino'
+                                    region:
+                                        it_IT: 'Toscana'
+                                        en_US: 'Tuscany'
+                                        fr_FR: 'Toscane'
+```
+
+### Product options
+
+| Option | Description |
+|---|---|
+| `translations` | Name of the option per locale |
+| `values` | Every value is either a string, written in every locale as Sylius does, or a map of locale to value |
+
+```yaml
+                product_option:
+                    options:
+                        custom:
+                            -   name: 'Numero di calici'
+                                code: 'number_of_glasses'
+                                translations:
+                                    it_IT: 'Numero di calici'
+                                    en_US: 'Number of glasses'
+                                values:
+                                    two_glasses:
+                                        it_IT: '2 calici'
+                                        en_US: '2 glasses'
+```
+
+The variants of a configurable product are named after their option values **in every locale**: Sylius names
+them once, in whatever locale the entity happens to be in, so a configurable product would end up with its
+variants translated in a single language.
+
 ### Taxons
 
 | Option | Description |

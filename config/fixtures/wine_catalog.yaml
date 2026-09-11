@@ -12,72 +12,90 @@ sylius_fixtures:
                                     it_IT:
                                         name: 'Categoria'
                                         slug: 'categoria'
+                                        description: "Tutte le categorie dell'enoteca: vini italiani, calici in cristallo ed esperienze enogastronomiche."
                                     en_US:
                                         name: 'Category'
                                         slug: 'category'
+                                        description: 'Every category of the shop: Italian wines, crystal glasses and food and wine experiences.'
                                     fr_FR:
                                         name: 'Catégorie'
                                         slug: 'categorie'
+                                        description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
                                 children:
                                     -   code: 'vini'
                                         translations:
                                             it_IT:
                                                 name: 'Vini'
                                                 slug: 'vini'
+                                                description: 'Ventisette etichette selezionate cantina per cantina, dai rossi di tutti i giorni ai grandi vini da collezione. Ogni scheda riporta vitigni, annata, gradazione e abbinamenti consigliati.'
                                             en_US:
                                                 name: 'Wines'
                                                 slug: 'wines'
+                                                description: 'Twenty-seven labels selected winery by winery, from everyday reds to collectible bottles. Every page lists grapes, vintage, alcohol content and suggested pairings.'
                                             fr_FR:
                                                 name: 'Vins'
                                                 slug: 'vins'
+                                                description: 'Vingt-sept étiquettes sélectionnées domaine par domaine, des rouges du quotidien aux vins de collection. Chaque fiche indique cépages, millésime, degré et accords conseillés.'
                                         children:
                                             -   code: 'vini_rossi'
                                                 translations:
                                                     it_IT:
                                                         name: 'Vini rossi'
                                                         slug: 'vini/vini-rossi'
+                                                        description: "Sangiovese, nebbiolo, montepulciano e primitivo: dai rossi da tavola alle riserve da invecchiamento. Da servire tra i 16 e i 18 °C, stappati almeno un'ora prima."
                                                     en_US:
                                                         name: 'Red wines'
                                                         slug: 'wines/red-wines'
+                                                        description: 'Sangiovese, Nebbiolo, Montepulciano and Primitivo: from everyday bottles to age-worthy riservas. Serve between 16 and 18 °C, uncorked at least an hour ahead.'
                                                     fr_FR:
                                                         name: 'Vins rouges'
                                                         slug: 'vins/vins-rouges'
+                                                        description: 'Sangiovese, nebbiolo, montepulciano et primitivo : des rouges de table aux riservas de garde. À servir entre 16 et 18 °C, débouchés au moins une heure avant.'
 
                                             -   code: 'vini_bianchi'
                                                 translations:
                                                     it_IT:
                                                         name: 'Vini bianchi'
                                                         slug: 'vini/vini-bianchi'
+                                                        description: 'Bianchi freschi e sapidi da nord a sud, dal verdicchio marchigiano al vermentino sardo, fino ai grandi bianchi affinati in legno che invecchiano per anni.'
                                                     en_US:
                                                         name: 'White wines'
                                                         slug: 'wines/white-wines'
+                                                        description: 'Fresh, savoury whites from north to south, from Marche Verdicchio to Sardinian Vermentino, up to oak-aged whites that keep for years.'
                                                     fr_FR:
                                                         name: 'Vins blancs'
                                                         slug: 'vins/vins-blancs'
+                                                        description: "Des blancs frais et sapides du nord au sud, du verdicchio des Marches au vermentino sarde, jusqu'aux grands blancs élevés en fût qui vieillissent des années."
 
                                             -   code: 'bollicine'
                                                 translations:
                                                     it_IT:
                                                         name: 'Bollicine'
                                                         slug: 'vini/bollicine'
+                                                        description: "Prosecco, Franciacorta, Trentodoc e Champagne: metodo Martinotti e metodo classico per l'aperitivo, la tavola e le occasioni da festeggiare."
                                                     en_US:
                                                         name: 'Sparkling wines'
                                                         slug: 'wines/sparkling-wines'
+                                                        description: 'Prosecco, Franciacorta, Trentodoc and Champagne: tank and traditional method bubbles for aperitivo, the table and every celebration.'
                                                     fr_FR:
                                                         name: 'Vins pétillants'
                                                         slug: 'vins/vins-petillants'
+                                                        description: "Prosecco, franciacorta, trentodoc et champagne : méthode Martinotti et méthode traditionnelle, pour l'apéritif, la table et les fêtes."
 
                                             -   code: 'vini_dolci'
                                                 translations:
                                                     it_IT:
                                                         name: 'Vini dolci'
                                                         slug: 'vini/vini-dolci'
+                                                        description: 'Moscato, Vin Santo e passiti: vini da dessert e da meditazione, da servire freschi con pasticceria secca, formaggi erborinati o da soli a fine pasto.'
                                                     en_US:
                                                         name: 'Dessert wines'
                                                         slug: 'wines/dessert-wines'
+                                                        description: 'Moscato, Vin Santo and passito wines: dessert and meditation bottles, served cool with dry pastries, blue cheeses or on their own after dinner.'
                                                     fr_FR:
                                                         name: 'Vins doux'
                                                         slug: 'vins/vins-doux'
+                                                        description: 'Moscato, vin santo et vins de paille : des liquoreux de dessert et de méditation, à servir frais sur des petits fours, des persillés ou seuls.'
 
                 product_attribute:
                     options:

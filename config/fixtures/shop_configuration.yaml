@@ -105,12 +105,15 @@ sylius_fixtures:
                                     it_IT:
                                         name: 'Categoria'
                                         slug: 'categoria'
+                                        description: "Tutte le categorie dell'enoteca: vini italiani, calici in cristallo ed esperienze enogastronomiche."
                                     en_US:
                                         name: 'Category'
                                         slug: 'category'
+                                        description: 'Every category of the shop: Italian wines, crystal glasses and food and wine experiences.'
                                     fr_FR:
                                         name: 'Catégorie'
                                         slug: 'categorie'
+                                        description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
 
                 channel:
                     options:

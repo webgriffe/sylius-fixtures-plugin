@@ -9,18 +9,34 @@ sylius_fixtures:
                             category:
                                 code: 'category'
                                 name: 'Categoria'
+                                translations:
+                                    it_IT:
+                                        name: 'Categoria'
+                                        slug: 'categoria'
+                                        description: "Tutte le categorie dell'enoteca: vini italiani, calici in cristallo ed esperienze enogastronomiche."
+                                    en_US:
+                                        name: 'Category'
+                                        slug: 'category'
+                                        description: 'Every category of the shop: Italian wines, crystal glasses and food and wine experiences.'
+                                    fr_FR:
+                                        name: 'Catégorie'
+                                        slug: 'categorie'
+                                        description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
                                 children:
                                     -   code: 'calici'
                                         translations:
                                             it_IT:
                                                 name: 'Calici'
                                                 slug: 'calici'
+                                                description: 'Calici in cristallo per ogni tipologia di vino, in confezioni da 2 a 8 pezzi: Riedel, Zwiesel, Spiegelau, Bormioli. Tutti lavabili in lavastoviglie, spediti con imballo antiurto.'
                                             en_US:
                                                 name: 'Wine glasses'
                                                 slug: 'wine-glasses'
+                                                description: 'Crystal glasses for every style of wine, in packs of 2 to 8: Riedel, Zwiesel, Spiegelau, Bormioli. All dishwasher safe, shipped with shockproof packaging.'
                                             fr_FR:
                                                 name: 'Verres à vin'
                                                 slug: 'verres-a-vin'
+                                                description: 'Verres en cristal pour chaque type de vin, en coffrets de 2 à 8 pièces : Riedel, Zwiesel, Spiegelau, Bormioli. Lavables au lave-vaisselle, expédiés en emballage renforcé.'
 
                 glassware_attribute:
                     name: product_attribute

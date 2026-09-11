@@ -9,18 +9,34 @@ sylius_fixtures:
                             category:
                                 code: 'category'
                                 name: 'Categoria'
+                                translations:
+                                    it_IT:
+                                        name: 'Categoria'
+                                        slug: 'categoria'
+                                        description: "Tutte le categorie dell'enoteca: vini italiani, calici in cristallo ed esperienze enogastronomiche."
+                                    en_US:
+                                        name: 'Category'
+                                        slug: 'category'
+                                        description: 'Every category of the shop: Italian wines, crystal glasses and food and wine experiences.'
+                                    fr_FR:
+                                        name: 'Catégorie'
+                                        slug: 'categorie'
+                                        description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
                                 children:
                                     -   code: 'esperienze'
                                         translations:
                                             it_IT:
                                                 name: 'Esperienze'
                                                 slug: 'esperienze'
+                                                description: 'Giornate e weekend in cantina tra Chianti, Appennino Tosco-Emiliano, Valpolicella e Langhe: visite guidate, degustazioni e cucina del territorio, da 2 a 6 persone.'
                                             en_US:
                                                 name: 'Experiences'
                                                 slug: 'experiences'
+                                                description: 'Days and weekends in the cellars of Chianti, the Tuscan-Emilian Apennines, Valpolicella and the Langhe: guided visits, tastings and local cooking, for 2 to 6 people.'
                                             fr_FR:
                                                 name: 'Expériences'
                                                 slug: 'experiences'
+                                                description: 'Journées et week-ends en cave, du Chianti aux Apennins tosco-émiliens, de la Valpolicella aux Langhe : visites guidées, dégustations et cuisine du terroir, de 2 à 6 personnes.'
 
                 experience_attribute:
                     name: product_attribute

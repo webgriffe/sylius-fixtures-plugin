@@ -1,0 +1,45 @@
+# Price history of some products, so the shop can show the lowest price of the last 30 days required by the
+# Omnibus directive. Sylius only logs the price of the moment the fixtures run.
+sylius_fixtures:
+    suites:
+        webgriffe:
+            fixtures:
+                price_history:
+                    options:
+                        products:
+                            # The price of today is logged by Sylius itself when the fixtures run, and it is the
+                            # entry excluded from the lowest price computation: only the older prices go here.
+
+                            # markdowns declared by hand with "original_price", visible without any promotion
+                            valpolicella_classico_bertani:
+                                entries:
+                                    - { days_ago: 50, price: 15.90 }
+                                    - { days_ago: 26, price: 13.90 }
+                                    - { days_ago: 18, price: 15.90 }
+                            primitivo_sessantanni_san_marzano:
+                                entries:
+                                    - { days_ago: 55, price: 34.00 }
+                                    - { days_ago: 22, price: 31.50 }
+                                    - { days_ago: 14, price: 34.00 }
+                            amarone_valpolicella_allegrini:
+                                entries:
+                                    - { days_ago: 45, price: 85.00 }
+                                    - { days_ago: 27, price: 79.00 }
+                                    - { days_ago: 10, price: 85.00 }
+
+                            # discounted by the catalog promotions: Sylius computes the lowest price by itself
+                            verdicchio_villa_bianchi_umani_ronchi:
+                                entries:
+                                    - { days_ago: 35, price: 9.00 }
+                                    - { days_ago: 25, price: 8.55 }
+                                    - { days_ago: 15, price: 9.00 }
+                            gavi_docg_la_scolca:
+                                entries:
+                                    - { days_ago: 45, price: 18.00 }
+                                    - { days_ago: 21, price: 16.50 }
+                                    - { days_ago: 9, price: 18.00 }
+                            prosecco_doc_jeio_bisol:
+                                entries:
+                                    - { days_ago: 40, price: 10.00 }
+                                    - { days_ago: 27, price: 9.00 }
+                                    - { days_ago: 10, price: 10.00 }

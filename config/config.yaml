@@ -6,4 +6,5 @@ imports:
     - { resource: 'fixtures/experiences.yaml' }
     - { resource: 'fixtures/promotions.yaml' }
     - { resource: 'fixtures/demo_data.yaml' }
+    - { resource: 'fixtures/price_history.yaml' }
     - { resource: "twig_hooks/**/*.yaml" }

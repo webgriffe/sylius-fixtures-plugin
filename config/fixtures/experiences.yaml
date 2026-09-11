@@ -24,6 +24,8 @@ sylius_fixtures:
                                         description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
                                 children:
                                     -   code: 'esperienze'
+                                        images:
+                                            - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/chianti_1.webp', type: 'main' }
                                         translations:
                                             it_IT:
                                                 name: 'Esperienze'

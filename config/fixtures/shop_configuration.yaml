@@ -100,6 +100,8 @@ sylius_fixtures:
                         custom:
                             category:
                                 code: 'category'
+                                images:
+                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp', type: 'main' }
                                 name: 'Categoria'
                                 translations:
                                     it_IT:

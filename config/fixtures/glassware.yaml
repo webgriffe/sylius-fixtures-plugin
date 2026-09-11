@@ -24,6 +24,8 @@ sylius_fixtures:
                                         description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
                                 children:
                                     -   code: 'calici'
+                                        images:
+                                            - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp', type: 'main' }
                                         translations:
                                             it_IT:
                                                 name: 'Calici'

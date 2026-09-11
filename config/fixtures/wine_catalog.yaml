@@ -23,6 +23,8 @@ sylius_fixtures:
                                         description: 'Toutes les catégories de la boutique : vins italiens, verres en cristal et expériences œnogastronomiques.'
                                 children:
                                     -   code: 'vini'
+                                        images:
+                                            - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/vigneto_1.webp', type: 'main' }
                                         translations:
                                             it_IT:
                                                 name: 'Vini'
@@ -38,6 +40,8 @@ sylius_fixtures:
                                                 description: 'Vingt-sept étiquettes sélectionnées domaine par domaine, des rouges du quotidien aux vins de collection. Chaque fiche indique cépages, millésime, degré et accords conseillés.'
                                         children:
                                             -   code: 'vini_rossi'
+                                                images:
+                                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
                                                 translations:
                                                     it_IT:
                                                         name: 'Vini rossi'
@@ -53,6 +57,8 @@ sylius_fixtures:
                                                         description: 'Sangiovese, nebbiolo, montepulciano et primitivo : des rouges de table aux riservas de garde. À servir entre 16 et 18 °C, débouchés au moins une heure avant.'
 
                                             -   code: 'vini_bianchi'
+                                                images:
+                                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
                                                 translations:
                                                     it_IT:
                                                         name: 'Vini bianchi'
@@ -68,6 +74,8 @@ sylius_fixtures:
                                                         description: "Des blancs frais et sapides du nord au sud, du verdicchio des Marches au vermentino sarde, jusqu'aux grands blancs élevés en fût qui vieillissent des années."
 
                                             -   code: 'bollicine'
+                                                images:
+                                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_1.webp', type: 'main' }
                                                 translations:
                                                     it_IT:
                                                         name: 'Bollicine'
@@ -83,6 +91,8 @@ sylius_fixtures:
                                                         description: "Prosecco, franciacorta, trentodoc et champagne : méthode Martinotti et méthode traditionnelle, pour l'apéritif, la table et les fêtes."
 
                                             -   code: 'vini_dolci'
+                                                images:
+                                                    - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
                                                 translations:
                                                     it_IT:
                                                         name: 'Vini dolci'

@@ -344,6 +344,7 @@ sylius_fixtures:
                                 locale_code: 'it_IT'
                                 first_name: 'Admin'
                                 last_name: 'Webgriffe'
+                                avatar: '@WebgriffeSyliusFixturesPlugin/Resources/fixtures/images/avatars/webgriffe.webp'
 
                             -   email: 'api@webgriffe.com'
                                 username: 'api'

@@ -109,6 +109,36 @@ faker localized on the country of the address instead of the American one used b
 > Sylius picks a random locale and then loads the products joining only the translation of that locale: reading
 > the product name in another locale creates an empty translation and breaks the flush on a multi locale channel.
 
+### Price history (Omnibus)
+
+The `price_history` fixture writes the past prices of a product, so the shop can show the *lowest price of the
+last 30 days* required by the Omnibus directive. Sylius only logs the price of the moment the fixtures run, so
+without it every product looks like it has always had its current price and the line never shows anything
+useful.
+
+```yaml
+                price_history:
+                    options:
+                        products:
+                            chianti_docg:
+                                entries:
+                                    - { days_ago: 50, price: 15.90 }
+                                    - { days_ago: 26, price: 13.90 }
+```
+
+Do not list the price of today: the fixture logs it by itself as the last entry, and Sylius excludes exactly
+that entry from the computation. It then runs the Sylius processor, so the lowest price is computed the same
+way it would be in production.
+
+The lowest price is stored only when the variant is discounted, that is either:
+
+* a **catalog promotion** applies to it, and the price is recomputed on every run (remember to consume the
+  messenger `main` transport, the promotions are applied asynchronously);
+* or the product declares an `original_price` higher than its price, a markdown made by hand.
+
+> Never combine the two on the same product: the catalog promotion recomputes the price from the original one,
+> overwriting the markdown.
+
 ## The demo store
 
 Import the fixtures file of the plugin to get the `webgriffe` suite:

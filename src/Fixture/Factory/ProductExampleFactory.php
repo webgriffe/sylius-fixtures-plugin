@@ -9,6 +9,7 @@ use Sylius\Component\Core\Model\ChannelPricingInterface;
 use Sylius\Component\Core\Model\ProductInterface;
 use Sylius\Component\Core\Model\ProductVariantInterface;
 use Sylius\Component\Locale\Model\LocaleInterface;
+use Sylius\Component\Product\Generator\SlugGeneratorInterface;
 use Sylius\Component\Shipping\Model\ShippingCategoryInterface;
 use Sylius\Resource\Doctrine\Persistence\RepositoryInterface;
 use Webmozart\Assert\Assert;
@@ -53,6 +54,7 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
         private ExampleFactoryInterface $decoratedFactory,
         private RepositoryInterface $shippingCategoryRepository,
         private RepositoryInterface $localeRepository,
+        private SlugGeneratorInterface $slugGenerator,
     ) {
     }
 
@@ -140,8 +142,12 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             if (isset($translation['name'])) {
                 $product->setName($translation['name']);
             }
+            // Sylius generates the slug once, from the name of the first locale: a product translated in
+            // several languages would carry the same slug everywhere.
             if (isset($translation['slug'])) {
                 $product->setSlug($translation['slug']);
+            } elseif (isset($translation['name'])) {
+                $product->setSlug($this->slugGenerator->generate($translation['name']));
             }
             if (isset($translation['short_description'])) {
                 $product->setShortDescription($translation['short_description']);

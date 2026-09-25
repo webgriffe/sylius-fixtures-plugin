@@ -13,6 +13,7 @@ use Sylius\Component\Core\Model\ProductInterface;
 use Sylius\Component\Core\Model\ProductVariant;
 use Sylius\Component\Attribute\AttributeType\TextAttributeType;
 use Sylius\Component\Attribute\Model\AttributeValueInterface;
+use Sylius\Component\Product\Generator\SlugGenerator;
 use Sylius\Component\Product\Model\ProductAttribute;
 use Sylius\Component\Product\Model\ProductAttributeValue;
 use Sylius\Component\Product\Model\ProductOptionValue;
@@ -201,6 +202,7 @@ final class ProductExampleFactoryTest extends TestCase
             $decoratedFactory,
             $this->createShippingCategoryRepository(),
             $this->createLocaleRepository(['it_IT', 'en_US']),
+            new SlugGenerator(),
         );
 
         $factory->create([]);
@@ -240,6 +242,39 @@ final class ProductExampleFactoryTest extends TestCase
         }
 
         self::assertSame(['it_IT' => 'Toscana', 'en_US' => 'Tuscany'], $values);
+    }
+
+    public function testItGeneratesTheSlugFromTheTranslatedName(): void
+    {
+        $product = $this->createProduct($this->createVariant($this->createChannelPricing()));
+
+        $this->createFactory($product)->create([
+            'translations' => [
+                'it_IT' => ['name' => 'Calici Bordeaux Riedel Vinum'],
+                'en_US' => ['name' => 'Riedel Vinum Bordeaux glasses'],
+            ],
+        ]);
+
+        $product->setCurrentLocale('it_IT');
+        $product->setFallbackLocale('it_IT');
+        self::assertSame('calici-bordeaux-riedel-vinum', $product->getSlug());
+
+        $product->setCurrentLocale('en_US');
+        $product->setFallbackLocale('en_US');
+        self::assertSame('riedel-vinum-bordeaux-glasses', $product->getSlug());
+    }
+
+    public function testItKeepsTheSlugWrittenInTheFixtures(): void
+    {
+        $product = $this->createProduct($this->createVariant($this->createChannelPricing()));
+
+        $this->createFactory($product)->create([
+            'translations' => ['it_IT' => ['name' => 'Chianti DOCG', 'slug' => 'chianti-docg-ruffino']],
+        ]);
+
+        $product->setCurrentLocale('it_IT');
+        $product->setFallbackLocale('it_IT');
+        self::assertSame('chianti-docg-ruffino', $product->getSlug());
     }
 
     public function testItSetsTheShippingCategoryOnEveryVariant(): void
@@ -292,7 +327,12 @@ final class ProductExampleFactoryTest extends TestCase
             ->willReturn($product)
         ;
 
-        $factory = new ProductExampleFactory($decoratedFactory, $this->createShippingCategoryRepository(), $this->createLocaleRepository());
+        $factory = new ProductExampleFactory(
+            $decoratedFactory,
+            $this->createShippingCategoryRepository(),
+            $this->createLocaleRepository(),
+            new SlugGenerator(),
+        );
 
         $factory->create([
             'code' => 'chianti',
@@ -309,7 +349,12 @@ final class ProductExampleFactoryTest extends TestCase
         $decoratedFactory = $this->createMock(ExampleFactoryInterface::class);
         $decoratedFactory->method('create')->willReturn($product);
 
-        return new ProductExampleFactory($decoratedFactory, $this->createShippingCategoryRepository(), $this->createLocaleRepository());
+        return new ProductExampleFactory(
+            $decoratedFactory,
+            $this->createShippingCategoryRepository(),
+            $this->createLocaleRepository(),
+            new SlugGenerator(),
+        );
     }
 
     /**

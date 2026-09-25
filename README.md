@@ -32,6 +32,10 @@ Webgriffe\SyliusFixturesPlugin\WebgriffeSyliusFixturesPlugin::class => ['dev' =>
 | `shipping_category` | Shipping category code, assigned to every variant. Sylius never sets it, so any shipping method bound to a category would be discarded at checkout |
 | `translations` | `name`, `slug`, `short_description`, `description`, `meta_keywords` and `meta_description` per locale. Sylius writes the same translation in every locale |
 
+The **slug of each locale is generated from the name of that locale** when the translation does not state one:
+Sylius generates it once, from the first name it reads, so a product translated in several languages would
+answer on the same url everywhere.
+
 ```yaml
 sylius_fixtures:
     suites:

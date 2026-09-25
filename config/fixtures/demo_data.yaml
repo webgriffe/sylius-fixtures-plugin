@@ -271,9 +271,93 @@ sylius_fixtures:
                                 author: 'lucas.moreau@example.com'
                                 status: 'accepted'
 
-                similar_product_association:
+                product_association_type:
                     options:
-                        amount: 3
+                        custom:
+                            -   code: 'prodotti_simili'
+                                name: 'Prodotti simili'
+                                translations:
+                                    it_IT: 'Prodotti simili'
+                                    en_US: 'Similar products'
+                                    fr_FR: 'Produits similaires'
+
+                            -   code: 'si_abbina_con'
+                                name: 'Si abbina con'
+                                translations:
+                                    it_IT: 'Si abbina con'
+                                    en_US: 'Pairs with'
+                                    fr_FR: "S'accorde avec"
+
+                product_association:
+                    options:
+                        custom:
+                            -   type: 'prodotti_simili'
+                                owner: 'chianti_docg_ruffino'
+                                associated_products: ['montepulciano_dabruzzo_zaccagnini', 'valpolicella_classico_bertani', 'nero_davola_planeta']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'barolo_pio_cesare'
+                                associated_products: ['brunello_montalcino_col_dorcia', 'amarone_valpolicella_allegrini', 'barolo_monfortino_giacomo_conterno']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'brunello_montalcino_col_dorcia'
+                                associated_products: ['barolo_pio_cesare', 'chianti_classico_riserva_ducale', 'tignanello_antinori']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'verdicchio_villa_bianchi_umani_ronchi'
+                                associated_products: ['vermentino_la_cala_sella_mosca', 'pinot_grigio_santa_margherita', 'gavi_docg_la_scolca']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'gavi_docg_la_scolca'
+                                associated_products: ['verdicchio_villa_bianchi_umani_ronchi', 'cervaro_della_sala_antinori']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'prosecco_doc_jeio_bisol'
+                                associated_products: ['franciacorta_cuvee_prestige_ca_del_bosco', 'ferrari_perle_trentodoc']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'dom_perignon_vintage'
+                                associated_products: ['moet_chandon_brut_imperial', 'franciacorta_cuvee_prestige_ca_del_bosco']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'moscato_dasti_araldica'
+                                associated_products: ['vin_santo_serelle_ruffino', 'ben_rye_donnafugata']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'masseto_toscana'
+                                associated_products: ['sassicaia_tenuta_san_guido', 'tignanello_antinori']
+
+                            -   type: 'prodotti_simili'
+                                owner: 'calici_bordeaux_riedel_vinum'
+                                associated_products: ['calici_borgogna_zwiesel_pure', 'calici_universali_luigi_bormioli_vinoteque']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'barolo_pio_cesare'
+                                associated_products: ['calici_borgogna_zwiesel_pure', 'esperienza_langhe']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'brunello_montalcino_col_dorcia'
+                                associated_products: ['calici_bordeaux_riedel_vinum', 'esperienza_chianti']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'amarone_valpolicella_allegrini'
+                                associated_products: ['calici_bordeaux_riedel_vinum', 'esperienza_valpolicella']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'franciacorta_cuvee_prestige_ca_del_bosco'
+                                associated_products: ['flute_spiegelau_style']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'prosecco_doc_jeio_bisol'
+                                associated_products: ['flute_spiegelau_style']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'chianti_docg_ruffino'
+                                associated_products: ['calici_universali_luigi_bormioli_vinoteque', 'esperienza_chianti']
+
+                            -   type: 'si_abbina_con'
+                                owner: 'ben_rye_donnafugata'
+                                associated_products: ['calici_degustazione_iso']
 
                 address:
                     options:

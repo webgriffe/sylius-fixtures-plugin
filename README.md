@@ -82,6 +82,16 @@ sylius_fixtures:
 > The `payments` fixture completes the payments without checking whether the transition is allowed, so declare
 > it **before** the fulfilled and the cancelled orders, or it will try to pay an order that cannot be paid.
 
+### Product association types
+
+| Option | Description |
+|---|---|
+| `translations` | Name of the association type per locale |
+
+> The `similar_product_association` fixture of Sylius creates its own type named "Similar products", hard coded
+> and identical in every locale. Declare `product_association_type` and `product_association` instead, as the
+> demo store does: it also lets you choose the associations rather than picking them at random.
+
 ### Product attributes
 
 | Option | Description |

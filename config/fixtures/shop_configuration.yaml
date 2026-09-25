@@ -221,8 +221,19 @@ sylius_fixtures:
                             standard_it:
                                 code: 'corriere_italia'
                                 name: 'Corriere espresso Italia'
-                                description: 'Consegna in 24/48 ore in tutta Italia.'
+                                translations:
+                                    it_IT:
+                                        name: 'Corriere espresso Italia'
+                                        description: 'Consegna in 24/48 ore in tutta Italia.'
+                                    en_US:
+                                        name: 'Express courier, Italy'
+                                        description: 'Delivered in 24/48 hours anywhere in Italy.'
+                                    fr_FR:
+                                        name: 'Transporteur express Italie'
+                                        description: 'Livraison en 24/48 heures partout en Italie.'
                                 enabled: true
+                                min_delivery_time_days: 1
+                                max_delivery_time_days: 2
                                 zone: 'IT'
                                 # only for orders made of bottles: anything fragile needs the dedicated method
                                 category: 'bottiglie'
@@ -237,8 +248,19 @@ sylius_fixtures:
                             standard_eu:
                                 code: 'corriere_europa'
                                 name: 'Corriere espresso Europa'
-                                description: 'Consegna in 3/5 giorni lavorativi nei paesi europei.'
+                                translations:
+                                    it_IT:
+                                        name: 'Corriere espresso Europa'
+                                        description: 'Consegna in 3/5 giorni lavorativi nei paesi europei.'
+                                    en_US:
+                                        name: 'Express courier, Europe'
+                                        description: 'Delivered in 3/5 working days across Europe.'
+                                    fr_FR:
+                                        name: 'Transporteur express Europe'
+                                        description: 'Livraison en 3 à 5 jours ouvrés en Europe.'
                                 enabled: true
+                                min_delivery_time_days: 3
+                                max_delivery_time_days: 5
                                 zone: 'EU'
                                 category: 'bottiglie'
                                 category_requirement: 'match_all'
@@ -252,8 +274,19 @@ sylius_fixtures:
                             fragile_it:
                                 code: 'corriere_fragile_italia'
                                 name: 'Corriere con imballo antiurto Italia'
-                                description: 'Imballo rinforzato per i calici, consegna in 24/48 ore in Italia.'
+                                translations:
+                                    it_IT:
+                                        name: 'Corriere con imballo antiurto Italia'
+                                        description: 'Imballo rinforzato per i calici, consegna in 24/48 ore in Italia.'
+                                    en_US:
+                                        name: 'Shockproof courier, Italy'
+                                        description: 'Reinforced packaging for glassware, delivered in 24/48 hours in Italy.'
+                                    fr_FR:
+                                        name: 'Transporteur avec emballage renforcé Italie'
+                                        description: 'Emballage renforcé pour les verres, livraison en 24/48 heures en Italie.'
                                 enabled: true
+                                min_delivery_time_days: 1
+                                max_delivery_time_days: 2
                                 zone: 'IT'
                                 # as soon as one glass is in the cart, the whole order travels protected
                                 category: 'fragile'
@@ -268,8 +301,19 @@ sylius_fixtures:
                             fragile_eu:
                                 code: 'corriere_fragile_europa'
                                 name: 'Corriere con imballo antiurto Europa'
-                                description: 'Imballo rinforzato per i calici, consegna in 3/5 giorni lavorativi in Europa.'
+                                translations:
+                                    it_IT:
+                                        name: 'Corriere con imballo antiurto Europa'
+                                        description: 'Imballo rinforzato per i calici, consegna in 3/5 giorni lavorativi in Europa.'
+                                    en_US:
+                                        name: 'Shockproof courier, Europe'
+                                        description: 'Reinforced packaging for glassware, delivered in 3/5 working days across Europe.'
+                                    fr_FR:
+                                        name: 'Transporteur avec emballage renforcé Europe'
+                                        description: 'Emballage renforcé pour les verres, livraison en 3 à 5 jours ouvrés en Europe.'
                                 enabled: true
+                                min_delivery_time_days: 3
+                                max_delivery_time_days: 5
                                 zone: 'EU'
                                 category: 'fragile'
                                 category_requirement: 'match_any'
@@ -283,8 +327,19 @@ sylius_fixtures:
                             pickup:
                                 code: 'ritiro_in_sede'
                                 name: 'Ritiro in sede'
-                                description: 'Ritiro gratuito presso la nostra sede di Casalgrande (RE).'
+                                translations:
+                                    it_IT:
+                                        name: 'Ritiro in sede'
+                                        description: 'Ritiro gratuito presso la nostra sede di Casalgrande (RE).'
+                                    en_US:
+                                        name: 'Pickup at the shop'
+                                        description: 'Free pickup at our premises in Casalgrande (RE), Italy.'
+                                    fr_FR:
+                                        name: 'Retrait sur place'
+                                        description: 'Retrait gratuit dans nos locaux de Casalgrande (RE), en Italie.'
                                 enabled: true
+                                min_delivery_time_days: 1
+                                max_delivery_time_days: 1
                                 zone: 'IT'
                                 # no category: available whatever the cart contains
                                 channels:

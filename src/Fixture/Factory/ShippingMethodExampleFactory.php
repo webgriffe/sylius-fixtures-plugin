@@ -35,7 +35,26 @@ final readonly class ShippingMethodExampleFactory implements ExampleFactoryInter
         $categoryRequirement = $options['category_requirement'] ?? null;
         unset($options['category_requirement']);
 
+        /** @var array<string, array<string, string>> $translations */
+        $translations = $options['translations'] ?? [];
+        unset($options['translations']);
+
+        $minDeliveryTimeDays = $options['min_delivery_time_days'] ?? null;
+        $maxDeliveryTimeDays = $options['max_delivery_time_days'] ?? null;
+        unset($options['min_delivery_time_days'], $options['max_delivery_time_days']);
+
         $shippingMethod = $this->decoratedFactory->create($options);
+
+        $this->translate($shippingMethod, $translations);
+
+        if (null !== $minDeliveryTimeDays) {
+            Assert::integer($minDeliveryTimeDays);
+            $shippingMethod->setMinDeliveryTimeDays($minDeliveryTimeDays);
+        }
+        if (null !== $maxDeliveryTimeDays) {
+            Assert::integer($maxDeliveryTimeDays);
+            $shippingMethod->setMaxDeliveryTimeDays($maxDeliveryTimeDays);
+        }
 
         if (null !== $categoryRequirement) {
             Assert::string($categoryRequirement);
@@ -45,5 +64,22 @@ final readonly class ShippingMethodExampleFactory implements ExampleFactoryInter
         }
 
         return $shippingMethod;
+    }
+
+    /** @param array<string, array<string, string>> $translations */
+    private function translate(ShippingMethodInterface $shippingMethod, array $translations): void
+    {
+        foreach ($translations as $localeCode => $translation) {
+            $shippingMethod->setCurrentLocale($localeCode);
+            // the fallback locale must match the current one, otherwise the fallback translation is overwritten
+            $shippingMethod->setFallbackLocale($localeCode);
+
+            if (isset($translation['name'])) {
+                $shippingMethod->setName($translation['name']);
+            }
+            if (isset($translation['description'])) {
+                $shippingMethod->setDescription($translation['description']);
+            }
+        }
     }
 }

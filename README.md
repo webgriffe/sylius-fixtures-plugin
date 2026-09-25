@@ -176,6 +176,23 @@ carries its province: the **code** of a real province where the country has them
 > Sylius picks a random locale and then loads the products joining only the translation of that locale: reading
 > the product name in another locale creates an empty translation and breaks the flush on a multi locale channel.
 
+### Customers
+
+| Option | Description |
+|---|---|
+| `subscribed_to_newsletter` | Subscribes the customer to the newsletter, which the Sylius fixtures never set |
+
+```yaml
+                shop_user:
+                    options:
+                        custom:
+                            -   email: 'cliente@webgriffe.com'
+                                first_name: 'Mario'
+                                last_name: 'Rossi'
+                                password: 'webgriffe'
+                                subscribed_to_newsletter: true
+```
+
 ### Promotions
 
 | Fixture | Option | Description |

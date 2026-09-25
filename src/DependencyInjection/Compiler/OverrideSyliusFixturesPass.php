@@ -14,6 +14,7 @@ use Webgriffe\SyliusFixturesPlugin\Fixture\ProductFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductOptionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\PromotionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ShippingMethodFixture;
+use Webgriffe\SyliusFixturesPlugin\Fixture\ShopUserFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\TaxonFixture;
 
 /**
@@ -30,6 +31,7 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
         'sylius.fixture.promotion' => PromotionFixture::class,
         'sylius.fixture.product_option' => ProductOptionFixture::class,
         'sylius.fixture.shipping_method' => ShippingMethodFixture::class,
+        'sylius.fixture.shop_user' => ShopUserFixture::class,
         'sylius.fixture.taxon' => TaxonFixture::class,
         'sylius.fixture.example_factory.order' => OrderExampleFactory::class,
     ];

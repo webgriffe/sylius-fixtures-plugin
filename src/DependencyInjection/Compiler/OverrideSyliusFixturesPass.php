@@ -9,6 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Webgriffe\SyliusFixturesPlugin\Fixture\CatalogPromotionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\OrderExampleFactory;
 use Webgriffe\SyliusFixturesPlugin\Fixture\OrderFixture;
+use Webgriffe\SyliusFixturesPlugin\Fixture\PaymentMethodFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductAssociationTypeFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductAttributeFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductFixture;
@@ -28,6 +29,7 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
         'sylius.fixture.catalog_promotion' => CatalogPromotionFixture::class,
         'sylius.fixture.order' => OrderFixture::class,
         'sylius.fixture.product' => ProductFixture::class,
+        'sylius.fixture.payment_method' => PaymentMethodFixture::class,
         'sylius.fixture.product_association_type' => ProductAssociationTypeFixture::class,
         'sylius.fixture.product_attribute' => ProductAttributeFixture::class,
         'sylius.fixture.promotion' => PromotionFixture::class,

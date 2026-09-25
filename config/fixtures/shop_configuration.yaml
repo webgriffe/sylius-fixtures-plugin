@@ -191,15 +191,41 @@ sylius_fixtures:
                     options:
                         custom:
                             bank_transfer:
-                                code: 'bank_transfer'
+                                code: 'bonifico_bancario'
                                 name: 'Bonifico bancario'
                                 enabled: true
+                                translations:
+                                    it_IT:
+                                        name: 'Bonifico bancario'
+                                        description: "L'ordine viene preparato alla ricezione del bonifico, di solito entro due giorni lavorativi."
+                                        instructions: "Intestatario: Webgriffe Srl — IBAN IT60 X054 2811 1010 0000 0123 456 — causale: numero dell'ordine."
+                                    en_US:
+                                        name: 'Bank transfer'
+                                        description: 'The order is prepared as soon as the transfer arrives, usually within two working days.'
+                                        instructions: 'Account holder: Webgriffe Srl — IBAN IT60 X054 2811 1010 0000 0123 456 — reference: your order number.'
+                                    fr_FR:
+                                        name: 'Virement bancaire'
+                                        description: "La commande est préparée dès réception du virement, en général sous deux jours ouvrés."
+                                        instructions: 'Titulaire : Webgriffe Srl — IBAN IT60 X054 2811 1010 0000 0123 456 — référence : le numéro de commande.'
                                 channels:
                                     - 'ecommerce'
                             cash_on_delivery:
-                                code: 'cash_on_delivery'
+                                code: 'contrassegno'
                                 name: 'Contrassegno'
                                 enabled: true
+                                translations:
+                                    it_IT:
+                                        name: 'Contrassegno'
+                                        description: 'Si paga in contanti al corriere alla consegna, con un supplemento di 3 € già incluso nel totale.'
+                                        instructions: "Prepara l'importo esatto: i corrieri non sempre hanno il resto."
+                                    en_US:
+                                        name: 'Cash on delivery'
+                                        description: 'Paid in cash to the courier on delivery, with a €3 surcharge already included in the total.'
+                                        instructions: 'Please have the exact amount ready: couriers do not always carry change.'
+                                    fr_FR:
+                                        name: 'Paiement à la livraison'
+                                        description: 'Réglé en espèces au transporteur à la livraison, avec un supplément de 3 € déjà inclus dans le total.'
+                                        instructions: "Prévoyez l'appoint : les transporteurs n'ont pas toujours de monnaie."
                                 channels:
                                     - 'ecommerce'
 

@@ -82,6 +82,15 @@ sylius_fixtures:
 > The `payments` fixture completes the payments without checking whether the transition is allowed, so declare
 > it **before** the fulfilled and the cancelled orders, or it will try to pay an order that cannot be paid.
 
+### Payment methods
+
+| Option | Description |
+|---|---|
+| `translations` | `name`, `description` and `instructions` per locale |
+
+The instructions are the text the customer reads after placing the order, the place for the bank details of an
+offline transfer.
+
 ### Product association types
 
 | Option | Description |

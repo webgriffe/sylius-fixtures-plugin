@@ -209,9 +209,11 @@ sylius_fixtures:
                             bottles:
                                 code: 'bottiglie'
                                 name: 'Bottiglie'
+                                description: 'Bottiglie di vino, spedite nei cartoni alveolati standard da sei o dodici pezzi.'
                             fragile:
                                 code: 'fragile'
                                 name: 'Fragile'
+                                description: 'Articoli in vetro e cristallo, che viaggiano solo con imballo antiurto e bollino fragile.'
 
                 shipping_method:
                     options:
@@ -455,12 +457,15 @@ sylius_fixtures:
                             wine:
                                 code: 'vino'
                                 name: 'Vino'
+                                description: 'Aliquota ordinaria del 22% applicata a vini, spumanti e vini liquorosi.'
                             other:
                                 code: 'altro'
                                 name: 'Altro'
+                                description: 'Aliquota ordinaria del 22% per gli articoli non alimentari, come calici e accessori.'
                             experiences:
                                 code: 'esperienze'
                                 name: 'Servizi turistici'
+                                description: 'Aliquota ridotta del 10% prevista per i servizi turistici: visite guidate, degustazioni e pernottamenti.'
 
                 tax_rate:
                     options:

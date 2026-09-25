@@ -150,6 +150,8 @@ variants translated in a single language.
 | Option | Description |
 |---|---|
 | `category_requirement` | `match_any` (default in Sylius), `match_all` or `match_none` |
+| `translations` | `name` and `description` per locale: Sylius writes the same ones in every locale |
+| `min_delivery_time_days`, `max_delivery_time_days` | Estimated delivery time, shown at the checkout |
 
 ```yaml
                 shipping_method:
@@ -165,8 +167,9 @@ variants translated in a single language.
 
 ### Orders
 
-The demo orders are created in the default locale of the channel, and their addresses are generated with a
-faker localized on the country of the address instead of the American one used by Sylius. Every address also
+The demo orders are created in the default locale of the channel, their addresses are generated with a faker
+localized on the country of the address instead of the American one used by Sylius, and every **shipped**
+shipment carries a tracking code, which Sylius never writes. Every address also
 carries its province: the **code** of a real province where the country has them (Italy in the demo store), the
 **name** of a region as free text everywhere else.
 

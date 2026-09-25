@@ -485,6 +485,46 @@ sylius_fixtures:
                                 birthday: '1976-08-27 00:00:00'
                                 subscribed_to_newsletter: true
 
+                            -   email: 'emma.clarke@example.com'
+                                first_name: 'Emma'
+                                last_name: 'Clarke'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+44 7700 900432'
+                                birthday: '1987-03-12 00:00:00'
+                                subscribed_to_newsletter: true
+
+                            -   email: 'michael.byrne@example.com'
+                                first_name: 'Michael'
+                                last_name: 'Byrne'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+                                gender: 'm'
+                                phone_number: '+353 86 1234567'
+                                birthday: '1979-09-04 00:00:00'
+                                subscribed_to_newsletter: false
+
+                            -   email: 'sophie.laurent@example.com'
+                                first_name: 'Sophie'
+                                last_name: 'Laurent'
+                                password: 'webgriffe'
+                                customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+33 6 12 34 56 78'
+                                birthday: '1991-06-25 00:00:00'
+                                subscribed_to_newsletter: true
+
+                            -   email: 'lucas.moreau@example.com'
+                                first_name: 'Lucas'
+                                last_name: 'Moreau'
+                                password: 'webgriffe'
+                                customer_group: 'ristorazione'
+                                gender: 'm'
+                                phone_number: '+33 7 98 76 54 32'
+                                birthday: '1984-11-08 00:00:00'
+                                subscribed_to_newsletter: false
+
                 admin_user:
                     options:
                         custom:

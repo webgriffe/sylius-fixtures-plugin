@@ -215,6 +215,62 @@ sylius_fixtures:
                                 author: 'marco.romano@example.com'
                                 status: 'rejected'
 
+                            -   product: 'barolo_pio_cesare'
+                                rating: 5
+                                title: 'Worth every year of the wait'
+                                comment: 'Bought after a tasting in Alba. Austere now, but the perfume of dried rose is already unmistakable. Cellaring the other two bottles.'
+                                author: 'emma.clarke@example.com'
+                                status: 'accepted'
+
+                            -   product: 'calici_bordeaux_riedel_vinum'
+                                rating: 5
+                                title: 'They really do change the wine'
+                                comment: 'Sceptical at first, then we compared the same Barolo in these and in ordinary glasses. No contest. Packed very well for the trip to London.'
+                                author: 'emma.clarke@example.com'
+                                status: 'accepted'
+
+                            -   product: 'prosecco_doc_jeio_bisol'
+                                rating: 4
+                                title: 'Our house sparkling'
+                                comment: 'Ordered a case for a summer party. Fresh, not too sweet, and it arrived in Dublin in four days as promised.'
+                                author: 'michael.byrne@example.com'
+                                status: 'accepted'
+
+                            -   product: 'esperienza_valpolicella'
+                                rating: 5
+                                title: 'The drying lofts are something else'
+                                comment: 'Walking between the racks where the grapes rest for months is worth the trip on its own. The cellar master answered every question, in English.'
+                                author: 'michael.byrne@example.com'
+                                status: 'accepted'
+
+                            -   product: 'gavi_docg_la_scolca'
+                                rating: 5
+                                title: 'Le blanc que je commande en caisse'
+                                comment: 'Minéral, tendu, parfait sur les fruits de mer. Livré à Lyon en cinq jours, emballage impeccable.'
+                                author: 'sophie.laurent@example.com'
+                                status: 'accepted'
+
+                            -   product: 'ben_rye_donnafugata'
+                                rating: 5
+                                title: 'Un liquoreux inoubliable'
+                                comment: 'Abricot sec et une salinité qui nettoie la bouche. La demi-bouteille suffit pour six personnes en fin de repas.'
+                                author: 'sophie.laurent@example.com'
+                                status: 'accepted'
+
+                            -   product: 'amarone_valpolicella_allegrini'
+                                rating: 4
+                                title: 'Puissant, à ouvrir longtemps avant'
+                                comment: "Servi sur un plat de gibier, il a écrasé la sauce. Ouvrez-le deux heures avant, il s'assouplit beaucoup."
+                                author: 'lucas.moreau@example.com'
+                                status: 'accepted'
+
+                            -   product: 'calici_degustazione_iso'
+                                rating: 4
+                                title: 'Les verres de nos dégustations'
+                                comment: "Nous les utilisons au restaurant pour les dégustations à l'aveugle. Robustes et conformes à la norme."
+                                author: 'lucas.moreau@example.com'
+                                status: 'accepted'
+
                 similar_product_association:
                     options:
                         amount: 3

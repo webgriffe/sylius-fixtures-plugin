@@ -60,6 +60,24 @@ sylius_fixtures:
                                         short_description: 'Fresh and savoury Sangiovese.'
 ```
 
+### Orders
+
+| Option | Description |
+|---|---|
+| `state` | `completed` (default) or `cancelled`, to show cancelled orders in the admin as well |
+
+```yaml
+                cancelled_orders:
+                    name: order
+                    options:
+                        amount: 3
+                        channel: 'ecommerce'
+                        state: 'cancelled'
+```
+
+> The `payments` fixture completes the payments without checking whether the transition is allowed, so declare
+> it **before** the fulfilled and the cancelled orders, or it will try to pay an order that cannot be paid.
+
 ### Product attributes
 
 | Option | Description |
@@ -148,10 +166,31 @@ variants translated in a single language.
 ### Orders
 
 The demo orders are created in the default locale of the channel, and their addresses are generated with a
-faker localized on the country of the address instead of the American one used by Sylius.
+faker localized on the country of the address instead of the American one used by Sylius. Every address also
+carries its province: the **code** of a real province where the country has them (Italy in the demo store), the
+**name** of a region as free text everywhere else.
+
+> The regions are a table of the plugin, not faker data: half of its locales have no region at all, and some
+> fall back to the American states, so a Bulgarian address would end up in Vermont.
 
 > Sylius picks a random locale and then loads the products joining only the translation of that locale: reading
 > the product name in another locale creates an empty translation and breaks the flush on a multi locale channel.
+
+### Provinces
+
+The `province` fixture creates the provinces of a country with their **abbreviation**, which the `geographical`
+fixture of Sylius leaves empty: it only takes a code and a name. Declare it after `geographical`, the countries
+have to exist.
+
+```yaml
+                province:
+                    options:
+                        countries:
+                            IT:
+                                IT-BO:
+                                    name: 'Bologna'
+                                    abbreviation: 'BO'
+```
 
 ### Price history (Omnibus)
 

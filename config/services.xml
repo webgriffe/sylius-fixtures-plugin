@@ -45,6 +45,14 @@
             <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.shipping_method.inner" />
         </service>
 
+        <service id="webgriffe_sylius_fixtures.fixture.province"
+                 class="Webgriffe\SyliusFixturesPlugin\Fixture\ProvinceFixture">
+            <argument type="service" id="sylius.manager.province" />
+            <argument type="service" id="sylius.repository.country" />
+            <argument type="service" id="sylius.factory.province" />
+            <tag name="sylius_fixtures.fixture" />
+        </service>
+
         <service id="webgriffe_sylius_fixtures.fixture.price_history"
                  class="Webgriffe\SyliusFixturesPlugin\Fixture\PriceHistoryFixture">
             <argument type="service" id="sylius.manager.channel_pricing_log_entry" />

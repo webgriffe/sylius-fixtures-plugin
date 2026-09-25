@@ -4,7 +4,216 @@ sylius_fixtures:
             fixtures:
                 product_review:
                     options:
-                        random: 40
+                        custom:
+                            -   product: 'chianti_docg_ruffino'
+                                rating: 5
+                                title: 'Il rosso di casa'
+                                comment: 'Ne ordino sei bottiglie alla volta da un anno. Sulla pizza del sabato non sbaglia mai e il prezzo resta onesto.'
+                                author: 'cliente@webgriffe.com'
+                                status: 'accepted'
+
+                            -   product: 'chianti_docg_ruffino'
+                                rating: 4
+                                title: 'Buono, ma aspettatelo'
+                                comment: "Appena stappato è un po' chiuso. Mezz'ora nel decanter e cambia completamente, tira fuori la ciliegia."
+                                author: 'luca.bianchi@example.com'
+                                status: 'accepted'
+
+                            -   product: 'montepulciano_dabruzzo_zaccagnini'
+                                rating: 4
+                                title: 'Rapporto qualità prezzo ottimo'
+                                comment: 'Sotto i dieci euro è difficile trovare di meglio. Morbido, senza spigoli, piace anche a chi non beve spesso rosso.'
+                                author: 'giulia.ferrari@example.com'
+                                status: 'accepted'
+
+                            -   product: 'valpolicella_classico_bertani'
+                                rating: 5
+                                title: 'Fresco e beverino'
+                                comment: 'Servito a 15 gradi come consigliato nella scheda: perfetto. Bottiglia finita in una sera fra quattro persone.'
+                                author: 'marco.romano@example.com'
+                                status: 'accepted'
+
+                            -   product: 'barbera_dasti_michele_chiarlo'
+                                rating: 4
+                                title: 'Ottimo sugli agnolotti'
+                                comment: 'Acidità giusta per i piatti di carne piemontesi. Il legno si sente ma non copre il frutto.'
+                                author: 'alessandro.conti@example.com'
+                                status: 'accepted'
+
+                            -   product: 'nero_davola_planeta'
+                                rating: 5
+                                title: 'Sicilia in bottiglia'
+                                comment: 'Preso per una grigliata, promosso a pieni voti. Caldo e speziato, tannino morbido.'
+                                author: 'davide.barbieri@example.com'
+                                status: 'accepted'
+
+                            -   product: 'chianti_classico_riserva_ducale'
+                                rating: 5
+                                title: 'Una Riserva che non delude'
+                                comment: "Regalata a mio padre che se ne intende. Mi ha telefonato il giorno dopo per chiedermi dove l'avevo comprata."
+                                author: 'francesca.greco@example.com'
+                                status: 'accepted'
+
+                            -   product: 'primitivo_sessantanni_san_marzano'
+                                rating: 4
+                                title: 'Importante, forse troppo'
+                                comment: 'Vino di grande struttura, ma quattordici e mezzo si sentono tutti. Va abbinato a piatti robusti.'
+                                author: 'sara.moretti@example.com'
+                                status: 'accepted'
+
+                            -   product: 'brunello_montalcino_col_dorcia'
+                                rating: 5
+                                title: 'Vale ogni euro'
+                                comment: 'Aperto per un anniversario. Ancora giovanissimo, ne ho comprata una seconda da dimenticare in cantina.'
+                                author: 'valentina.rizzo@example.com'
+                                status: 'accepted'
+
+                            -   product: 'barolo_pio_cesare'
+                                rating: 5
+                                title: 'Il Barolo come dovrebbe essere'
+                                comment: 'Austero, tannico, lunghissimo. Con il brasato è stata una serata da ricordare.'
+                                author: 'alessandro.conti@example.com'
+                                status: 'accepted'
+
+                            -   product: 'amarone_valpolicella_allegrini'
+                                rating: 4
+                                title: 'Potente, da meditazione'
+                                comment: 'Più che a tavola lo berrei da solo dopo cena. Il prezzo scontato lo rende interessante.'
+                                author: 'cliente@webgriffe.com'
+                                status: 'accepted'
+
+                            -   product: 'tignanello_antinori'
+                                rating: 5
+                                title: 'Un classico che non tradisce'
+                                comment: 'Arrivato imballato benissimo in due giorni. Il vino non ha bisogno di presentazioni.'
+                                author: 'osteria.delborgo@example.com'
+                                status: 'accepted'
+
+                            -   product: 'verdicchio_villa_bianchi_umani_ronchi'
+                                rating: 4
+                                title: 'Perfetto con il pesce'
+                                comment: "Sapido, con quella nota di mandorla in fondo. Lo tengo sempre in frigo d'estate."
+                                author: 'chiara.esposito@example.com'
+                                status: 'accepted'
+
+                            -   product: 'vermentino_la_cala_sella_mosca'
+                                rating: 5
+                                title: 'Profuma di mare'
+                                comment: 'Bevuto con spaghetti alle vongole, abbinamento da manuale. Ottimo anche come aperitivo.'
+                                author: 'sara.moretti@example.com'
+                                status: 'accepted'
+
+                            -   product: 'pinot_grigio_santa_margherita'
+                                rating: 3
+                                title: 'Corretto, niente di più'
+                                comment: 'È il pinot grigio che ti aspetti: pulito e facile. Per il prezzo mi aspettavo un pizzico di carattere in più.'
+                                author: 'davide.barbieri@example.com'
+                                status: 'accepted'
+
+                            -   product: 'gavi_docg_la_scolca'
+                                rating: 5
+                                title: 'Il mio bianco preferito'
+                                comment: 'Minerale e teso, non stanca mai. Con il promozionale in corso ne ho prese tre.'
+                                author: 'giulia.ferrari@example.com'
+                                status: 'accepted'
+
+                            -   product: 'prosecco_doc_jeio_bisol'
+                                rating: 4
+                                title: 'Aperitivo garantito'
+                                comment: 'Bollicina fine e prezzo giusto. Per una cena fra amici ne bastano due bottiglie.'
+                                author: 'marco.romano@example.com'
+                                status: 'accepted'
+
+                            -   product: 'franciacorta_cuvee_prestige_ca_del_bosco'
+                                rating: 5
+                                title: 'Metodo classico serio'
+                                comment: 'Crosta di pane e agrumi, perlage finissimo. Regalato a Natale, figura sempre bene.'
+                                author: 'enoteca.centrale@example.com'
+                                status: 'accepted'
+
+                            -   product: 'dom_perignon_vintage'
+                                rating: 5
+                                title: 'Per le occasioni vere'
+                                comment: 'Comprato per il matrimonio di mia sorella. Confezione impeccabile e consegna puntuale.'
+                                author: 'valentina.rizzo@example.com'
+                                status: 'accepted'
+
+                            -   product: 'moscato_dasti_araldica'
+                                rating: 4
+                                title: 'Dolce ma non stucchevole'
+                                comment: "Con il panettone è d'obbligo. Cinque gradi e mezzo, lo bevono tutti volentieri."
+                                author: 'francesca.greco@example.com'
+                                status: 'accepted'
+
+                            -   product: 'ben_rye_donnafugata'
+                                rating: 5
+                                title: 'Un passito straordinario'
+                                comment: 'Albicocca secca e una sapidità che pulisce la bocca. Mezza bottiglia basta per sei persone.'
+                                author: 'luca.bianchi@example.com'
+                                status: 'accepted'
+
+                            -   product: 'calici_bordeaux_riedel_vinum'
+                                rating: 5
+                                title: 'Cambiano il vino davvero'
+                                comment: 'Pensavo fossero discorsi da sommelier, poi ho provato lo stesso Barolo in due bicchieri diversi. Ricredutomi.'
+                                author: 'alessandro.conti@example.com'
+                                status: 'accepted'
+
+                            -   product: 'calici_degustazione_iso'
+                                rating: 4
+                                title: 'Quelli del corso'
+                                comment: 'Sono esattamente i bicchieri usati al corso da sommelier. Confezione da sei ben imballata.'
+                                author: 'chiara.esposito@example.com'
+                                status: 'accepted'
+
+                            -   product: 'flute_spiegelau_style'
+                                rating: 3
+                                title: 'Belli ma delicati'
+                                comment: 'Molto eleganti, però uno si è rotto in lavastoviglie al secondo lavaggio. Consiglio a mano.'
+                                author: 'sara.moretti@example.com'
+                                status: 'accepted'
+
+                            -   product: 'esperienza_chianti'
+                                rating: 5
+                                title: 'Due giorni indimenticabili'
+                                comment: 'Guida preparatissima e cantine scelte bene. Il pranzo in fattoria valeva da solo il viaggio.'
+                                author: 'cliente@webgriffe.com'
+                                status: 'accepted'
+
+                            -   product: 'esperienza_appennino'
+                                rating: 5
+                                title: "Il caseificio all'alba"
+                                comment: "Vedere la caldaia alle sei del mattino è un'esperienza. Ottima anche la parte sui vini della pedecollina."
+                                author: 'davide.barbieri@example.com'
+                                status: 'accepted'
+
+                            -   product: 'esperienza_langhe'
+                                rating: 4
+                                title: 'Tartufo e Barolo, cosa volere di più'
+                                comment: 'Cerca del tartufo emozionante, unico neo la partenza molto presto. Organizzazione perfetta.'
+                                author: 'enoteca.centrale@example.com'
+                                status: 'accepted'
+
+                            -   product: 'barolo_monfortino_giacomo_conterno'
+                                rating: 5
+                                title: 'Bottiglia da collezione'
+                                comment: "Arrivata in cantinetta e mai aperta. La tengo per i settant'anni di mio padre."
+                                author: 'osteria.delborgo@example.com'
+                                status: 'new'
+
+                            -   product: 'masseto_toscana'
+                                rating: 4
+                                title: 'Costosissimo ma unico'
+                                comment: 'Bevuto una volta in vita mia, grazie a una cena speciale. Vellutato come pochi.'
+                                author: 'valentina.rizzo@example.com'
+                                status: 'new'
+
+                            -   product: 'moet_chandon_brut_imperial'
+                                rating: 2
+                                title: "Non all'altezza del prezzo"
+                                comment: "Sarà l'abitudine, ma con la stessa cifra preferisco un Franciacorta italiano."
+                                author: 'marco.romano@example.com'
+                                status: 'rejected'
 
                 similar_product_association:
                     options:
@@ -12,15 +221,14 @@ sylius_fixtures:
 
                 address:
                     options:
-                        # The random ones are generated with an English faker, the Italian ones are explicit.
-                        random: 4
-                        prototype:
-                            country_code: 'IT'
+                        # Written by hand: the faker of Sylius is English and it never fills the province,
+                        # which Italian addresses require.
                         custom:
                             -   first_name: 'Mario'
                                 last_name: 'Rossi'
                                 street: 'Via Emilia Ovest, 12'
                                 city: 'Reggio Emilia'
+                                province_code: 'IT-RE'
                                 postcode: '42123'
                                 country_code: 'IT'
                                 phone_number: '+39 0522 445566'
@@ -30,6 +238,7 @@ sylius_fixtures:
                                 last_name: 'Ferrari'
                                 street: 'Corso Vittorio Emanuele II, 48'
                                 city: 'Torino'
+                                province_code: 'IT-TO'
                                 postcode: '10121'
                                 country_code: 'IT'
                                 phone_number: '+39 011 2233445'
@@ -39,6 +248,7 @@ sylius_fixtures:
                                 last_name: 'Bianchi'
                                 street: 'Via Garibaldi, 7'
                                 city: 'Bologna'
+                                province_code: 'IT-BO'
                                 postcode: '40124'
                                 country_code: 'IT'
                                 phone_number: '+39 051 998877'
@@ -48,6 +258,7 @@ sylius_fixtures:
                                 last_name: 'Esposito'
                                 street: 'Via Toledo, 210'
                                 city: 'Napoli'
+                                province_code: 'IT-NA'
                                 postcode: '80132'
                                 country_code: 'IT'
                                 phone_number: '+39 081 5566778'
@@ -57,6 +268,7 @@ sylius_fixtures:
                                 last_name: 'Romano'
                                 street: 'Viale Certosa, 33'
                                 city: 'Milano'
+                                province_code: 'IT-MI'
                                 postcode: '20155'
                                 country_code: 'IT'
                                 phone_number: '+39 02 33445566'
@@ -66,16 +278,73 @@ sylius_fixtures:
                                 last_name: 'Fontana'
                                 street: 'Piazza del Popolo, 4'
                                 city: 'Ascoli Piceno'
+                                province_code: 'IT-AP'
                                 postcode: '63100'
                                 country_code: 'IT'
                                 phone_number: '+39 0736 112233'
                                 customer: 'osteria.delborgo@example.com'
 
+                            -   first_name: 'Francesca'
+                                last_name: 'Greco'
+                                street: 'Via Mazzini, 22'
+                                city: 'Verona'
+                                postcode: '37121'
+                                country_code: 'IT'
+                                province_code: 'IT-VR'
+                                phone_number: '+39 045 8899221'
+                                customer: 'francesca.greco@example.com'
+
+                            -   first_name: 'Alessandro'
+                                last_name: 'Conti'
+                                street: 'Lungarno Vespucci, 8'
+                                city: 'Firenze'
+                                postcode: '50123'
+                                country_code: 'IT'
+                                province_code: 'IT-FI'
+                                phone_number: '+39 055 2211334'
+                                customer: 'alessandro.conti@example.com'
+
+                            -   first_name: 'Sara'
+                                last_name: 'Moretti'
+                                street: 'Strada della Repubblica, 45'
+                                city: 'Parma'
+                                postcode: '43121'
+                                country_code: 'IT'
+                                province_code: 'IT-PR'
+                                phone_number: '+39 0521 445566'
+                                customer: 'sara.moretti@example.com'
+
+                            -   first_name: 'Elena'
+                                last_name: 'Gallo'
+                                street: 'Via del Corso, 101'
+                                city: 'Roma'
+                                postcode: '00186'
+                                country_code: 'IT'
+                                province_code: 'IT-RM'
+                                phone_number: '+39 06 6677889'
+                                customer: 'enoteca.centrale@example.com'
+
                 order:
                     options:
-                        amount: 20
+                        # most of the orders of an Italian wine shop are Italian, and they carry a province
+                        amount: 12
                         channel: 'ecommerce'
+                        country: 'IT'
 
                 payments:
                     options:
                         percentage_completed: 75
+
+                fulfilled_orders:
+                    name: order
+                    options:
+                        amount: 5
+                        channel: 'ecommerce'
+                        fulfilled: true
+
+                cancelled_orders:
+                    name: order
+                    options:
+                        amount: 3
+                        channel: 'ecommerce'
+                        state: 'cancelled'

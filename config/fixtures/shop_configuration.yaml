@@ -94,6 +94,47 @@ sylius_fixtures:
                                     - 'NO'
                                     - 'GB'
 
+                province:
+                    options:
+                        countries:
+                            IT:
+                                IT-AP:
+                                    name: 'Ascoli Piceno'
+                                    abbreviation: 'AP'
+                                IT-BO:
+                                    name: 'Bologna'
+                                    abbreviation: 'BO'
+                                IT-CN:
+                                    name: 'Cuneo'
+                                    abbreviation: 'CN'
+                                IT-FI:
+                                    name: 'Firenze'
+                                    abbreviation: 'FI'
+                                IT-MI:
+                                    name: 'Milano'
+                                    abbreviation: 'MI'
+                                IT-NA:
+                                    name: 'Napoli'
+                                    abbreviation: 'NA'
+                                IT-PR:
+                                    name: 'Parma'
+                                    abbreviation: 'PR'
+                                IT-RE:
+                                    name: "Reggio nell'Emilia"
+                                    abbreviation: 'RE'
+                                IT-RM:
+                                    name: 'Roma'
+                                    abbreviation: 'RM'
+                                IT-TN:
+                                    name: 'Trento'
+                                    abbreviation: 'TN'
+                                IT-TO:
+                                    name: 'Torino'
+                                    abbreviation: 'TO'
+                                IT-VR:
+                                    name: 'Verona'
+                                    abbreviation: 'VR'
+
                 menu_taxon:
                     name: taxon
                     options:
@@ -272,72 +313,108 @@ sylius_fixtures:
                                 last_name: 'Rossi'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'm'
+                                phone_number: '+39 335 1122334'
+                                birthday: '1981-04-17 00:00:00'
 
                             -   email: 'giulia.ferrari@example.com'
                                 first_name: 'Giulia'
                                 last_name: 'Ferrari'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+39 347 9988776'
+                                birthday: '1990-11-02 00:00:00'
 
                             -   email: 'luca.bianchi@example.com'
                                 first_name: 'Luca'
                                 last_name: 'Bianchi'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'm'
+                                phone_number: '+39 333 4455667'
+                                birthday: '1978-06-23 00:00:00'
 
                             -   email: 'chiara.esposito@example.com'
                                 first_name: 'Chiara'
                                 last_name: 'Esposito'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+39 349 1239876'
+                                birthday: '1995-02-08 00:00:00'
 
                             -   email: 'marco.romano@example.com'
                                 first_name: 'Marco'
                                 last_name: 'Romano'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'm'
+                                phone_number: '+39 340 5566778'
+                                birthday: '1986-09-30 00:00:00'
 
                             -   email: 'francesca.greco@example.com'
                                 first_name: 'Francesca'
                                 last_name: 'Greco'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+39 348 2233445'
+                                birthday: '1992-12-14 00:00:00'
 
                             -   email: 'alessandro.conti@example.com'
                                 first_name: 'Alessandro'
                                 last_name: 'Conti'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'm'
+                                phone_number: '+39 339 6677889'
+                                birthday: '1974-03-05 00:00:00'
 
                             -   email: 'sara.moretti@example.com'
                                 first_name: 'Sara'
                                 last_name: 'Moretti'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+39 346 3344556'
+                                birthday: '1998-07-21 00:00:00'
 
                             -   email: 'davide.barbieri@example.com'
                                 first_name: 'Davide'
                                 last_name: 'Barbieri'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'm'
+                                phone_number: '+39 320 7788990'
+                                birthday: '1983-01-29 00:00:00'
 
                             -   email: 'valentina.rizzo@example.com'
                                 first_name: 'Valentina'
                                 last_name: 'Rizzo'
                                 password: 'webgriffe'
                                 customer_group: 'privati'
+                                gender: 'f'
+                                phone_number: '+39 351 4455112'
+                                birthday: '1989-10-11 00:00:00'
 
                             -   email: 'osteria.delborgo@example.com'
                                 first_name: 'Paolo'
                                 last_name: 'Fontana'
                                 password: 'webgriffe'
                                 customer_group: 'ristorazione'
+                                gender: 'm'
+                                phone_number: '+39 0736 112233'
+                                birthday: '1970-05-19 00:00:00'
 
                             -   email: 'enoteca.centrale@example.com'
                                 first_name: 'Elena'
                                 last_name: 'Gallo'
                                 password: 'webgriffe'
                                 customer_group: 'ristorazione'
+                                gender: 'f'
+                                phone_number: '+39 011 2244668'
+                                birthday: '1976-08-27 00:00:00'
 
                 admin_user:
                     options:

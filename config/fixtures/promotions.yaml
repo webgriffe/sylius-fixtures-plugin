@@ -10,6 +10,11 @@ sylius_fixtures:
                             free_shipping:
                                 code: 'spedizione_gratuita'
                                 name: 'Spedizione gratuita sopra 100 €'
+                                description: 'Chi ordina almeno 100 € di vino non paga il trasporto, in Italia e in Europa.'
+                                translations:
+                                    it_IT: 'Spedizione gratuita sopra 100 €'
+                                    en_US: 'Free shipping over €100'
+                                    fr_FR: 'Livraison offerte dès 100 €'
                                 priority: 1
                                 channels:
                                     - 'ecommerce'
@@ -27,6 +32,11 @@ sylius_fixtures:
                             welcome_coupon:
                                 code: 'benvenuto'
                                 name: 'Benvenuto in enoteca'
+                                description: 'Sconto di benvenuto del 10% per il primo ordine, una volta per cliente con il codice BENVENUTO10.'
+                                translations:
+                                    it_IT: 'Benvenuto in enoteca: 10% con il codice BENVENUTO10'
+                                    en_US: 'Welcome to the wine shop: 10% off with the code BENVENUTO10'
+                                    fr_FR: 'Bienvenue à la cave : 10 % avec le code BENVENUTO10'
                                 coupon_based: true
                                 channels:
                                     - 'ecommerce'
@@ -42,6 +52,11 @@ sylius_fixtures:
                             case_discount:
                                 code: 'sconto_cartone'
                                 name: 'Sconto 20 € sopra 200 €'
+                                description: 'Venti euro di sconto da 200 € di spesa, pensato per chi acquista un cartone completo.'
+                                translations:
+                                    it_IT: 'Sconto di 20 € sopra 200 €'
+                                    en_US: '€20 off over €200'
+                                    fr_FR: '20 € de remise dès 200 €'
                                 priority: 2
                                 channels:
                                     - 'ecommerce'
@@ -62,6 +77,16 @@ sylius_fixtures:
                             white_wines_sale:
                                 code: 'promo_bianchi'
                                 name: 'Settimana dei bianchi'
+                                translations:
+                                    it_IT:
+                                        label: 'Settimana dei bianchi: 10% di sconto'
+                                        description: 'Tutti i bianchi in catalogo, dal Verdicchio dei Castelli di Jesi al Cervaro della Sala, scontati del 10%.'
+                                    en_US:
+                                        label: 'White wine week: 10% off'
+                                        description: 'Every white in the catalogue, from Verdicchio dei Castelli di Jesi to Cervaro della Sala, is 10% off.'
+                                    fr_FR:
+                                        label: 'Semaine des blancs : 10 % de remise'
+                                        description: 'Tous les blancs du catalogue, du verdicchio dei Castelli di Jesi au Cervaro della Sala, à −10 %.'
                                 channels:
                                     - 'ecommerce'
                                 priority: 1
@@ -78,6 +103,16 @@ sylius_fixtures:
                             sparkling_sale:
                                 code: 'promo_bollicine'
                                 name: 'Bollicine in festa'
+                                translations:
+                                    it_IT:
+                                        label: 'Bollicine in festa: 5 € di sconto a bottiglia'
+                                        description: 'Cinque euro in meno su ogni Prosecco, Franciacorta, Trentodoc e Champagne, per due settimane.'
+                                    en_US:
+                                        label: 'Sparkling celebration: €5 off per bottle'
+                                        description: 'Five euros off every Prosecco, Franciacorta, Trentodoc and Champagne, for two weeks.'
+                                    fr_FR:
+                                        label: 'Fête des bulles : 5 € de remise par bouteille'
+                                        description: 'Cinq euros de moins sur chaque prosecco, franciacorta, trentodoc et champagne, pendant deux semaines.'
                                 channels:
                                     - 'ecommerce'
                                 priority: 2

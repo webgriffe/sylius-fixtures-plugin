@@ -176,6 +176,32 @@ carries its province: the **code** of a real province where the country has them
 > Sylius picks a random locale and then loads the products joining only the translation of that locale: reading
 > the product name in another locale creates an empty translation and breaks the flush on a multi locale channel.
 
+### Promotions
+
+| Fixture | Option | Description |
+|---|---|---|
+| `catalog_promotion` | `translations` | `label` and `description` per locale |
+| `promotion` | `translations` | The label per locale, the text the customer reads on the cart |
+
+```yaml
+                catalog_promotion:
+                    options:
+                        custom:
+                            white_wines:
+                                code: 'white_wines'
+                                name: 'White wine week'
+                                translations:
+                                    it_IT:
+                                        label: 'Settimana dei bianchi: 10% di sconto'
+                                        description: 'Tutti i bianchi in catalogo scontati del 10%.'
+                                    en_US:
+                                        label: 'White wine week: 10% off'
+                                        description: 'Every white in the catalogue is 10% off.'
+```
+
+The description of a **cart** promotion is not translatable in Sylius: it lives on the promotion itself, next
+to its name, and it is only read in the administration.
+
 ### Provinces
 
 The `province` fixture creates the provinces of a country with their **abbreviation**, which the `geographical`

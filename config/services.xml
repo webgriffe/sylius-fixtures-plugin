@@ -18,6 +18,18 @@
             <argument type="service" id="sylius.repository.locale" />
         </service>
 
+        <service id="webgriffe_sylius_fixtures.fixture.example_factory.catalog_promotion"
+                 class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\CatalogPromotionExampleFactory"
+                 decorates="sylius.fixture.example_factory.catalog_promotion">
+            <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.catalog_promotion.inner" />
+        </service>
+
+        <service id="webgriffe_sylius_fixtures.fixture.example_factory.promotion"
+                 class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\PromotionExampleFactory"
+                 decorates="sylius.fixture.example_factory.promotion">
+            <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.promotion.inner" />
+        </service>
+
         <service id="webgriffe_sylius_fixtures.fixture.example_factory.product_attribute"
                  class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ProductAttributeExampleFactory"
                  decorates="sylius.fixture.example_factory.product_attribute">

@@ -6,11 +6,13 @@ namespace Webgriffe\SyliusFixturesPlugin\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Webgriffe\SyliusFixturesPlugin\Fixture\CatalogPromotionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\OrderExampleFactory;
 use Webgriffe\SyliusFixturesPlugin\Fixture\OrderFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductAttributeFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductOptionFixture;
+use Webgriffe\SyliusFixturesPlugin\Fixture\PromotionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ShippingMethodFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\TaxonFixture;
 
@@ -21,9 +23,11 @@ use Webgriffe\SyliusFixturesPlugin\Fixture\TaxonFixture;
 final class OverrideSyliusFixturesPass implements CompilerPassInterface
 {
     private const OVERRIDDEN_CLASSES = [
+        'sylius.fixture.catalog_promotion' => CatalogPromotionFixture::class,
         'sylius.fixture.order' => OrderFixture::class,
         'sylius.fixture.product' => ProductFixture::class,
         'sylius.fixture.product_attribute' => ProductAttributeFixture::class,
+        'sylius.fixture.promotion' => PromotionFixture::class,
         'sylius.fixture.product_option' => ProductOptionFixture::class,
         'sylius.fixture.shipping_method' => ShippingMethodFixture::class,
         'sylius.fixture.taxon' => TaxonFixture::class,

@@ -277,6 +277,33 @@ final class ProductExampleFactoryTest extends TestCase
         self::assertSame('chianti-docg-ruffino', $product->getSlug());
     }
 
+    public function testItNamesAVariantWithoutOptionsAfterTheGivenVariantName(): void
+    {
+        $variant = $this->createVariant($this->createChannelPricing());
+
+        $this->createFactoryWithLocales($this->createProduct($variant), ['it_IT', 'en_US'])->create([
+            'variant_name' => ['it_IT' => 'Bottiglia 0,75 L', 'en_US' => '0.75 L bottle'],
+        ]);
+
+        self::assertSame('Bottiglia 0,75 L', $this->variantNameIn($variant, 'it_IT'));
+        self::assertSame('0.75 L bottle', $this->variantNameIn($variant, 'en_US'));
+    }
+
+    public function testItNamesAVariantWithoutOptionsAfterTheProductByDefault(): void
+    {
+        $variant = $this->createVariant($this->createChannelPricing());
+
+        $this->createFactoryWithLocales($this->createProduct($variant), ['it_IT', 'en_US'])->create([
+            'translations' => [
+                'it_IT' => ['name' => 'Calici Bordeaux'],
+                'en_US' => ['name' => 'Bordeaux glasses'],
+            ],
+        ]);
+
+        self::assertSame('Calici Bordeaux', $this->variantNameIn($variant, 'it_IT'));
+        self::assertSame('Bordeaux glasses', $this->variantNameIn($variant, 'en_US'));
+    }
+
     public function testItSetsTheShippingCategoryOnEveryVariant(): void
     {
         $variant = $this->createVariant($this->createChannelPricing());
@@ -342,6 +369,28 @@ final class ProductExampleFactoryTest extends TestCase
             'shipping_category' => 'fragile',
             'translations' => ['it_IT' => ['name' => 'Chianti DOCG']],
         ]);
+    }
+
+    /** @param list<string> $localeCodes */
+    private function createFactoryWithLocales(ProductInterface $product, array $localeCodes): ProductExampleFactory
+    {
+        $decoratedFactory = $this->createMock(ExampleFactoryInterface::class);
+        $decoratedFactory->method('create')->willReturn($product);
+
+        return new ProductExampleFactory(
+            $decoratedFactory,
+            $this->createShippingCategoryRepository(),
+            $this->createLocaleRepository($localeCodes),
+            new SlugGenerator(),
+        );
+    }
+
+    private function variantNameIn(ProductVariant $variant, string $localeCode): ?string
+    {
+        $variant->setCurrentLocale($localeCode);
+        $variant->setFallbackLocale($localeCode);
+
+        return $variant->getName();
     }
 
     private function createFactory(ProductInterface $product): ProductExampleFactory

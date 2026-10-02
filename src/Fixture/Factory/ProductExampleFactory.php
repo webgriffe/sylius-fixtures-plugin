@@ -41,6 +41,7 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
         'weight',
         'variant_dimensions',
         'translations',
+        'variant_name',
     ];
 
     private const DIMENSIONS = ['width', 'height', 'depth', 'weight'];
@@ -88,7 +89,7 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             $this->applyPrices($variant, $extraOptions);
             $this->applyShippingCategory($variant, $extraOptions);
             $this->applyDimensions($variant, $extraOptions);
-            $this->nameVariant($variant);
+            $this->nameVariant($product, $variant, $extraOptions);
         }
 
         return $product;
@@ -178,31 +179,51 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
     }
 
     /**
-     * Sylius names a variant after its option values once, in whatever locale the entity happens to be in,
-     * so a configurable product ends up with a single translation for its variants.
+     * Sylius names a variant once, in whatever locale the entity happens to be in: after its option values, or
+     * with an empty name when it has none. So every variant ends up with a single translation, which the
+     * administration flags as missing in the other locales. A variant with option values is named after them,
+     * a variant without any after "variant_name", or after the product when the fixture does not give one.
+     *
+     * @param array<string, mixed> $options
      */
-    private function nameVariant(ProductVariantInterface $variant): void
+    private function nameVariant(ProductInterface $product, ProductVariantInterface $variant, array $options): void
     {
-        if ($variant->getOptionValues()->isEmpty()) {
-            return;
-        }
+        /** @var array<string, string> $variantNames */
+        $variantNames = $options['variant_name'] ?? [];
 
         foreach ($this->localeRepository->findAll() as $locale) {
             $localeCode = $locale->getCode();
             Assert::string($localeCode);
 
-            $names = [];
-            foreach ($variant->getOptionValues() as $optionValue) {
-                $optionValue->setCurrentLocale($localeCode);
-                $optionValue->setFallbackLocale($localeCode);
-
-                $names[] = (string) $optionValue->getValue();
-            }
+            $name = $variant->getOptionValues()->isEmpty()
+                ? $variantNames[$localeCode] ?? $this->productNameIn($product, $localeCode)
+                : $this->optionValuesNameIn($variant, $localeCode);
 
             $variant->setCurrentLocale($localeCode);
             $variant->setFallbackLocale($localeCode);
-            $variant->setName(implode(' ', $names));
+            $variant->setName($name);
         }
+    }
+
+    private function optionValuesNameIn(ProductVariantInterface $variant, string $localeCode): string
+    {
+        $names = [];
+        foreach ($variant->getOptionValues() as $optionValue) {
+            $optionValue->setCurrentLocale($localeCode);
+            $optionValue->setFallbackLocale($localeCode);
+
+            $names[] = (string) $optionValue->getValue();
+        }
+
+        return implode(' ', $names);
+    }
+
+    private function productNameIn(ProductInterface $product, string $localeCode): ?string
+    {
+        $product->setCurrentLocale($localeCode);
+        $product->setFallbackLocale($localeCode);
+
+        return $product->getName();
     }
 
     /** @param array<string, mixed> $options */

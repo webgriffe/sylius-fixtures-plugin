@@ -31,10 +31,15 @@ Webgriffe\SyliusFixturesPlugin\WebgriffeSyliusFixturesPlugin::class => ['dev' =>
 | `variant_dimensions` | Size per variant, keyed like `variant_prices`: a pack of 8 glasses does not weigh what a pack of 2 does |
 | `shipping_category` | Shipping category code, assigned to every variant. Sylius never sets it, so any shipping method bound to a category would be discarded at checkout |
 | `translations` | `name`, `slug`, `short_description`, `description`, `meta_keywords` and `meta_description` per locale. Sylius writes the same translation in every locale |
+| `variant_name` | Name per locale of the variant of a product without options (`Bottiglia 0,75 L`), the name of the product by default |
 
 The **slug of each locale is generated from the name of that locale** when the translation does not state one:
 Sylius generates it once, from the first name it reads, so a product translated in several languages would
 answer on the same url everywhere.
+
+Every variant gets a name in every locale: after its option values when it has some, after `variant_name` or
+the product otherwise. Sylius names a variant once, in a single locale and with an empty name when it has no
+options, so the inventory of the administration flags all the others as *missing translation*.
 
 `variant_selection_method` is a native Sylius option, worth choosing on the shape of the options of a
 configurable product: the demo store uses `choice` for the glassware, a single option with a few packs that

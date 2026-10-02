@@ -16,6 +16,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -65,6 +69,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -115,6 +123,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -164,6 +176,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -213,6 +229,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -262,6 +282,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -312,6 +336,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -361,6 +389,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -410,6 +442,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -460,6 +496,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -509,6 +549,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -558,6 +602,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -607,6 +655,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -656,6 +708,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -706,6 +762,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -755,6 +815,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -804,6 +868,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -853,6 +921,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -902,6 +974,10 @@ sylius_fixtures:
                                 height: 33.0
                                 depth: 8.5
                                 weight: 1.5
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -952,6 +1028,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 9.0
                                 weight: 1.6
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1000,6 +1080,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 9.0
                                 weight: 1.6
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1048,6 +1132,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 9.0
                                 weight: 1.6
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1097,6 +1185,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 9.0
                                 weight: 1.6
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1145,6 +1237,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 9.0
                                 weight: 1.6
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1195,6 +1291,10 @@ sylius_fixtures:
                                 height: 32.0
                                 depth: 8.0
                                 weight: 1.3
+                                variant_name:
+                                    it_IT: 'Bottiglia 0,75 L'
+                                    en_US: '0.75 L bottle'
+                                    fr_FR: 'Bouteille 0,75 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1244,6 +1344,10 @@ sylius_fixtures:
                                 height: 26.0
                                 depth: 6.0
                                 weight: 0.75
+                                variant_name:
+                                    it_IT: 'Mezza bottiglia 0,375 L'
+                                    en_US: '0.375 L half bottle'
+                                    fr_FR: 'Demi-bouteille 0,375 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']
@@ -1293,6 +1397,10 @@ sylius_fixtures:
                                 height: 26.0
                                 depth: 6.0
                                 weight: 0.75
+                                variant_name:
+                                    it_IT: 'Mezza bottiglia 0,375 L'
+                                    en_US: '0.375 L half bottle'
+                                    fr_FR: 'Demi-bouteille 0,375 L'
                                 tax_category: 'vino'
                                 shipping_category: 'bottiglie'
                                 channels: ['ecommerce']

@@ -278,6 +278,23 @@ final class ProductExampleFactoryTest extends TestCase
         self::assertSame('chianti-docg-ruffino', $product->getSlug());
     }
 
+    public function testItDoesNotNameAVariantInALocaleItsOptionValuesAreNotTranslatedIn(): void
+    {
+        $variant = $this->createVariant($this->createChannelPricing());
+        $size = $this->createOptionValue('t_shirt_size_s');
+        $size->setCurrentLocale('en_US');
+        $size->setFallbackLocale('en_US');
+        $size->setValue('S');
+        $variant->addOptionValue($size);
+
+        $this->createFactoryWithLocales($this->createProduct($variant), ['en_US', 'de_DE'])->create([]);
+
+        self::assertSame('S', $this->variantNameIn($variant, 'en_US'));
+        // reading the option value in German would have created an empty translation of it
+        self::assertSame(['en_US'], $size->getTranslations()->getKeys());
+        self::assertFalse($variant->getTranslations()->containsKey('de_DE'));
+    }
+
     public function testItNamesAVariantWithoutOptionsAfterTheGivenVariantName(): void
     {
         $variant = $this->createVariant($this->createChannelPricing());

@@ -47,69 +47,93 @@ sylius_fixtures:
                             -   name: 'Produttore'
                                 code: 'calice_produttore'
                                 translations:
-                                    it_IT: 'Produttore'
-                                    en_US: 'Manufacturer'
-                                    fr_FR: 'Fabricant'
+                                    it_IT:
+                                        name: 'Produttore'
+                                    en_US:
+                                        name: 'Manufacturer'
+                                    fr_FR:
+                                        name: 'Fabricant'
                                 type: 'text'
 
                             -   name: 'Collezione'
                                 code: 'calice_collezione'
                                 translations:
-                                    it_IT: 'Collezione'
-                                    en_US: 'Collection'
-                                    fr_FR: 'Collection'
+                                    it_IT:
+                                        name: 'Collezione'
+                                    en_US:
+                                        name: 'Collection'
+                                    fr_FR:
+                                        name: 'Collection'
                                 type: 'text'
 
                             -   name: 'Materiale'
                                 code: 'calice_materiale'
                                 translations:
-                                    it_IT: 'Materiale'
-                                    en_US: 'Material'
-                                    fr_FR: 'Matière'
+                                    it_IT:
+                                        name: 'Materiale'
+                                    en_US:
+                                        name: 'Material'
+                                    fr_FR:
+                                        name: 'Matière'
                                 type: 'text'
 
                             -   name: 'Capacità (ml)'
                                 code: 'calice_capacita'
                                 translations:
-                                    it_IT: 'Capacità (ml)'
-                                    en_US: 'Capacity (ml)'
-                                    fr_FR: 'Contenance (ml)'
+                                    it_IT:
+                                        name: 'Capacità (ml)'
+                                    en_US:
+                                        name: 'Capacity (ml)'
+                                    fr_FR:
+                                        name: 'Contenance (ml)'
                                 type: 'integer'
                                 translatable: false
 
                             -   name: 'Altezza (mm)'
                                 code: 'calice_altezza'
                                 translations:
-                                    it_IT: 'Altezza (mm)'
-                                    en_US: 'Height (mm)'
-                                    fr_FR: 'Hauteur (mm)'
+                                    it_IT:
+                                        name: 'Altezza (mm)'
+                                    en_US:
+                                        name: 'Height (mm)'
+                                    fr_FR:
+                                        name: 'Hauteur (mm)'
                                 type: 'integer'
                                 translatable: false
 
                             -   name: 'Lavabile in lavastoviglie'
                                 code: 'calice_lavastoviglie'
                                 translations:
-                                    it_IT: 'Lavabile in lavastoviglie'
-                                    en_US: 'Dishwasher safe'
-                                    fr_FR: 'Lavable au lave-vaisselle'
+                                    it_IT:
+                                        name: 'Lavabile in lavastoviglie'
+                                    en_US:
+                                        name: 'Dishwasher safe'
+                                    fr_FR:
+                                        name: 'Lavable au lave-vaisselle'
                                 type: 'checkbox'
                                 translatable: false
 
                             -   name: 'Codice articolo del produttore'
                                 code: 'calice_codice_articolo'
                                 translations:
-                                    it_IT: 'Codice articolo del produttore'
-                                    en_US: 'Manufacturer article number'
-                                    fr_FR: 'Référence fabricant'
+                                    it_IT:
+                                        name: 'Codice articolo del produttore'
+                                    en_US:
+                                        name: 'Manufacturer article number'
+                                    fr_FR:
+                                        name: 'Référence fabricant'
                                 type: 'text'
                                 translatable: false
 
                             -   name: 'Codici EAN per confezione'
                                 code: 'calice_codici_ean'
                                 translations:
-                                    it_IT: 'Codici EAN per confezione'
-                                    en_US: 'EAN codes per pack'
-                                    fr_FR: 'Codes EAN par coffret'
+                                    it_IT:
+                                        name: 'Codici EAN per confezione'
+                                    en_US:
+                                        name: 'EAN codes per pack'
+                                    fr_FR:
+                                        name: 'Codes EAN par coffret'
                                 type: 'textarea'
                                 translatable: false
 
@@ -120,26 +144,32 @@ sylius_fixtures:
                             -   name: 'Numero di calici'
                                 code: 'numero_calici'
                                 translations:
-                                    it_IT: 'Numero di calici'
-                                    en_US: 'Number of glasses'
-                                    fr_FR: 'Nombre de verres'
+                                    it_IT:
+                                        name: 'Numero di calici'
+                                        values:
+                                            numero_calici_2: '2 calici'
+                                            numero_calici_4: '4 calici'
+                                            numero_calici_6: '6 calici'
+                                            numero_calici_8: '8 calici'
+                                    en_US:
+                                        name: 'Number of glasses'
+                                        values:
+                                            numero_calici_2: '2 glasses'
+                                            numero_calici_4: '4 glasses'
+                                            numero_calici_6: '6 glasses'
+                                            numero_calici_8: '8 glasses'
+                                    fr_FR:
+                                        name: 'Nombre de verres'
+                                        values:
+                                            numero_calici_2: '2 verres'
+                                            numero_calici_4: '4 verres'
+                                            numero_calici_6: '6 verres'
+                                            numero_calici_8: '8 verres'
                                 values:
-                                    numero_calici_2:
-                                        it_IT: '2 calici'
-                                        en_US: '2 glasses'
-                                        fr_FR: '2 verres'
-                                    numero_calici_4:
-                                        it_IT: '4 calici'
-                                        en_US: '4 glasses'
-                                        fr_FR: '4 verres'
-                                    numero_calici_6:
-                                        it_IT: '6 calici'
-                                        en_US: '6 glasses'
-                                        fr_FR: '6 verres'
-                                    numero_calici_8:
-                                        it_IT: '8 calici'
-                                        en_US: '8 glasses'
-                                        fr_FR: '8 verres'
+                                    numero_calici_2: '2 calici'
+                                    numero_calici_4: '4 calici'
+                                    numero_calici_6: '6 calici'
+                                    numero_calici_8: '8 calici'
 
                 glassware_product:
                     name: product

@@ -113,9 +113,18 @@ offline transfer.
 
 ### Product attributes
 
-| Option | Description |
-|---|---|
-| `translations` | Name of the attribute per locale |
+The **name** of an attribute is translated by Sylius itself since 2.3, with its `translations` option:
+
+```yaml
+                            -   name: 'Regione'
+                                code: 'region'
+                                type: 'text'
+                                translations:
+                                    it_IT:
+                                        name: 'Regione'
+                                    en_US:
+                                        name: 'Region'
+```
 
 The **values** of the attributes are translated from the product, where a value is either a scalar, written in
 every locale as Sylius does, or a map of locale to value:
@@ -174,10 +183,8 @@ attribute can be seen:
 
 ### Product options
 
-| Option | Description |
-|---|---|
-| `translations` | Name of the option per locale |
-| `values` | Every value is either a string, written in every locale as Sylius does, or a map of locale to value |
+The name of an option and its values are translated by Sylius itself since 2.3, with its `translations`
+option. Keep the `values` as well, with the value of the default locale: Sylius requires at least one.
 
 ```yaml
                 product_option:
@@ -186,12 +193,16 @@ attribute can be seen:
                             -   name: 'Numero di calici'
                                 code: 'number_of_glasses'
                                 translations:
-                                    it_IT: 'Numero di calici'
-                                    en_US: 'Number of glasses'
+                                    it_IT:
+                                        name: 'Numero di calici'
+                                        values:
+                                            two_glasses: '2 calici'
+                                    en_US:
+                                        name: 'Number of glasses'
+                                        values:
+                                            two_glasses: '2 glasses'
                                 values:
-                                    two_glasses:
-                                        it_IT: '2 calici'
-                                        en_US: '2 glasses'
+                                    two_glasses: '2 calici'
 ```
 
 The variants of a configurable product are named after their option values **in every locale**: Sylius names

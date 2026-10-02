@@ -113,121 +113,163 @@ sylius_fixtures:
                             -   name: 'Cantina'
                                 code: 'vino_cantina'
                                 translations:
-                                    it_IT: 'Cantina'
-                                    en_US: 'Winery'
-                                    fr_FR: 'Domaine'
+                                    it_IT:
+                                        name: 'Cantina'
+                                    en_US:
+                                        name: 'Winery'
+                                    fr_FR:
+                                        name: 'Domaine'
                                 type: 'text'
 
                             -   name: 'Denominazione'
                                 code: 'vino_denominazione'
                                 translations:
-                                    it_IT: 'Denominazione'
-                                    en_US: 'Appellation'
-                                    fr_FR: 'Appellation'
+                                    it_IT:
+                                        name: 'Denominazione'
+                                    en_US:
+                                        name: 'Appellation'
+                                    fr_FR:
+                                        name: 'Appellation'
                                 type: 'text'
 
                             -   name: 'Annata'
                                 code: 'vino_annata'
                                 translations:
-                                    it_IT: 'Annata'
-                                    en_US: 'Vintage'
-                                    fr_FR: 'Millésime'
+                                    it_IT:
+                                        name: 'Annata'
+                                    en_US:
+                                        name: 'Vintage'
+                                    fr_FR:
+                                        name: 'Millésime'
                                 type: 'integer'
                                 translatable: false
 
                             -   name: 'Vitigni'
                                 code: 'vino_vitigni'
                                 translations:
-                                    it_IT: 'Vitigni'
-                                    en_US: 'Grape varieties'
-                                    fr_FR: 'Cépages'
+                                    it_IT:
+                                        name: 'Vitigni'
+                                    en_US:
+                                        name: 'Grape varieties'
+                                    fr_FR:
+                                        name: 'Cépages'
                                 type: 'text'
 
                             -   name: 'Regione'
                                 code: 'vino_regione'
                                 translations:
-                                    it_IT: 'Regione'
-                                    en_US: 'Region'
-                                    fr_FR: 'Région'
+                                    it_IT:
+                                        name: 'Regione'
+                                    en_US:
+                                        name: 'Region'
+                                    fr_FR:
+                                        name: 'Région'
                                 type: 'text'
 
                             -   name: 'Gradazione alcolica'
                                 code: 'vino_gradazione'
                                 translations:
-                                    it_IT: 'Gradazione alcolica'
-                                    en_US: 'Alcohol content'
-                                    fr_FR: 'Degré alcoolique'
+                                    it_IT:
+                                        name: 'Gradazione alcolica'
+                                    en_US:
+                                        name: 'Alcohol content'
+                                    fr_FR:
+                                        name: 'Degré alcoolique'
                                 type: 'percent'
                                 translatable: false
 
                             -   name: 'Formato'
                                 code: 'vino_formato'
                                 translations:
-                                    it_IT: 'Formato'
-                                    en_US: 'Bottle size'
-                                    fr_FR: 'Contenance'
+                                    it_IT:
+                                        name: 'Formato'
+                                    en_US:
+                                        name: 'Bottle size'
+                                    fr_FR:
+                                        name: 'Contenance'
                                 type: 'text'
 
                             -   name: 'Note di degustazione'
                                 code: 'vino_note_degustazione'
                                 translations:
-                                    it_IT: 'Note di degustazione'
-                                    en_US: 'Tasting notes'
-                                    fr_FR: 'Notes de dégustation'
+                                    it_IT:
+                                        name: 'Note di degustazione'
+                                    en_US:
+                                        name: 'Tasting notes'
+                                    fr_FR:
+                                        name: 'Notes de dégustation'
                                 type: 'textarea'
                                 translatable: true
 
                             -   name: 'Temperatura di servizio (°C)'
                                 code: 'vino_temperatura_servizio'
                                 translations:
-                                    it_IT: 'Temperatura di servizio (°C)'
-                                    en_US: 'Serving temperature (°F)'
-                                    fr_FR: 'Température de service (°C)'
+                                    it_IT:
+                                        name: 'Temperatura di servizio (°C)'
+                                    en_US:
+                                        name: 'Serving temperature (°F)'
+                                    fr_FR:
+                                        name: 'Température de service (°C)'
                                 type: 'float'
                                 translatable: true
 
                             -   name: 'Acidità totale (g/l)'
                                 code: 'vino_acidita_totale'
                                 translations:
-                                    it_IT: 'Acidità totale (g/l)'
-                                    en_US: 'Total acidity (g/l)'
-                                    fr_FR: 'Acidité totale (g/l)'
+                                    it_IT:
+                                        name: 'Acidità totale (g/l)'
+                                    en_US:
+                                        name: 'Total acidity (g/l)'
+                                    fr_FR:
+                                        name: 'Acidité totale (g/l)'
                                 type: 'float'
                                 translatable: false
 
                             -   name: 'Data di imbottigliamento'
                                 code: 'vino_data_imbottigliamento'
                                 translations:
-                                    it_IT: 'Data di imbottigliamento'
-                                    en_US: 'Bottling date'
-                                    fr_FR: 'Date de mise en bouteille'
+                                    it_IT:
+                                        name: 'Data di imbottigliamento'
+                                    en_US:
+                                        name: 'Bottling date'
+                                    fr_FR:
+                                        name: 'Date de mise en bouteille'
                                 type: 'date'
                                 translatable: false
 
                             -   name: 'Punteggio della critica italiana'
                                 code: 'vino_punteggio'
                                 translations:
-                                    it_IT: 'Punteggio della critica italiana'
-                                    en_US: 'US critics score'
-                                    fr_FR: 'Note de la critique française'
+                                    it_IT:
+                                        name: 'Punteggio della critica italiana'
+                                    en_US:
+                                        name: 'US critics score'
+                                    fr_FR:
+                                        name: 'Note de la critique française'
                                 type: 'integer'
                                 translatable: true
 
                             -   name: 'Degustazione online con il produttore'
                                 code: 'vino_degustazione_online'
                                 translations:
-                                    it_IT: 'Degustazione online con il produttore'
-                                    en_US: 'Online tasting with the producer'
-                                    fr_FR: 'Dégustation en ligne avec le producteur'
+                                    it_IT:
+                                        name: 'Degustazione online con il produttore'
+                                    en_US:
+                                        name: 'Online tasting with the producer'
+                                    fr_FR:
+                                        name: 'Dégustation en ligne avec le producteur'
                                 type: 'datetime'
                                 translatable: true
 
                             -   name: 'Tipo di chiusura'
                                 code: 'vino_tipo_chiusura'
                                 translations:
-                                    it_IT: 'Tipo di chiusura'
-                                    en_US: 'Closure'
-                                    fr_FR: 'Type de bouchage'
+                                    it_IT:
+                                        name: 'Tipo di chiusura'
+                                    en_US:
+                                        name: 'Closure'
+                                    fr_FR:
+                                        name: 'Type de bouchage'
                                 type: 'select'
                                 translatable: false
                                 configuration:
@@ -253,9 +295,12 @@ sylius_fixtures:
                             -   name: 'Abbinamenti'
                                 code: 'vino_abbinamenti'
                                 translations:
-                                    it_IT: 'Abbinamenti'
-                                    en_US: 'Food pairings'
-                                    fr_FR: 'Accords mets-vins'
+                                    it_IT:
+                                        name: 'Abbinamenti'
+                                    en_US:
+                                        name: 'Food pairings'
+                                    fr_FR:
+                                        name: 'Accords mets-vins'
                                 type: 'select'
                                 translatable: false
                                 configuration:
@@ -315,9 +360,12 @@ sylius_fixtures:
                             -   name: 'Occasione consigliata'
                                 code: 'vino_occasione'
                                 translations:
-                                    it_IT: 'Occasione consigliata'
-                                    en_US: 'Best for'
-                                    fr_FR: 'Moment idéal'
+                                    it_IT:
+                                        name: 'Occasione consigliata'
+                                    en_US:
+                                        name: 'Best for'
+                                    fr_FR:
+                                        name: 'Moment idéal'
                                 type: 'select'
                                 translatable: true
                                 configuration:
@@ -351,9 +399,12 @@ sylius_fixtures:
                             -   name: 'Etichette promozionali'
                                 code: 'vino_badge'
                                 translations:
-                                    it_IT: 'Etichette promozionali'
-                                    en_US: 'Product badges'
-                                    fr_FR: 'Badges produit'
+                                    it_IT:
+                                        name: 'Etichette promozionali'
+                                    en_US:
+                                        name: 'Product badges'
+                                    fr_FR:
+                                        name: 'Badges produit'
                                 type: 'select'
                                 translatable: true
                                 configuration:

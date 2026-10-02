@@ -55,18 +55,6 @@
             <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.promotion.inner" />
         </service>
 
-        <service id="webgriffe_sylius_fixtures.fixture.example_factory.product_attribute"
-                 class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ProductAttributeExampleFactory"
-                 decorates="sylius.fixture.example_factory.product_attribute">
-            <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.product_attribute.inner" />
-        </service>
-
-        <service id="webgriffe_sylius_fixtures.fixture.example_factory.product_option"
-                 class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ProductOptionExampleFactory"
-                 decorates="sylius.fixture.example_factory.product_option">
-            <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.product_option.inner" />
-        </service>
-
         <service id="webgriffe_sylius_fixtures.fixture.example_factory.taxon"
                  class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\TaxonExampleFactory"
                  decorates="sylius.fixture.example_factory.taxon">

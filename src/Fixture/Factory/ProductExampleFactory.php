@@ -238,6 +238,10 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             $localeCode = $locale->getCode();
             Assert::string($localeCode);
 
+            if (!$this->optionValuesAreTranslatedIn($variant, $localeCode)) {
+                continue;
+            }
+
             $name = $variant->getOptionValues()->isEmpty()
                 ? $variantNames[$localeCode] ?? $this->productNameIn($product, $localeCode)
                 : $this->optionValuesNameIn($variant, $localeCode);
@@ -246,6 +250,21 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             $variant->setFallbackLocale($localeCode);
             $variant->setName($name);
         }
+    }
+
+    /**
+     * An option value may be translated in a few locales only: reading it in another one would create an empty
+     * translation, which the database refuses.
+     */
+    private function optionValuesAreTranslatedIn(ProductVariantInterface $variant, string $localeCode): bool
+    {
+        foreach ($variant->getOptionValues() as $optionValue) {
+            if (!$optionValue->getTranslations()->containsKey($localeCode)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private function optionValuesNameIn(ProductVariantInterface $variant, string $localeCode): string

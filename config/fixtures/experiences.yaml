@@ -47,76 +47,103 @@ sylius_fixtures:
                             -   name: 'Località'
                                 code: 'esperienza_localita'
                                 translations:
-                                    it_IT: 'Località'
-                                    en_US: 'Location'
-                                    fr_FR: 'Lieu'
+                                    it_IT:
+                                        name: 'Località'
+                                    en_US:
+                                        name: 'Location'
+                                    fr_FR:
+                                        name: 'Lieu'
                                 type: 'text'
 
                             -   name: 'Punto di incontro'
                                 code: 'esperienza_punto_incontro'
                                 translations:
-                                    it_IT: 'Punto di incontro'
-                                    en_US: 'Meeting point'
-                                    fr_FR: 'Point de rendez-vous'
+                                    it_IT:
+                                        name: 'Punto di incontro'
+                                    en_US:
+                                        name: 'Meeting point'
+                                    fr_FR:
+                                        name: 'Point de rendez-vous'
                                 type: 'text'
 
                             -   name: 'La quota comprende'
                                 code: 'esperienza_incluso'
                                 translations:
-                                    it_IT: 'La quota comprende'
-                                    en_US: 'The price includes'
-                                    fr_FR: 'Le tarif comprend'
+                                    it_IT:
+                                        name: 'La quota comprende'
+                                    en_US:
+                                        name: 'The price includes'
+                                    fr_FR:
+                                        name: 'Le tarif comprend'
                                 type: 'text'
 
                             -   name: 'Lingue della guida'
                                 code: 'esperienza_lingue'
                                 translations:
-                                    it_IT: 'Lingue della guida'
-                                    en_US: 'Languages of the guide'
-                                    fr_FR: 'Langues du guide'
+                                    it_IT:
+                                        name: 'Lingue della guida'
+                                    en_US:
+                                        name: 'Languages of the guide'
+                                    fr_FR:
+                                        name: 'Langues du guide'
                                 type: 'text'
 
                             -   name: 'Periodo consigliato'
                                 code: 'esperienza_stagione'
                                 translations:
-                                    it_IT: 'Periodo consigliato'
-                                    en_US: 'Best season'
-                                    fr_FR: 'Période conseillée'
+                                    it_IT:
+                                        name: 'Periodo consigliato'
+                                    en_US:
+                                        name: 'Best season'
+                                    fr_FR:
+                                        name: 'Période conseillée'
                                 type: 'text'
 
                             -   name: 'Guida nella tua lingua'
                                 code: 'esperienza_guida_in_lingua'
                                 translations:
-                                    it_IT: 'Guida nella tua lingua'
-                                    en_US: 'Guide in your language'
-                                    fr_FR: 'Guide dans votre langue'
+                                    it_IT:
+                                        name: 'Guida nella tua lingua'
+                                    en_US:
+                                        name: 'Guide in your language'
+                                    fr_FR:
+                                        name: 'Guide dans votre langue'
                                 type: 'checkbox'
                                 translatable: true
 
                             -   name: 'Caparra alla prenotazione'
                                 code: 'esperienza_caparra'
                                 translations:
-                                    it_IT: 'Caparra alla prenotazione'
-                                    en_US: 'Deposit on booking'
-                                    fr_FR: 'Acompte à la réservation'
+                                    it_IT:
+                                        name: 'Caparra alla prenotazione'
+                                    en_US:
+                                        name: 'Deposit on booking'
+                                    fr_FR:
+                                        name: 'Acompte à la réservation'
                                 type: 'percent'
                                 translatable: true
 
                             -   name: 'Prossima partenza'
                                 code: 'esperienza_prossima_partenza'
                                 translations:
-                                    it_IT: 'Prossima partenza'
-                                    en_US: 'Next departure'
-                                    fr_FR: 'Prochain départ'
+                                    it_IT:
+                                        name: 'Prossima partenza'
+                                    en_US:
+                                        name: 'Next departure'
+                                    fr_FR:
+                                        name: 'Prochain départ'
                                 type: 'date'
                                 translatable: true
 
                             -   name: 'Chiusura delle prenotazioni'
                                 code: 'esperienza_fine_prenotazioni'
                                 translations:
-                                    it_IT: 'Chiusura delle prenotazioni'
-                                    en_US: 'Bookings close on'
-                                    fr_FR: 'Clôture des réservations'
+                                    it_IT:
+                                        name: 'Chiusura delle prenotazioni'
+                                    en_US:
+                                        name: 'Bookings close on'
+                                    fr_FR:
+                                        name: 'Clôture des réservations'
                                 type: 'datetime'
                                 translatable: false
 
@@ -127,42 +154,54 @@ sylius_fixtures:
                             -   name: 'Durata'
                                 code: 'durata_esperienza'
                                 translations:
-                                    it_IT: 'Durata'
-                                    en_US: 'Duration'
-                                    fr_FR: 'Durée'
+                                    it_IT:
+                                        name: 'Durata'
+                                        values:
+                                            esperienza_1_giorno: '1 giorno'
+                                            esperienza_2_giorni: '2 giorni / 1 notte'
+                                            esperienza_3_giorni: '3 giorni / 2 notti'
+                                    en_US:
+                                        name: 'Duration'
+                                        values:
+                                            esperienza_1_giorno: '1 day'
+                                            esperienza_2_giorni: '2 days / 1 night'
+                                            esperienza_3_giorni: '3 days / 2 nights'
+                                    fr_FR:
+                                        name: 'Durée'
+                                        values:
+                                            esperienza_1_giorno: '1 jour'
+                                            esperienza_2_giorni: '2 jours / 1 nuit'
+                                            esperienza_3_giorni: '3 jours / 2 nuits'
                                 values:
-                                    esperienza_1_giorno:
-                                        it_IT: '1 giorno'
-                                        en_US: '1 day'
-                                        fr_FR: '1 jour'
-                                    esperienza_2_giorni:
-                                        it_IT: '2 giorni / 1 notte'
-                                        en_US: '2 days / 1 night'
-                                        fr_FR: '2 jours / 1 nuit'
-                                    esperienza_3_giorni:
-                                        it_IT: '3 giorni / 2 notti'
-                                        en_US: '3 days / 2 nights'
-                                        fr_FR: '3 jours / 2 nuits'
+                                    esperienza_1_giorno: '1 giorno'
+                                    esperienza_2_giorni: '2 giorni / 1 notte'
+                                    esperienza_3_giorni: '3 giorni / 2 notti'
 
                             -   name: 'Partecipanti'
                                 code: 'numero_partecipanti'
                                 translations:
-                                    it_IT: 'Partecipanti'
-                                    en_US: 'Participants'
-                                    fr_FR: 'Participants'
+                                    it_IT:
+                                        name: 'Partecipanti'
+                                        values:
+                                            partecipanti_2: '2 persone'
+                                            partecipanti_4: '4 persone'
+                                            partecipanti_6: '6 persone'
+                                    en_US:
+                                        name: 'Participants'
+                                        values:
+                                            partecipanti_2: '2 people'
+                                            partecipanti_4: '4 people'
+                                            partecipanti_6: '6 people'
+                                    fr_FR:
+                                        name: 'Participants'
+                                        values:
+                                            partecipanti_2: '2 personnes'
+                                            partecipanti_4: '4 personnes'
+                                            partecipanti_6: '6 personnes'
                                 values:
-                                    partecipanti_2:
-                                        it_IT: '2 persone'
-                                        en_US: '2 people'
-                                        fr_FR: '2 personnes'
-                                    partecipanti_4:
-                                        it_IT: '4 persone'
-                                        en_US: '4 people'
-                                        fr_FR: '4 personnes'
-                                    partecipanti_6:
-                                        it_IT: '6 persone'
-                                        en_US: '6 people'
-                                        fr_FR: '6 personnes'
+                                    partecipanti_2: '2 persone'
+                                    partecipanti_4: '4 persone'
+                                    partecipanti_6: '6 persone'
 
                 experience_product:
                     name: product

@@ -1,3 +1,7 @@
+sylius:
+    top_bar: "Livraison offerte en Italie dès 100 € d'achat"
+
 webgriffe_sylius_fixtures:
     homepage:
         banner_tagline: "Des vins italiens, de la vigne à votre table"
+        categories: "Découvrez la cave"

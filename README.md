@@ -434,12 +434,21 @@ The lowest price is stored only when the variant is discounted, that is either:
 > Never combine the two on the same product: the catalog promotion recomputes the price from the original one,
 > overwriting the markdown.
 
-### Homepage
+### Shop
 
-Importing `config/config.yaml` of the plugin also replaces the banner of the shop homepage, the clothing photo of
-Sylius, with a vineyard at sunset, the name of the channel and a tagline translated in it, en and fr
-(`webgriffe_sylius_fixtures.homepage.banner_tagline`). The picture is an asset of the bundle: run
-`bin/console assets:install` after installing the plugin.
+Importing `config/config.yaml` of the plugin also dresses the shop as the demo wine shop, through twig hooks:
+
+* the **logo** of Sylius is replaced by the one of the wine shop in the header, the footer, the checkout and the
+  error pages, and the footer credits the company of the channel;
+* the **homepage banner**, a clothing photo, becomes a vineyard at sunset with the name of the channel and a
+  tagline (`webgriffe_sylius_fixtures.homepage.banner_tagline`);
+* the **new collection**, three more clothing photos, becomes the categories of the menu of the channel, with
+  their image, name and link;
+* the **top bar** stops promising 20% off for the newsletter, which the demo store does not give, and announces
+  its free shipping in Italy instead (`sylius.top_bar`).
+
+The texts are translated in it, en and fr. The banner is an asset of the bundle: run `bin/console assets:install`
+after installing the plugin.
 
 ## The demo store
 

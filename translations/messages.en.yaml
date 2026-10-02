@@ -1,3 +1,7 @@
+sylius:
+    top_bar: "Free shipping in Italy on orders over €100"
+
 webgriffe_sylius_fixtures:
     homepage:
         banner_tagline: "Italian wines from the vineyard to your table"
+        categories: "Explore the wine shop"

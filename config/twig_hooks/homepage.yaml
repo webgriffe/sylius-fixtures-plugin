@@ -5,3 +5,7 @@ sylius_twig_hooks:
             banner:
                 template: '@WebgriffeSyliusFixturesPlugin/shop/homepage/banner.html.twig'
                 priority: 300
+            # the clothing photos of the "new collection", replaced by the categories of the menu
+            new_collection:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/homepage/categories.html.twig'
+                priority: 100

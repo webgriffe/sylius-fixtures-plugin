@@ -1,3 +1,8 @@
+sylius:
+    # the top bar of Sylius promises 20% off for the newsletter, which the demo store does not give
+    top_bar: "Spedizione gratuita in Italia per gli ordini sopra 100 €"
+
 webgriffe_sylius_fixtures:
     homepage:
         banner_tagline: "Vini italiani dalla vigna alla tua tavola"
+        categories: "Scopri l'enoteca"

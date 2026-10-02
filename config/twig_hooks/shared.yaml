@@ -1,0 +1,27 @@
+sylius_twig_hooks:
+    hooks:
+        # the Sylius logo, replaced by the one of the demo wine shop wherever the shop shows it
+        'sylius_shop.base.header.content':
+            logo:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/header/logo.html.twig'
+                priority: 300
+
+        'sylius_shop.base.header.content.logo':
+            content:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/shared/logo.html.twig'
+                priority: 0
+
+        'sylius_shop.base.footer.content':
+            copy:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/footer/copy.html.twig'
+                priority: 0
+
+        'sylius_shop.checkout.common.header':
+            logo:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/checkout/logo.html.twig'
+                priority: 100
+
+        'sylius_shop.shared.error.layout':
+            logo:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/shared/error/logo.html.twig'
+                priority: 100

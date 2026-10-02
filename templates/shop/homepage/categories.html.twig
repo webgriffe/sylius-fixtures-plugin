@@ -1,0 +1,22 @@
+{% set categories = sylius.channel.menuTaxon is not null ? sylius.channel.menuTaxon.enabledChildren|slice(0, 3) : [] %}
+
+{% if categories is not empty %}
+    <div class="container mb-6" role="region" aria-labelledby="categories">
+        <div class="mb-5">
+            <h2 id="categories">
+                {{ 'webgriffe_sylius_fixtures.homepage.categories'|trans }}
+            </h2>
+        </div>
+
+        <div class="photo-grid">
+            {% for category in categories %}
+                <a href="{{ path('sylius_shop_product_index', {'slug': category.slug, '_locale': category.translation.locale}) }}" class="photo-grid-item-{{ loop.index }} position-relative d-block link-reset">
+                    {% if category.images is not empty %}
+                        <img src="{{ category.images.first.path|imagine_filter('sylius_shop_product_original') }}" class="object-fit-cover w-100 h-100 rounded-3" loading="lazy" alt="">
+                    {% endif %}
+                    <span class="position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded-3 bg-white fs-5 fw-semibold">{{ category.name }}</span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

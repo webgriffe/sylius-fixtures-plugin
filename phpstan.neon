@@ -16,3 +16,11 @@ parameters:
         - '/Parameter #1 \$configuration of method Symfony\\Component\\DependencyInjection\\Extension\\Extension::processConfiguration\(\) expects Symfony\\Component\\Config\\Definition\\ConfigurationInterface, Symfony\\Component\\Config\\Definition\\ConfigurationInterface\|null given\./'
         -
             identifier: missingType.iterableValue
+
+        # Symfony 6.4 has no generics on the config tree builders, so PHPStan loses the type of their chains
+        -
+            message: '#^Cannot call method [a-zA-Z]+\(\) on Symfony\\Component\\Config\\Definition\\Builder\\NodeParentInterface\|null\.$#'
+            path: src/Fixture/*Fixture.php
+        -
+            message: '#^Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\)\.$#'
+            path: src/Fixture/*Fixture.php

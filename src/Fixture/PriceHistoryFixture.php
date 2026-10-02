@@ -107,6 +107,8 @@ final class PriceHistoryFixture implements FixtureInterface
      * Sylius looks for the latest log entry by id, so the history has to be written in chronological order:
      * the entry it wrote when the product was created is replaced by an identical one, written last.
      *
+     * The dates are mutable: the column is mapped as "datetime", which DBAL 4 refuses to fill with an immutable date.
+     *
      * @param list<array<string, mixed>> $entries
      */
     private function logEntries(ChannelPricingInterface $channelPricing, array $entries): void
@@ -124,7 +126,7 @@ final class PriceHistoryFixture implements FixtureInterface
 
             $logEntry = $this->channelPricingLogEntryFactory->create(
                 $channelPricing,
-                new \DateTimeImmutable(sprintf('-%d days', $daysAgo)),
+                new \DateTime(sprintf('-%d days', $daysAgo)),
                 (int) round(((float) $price) * 100.0),
             );
 
@@ -133,7 +135,7 @@ final class PriceHistoryFixture implements FixtureInterface
 
         $this->objectManager->persist($this->channelPricingLogEntryFactory->create(
             $channelPricing,
-            new \DateTimeImmutable(),
+            new \DateTime(),
             $channelPricing->getPrice() ?? 0,
             $channelPricing->getOriginalPrice(),
         ));

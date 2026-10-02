@@ -40,6 +40,20 @@ final class PriceHistoryFixtureTest extends TestCase
         self::assertSame(1590, $loggedEntries[2]['original_price']);
     }
 
+    public function testItLogsMutableDatesAsTheDoctrineMappingRequires(): void
+    {
+        $channelPricing = new ChannelPricing();
+        $channelPricing->setChannelCode('ecommerce');
+        $channelPricing->setPrice(1200);
+
+        $loggedEntries = [];
+        $this->createFixture($channelPricing, $loggedEntries)
+            ->load(['products' => ['chianti' => ['entries' => [['days_ago' => 10, 'price' => 13.00]]]]])
+        ;
+
+        self::assertSame([true, true], array_column($loggedEntries, 'mutable_date'));
+    }
+
     public function testItLetsSyliusComputeTheLowestPrice(): void
     {
         $channelPricing = new ChannelPricing();
@@ -55,7 +69,7 @@ final class PriceHistoryFixtureTest extends TestCase
         ;
     }
 
-    /** @param array<int, array<string, int>> $loggedEntries */
+    /** @param array<int, array<string, int|bool|null>> $loggedEntries */
     private function createFixture(
         ChannelPricing $channelPricing,
         array &$loggedEntries,
@@ -78,7 +92,11 @@ final class PriceHistoryFixtureTest extends TestCase
         $factory = $this->createMock(ChannelPricingLogEntryFactoryInterface::class);
         $factory->method('create')->willReturnCallback(
             function (ChannelPricing $pricing, \DateTimeInterface $loggedAt, int $price, ?int $originalPrice = null) use (&$loggedEntries): ChannelPricingLogEntry {
-                $loggedEntries[] = ['price' => $price, 'original_price' => $originalPrice];
+                $loggedEntries[] = [
+                    'price' => $price,
+                    'original_price' => $originalPrice,
+                    'mutable_date' => $loggedAt instanceof \DateTime,
+                ];
 
                 return new ChannelPricingLogEntry($pricing, $loggedAt, $price, $originalPrice);
             },

@@ -333,6 +333,23 @@ have to exist.
                                     abbreviation: 'BO'
 ```
 
+### Exchange rates
+
+The `exchange_rate` fixture creates the exchange rates between the currencies of the shop, which Sylius has no
+fixture for: without them a price shown in another currency is the same number as in the base currency.
+Declare it after `currency`, the currencies have to exist.
+
+```yaml
+                exchange_rate:
+                    options:
+                        exchange_rates:
+                            -   source_currency: 'EUR'
+                                target_currency: 'GBP'
+                                ratio: 0.85373
+```
+
+> Sylius converts the prices only to show them: the orders are still placed and paid in the base currency.
+
 ### Price history (Omnibus)
 
 The `price_history` fixture writes the past prices of a product, so the shop can show the *lowest price of the
@@ -379,12 +396,17 @@ bin/console sylius:fixtures:load webgriffe -n
 bin/console messenger:consume main --time-limit=60
 ```
 
+> Every zone of the demo store has a single scope, `tax` or `shipping`: Sylius taxes an address with **one** zone
+> of the tax scope, picking whichever the database returns first when two of them match, so Italy and the
+> European Union, or the United Kingdom and the extra EU shipping zone, must never share a scope.
+
 > The variants of the demo store are **tracked**, and the demo orders decrease their inventory: their stock is
 > therefore generous (200 units and up) so that a random set of orders can never exhaust a variant and break the
 > loading. Lower it in your own suite if you need to demo the out of stock behaviour.
 
 It creates an Italian wine shop: the `ecommerce` channel in three locales (it_IT, en_US, fr_FR) with prices in
-euro, shipping to Europe only, 27 wines, 5 configurable sets of glasses, 4 food and wine experiences (nothing to
+euro, also shown in pounds and Swiss francs at the ECB rates of 1 October 2026, shipping to the European Union,
+the United Kingdom and Switzerland, 27 wines, 5 configurable sets of glasses, 4 food and wine experiences (nothing to
 ship, VAT 10%), promotions, 20 orders, 40 reviews and 20 customers.
 
 The pictures are public domain (CC0) photos, their origin is tracked in

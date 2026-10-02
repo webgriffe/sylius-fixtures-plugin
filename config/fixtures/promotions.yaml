@@ -9,12 +9,12 @@ sylius_fixtures:
                         custom:
                             free_shipping:
                                 code: 'spedizione_gratuita'
-                                name: 'Spedizione gratuita sopra 100 €'
-                                description: 'Chi ordina almeno 100 € di vino non paga il trasporto, in Italia e in Europa.'
+                                name: 'Spedizione gratuita in Italia sopra 100 €'
+                                description: 'Chi ordina almeno 100 € e riceve in Italia non paga il trasporto: all''estero, e ancor più fuori dall''Unione Europea, il corriere costa troppo per regalarlo.'
                                 translations:
-                                    it_IT: 'Spedizione gratuita sopra 100 €'
-                                    en_US: 'Free shipping over €100'
-                                    fr_FR: 'Livraison offerte dès 100 €'
+                                    it_IT: 'Spedizione gratuita in Italia sopra 100 €'
+                                    en_US: 'Free shipping in Italy over €100'
+                                    fr_FR: 'Livraison offerte en Italie dès 100 €'
                                 priority: 1
                                 channels:
                                     - 'ecommerce'
@@ -23,6 +23,9 @@ sylius_fixtures:
                                         configuration:
                                             ecommerce:
                                                 amount: 100.00
+                                    -   type: 'shipping_country'
+                                        configuration:
+                                            country: 'IT'
                                 actions:
                                     -   type: 'shipping_percentage_discount'
                                         configuration:

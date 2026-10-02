@@ -18,6 +18,19 @@ sylius_fixtures:
                     options:
                         currencies:
                             - 'EUR'
+                            - 'GBP'
+                            - 'CHF'
+
+                exchange_rate:
+                    options:
+                        # reference rates of the European Central Bank on 1 October 2026
+                        exchange_rates:
+                            -   source_currency: 'EUR'
+                                target_currency: 'GBP'
+                                ratio: 0.85373
+                            -   source_currency: 'EUR'
+                                target_currency: 'CHF'
+                                ratio: 0.9437
 
                 geographical:
                     options:
@@ -50,15 +63,55 @@ sylius_fixtures:
                             - 'SE'
                             - 'HU'
                             - 'CH'
-                            - 'NO'
                             - 'GB'
                         zones:
+                            # The tax zones and the shipping zones are kept apart: an address matching two zones of the
+                            # same scope would be taxed or shipped by whichever of them the database returns first.
                             IT:
-                                name: 'Italia'
+                                name: "Italia"
+                                scope: 'shipping'
                                 countries:
                                     - 'IT'
+                            UE_ESTERO:
+                                name: "Unione Europea, esclusa l'Italia"
+                                scope: 'shipping'
+                                countries:
+                                    - 'AT'
+                                    - 'BE'
+                                    - 'BG'
+                                    - 'HR'
+                                    - 'CY'
+                                    - 'CZ'
+                                    - 'DK'
+                                    - 'EE'
+                                    - 'FI'
+                                    - 'FR'
+                                    - 'DE'
+                                    - 'GR'
+                                    - 'IE'
+                                    - 'LV'
+                                    - 'LT'
+                                    - 'LU'
+                                    - 'MT'
+                                    - 'NL'
+                                    - 'PL'
+                                    - 'PT'
+                                    - 'RO'
+                                    - 'SK'
+                                    - 'SI'
+                                    - 'ES'
+                                    - 'SE'
+                                    - 'HU'
+                            EXTRA_UE:
+                                # outside the customs union: the parcels travel with the export documents
+                                name: "Regno Unito e Svizzera"
+                                scope: 'shipping'
+                                countries:
+                                    - 'GB'
+                                    - 'CH'
                             EU:
-                                name: 'Unione Europea'
+                                name: "Unione Europea"
+                                scope: 'tax'
                                 countries:
                                     - 'IT'
                                     - 'AT'
@@ -87,45 +140,16 @@ sylius_fixtures:
                                     - 'ES'
                                     - 'SE'
                                     - 'HU'
-                            ESTERO:
-                                # every country the shop ships to but Italy, served by the European couriers
-                                name: 'Estero'
+                            GB:
+                                name: "Regno Unito"
+                                scope: 'tax'
                                 countries:
-                                    - 'AT'
-                                    - 'BE'
-                                    - 'BG'
-                                    - 'HR'
-                                    - 'CY'
-                                    - 'CZ'
-                                    - 'DK'
-                                    - 'EE'
-                                    - 'FI'
-                                    - 'FR'
-                                    - 'DE'
-                                    - 'GR'
-                                    - 'IE'
-                                    - 'LV'
-                                    - 'LT'
-                                    - 'LU'
-                                    - 'MT'
-                                    - 'NL'
-                                    - 'PL'
-                                    - 'PT'
-                                    - 'RO'
-                                    - 'SK'
-                                    - 'SI'
-                                    - 'ES'
-                                    - 'SE'
-                                    - 'HU'
-                                    - 'CH'
-                                    - 'NO'
                                     - 'GB'
-                            EUROPE:
-                                name: 'Europa'
+                            CH:
+                                name: "Svizzera"
+                                scope: 'tax'
                                 countries:
                                     - 'CH'
-                                    - 'NO'
-                                    - 'GB'
 
                 province:
                     options:
@@ -204,6 +228,8 @@ sylius_fixtures:
                                 default_locale: 'it_IT'
                                 currencies:
                                     - 'EUR'
+                                    - 'GBP'
+                                    - 'CHF'
                                 base_currency: 'EUR'
                                 default_tax_zone: 'EU'
                                 tax_calculation_strategy: 'order_items_based'
@@ -280,19 +306,19 @@ sylius_fixtures:
                             wine:
                                 code: 'vino'
                                 name: 'Vino'
-                                description: 'Aliquota ordinaria del 22% applicata a vini, spumanti e vini liquorosi.'
+                                description: 'Vini, spumanti e vini liquorosi: IVA ordinaria del 22%% nell''Unione Europea, VAT del 20%% nel Regno Unito e IVA dell''8,1%% in Svizzera.'
                             other:
                                 code: 'altro'
                                 name: 'Altro'
-                                description: 'Aliquota ordinaria del 22% per gli articoli non alimentari, come calici e accessori.'
+                                description: 'Articoli non alimentari come calici e accessori: IVA ordinaria del 22%% nell''Unione Europea, VAT del 20%% nel Regno Unito e IVA dell''8,1%% in Svizzera.'
                             experiences:
                                 code: 'esperienze'
                                 name: 'Servizi turistici'
-                                description: 'Aliquota ridotta del 10% prevista per i servizi turistici: visite guidate, degustazioni e pernottamenti.'
+                                description: 'Visite guidate, degustazioni e pernottamenti: si svolgono in Italia, quindi pagano l''IVA italiana ridotta del 10% da qualunque paese arrivi il cliente.'
                             shipping:
                                 code: 'spedizione'
                                 name: 'Spedizione'
-                                description: 'Aliquota ordinaria del 22% sul trasporto, che segue quella dei beni spediti: vini e calici.'
+                                description: 'Il trasporto segue l''aliquota dei beni spediti, vini e calici: 22%% nell''Unione Europea, 20%% nel Regno Unito e 8,1%% in Svizzera.'
 
                 tax_rate:
                     options:
@@ -327,6 +353,72 @@ sylius_fixtures:
                                 zone: 'EU'
                                 category: 'spedizione'
                                 amount: 0.22
+                                included_in_price: true
+
+                            # The UK and Swiss VAT is collected at the checkout, so the parcels clear customs with
+                            # nothing left to pay on delivery.
+                            wine_vat_gb:
+                                code: 'iva_20_vino_regno_unito'
+                                name: 'VAT 20% vino Regno Unito'
+                                zone: 'GB'
+                                category: 'vino'
+                                amount: 0.2
+                                included_in_price: true
+
+                            default_vat_gb:
+                                code: 'iva_20_regno_unito'
+                                name: 'VAT 20% Regno Unito'
+                                zone: 'GB'
+                                category: 'altro'
+                                amount: 0.2
+                                included_in_price: true
+
+                            shipping_vat_gb:
+                                code: 'iva_20_spedizione_regno_unito'
+                                name: 'VAT 20% spedizione Regno Unito'
+                                zone: 'GB'
+                                category: 'spedizione'
+                                amount: 0.2
+                                included_in_price: true
+
+                            experiences_vat_gb:
+                                code: 'iva_10_esperienze_regno_unito'
+                                name: 'IVA 10% servizi turistici, clienti del Regno Unito'
+                                zone: 'GB'
+                                category: 'esperienze'
+                                amount: 0.1
+                                included_in_price: true
+
+                            wine_vat_ch:
+                                code: 'iva_8_1_vino_svizzera'
+                                name: 'IVA 8,1% vino Svizzera'
+                                zone: 'CH'
+                                category: 'vino'
+                                amount: 0.081
+                                included_in_price: true
+
+                            default_vat_ch:
+                                code: 'iva_8_1_svizzera'
+                                name: 'IVA 8,1% Svizzera'
+                                zone: 'CH'
+                                category: 'altro'
+                                amount: 0.081
+                                included_in_price: true
+
+                            shipping_vat_ch:
+                                code: 'iva_8_1_spedizione_svizzera'
+                                name: 'IVA 8,1% spedizione Svizzera'
+                                zone: 'CH'
+                                category: 'spedizione'
+                                amount: 0.081
+                                included_in_price: true
+
+                            experiences_vat_ch:
+                                code: 'iva_10_esperienze_svizzera'
+                                name: 'IVA 10% servizi turistici, clienti svizzeri'
+                                zone: 'CH'
+                                category: 'esperienze'
+                                amount: 0.1
                                 included_in_price: true
 
                 shipping_method:
@@ -381,7 +473,7 @@ sylius_fixtures:
                                 enabled: true
                                 min_delivery_time_days: 3
                                 max_delivery_time_days: 5
-                                zone: 'ESTERO'
+                                zone: 'UE_ESTERO'
                                 category: 'bottiglie'
                                 category_requirement: 'match_all'
                                 tax_category: 'spedizione'
@@ -445,7 +537,7 @@ sylius_fixtures:
                                 enabled: true
                                 min_delivery_time_days: 3
                                 max_delivery_time_days: 5
-                                zone: 'ESTERO'
+                                zone: 'UE_ESTERO'
                                 category: 'fragile'
                                 category_requirement: 'match_any'
                                 tax_category: 'spedizione'
@@ -506,7 +598,7 @@ sylius_fixtures:
                                 enabled: true
                                 min_delivery_time_days: 5
                                 max_delivery_time_days: 10
-                                zone: 'ESTERO'
+                                zone: 'UE_ESTERO'
                                 # no category: bottles and glasses travel together, strapped to the pallet
                                 tax_category: 'spedizione'
                                 rules:
@@ -520,6 +612,98 @@ sylius_fixtures:
                                     configuration:
                                         ecommerce:
                                             amount: 8900
+                            standard_extra_eu:
+                                code: 'corriere_extra_ue'
+                                name: "Corriere espresso Regno Unito e Svizzera"
+                                translations:
+                                    it_IT:
+                                        name: "Corriere espresso Regno Unito e Svizzera"
+                                        description: "Consegna in 4/7 giorni lavorativi, sdoganamento incluso: niente da pagare all'arrivo."
+                                    en_US:
+                                        name: "Express courier, United Kingdom and Switzerland"
+                                        description: "Delivered in 4/7 working days, customs clearance included: nothing to pay on arrival."
+                                    fr_FR:
+                                        name: "Transporteur express Royaume-Uni et Suisse"
+                                        description: "Livraison en 4 à 7 jours ouvrés, dédouanement compris : rien à payer à l'arrivée."
+                                enabled: true
+                                min_delivery_time_days: 4
+                                max_delivery_time_days: 7
+                                zone: 'EXTRA_UE'
+                                # the price covers the export documents and the customs clearance of the courier
+                                category: 'bottiglie'
+                                category_requirement: 'match_all'
+                                tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 30
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 2990
+                            fragile_extra_eu:
+                                code: 'corriere_fragile_extra_ue'
+                                name: "Corriere con imballo antiurto Regno Unito e Svizzera"
+                                translations:
+                                    it_IT:
+                                        name: "Corriere con imballo antiurto Regno Unito e Svizzera"
+                                        description: "Imballo rinforzato per i calici, consegna in 4/7 giorni lavorativi con sdoganamento incluso."
+                                    en_US:
+                                        name: "Shockproof courier, United Kingdom and Switzerland"
+                                        description: "Reinforced packaging for glassware, delivered in 4/7 working days with customs clearance included."
+                                    fr_FR:
+                                        name: "Transporteur avec emballage renforcé Royaume-Uni et Suisse"
+                                        description: "Emballage renforcé pour les verres, livraison en 4 à 7 jours ouvrés, dédouanement compris."
+                                enabled: true
+                                min_delivery_time_days: 4
+                                max_delivery_time_days: 7
+                                zone: 'EXTRA_UE'
+                                category: 'fragile'
+                                category_requirement: 'match_any'
+                                tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 20
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 3990
+                            pallet_extra_eu:
+                                code: 'bancale_extra_ue'
+                                name: "Spedizione su bancale Regno Unito e Svizzera"
+                                translations:
+                                    it_IT:
+                                        name: "Spedizione su bancale Regno Unito e Svizzera"
+                                        description: "Per gli ordini oltre i 20 kg: bancale reggiato, sdoganamento incluso e consegna su appuntamento in 7/12 giorni lavorativi."
+                                    en_US:
+                                        name: "Pallet delivery, United Kingdom and Switzerland"
+                                        description: "For orders over 20 kg: strapped pallet, customs clearance included, delivered by appointment in 7/12 working days."
+                                    fr_FR:
+                                        name: "Livraison sur palette Royaume-Uni et Suisse"
+                                        description: "Pour les commandes de plus de 20 kg : palette cerclée, dédouanement compris, livraison sur rendez-vous en 7 à 12 jours ouvrés."
+                                enabled: true
+                                min_delivery_time_days: 7
+                                max_delivery_time_days: 12
+                                zone: 'EXTRA_UE'
+                                tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_greater_than_or_equal'
+                                        configuration:
+                                            weight: 20
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 14900
                             pickup:
                                 code: 'ritiro_in_sede'
                                 name: 'Ritiro in sede'

@@ -85,6 +85,14 @@
             <tag name="sylius_fixtures.fixture" />
         </service>
 
+        <service id="webgriffe_sylius_fixtures.fixture.exchange_rate"
+                 class="Webgriffe\SyliusFixturesPlugin\Fixture\ExchangeRateFixture">
+            <argument type="service" id="sylius.manager.exchange_rate" />
+            <argument type="service" id="sylius.repository.currency" />
+            <argument type="service" id="sylius.factory.exchange_rate" />
+            <tag name="sylius_fixtures.fixture" />
+        </service>
+
         <service id="webgriffe_sylius_fixtures.fixture.price_history"
                  class="Webgriffe\SyliusFixturesPlugin\Fixture\PriceHistoryFixture">
             <argument type="service" id="sylius.manager.channel_pricing_log_entry" />

@@ -129,6 +129,49 @@ every locale as Sylius does, or a map of locale to value:
                                         fr_FR: 'Toscane'
 ```
 
+A map is recognized as translated when **all** its keys are locale codes: any other array is a value of its own,
+like the list of choices of a `select` attribute. The dates of the translated values are written as strings,
+the plugin turns them into dates as Sylius does for the others.
+
+The values of a `select` attribute are the keys of its choices, always as a list, multiple or not:
+
+```yaml
+                            -   name: 'Abbinamenti'
+                                code: 'pairings'
+                                type: 'select'
+                                translatable: false
+                                configuration:
+                                    multiple: true
+                                    min: 1
+                                    max: 4
+                                    choices:
+                                        red_meat:
+                                            it_IT: 'Carni rosse'
+                                            en_US: 'Red meat'
+                                        cheese:
+                                            it_IT: 'Formaggi stagionati'
+                                            en_US: 'Aged cheeses'
+
+                                product_attributes:
+                                    pairings: ['red_meat', 'cheese']
+```
+
+The demo store holds an attribute of every type, translatable and not, so every way Sylius stores and shows an
+attribute can be seen:
+
+| Type | Translatable | Not translatable |
+|---|---|---|
+| `text` | region of the wine | article number of the glasses |
+| `textarea` | tasting notes | EAN codes of the packs |
+| `checkbox` | guide in your language | dishwasher safe |
+| `integer` | critics score of each market | vintage |
+| `float` | serving temperature, in °F for the American market | total acidity |
+| `percent` | deposit on booking | alcohol content |
+| `date` | next departure, market by market | bottling date |
+| `datetime` | online tasting, one a market | bookings close |
+| `select` single | best for, following the habits of each market | closure |
+| `select` multiple | product badges | food pairings |
+
 ### Product options
 
 | Option | Description |

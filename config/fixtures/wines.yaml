@@ -36,6 +36,18 @@ sylius_fixtures:
                                         fr_FR: 'Abruzzes'
                                     vino_gradazione: 0.13
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 16.0
+                                        en_US: 60.8
+                                        fr_FR: 16.0
+                                    vino_acidita_totale: 5.4
+                                    vino_data_imbottigliamento: '2023-04-18'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['pasta', 'salumi', 'carni_bianche']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -89,6 +101,22 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 16.0
+                                        en_US: 60.8
+                                        fr_FR: 16.0
+                                    vino_acidita_totale: 5.6
+                                    vino_data_imbottigliamento: '2023-03-15'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['pizza', 'pasta', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
+                                    vino_badge:
+                                        it_IT: ['piu_venduto']
+                                        en_US: ['piu_venduto']
+                                        fr_FR: ['novita']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -143,6 +171,18 @@ sylius_fixtures:
                                         fr_FR: 'Vénétie'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 15.0
+                                        en_US: 59.0
+                                        fr_FR: 15.0
+                                    vino_acidita_totale: 5.5
+                                    vino_data_imbottigliamento: '2023-02-20'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['salumi', 'pasta']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -196,6 +236,18 @@ sylius_fixtures:
                                         fr_FR: 'Piémont'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 16.0
+                                        en_US: 60.8
+                                        fr_FR: 16.0
+                                    vino_acidita_totale: 6.1
+                                    vino_data_imbottigliamento: '2022-11-10'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['pasta', 'carni_rosse', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -249,6 +301,18 @@ sylius_fixtures:
                                         fr_FR: 'Sicile'
                                     vino_gradazione: 0.135
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 17.0
+                                        en_US: 62.6
+                                        fr_FR: 17.0
+                                    vino_acidita_totale: 5.3
+                                    vino_data_imbottigliamento: '2023-05-08'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['carni_rosse', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -302,6 +366,18 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.135
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 17.0
+                                        en_US: 62.6
+                                        fr_FR: 17.0
+                                    vino_acidita_totale: 5.5
+                                    vino_data_imbottigliamento: '2023-01-25'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -356,6 +432,18 @@ sylius_fixtures:
                                         fr_FR: 'Pouilles'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 17.0
+                                        en_US: 62.6
+                                        fr_FR: 17.0
+                                    vino_acidita_totale: 5.1
+                                    vino_data_imbottigliamento: '2022-04-12'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'selvaggina', 'formaggi_erborinati']
+                                    vino_occasione:
+                                        it_IT: ['meditazione']
+                                        en_US: ['meditazione']
+                                        fr_FR: ['meditazione']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -409,6 +497,35 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.6
+                                    vino_data_imbottigliamento: '2023-07-03'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'selvaggina', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
+                                    vino_punteggio:
+                                        it_IT: 93
+                                        en_US: 94
+                                        fr_FR: 92
+                                    vino_note_degustazione:
+                                        it_IT: |-
+                                            Colore: rubino intenso tendente al granato.
+                                            Naso: ciliegia matura, sottobosco, spezie dolci.
+                                            Bocca: piena, tannino nobile, chiusura sapida.
+                                        en_US: |-
+                                            Colour: deep ruby turning to garnet.
+                                            Nose: ripe cherry, forest floor, sweet spice.
+                                            Palate: full, noble tannins, savoury close.
+                                        fr_FR: |-
+                                            Robe : rubis profond tirant sur le grenat.
+                                            Nez : cerise mûre, sous-bois, épices douces.
+                                            Bouche : ample, tanins nobles, finale sapide.
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -462,6 +579,43 @@ sylius_fixtures:
                                         fr_FR: 'Piémont'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.8
+                                    vino_data_imbottigliamento: '2023-06-20'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'selvaggina', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
+                                    vino_badge:
+                                        it_IT: ['scelta_sommelier']
+                                        en_US: ['scelta_sommelier']
+                                        fr_FR: ['scelta_sommelier', 'novita']
+                                    vino_punteggio:
+                                        it_IT: 94
+                                        en_US: 93
+                                        fr_FR: 93
+                                    vino_degustazione_online:
+                                        it_IT: '2026-10-22 19:00:00'
+                                        en_US: '2026-10-24 18:00:00'
+                                        fr_FR: '2026-10-29 19:30:00'
+                                    vino_note_degustazione:
+                                        it_IT: |-
+                                            Colore: granato con riflessi aranciati.
+                                            Naso: rosa appassita, catrame, liquirizia, tabacco.
+                                            Bocca: tannino austero e fitto, acidità viva, finale lunghissimo.
+                                        en_US: |-
+                                            Colour: garnet with orange hues.
+                                            Nose: dried rose, tar, liquorice, tobacco.
+                                            Palate: austere, dense tannins, lively acidity, very long finish.
+                                        fr_FR: |-
+                                            Robe : grenat aux reflets orangés.
+                                            Nez : rose fanée, goudron, réglisse, tabac.
+                                            Bouche : tanins austères et serrés, acidité vive, finale très longue.
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -516,6 +670,35 @@ sylius_fixtures:
                                         fr_FR: 'Vénétie'
                                     vino_gradazione: 0.155
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.4
+                                    vino_data_imbottigliamento: '2023-03-30'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['selvaggina', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['meditazione']
+                                        en_US: ['meditazione']
+                                        fr_FR: ['meditazione']
+                                    vino_degustazione_online:
+                                        it_IT: '2026-11-05 19:00:00'
+                                        en_US: '2026-11-07 18:00:00'
+                                        fr_FR: '2026-11-12 19:30:00'
+                                    vino_note_degustazione:
+                                        it_IT: |-
+                                            Colore: rubino cupo, quasi impenetrabile.
+                                            Naso: ciliegia sotto spirito, cacao, spezie orientali.
+                                            Bocca: densa e vellutata, calore alcolico ben integrato.
+                                        en_US: |-
+                                            Colour: dark, almost opaque ruby.
+                                            Nose: cherry in spirit, cocoa, oriental spice.
+                                            Palate: dense and velvety, well integrated warmth.
+                                        fr_FR: |-
+                                            Robe : rubis sombre, presque opaque.
+                                            Nez : cerise à l'eau-de-vie, cacao, épices orientales.
+                                            Bouche : dense et veloutée, chaleur bien intégrée.
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -569,6 +752,22 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.5
+                                    vino_data_imbottigliamento: '2023-04-14'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'selvaggina']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
+                                    vino_punteggio:
+                                        it_IT: 96
+                                        en_US: 97
+                                        fr_FR: 95
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_3.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -622,6 +821,35 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.14
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.6
+                                    vino_data_imbottigliamento: '2023-06-01'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'selvaggina']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
+                                    vino_punteggio:
+                                        it_IT: 98
+                                        en_US: 97
+                                        fr_FR: 98
+                                    vino_note_degustazione:
+                                        it_IT: |-
+                                            Colore: rubino profondo.
+                                            Naso: ribes nero, erbe mediterranee, grafite.
+                                            Bocca: tannini di seta, freschezza salina, grande eleganza.
+                                        en_US: |-
+                                            Colour: deep ruby.
+                                            Nose: blackcurrant, Mediterranean herbs, graphite.
+                                            Palate: silky tannins, saline freshness, great elegance.
+                                        fr_FR: |-
+                                            Robe : rubis profond.
+                                            Nez : cassis, herbes méditerranéennes, graphite.
+                                            Bouche : tanins soyeux, fraîcheur saline, grande élégance.
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_4.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -675,6 +903,26 @@ sylius_fixtures:
                                         fr_FR: 'Piémont'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.9
+                                    vino_data_imbottigliamento: '2023-05-15'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['selvaggina', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['meditazione']
+                                        en_US: ['meditazione']
+                                        fr_FR: ['meditazione']
+                                    vino_badge:
+                                        it_IT: ['edizione_limitata', 'ultime_bottiglie']
+                                        en_US: ['edizione_limitata', 'ultime_bottiglie']
+                                        fr_FR: ['edizione_limitata', 'ultime_bottiglie']
+                                    vino_punteggio:
+                                        it_IT: 99
+                                        en_US: 99
+                                        fr_FR: 98
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -728,6 +976,26 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 18.0
+                                        en_US: 64.4
+                                        fr_FR: 18.0
+                                    vino_acidita_totale: 5.3
+                                    vino_data_imbottigliamento: '2022-01-17'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['carni_rosse', 'selvaggina']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
+                                    vino_badge:
+                                        it_IT: ['ultime_bottiglie']
+                                        en_US: ['edizione_limitata']
+                                        fr_FR: ['ultime_bottiglie']
+                                    vino_punteggio:
+                                        it_IT: 98
+                                        en_US: 99
+                                        fr_FR: 97
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_rosso_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -782,6 +1050,18 @@ sylius_fixtures:
                                         fr_FR: 'Marches'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 10.0
+                                        en_US: 50.0
+                                        fr_FR: 10.0
+                                    vino_acidita_totale: 6.2
+                                    vino_data_imbottigliamento: '2024-02-12'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['pesce', 'crostacei', 'pasta']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -835,6 +1115,18 @@ sylius_fixtures:
                                         fr_FR: 'Sardaigne'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 10.0
+                                        en_US: 50.0
+                                        fr_FR: 10.0
+                                    vino_acidita_totale: 5.9
+                                    vino_data_imbottigliamento: '2024-02-26'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['pesce', 'crostacei']
+                                    vino_occasione:
+                                        it_IT: ['aperitivo']
+                                        en_US: ['aperitivo']
+                                        fr_FR: ['aperitivo']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -888,6 +1180,18 @@ sylius_fixtures:
                                         fr_FR: 'Trentin-Haut-Adige'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 10.0
+                                        en_US: 50.0
+                                        fr_FR: 10.0
+                                    vino_acidita_totale: 5.8
+                                    vino_data_imbottigliamento: '2024-01-30'
+                                    vino_tipo_chiusura: ['sughero_tecnico']
+                                    vino_abbinamenti: ['pesce', 'aperitivo']
+                                    vino_occasione:
+                                        it_IT: ['aperitivo']
+                                        en_US: ['aperitivo']
+                                        fr_FR: ['aperitivo']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -941,6 +1245,18 @@ sylius_fixtures:
                                         fr_FR: 'Piémont'
                                     vino_gradazione: 0.12
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 10.0
+                                        en_US: 50.0
+                                        fr_FR: 10.0
+                                    vino_acidita_totale: 6.4
+                                    vino_data_imbottigliamento: '2024-03-11'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['pesce', 'pasta']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -994,6 +1310,18 @@ sylius_fixtures:
                                         fr_FR: 'Ombrie'
                                     vino_gradazione: 0.13
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 12.0
+                                        en_US: 53.6
+                                        fr_FR: 12.0
+                                    vino_acidita_totale: 6.0
+                                    vino_data_imbottigliamento: '2023-06-26'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['crostacei', 'carni_bianche', 'formaggi_stagionati']
+                                    vino_occasione:
+                                        it_IT: ['pasto']
+                                        en_US: ['pasto']
+                                        fr_FR: ['pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_bianco_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -1047,6 +1375,22 @@ sylius_fixtures:
                                         fr_FR: 'Vénétie'
                                     vino_gradazione: 0.11
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 7.0
+                                        en_US: 44.6
+                                        fr_FR: 7.0
+                                    vino_acidita_totale: 6.8
+                                    vino_data_imbottigliamento: '2026-03-10'
+                                    vino_tipo_chiusura: ['tappo_a_fungo']
+                                    vino_abbinamenti: ['aperitivo', 'pesce']
+                                    vino_occasione:
+                                        it_IT: ['aperitivo']
+                                        en_US: ['brunch']
+                                        fr_FR: ['aperitivo']
+                                    vino_badge:
+                                        it_IT: ['piu_venduto']
+                                        en_US: ['piu_venduto', 'scelta_sommelier']
+                                        fr_FR: ['piu_venduto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -1099,6 +1443,35 @@ sylius_fixtures:
                                         fr_FR: 'Lombardie'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 8.0
+                                        en_US: 46.4
+                                        fr_FR: 8.0
+                                    vino_acidita_totale: 7.0
+                                    vino_data_imbottigliamento: '2024-11-15'
+                                    vino_tipo_chiusura: ['tappo_a_fungo']
+                                    vino_abbinamenti: ['aperitivo', 'pesce', 'crostacei']
+                                    vino_occasione:
+                                        it_IT: ['aperitivo']
+                                        en_US: ['aperitivo']
+                                        fr_FR: ['pasto']
+                                    vino_degustazione_online:
+                                        it_IT: '2026-12-03 19:00:00'
+                                        en_US: '2026-12-05 18:00:00'
+                                        fr_FR: '2026-12-10 19:30:00'
+                                    vino_note_degustazione:
+                                        it_IT: |-
+                                            Colore: paglierino brillante, perlage fine e persistente.
+                                            Naso: crosta di pane, agrumi canditi, frutta bianca.
+                                            Bocca: cremosa e precisa, finale fresco.
+                                        en_US: |-
+                                            Colour: bright straw, fine and persistent bubbles.
+                                            Nose: bread crust, candied citrus, orchard fruit.
+                                            Palate: creamy and precise, fresh finish.
+                                        fr_FR: |-
+                                            Robe : paille brillant, bulles fines et persistantes.
+                                            Nez : croûte de pain, agrumes confits, fruits blancs.
+                                            Bouche : crémeuse et précise, finale fraîche.
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -1152,6 +1525,18 @@ sylius_fixtures:
                                         fr_FR: 'Trentin'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 8.0
+                                        en_US: 46.4
+                                        fr_FR: 8.0
+                                    vino_acidita_totale: 6.9
+                                    vino_data_imbottigliamento: '2019-05-02'
+                                    vino_tipo_chiusura: ['tappo_a_fungo']
+                                    vino_abbinamenti: ['aperitivo', 'crostacei']
+                                    vino_occasione:
+                                        it_IT: ['aperitivo']
+                                        en_US: ['aperitivo']
+                                        fr_FR: ['aperitivo']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_3.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -1204,6 +1589,18 @@ sylius_fixtures:
                                         fr_FR: 'Champagne'
                                     vino_gradazione: 0.12
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 8.0
+                                        en_US: 46.4
+                                        fr_FR: 8.0
+                                    vino_acidita_totale: 6.7
+                                    vino_data_imbottigliamento: '2024-09-02'
+                                    vino_tipo_chiusura: ['tappo_a_fungo']
+                                    vino_abbinamenti: ['aperitivo', 'crostacei']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -1257,6 +1654,18 @@ sylius_fixtures:
                                         fr_FR: 'Champagne'
                                     vino_gradazione: 0.125
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 10.0
+                                        en_US: 50.0
+                                        fr_FR: 10.0
+                                    vino_acidita_totale: 6.3
+                                    vino_data_imbottigliamento: '2014-06-02'
+                                    vino_tipo_chiusura: ['tappo_a_fungo']
+                                    vino_abbinamenti: ['crostacei', 'pesce']
+                                    vino_occasione:
+                                        it_IT: ['regalo']
+                                        en_US: ['regalo']
+                                        fr_FR: ['regalo']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/bollicine_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -1311,6 +1720,18 @@ sylius_fixtures:
                                         fr_FR: 'Piémont'
                                     vino_gradazione: 0.055
                                     vino_formato: '0,75 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 8.0
+                                        en_US: 46.4
+                                        fr_FR: 8.0
+                                    vino_acidita_totale: 6.2
+                                    vino_data_imbottigliamento: '2024-01-22'
+                                    vino_tipo_chiusura: ['tappo_a_vite']
+                                    vino_abbinamenti: ['pasticceria']
+                                    vino_occasione:
+                                        it_IT: ['fine_pasto']
+                                        en_US: ['brunch']
+                                        fr_FR: ['fine_pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }
@@ -1364,6 +1785,18 @@ sylius_fixtures:
                                         fr_FR: 'Toscane'
                                     vino_gradazione: 0.15
                                     vino_formato: '0,375 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 14.0
+                                        en_US: 57.2
+                                        fr_FR: 14.0
+                                    vino_acidita_totale: 6.0
+                                    vino_data_imbottigliamento: '2023-09-18'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['pasticceria', 'formaggi_erborinati']
+                                    vino_occasione:
+                                        it_IT: ['fine_pasto']
+                                        en_US: ['fine_pasto']
+                                        fr_FR: ['fine_pasto']
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_2.webp' }
@@ -1417,6 +1850,35 @@ sylius_fixtures:
                                         fr_FR: 'Sicile'
                                     vino_gradazione: 0.145
                                     vino_formato: '0,375 L'
+                                    vino_temperatura_servizio:
+                                        it_IT: 12.0
+                                        en_US: 53.6
+                                        fr_FR: 12.0
+                                    vino_acidita_totale: 6.5
+                                    vino_data_imbottigliamento: '2023-02-06'
+                                    vino_tipo_chiusura: ['sughero_naturale']
+                                    vino_abbinamenti: ['pasticceria', 'formaggi_erborinati']
+                                    vino_occasione:
+                                        it_IT: ['meditazione']
+                                        en_US: ['meditazione']
+                                        fr_FR: ['meditazione']
+                                    vino_badge:
+                                        it_IT: ['scelta_sommelier']
+                                        en_US: ['novita']
+                                        fr_FR: ['novita']
+                                    vino_note_degustazione:
+                                        it_IT: |-
+                                            Colore: ambra luminosa.
+                                            Naso: albicocca secca, miele, erbe mediterranee.
+                                            Bocca: dolce e avvolgente, chiusa da una nota salina.
+                                        en_US: |-
+                                            Colour: bright amber.
+                                            Nose: dried apricot, honey, Mediterranean herbs.
+                                            Palate: sweet and enveloping, closed by a saline note.
+                                        fr_FR: |-
+                                            Robe : ambre lumineux.
+                                            Nez : abricot sec, miel, herbes méditerranéennes.
+                                            Bouche : douce et enveloppante, finale saline.
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/vino_dolce_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/wines/enoteca_1.webp' }

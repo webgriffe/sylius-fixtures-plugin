@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Webgriffe\SyliusFixturesPlugin\Fixture\Factory;
 
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
+use Sylius\Component\Attribute\Model\AttributeValueInterface;
 use Sylius\Component\Core\Model\ChannelPricingInterface;
 use Sylius\Component\Core\Model\ProductInterface;
 use Sylius\Component\Core\Model\ProductVariantInterface;
@@ -101,11 +102,33 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
      */
     private function defaultAttributeValueOf(mixed $value): mixed
     {
-        if (!is_array($value) || [] === $value) {
+        if (!$this->isTranslated($value)) {
             return $value;
         }
 
-        return reset($value);
+        /** @var array<string, mixed> $translations */
+        $translations = $value;
+
+        return reset($translations);
+    }
+
+    /**
+     * A translated value is a map of locale to value. Any other array is a value of its own: the choices of a
+     * select attribute, which Sylius stores as a list.
+     */
+    private function isTranslated(mixed $value): bool
+    {
+        if (!is_array($value) || [] === $value) {
+            return false;
+        }
+
+        foreach (array_keys($value) as $key) {
+            if (!is_string($key) || 1 !== preg_match('/^[a-z]{2}_[A-Z]{2}$/', $key)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -124,12 +147,32 @@ final readonly class ProductExampleFactory implements ExampleFactoryInterface
             }
 
             $translations = $attributes[(string) $attribute->getCode()] ?? null;
-            if (!is_array($translations) || !isset($translations[$localeCode])) {
+            if (!$this->isTranslated($translations)) {
                 continue;
             }
 
-            $attributeValue->setValue($translations[$localeCode]);
+            /** @var array<string, mixed> $valuesByLocale */
+            $valuesByLocale = $translations;
+            if (!array_key_exists($localeCode, $valuesByLocale)) {
+                continue;
+            }
+
+            $attributeValue->setValue($this->storableValue($attribute->getStorageType(), $valuesByLocale[$localeCode]));
         }
+    }
+
+    /**
+     * Sylius turns the dates written in the fixtures into objects only for the value it writes itself, so the
+     * translated ones are turned here.
+     */
+    private function storableValue(?string $storageType, mixed $value): mixed
+    {
+        $isDate = in_array($storageType, [AttributeValueInterface::STORAGE_DATE, AttributeValueInterface::STORAGE_DATETIME], true);
+        if ($isDate && is_string($value)) {
+            return new \DateTime($value);
+        }
+
+        return $value;
     }
 
     /** @param array<string, array<string, string>> $translations */

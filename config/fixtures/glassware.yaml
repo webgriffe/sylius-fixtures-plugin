@@ -95,6 +95,24 @@ sylius_fixtures:
                                 type: 'checkbox'
                                 translatable: false
 
+                            -   name: 'Codice articolo del produttore'
+                                code: 'calice_codice_articolo'
+                                translations:
+                                    it_IT: 'Codice articolo del produttore'
+                                    en_US: 'Manufacturer article number'
+                                    fr_FR: 'Référence fabricant'
+                                type: 'text'
+                                translatable: false
+
+                            -   name: 'Codici EAN per confezione'
+                                code: 'calice_codici_ean'
+                                translations:
+                                    it_IT: 'Codici EAN per confezione'
+                                    en_US: 'EAN codes per pack'
+                                    fr_FR: 'Codes EAN par coffret'
+                                type: 'textarea'
+                                translatable: false
+
                 glassware_option:
                     name: product_option
                     options:
@@ -179,6 +197,12 @@ sylius_fixtures:
                                     calice_capacita: 610
                                     calice_altezza: 223
                                     calice_lavastoviglie: true
+                                    calice_codice_articolo: '6416/0'
+                                    calice_codici_ean: |-
+                                        2 calici: 9006921416006
+                                        4 calici: 9006921416013
+                                        6 calici: 9006921416020
+                                        8 calici: 9006921416037
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_2.webp' }
@@ -254,6 +278,12 @@ sylius_fixtures:
                                     calice_capacita: 692
                                     calice_altezza: 233
                                     calice_lavastoviglie: true
+                                    calice_codice_articolo: '122317'
+                                    calice_codici_ean: |-
+                                        2 calici: 4003834122302
+                                        4 calici: 4003834122319
+                                        6 calici: 4003834122326
+                                        8 calici: 4003834122333
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_3.webp' }
@@ -329,6 +359,12 @@ sylius_fixtures:
                                     calice_capacita: 310
                                     calice_altezza: 233
                                     calice_lavastoviglie: true
+                                    calice_codice_articolo: '4678007'
+                                    calice_codici_ean: |-
+                                        2 calici: 4000087467808
+                                        4 calici: 4000087467815
+                                        6 calici: 4000087467822
+                                        8 calici: 4000087467839
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_3.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp' }
@@ -404,6 +440,12 @@ sylius_fixtures:
                                     calice_capacita: 215
                                     calice_altezza: 155
                                     calice_lavastoviglie: true
+                                    calice_codice_articolo: '359.03.2'
+                                    calice_codici_ean: |-
+                                        2 calici: 8001044359002
+                                        4 calici: 8001044359019
+                                        6 calici: 8001044359026
+                                        8 calici: 8001044359033
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_3.webp' }
@@ -479,6 +521,12 @@ sylius_fixtures:
                                     calice_capacita: 450
                                     calice_altezza: 218
                                     calice_lavastoviglie: true
+                                    calice_codice_articolo: 'A-11277'
+                                    calice_codici_ean: |-
+                                        2 calici: 8023351112705
+                                        4 calici: 8023351112712
+                                        6 calici: 8023351112729
+                                        8 calici: 8023351112736
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_2.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/calici/calici_1.webp' }

@@ -84,6 +84,42 @@ sylius_fixtures:
                                     fr_FR: 'Période conseillée'
                                 type: 'text'
 
+                            -   name: 'Guida nella tua lingua'
+                                code: 'esperienza_guida_in_lingua'
+                                translations:
+                                    it_IT: 'Guida nella tua lingua'
+                                    en_US: 'Guide in your language'
+                                    fr_FR: 'Guide dans votre langue'
+                                type: 'checkbox'
+                                translatable: true
+
+                            -   name: 'Caparra alla prenotazione'
+                                code: 'esperienza_caparra'
+                                translations:
+                                    it_IT: 'Caparra alla prenotazione'
+                                    en_US: 'Deposit on booking'
+                                    fr_FR: 'Acompte à la réservation'
+                                type: 'percent'
+                                translatable: true
+
+                            -   name: 'Prossima partenza'
+                                code: 'esperienza_prossima_partenza'
+                                translations:
+                                    it_IT: 'Prossima partenza'
+                                    en_US: 'Next departure'
+                                    fr_FR: 'Prochain départ'
+                                type: 'date'
+                                translatable: true
+
+                            -   name: 'Chiusura delle prenotazioni'
+                                code: 'esperienza_fine_prenotazioni'
+                                translations:
+                                    it_IT: 'Chiusura delle prenotazioni'
+                                    en_US: 'Bookings close on'
+                                    fr_FR: 'Clôture des réservations'
+                                type: 'datetime'
+                                translatable: false
+
                 experience_option:
                     name: product_option
                     options:
@@ -170,6 +206,19 @@ sylius_fixtures:
                                         it_IT: 'Da aprile a ottobre'
                                         en_US: 'From April to October'
                                         fr_FR: "D'avril à octobre"
+                                    esperienza_guida_in_lingua:
+                                        it_IT: true
+                                        en_US: true
+                                        fr_FR: true
+                                    esperienza_caparra:
+                                        it_IT: 0.3
+                                        en_US: 0.5
+                                        fr_FR: 0.5
+                                    esperienza_prossima_partenza:
+                                        it_IT: '2026-10-17'
+                                        en_US: '2026-10-24'
+                                        fr_FR: '2026-11-07'
+                                    esperienza_fine_prenotazioni: '2026-11-15 23:59:00'
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/chianti_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/degustazione_1.webp' }
@@ -231,6 +280,19 @@ sylius_fixtures:
                                         it_IT: 'Da maggio a settembre'
                                         en_US: 'From May to September'
                                         fr_FR: 'De mai à septembre'
+                                    esperienza_guida_in_lingua:
+                                        it_IT: true
+                                        en_US: true
+                                        fr_FR: false
+                                    esperienza_caparra:
+                                        it_IT: 0.3
+                                        en_US: 0.5
+                                        fr_FR: 0.5
+                                    esperienza_prossima_partenza:
+                                        it_IT: '2027-05-15'
+                                        en_US: '2027-05-22'
+                                        fr_FR: '2027-06-05'
+                                    esperienza_fine_prenotazioni: '2027-09-15 23:59:00'
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/appennino_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/formaggi_1.webp' }
@@ -292,6 +354,19 @@ sylius_fixtures:
                                         it_IT: 'Da settembre a novembre'
                                         en_US: 'From September to November'
                                         fr_FR: 'De septembre à novembre'
+                                    esperienza_guida_in_lingua:
+                                        it_IT: true
+                                        en_US: true
+                                        fr_FR: true
+                                    esperienza_caparra:
+                                        it_IT: 0.3
+                                        en_US: 0.5
+                                        fr_FR: 0.5
+                                    esperienza_prossima_partenza:
+                                        it_IT: '2026-10-10'
+                                        en_US: '2026-10-31'
+                                        fr_FR: '2026-10-24'
+                                    esperienza_fine_prenotazioni: '2026-11-20 23:59:00'
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/vigneto_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/degustazione_1.webp' }
@@ -353,6 +428,19 @@ sylius_fixtures:
                                         it_IT: 'Da ottobre a dicembre'
                                         en_US: 'From October to December'
                                         fr_FR: "D'octobre à décembre"
+                                    esperienza_guida_in_lingua:
+                                        it_IT: true
+                                        en_US: true
+                                        fr_FR: false
+                                    esperienza_caparra:
+                                        it_IT: 0.3
+                                        en_US: 0.5
+                                        fr_FR: 0.5
+                                    esperienza_prossima_partenza:
+                                        it_IT: '2026-10-24'
+                                        en_US: '2026-11-07'
+                                        fr_FR: '2026-11-14'
+                                    esperienza_fine_prenotazioni: '2026-12-10 23:59:00'
                                 images:
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/colline_1.webp', type: 'main' }
                                     - { path: '@WebgriffeSyliusFixturesPlugin/fixtures/images/esperienze/formaggi_1.webp' }

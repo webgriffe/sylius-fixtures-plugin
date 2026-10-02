@@ -11,6 +11,7 @@ use Sylius\Component\Core\Model\ChannelPricing;
 use Sylius\Component\Core\Model\Product;
 use Sylius\Component\Core\Model\ProductInterface;
 use Sylius\Component\Core\Model\ProductVariant;
+use Sylius\Component\Attribute\AttributeType\DateAttributeType;
 use Sylius\Component\Attribute\AttributeType\TextAttributeType;
 use Sylius\Component\Attribute\Model\AttributeValueInterface;
 use Sylius\Component\Product\Generator\SlugGenerator;
@@ -302,6 +303,68 @@ final class ProductExampleFactoryTest extends TestCase
 
         self::assertSame('Calici Bordeaux', $this->variantNameIn($variant, 'it_IT'));
         self::assertSame('Bordeaux glasses', $this->variantNameIn($variant, 'en_US'));
+    }
+
+    public function testItGivesTheChoicesOfASelectAttributeToSyliusAsTheyAre(): void
+    {
+        $product = $this->createProduct($this->createVariant($this->createChannelPricing()));
+
+        $decoratedFactory = $this->createMock(ExampleFactoryInterface::class);
+        $decoratedFactory
+            ->expects(self::once())
+            ->method('create')
+            ->with(['product_attributes' => [
+                'vino_abbinamenti' => ['carni_rosse', 'selvaggina'],
+                'vino_occasione' => ['regalo'],
+            ]])
+            ->willReturn($product)
+        ;
+
+        $factory = new ProductExampleFactory(
+            $decoratedFactory,
+            $this->createShippingCategoryRepository(),
+            $this->createLocaleRepository(),
+            new SlugGenerator(),
+        );
+
+        $factory->create(['product_attributes' => [
+            // a list of choices is a value of its own
+            'vino_abbinamenti' => ['carni_rosse', 'selvaggina'],
+            // a map of locale to choices is a translated value, Sylius gets the one of the first locale
+            'vino_occasione' => ['it_IT' => ['regalo'], 'en_US' => ['brunch']],
+        ]]);
+    }
+
+    public function testItStoresTheTranslatedDatesAsDates(): void
+    {
+        $attribute = new ProductAttribute();
+        $attribute->setCode('esperienza_prossima_partenza');
+        $attribute->setType(DateAttributeType::TYPE);
+        $attribute->setStorageType(AttributeValueInterface::STORAGE_DATE);
+
+        $product = $this->createProduct($this->createVariant($this->createChannelPricing()));
+        foreach (['it_IT', 'en_US'] as $localeCode) {
+            $attributeValue = new ProductAttributeValue();
+            $attributeValue->setAttribute($attribute);
+            $attributeValue->setLocaleCode($localeCode);
+            $attributeValue->setValue(new \DateTime('2026-10-24'));
+            $product->addAttribute($attributeValue);
+        }
+
+        $this->createFactory($product)->create([
+            'product_attributes' => [
+                'esperienza_prossima_partenza' => ['it_IT' => '2026-10-24', 'en_US' => '2026-11-07'],
+            ],
+        ]);
+
+        $dates = [];
+        foreach ($product->getAttributes() as $attributeValue) {
+            $value = $attributeValue->getValue();
+            self::assertInstanceOf(\DateTimeInterface::class, $value);
+            $dates[(string) $attributeValue->getLocaleCode()] = $value->format('Y-m-d');
+        }
+
+        self::assertSame(['it_IT' => '2026-10-24', 'en_US' => '2026-11-07'], $dates);
     }
 
     public function testItSetsTheShippingCategoryOnEveryVariant(): void

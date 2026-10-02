@@ -167,3 +167,216 @@ sylius_fixtures:
                                     en_US: 'Bottle size'
                                     fr_FR: 'Contenance'
                                 type: 'text'
+
+                            -   name: 'Note di degustazione'
+                                code: 'vino_note_degustazione'
+                                translations:
+                                    it_IT: 'Note di degustazione'
+                                    en_US: 'Tasting notes'
+                                    fr_FR: 'Notes de dégustation'
+                                type: 'textarea'
+                                translatable: true
+
+                            -   name: 'Temperatura di servizio (°C)'
+                                code: 'vino_temperatura_servizio'
+                                translations:
+                                    it_IT: 'Temperatura di servizio (°C)'
+                                    en_US: 'Serving temperature (°F)'
+                                    fr_FR: 'Température de service (°C)'
+                                type: 'float'
+                                translatable: true
+
+                            -   name: 'Acidità totale (g/l)'
+                                code: 'vino_acidita_totale'
+                                translations:
+                                    it_IT: 'Acidità totale (g/l)'
+                                    en_US: 'Total acidity (g/l)'
+                                    fr_FR: 'Acidité totale (g/l)'
+                                type: 'float'
+                                translatable: false
+
+                            -   name: 'Data di imbottigliamento'
+                                code: 'vino_data_imbottigliamento'
+                                translations:
+                                    it_IT: 'Data di imbottigliamento'
+                                    en_US: 'Bottling date'
+                                    fr_FR: 'Date de mise en bouteille'
+                                type: 'date'
+                                translatable: false
+
+                            -   name: 'Punteggio della critica italiana'
+                                code: 'vino_punteggio'
+                                translations:
+                                    it_IT: 'Punteggio della critica italiana'
+                                    en_US: 'US critics score'
+                                    fr_FR: 'Note de la critique française'
+                                type: 'integer'
+                                translatable: true
+
+                            -   name: 'Degustazione online con il produttore'
+                                code: 'vino_degustazione_online'
+                                translations:
+                                    it_IT: 'Degustazione online con il produttore'
+                                    en_US: 'Online tasting with the producer'
+                                    fr_FR: 'Dégustation en ligne avec le producteur'
+                                type: 'datetime'
+                                translatable: true
+
+                            -   name: 'Tipo di chiusura'
+                                code: 'vino_tipo_chiusura'
+                                translations:
+                                    it_IT: 'Tipo di chiusura'
+                                    en_US: 'Closure'
+                                    fr_FR: 'Type de bouchage'
+                                type: 'select'
+                                translatable: false
+                                configuration:
+                                    multiple: false
+                                    choices:
+                                        sughero_naturale:
+                                            it_IT: 'Sughero naturale'
+                                            en_US: 'Natural cork'
+                                            fr_FR: 'Liège naturel'
+                                        sughero_tecnico:
+                                            it_IT: 'Sughero tecnico'
+                                            en_US: 'Technical cork'
+                                            fr_FR: 'Liège technique'
+                                        tappo_a_fungo:
+                                            it_IT: 'Tappo a fungo con gabbietta'
+                                            en_US: 'Mushroom cork with wire cage'
+                                            fr_FR: 'Bouchon champignon avec muselet'
+                                        tappo_a_vite:
+                                            it_IT: 'Tappo a vite'
+                                            en_US: 'Screw cap'
+                                            fr_FR: 'Capsule à vis'
+
+                            -   name: 'Abbinamenti'
+                                code: 'vino_abbinamenti'
+                                translations:
+                                    it_IT: 'Abbinamenti'
+                                    en_US: 'Food pairings'
+                                    fr_FR: 'Accords mets-vins'
+                                type: 'select'
+                                translatable: false
+                                configuration:
+                                    multiple: true
+                                    min: 1
+                                    max: 4
+                                    choices:
+                                        carni_rosse:
+                                            it_IT: 'Carni rosse'
+                                            en_US: 'Red meat'
+                                            fr_FR: 'Viandes rouges'
+                                        selvaggina:
+                                            it_IT: 'Selvaggina'
+                                            en_US: 'Game'
+                                            fr_FR: 'Gibier'
+                                        carni_bianche:
+                                            it_IT: 'Carni bianche'
+                                            en_US: 'White meat'
+                                            fr_FR: 'Viandes blanches'
+                                        pesce:
+                                            it_IT: 'Pesce'
+                                            en_US: 'Fish'
+                                            fr_FR: 'Poisson'
+                                        crostacei:
+                                            it_IT: 'Crostacei'
+                                            en_US: 'Shellfish'
+                                            fr_FR: 'Crustacés'
+                                        pasta:
+                                            it_IT: 'Primi piatti'
+                                            en_US: 'Pasta and risotto'
+                                            fr_FR: 'Pâtes et risottos'
+                                        pizza:
+                                            it_IT: 'Pizza'
+                                            en_US: 'Pizza'
+                                            fr_FR: 'Pizza'
+                                        salumi:
+                                            it_IT: 'Salumi'
+                                            en_US: 'Cured meats'
+                                            fr_FR: 'Charcuterie'
+                                        formaggi_stagionati:
+                                            it_IT: 'Formaggi stagionati'
+                                            en_US: 'Aged cheeses'
+                                            fr_FR: 'Fromages affinés'
+                                        formaggi_erborinati:
+                                            it_IT: 'Formaggi erborinati'
+                                            en_US: 'Blue cheeses'
+                                            fr_FR: 'Fromages persillés'
+                                        pasticceria:
+                                            it_IT: 'Pasticceria secca'
+                                            en_US: 'Dry pastries'
+                                            fr_FR: 'Petits fours'
+                                        aperitivo:
+                                            it_IT: 'Aperitivo'
+                                            en_US: 'Aperitif snacks'
+                                            fr_FR: 'Amuse-bouches'
+
+                            -   name: 'Occasione consigliata'
+                                code: 'vino_occasione'
+                                translations:
+                                    it_IT: 'Occasione consigliata'
+                                    en_US: 'Best for'
+                                    fr_FR: 'Moment idéal'
+                                type: 'select'
+                                translatable: true
+                                configuration:
+                                    multiple: false
+                                    choices:
+                                        aperitivo:
+                                            it_IT: 'Aperitivo'
+                                            en_US: 'Aperitif'
+                                            fr_FR: 'Apéritif'
+                                        brunch:
+                                            it_IT: 'Brunch'
+                                            en_US: 'Brunch'
+                                            fr_FR: 'Brunch'
+                                        pasto:
+                                            it_IT: 'A tutto pasto'
+                                            en_US: 'With dinner'
+                                            fr_FR: 'Pendant le repas'
+                                        fine_pasto:
+                                            it_IT: 'Fine pasto'
+                                            en_US: 'With dessert'
+                                            fr_FR: 'Au dessert'
+                                        meditazione:
+                                            it_IT: 'Da meditazione'
+                                            en_US: 'Sipping'
+                                            fr_FR: 'Vin de méditation'
+                                        regalo:
+                                            it_IT: 'Da regalare'
+                                            en_US: 'As a gift'
+                                            fr_FR: 'À offrir'
+
+                            -   name: 'Etichette promozionali'
+                                code: 'vino_badge'
+                                translations:
+                                    it_IT: 'Etichette promozionali'
+                                    en_US: 'Product badges'
+                                    fr_FR: 'Badges produit'
+                                type: 'select'
+                                translatable: true
+                                configuration:
+                                    multiple: true
+                                    max: 2
+                                    choices:
+                                        novita:
+                                            it_IT: 'Novità'
+                                            en_US: 'New'
+                                            fr_FR: 'Nouveauté'
+                                        piu_venduto:
+                                            it_IT: 'Più venduto'
+                                            en_US: 'Best seller'
+                                            fr_FR: 'Meilleure vente'
+                                        scelta_sommelier:
+                                            it_IT: 'Scelta del sommelier'
+                                            en_US: "Sommelier's pick"
+                                            fr_FR: 'Choix du sommelier'
+                                        edizione_limitata:
+                                            it_IT: 'Edizione limitata'
+                                            en_US: 'Limited edition'
+                                            fr_FR: 'Édition limitée'
+                                        ultime_bottiglie:
+                                            it_IT: 'Ultime bottiglie'
+                                            en_US: 'Last bottles'
+                                            fr_FR: 'Dernières bouteilles'

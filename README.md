@@ -297,6 +297,8 @@ carries its province: the **code** of a real province where the country has them
 |---|---|---|
 | `catalog_promotion` | `translations` | `label` and `description` per locale |
 | `promotion` | `translations` | The label per locale, the text the customer reads on the cart |
+| `promotion` | `track_usage` | `false` to leave the usage counter of the promotion untouched by the orders (Sylius 2.3) |
+| `promotion` | `coupons.*.track_usage` | The same for a single coupon |
 
 ```yaml
                 catalog_promotion:
@@ -316,6 +318,28 @@ carries its province: the **code** of a real province where the country has them
 
 The description of a **cart** promotion is not translatable in Sylius: it lives on the promotion itself, next
 to its name, and it is only read in the administration.
+
+A promotion or a coupon that does not track its usage is never stopped by its usage limit, and its orders are
+left out of its statistics: the demo store uses it for the `STAFF25` coupon of the employees.
+
+```yaml
+                promotion:
+                    options:
+                        custom:
+                            staff_coupon:
+                                code: 'staff'
+                                coupon_based: true
+                                track_usage: false
+                                coupons:
+                                    -   code: 'STAFF25'
+                                        track_usage: false
+```
+
+> Sylius dates the usage of a coupon from the moment its tracking is turned on (`track_usage_since`), which has
+> no option: it is written by Sylius itself, and only when the tracking is switched on again.
+
+> Sylius makes a cart promotion **exclusive** at random when the option is missing: declare `exclusive` on
+> every promotion, an exclusive one applied to the cart stops all the others.
 
 ### Provinces
 

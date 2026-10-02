@@ -56,6 +56,28 @@ sylius_fixtures:
                                         configuration:
                                             percentage: 10
 
+                            staff_coupon:
+                                code: 'staff'
+                                name: 'Sconto dipendenti'
+                                description: 'Il 25% riservato a chi lavora in Webgriffe, per le bottiglie da portare a casa: non entra nelle statistiche delle promozioni, che misurano solo i clienti.'
+                                translations:
+                                    it_IT: 'Sconto dipendenti del 25%'
+                                    en_US: '25% staff discount'
+                                    fr_FR: 'Remise collaborateurs de 25 %'
+                                coupon_based: true
+                                exclusive: true
+                                # the staff orders do not count as customers using the promotion
+                                track_usage: false
+                                channels:
+                                    - 'ecommerce'
+                                coupons:
+                                    -   code: 'STAFF25'
+                                        track_usage: false
+                                actions:
+                                    -   type: 'order_percentage_discount'
+                                        configuration:
+                                            percentage: 25
+
                             case_discount:
                                 code: 'sconto_cartone'
                                 name: 'Sconto 20 € sopra 200 €'

@@ -241,6 +241,61 @@ sylius_fixtures:
                                 name: 'Fragile'
                                 description: 'Articoli in vetro e cristallo, che viaggiano solo con imballo antiurto e bollino fragile.'
 
+                tax_category:
+                    options:
+                        custom:
+                            wine:
+                                code: 'vino'
+                                name: 'Vino'
+                                description: 'Aliquota ordinaria del 22% applicata a vini, spumanti e vini liquorosi.'
+                            other:
+                                code: 'altro'
+                                name: 'Altro'
+                                description: 'Aliquota ordinaria del 22% per gli articoli non alimentari, come calici e accessori.'
+                            experiences:
+                                code: 'esperienze'
+                                name: 'Servizi turistici'
+                                description: 'Aliquota ridotta del 10% prevista per i servizi turistici: visite guidate, degustazioni e pernottamenti.'
+                            shipping:
+                                code: 'spedizione'
+                                name: 'Spedizione'
+                                description: 'Aliquota ordinaria del 22% sul trasporto, che segue quella dei beni spediti: vini e calici.'
+
+                tax_rate:
+                    options:
+                        custom:
+                            wine_vat:
+                                code: 'iva_22_vino'
+                                name: 'IVA 22% vino'
+                                zone: 'EU'
+                                category: 'vino'
+                                amount: 0.22
+                                included_in_price: true
+
+                            default_vat:
+                                code: 'iva_22'
+                                name: 'IVA 22%'
+                                zone: 'EU'
+                                category: 'altro'
+                                amount: 0.22
+                                included_in_price: true
+
+                            experiences_vat:
+                                code: 'iva_10_esperienze'
+                                name: 'IVA 10% servizi turistici'
+                                zone: 'EU'
+                                category: 'esperienze'
+                                amount: 0.1
+                                included_in_price: true
+
+                            shipping_vat:
+                                code: 'iva_22_spedizione'
+                                name: 'IVA 22% spedizione'
+                                zone: 'EU'
+                                category: 'spedizione'
+                                amount: 0.22
+                                included_in_price: true
+
                 shipping_method:
                     options:
                         custom:
@@ -264,6 +319,7 @@ sylius_fixtures:
                                 # only for orders made of bottles: anything fragile needs the dedicated method
                                 category: 'bottiglie'
                                 category_requirement: 'match_all'
+                                tax_category: 'spedizione'
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -290,6 +346,7 @@ sylius_fixtures:
                                 zone: 'EU'
                                 category: 'bottiglie'
                                 category_requirement: 'match_all'
+                                tax_category: 'spedizione'
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -317,6 +374,7 @@ sylius_fixtures:
                                 # as soon as one glass is in the cart, the whole order travels protected
                                 category: 'fragile'
                                 category_requirement: 'match_any'
+                                tax_category: 'spedizione'
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -343,6 +401,7 @@ sylius_fixtures:
                                 zone: 'EU'
                                 category: 'fragile'
                                 category_requirement: 'match_any'
+                                tax_category: 'spedizione'
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -368,6 +427,7 @@ sylius_fixtures:
                                 max_delivery_time_days: 1
                                 zone: 'IT'
                                 # no category: available whatever the cart contains
+                                tax_category: 'spedizione'
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -572,45 +632,3 @@ sylius_fixtures:
                                 last_name: 'Webgriffe'
                                 api: true
 
-                tax_category:
-                    options:
-                        custom:
-                            wine:
-                                code: 'vino'
-                                name: 'Vino'
-                                description: 'Aliquota ordinaria del 22% applicata a vini, spumanti e vini liquorosi.'
-                            other:
-                                code: 'altro'
-                                name: 'Altro'
-                                description: 'Aliquota ordinaria del 22% per gli articoli non alimentari, come calici e accessori.'
-                            experiences:
-                                code: 'esperienze'
-                                name: 'Servizi turistici'
-                                description: 'Aliquota ridotta del 10% prevista per i servizi turistici: visite guidate, degustazioni e pernottamenti.'
-
-                tax_rate:
-                    options:
-                        custom:
-                            wine_vat:
-                                code: 'iva_22_vino'
-                                name: 'IVA 22% vino'
-                                zone: 'EU'
-                                category: 'vino'
-                                amount: 0.22
-                                included_in_price: true
-
-                            default_vat:
-                                code: 'iva_22'
-                                name: 'IVA 22%'
-                                zone: 'EU'
-                                category: 'altro'
-                                amount: 0.22
-                                included_in_price: true
-
-                            experiences_vat:
-                                code: 'iva_10_esperienze'
-                                name: 'IVA 10% servizi turistici'
-                                zone: 'EU'
-                                category: 'esperienze'
-                                amount: 0.1
-                                included_in_price: true

@@ -36,6 +36,11 @@ The **slug of each locale is generated from the name of that locale** when the t
 Sylius generates it once, from the first name it reads, so a product translated in several languages would
 answer on the same url everywhere.
 
+`variant_selection_method` is a native Sylius option, worth choosing on the shape of the options of a
+configurable product: the demo store uses `choice` for the glassware, a single option with a few packs that
+read best as a list with their own price, and `match` for the experiences, two options whose nine
+combinations read best as two selects.
+
 ```yaml
 sylius_fixtures:
     suites:

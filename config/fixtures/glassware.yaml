@@ -168,6 +168,7 @@ sylius_fixtures:
                                 main_taxon: 'calici'
                                 taxons: ['calici']
                                 product_options: ['numero_calici']
+                                variant_selection_method: 'choice'
                                 product_attributes:
                                     calice_produttore: 'Riedel'
                                     calice_collezione: 'Vinum'
@@ -242,6 +243,7 @@ sylius_fixtures:
                                 main_taxon: 'calici'
                                 taxons: ['calici']
                                 product_options: ['numero_calici']
+                                variant_selection_method: 'choice'
                                 product_attributes:
                                     calice_produttore: 'Zwiesel Glas'
                                     calice_collezione: 'Pure'
@@ -316,6 +318,7 @@ sylius_fixtures:
                                 main_taxon: 'calici'
                                 taxons: ['calici']
                                 product_options: ['numero_calici']
+                                variant_selection_method: 'choice'
                                 product_attributes:
                                     calice_produttore: 'Spiegelau'
                                     calice_collezione: 'Style'
@@ -390,6 +393,7 @@ sylius_fixtures:
                                 main_taxon: 'calici'
                                 taxons: ['calici']
                                 product_options: ['numero_calici']
+                                variant_selection_method: 'choice'
                                 product_attributes:
                                     calice_produttore: 'Bormioli Rocco'
                                     calice_collezione: 'Riserva'
@@ -464,6 +468,7 @@ sylius_fixtures:
                                 main_taxon: 'calici'
                                 taxons: ['calici']
                                 product_options: ['numero_calici']
+                                variant_selection_method: 'choice'
                                 product_attributes:
                                     calice_produttore: 'Luigi Bormioli'
                                     calice_collezione: 'Vinoteque'

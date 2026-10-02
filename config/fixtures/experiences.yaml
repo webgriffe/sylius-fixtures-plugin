@@ -141,6 +141,7 @@ sylius_fixtures:
                                 main_taxon: 'esperienze'
                                 taxons: ['esperienze']
                                 product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_selection_method: 'match'
                                 variant_prices:
                                     esperienza_1_giorno+partecipanti_2: 190.00
                                     esperienza_1_giorno+partecipanti_4: 360.00
@@ -201,6 +202,7 @@ sylius_fixtures:
                                 main_taxon: 'esperienze'
                                 taxons: ['esperienze']
                                 product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_selection_method: 'match'
                                 variant_prices:
                                     esperienza_1_giorno+partecipanti_2: 140.00
                                     esperienza_1_giorno+partecipanti_4: 265.00
@@ -261,6 +263,7 @@ sylius_fixtures:
                                 main_taxon: 'esperienze'
                                 taxons: ['esperienze']
                                 product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_selection_method: 'match'
                                 variant_prices:
                                     esperienza_1_giorno+partecipanti_2: 210.00
                                     esperienza_1_giorno+partecipanti_4: 400.00
@@ -321,6 +324,7 @@ sylius_fixtures:
                                 main_taxon: 'esperienze'
                                 taxons: ['esperienze']
                                 product_options: ['durata_esperienza', 'numero_partecipanti']
+                                variant_selection_method: 'match'
                                 variant_prices:
                                     esperienza_1_giorno+partecipanti_2: 260.00
                                     esperienza_1_giorno+partecipanti_4: 500.00

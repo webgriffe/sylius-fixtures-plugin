@@ -16,6 +16,9 @@ sylius_fixtures:
                                     en_US: 'Free shipping in Italy over €100'
                                     fr_FR: 'Livraison offerte en Italie dès 100 €'
                                 priority: 1
+                                # Sylius makes a promotion exclusive at random when it is not declared, and an
+                                # exclusive one applied to the cart stops all the others
+                                exclusive: false
                                 channels:
                                     - 'ecommerce'
                                 rules:
@@ -35,12 +38,13 @@ sylius_fixtures:
                             welcome_coupon:
                                 code: 'benvenuto'
                                 name: 'Benvenuto in enoteca'
-                                description: 'Sconto di benvenuto del 10% per il primo ordine, una volta per cliente con il codice BENVENUTO10.'
+                                description: 'Sconto di benvenuto del 10% per il primo ordine, una volta per cliente con il codice BENVENUTO10, non cumulabile con le altre promozioni.'
                                 translations:
                                     it_IT: 'Benvenuto in enoteca: 10% con il codice BENVENUTO10'
                                     en_US: 'Welcome to the wine shop: 10% off with the code BENVENUTO10'
                                     fr_FR: 'Bienvenue à la cave : 10 % avec le code BENVENUTO10'
                                 coupon_based: true
+                                exclusive: true
                                 channels:
                                     - 'ecommerce'
                                 coupons:
@@ -61,6 +65,7 @@ sylius_fixtures:
                                     en_US: '€20 off over €200'
                                     fr_FR: '20 € de remise dès 200 €'
                                 priority: 2
+                                exclusive: false
                                 channels:
                                     - 'ecommerce'
                                 rules:

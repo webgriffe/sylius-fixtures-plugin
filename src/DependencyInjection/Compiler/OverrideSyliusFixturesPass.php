@@ -10,6 +10,7 @@ use Symfony\Component\DependencyInjection\Reference;
 use Webgriffe\SyliusFixturesPlugin\Fixture\AdminUserFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\CatalogPromotionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\OrderExampleFactory;
+use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ShippingMethodExampleFactory;
 use Webgriffe\SyliusFixturesPlugin\Fixture\OrderFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\PaymentMethodFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\ProductAssociationTypeFixture;
@@ -37,6 +38,7 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
         'sylius.fixture.shop_user' => ShopUserFixture::class,
         'sylius.fixture.taxon' => TaxonFixture::class,
         'sylius.fixture.example_factory.order' => OrderExampleFactory::class,
+        'sylius.fixture.example_factory.shipping_method' => ShippingMethodExampleFactory::class,
     ];
 
     public function process(ContainerBuilder $container): void
@@ -50,6 +52,7 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
         }
 
         $this->injectShippingMethodsResolver($container);
+        $this->injectShippingMethodRuleFactory($container);
     }
 
     /** The order factory ships the demo orders with an eligible method, see {@see OrderExampleFactory}. */
@@ -62,6 +65,19 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
         $container
             ->getDefinition('sylius.fixture.example_factory.order')
             ->addMethodCall('setShippingMethodsResolver', [new Reference('sylius.resolver.shipping_methods')])
+        ;
+    }
+
+    /** The shipping method factory adds the rules of the methods, see {@see ShippingMethodExampleFactory}. */
+    private function injectShippingMethodRuleFactory(ContainerBuilder $container): void
+    {
+        if (!$container->hasDefinition('sylius.fixture.example_factory.shipping_method')) {
+            return;
+        }
+
+        $container
+            ->getDefinition('sylius.fixture.example_factory.shipping_method')
+            ->addMethodCall('setRuleFactory', [new Reference('sylius.factory.shipping_method_rule')])
         ;
     }
 }

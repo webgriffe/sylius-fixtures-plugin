@@ -64,13 +64,6 @@
             <argument type="service" id="file_locator" />
         </service>
 
-        <service id="webgriffe_sylius_fixtures.fixture.example_factory.shipping_method"
-                 class="Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ShippingMethodExampleFactory"
-                 decorates="sylius.fixture.example_factory.shipping_method">
-            <argument type="service" id="webgriffe_sylius_fixtures.fixture.example_factory.shipping_method.inner" />
-            <argument type="service" id="sylius.factory.shipping_method_rule" />
-        </service>
-
         <service id="webgriffe_sylius_fixtures.fixture.province"
                  class="Webgriffe\SyliusFixturesPlugin\Fixture\ProvinceFixture">
             <argument type="service" id="sylius.manager.province" />

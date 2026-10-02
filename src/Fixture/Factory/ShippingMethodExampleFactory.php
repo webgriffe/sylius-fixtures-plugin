@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Webgriffe\SyliusFixturesPlugin\Fixture\Factory;
 
-use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
+use Sylius\Bundle\CoreBundle\Fixture\Factory\ShippingMethodExampleFactory as BaseShippingMethodExampleFactory;
 use Sylius\Component\Core\Model\ShippingMethodInterface;
 use Sylius\Component\Shipping\Model\ShippingMethodRuleInterface;
 use Sylius\Resource\Factory\FactoryInterface;
@@ -14,9 +14,9 @@ use Webmozart\Assert\Assert;
  * Adds the category requirement to the Sylius shipping method example factory, which always leaves it
  * to its default value ("match any"), and the rules, which it does not support at all.
  *
- * @implements ExampleFactoryInterface<ShippingMethodInterface>
+ * It extends the Sylius factory instead of decorating it: the Behat contexts of Sylius require its class.
  */
-final readonly class ShippingMethodExampleFactory implements ExampleFactoryInterface
+final class ShippingMethodExampleFactory extends BaseShippingMethodExampleFactory
 {
     private const CATEGORY_REQUIREMENTS = [
         'match_none' => ShippingMethodInterface::CATEGORY_REQUIREMENT_MATCH_NONE,
@@ -24,14 +24,17 @@ final readonly class ShippingMethodExampleFactory implements ExampleFactoryInter
         'match_all' => ShippingMethodInterface::CATEGORY_REQUIREMENT_MATCH_ALL,
     ];
 
+    /** @var FactoryInterface<ShippingMethodRuleInterface>|null */
+    private ?FactoryInterface $ruleFactory = null;
+
     /**
-     * @param ExampleFactoryInterface<ShippingMethodInterface> $decoratedFactory
+     * Injected by a setter, so that the arguments of the Sylius factory can be kept as they are.
+     *
      * @param FactoryInterface<ShippingMethodRuleInterface> $ruleFactory
      */
-    public function __construct(
-        private ExampleFactoryInterface $decoratedFactory,
-        private FactoryInterface $ruleFactory,
-    ) {
+    public function setRuleFactory(FactoryInterface $ruleFactory): void
+    {
+        $this->ruleFactory = $ruleFactory;
     }
 
     /** @param array<string, mixed> $options */
@@ -53,7 +56,7 @@ final readonly class ShippingMethodExampleFactory implements ExampleFactoryInter
         $rules = $options['rules'] ?? [];
         unset($options['rules']);
 
-        $shippingMethod = $this->decoratedFactory->create($options);
+        $shippingMethod = parent::create($options);
 
         $this->translate($shippingMethod, $translations);
         $this->addRules($shippingMethod, $rules);
@@ -80,6 +83,12 @@ final readonly class ShippingMethodExampleFactory implements ExampleFactoryInter
     /** @param list<array{type: string, configuration: array<string, mixed>}> $rules */
     private function addRules(ShippingMethodInterface $shippingMethod, array $rules): void
     {
+        if ([] === $rules) {
+            return;
+        }
+
+        Assert::notNull($this->ruleFactory, 'The shipping method rule factory has not been injected.');
+
         foreach ($rules as $ruleOptions) {
             $rule = $this->ruleFactory->createNew();
             $rule->setType($ruleOptions['type']);

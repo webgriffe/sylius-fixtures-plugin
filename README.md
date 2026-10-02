@@ -274,6 +274,25 @@ carries its province: the **code** of a real province where the country has them
 > Sylius picks a random locale and then loads the products joining only the translation of that locale: reading
 > the product name in another locale creates an empty translation and breaks the flush on a multi locale channel.
 
+### Admin users
+
+| Option | Description |
+|---|---|
+| `administration_access` | `false` for an administrator without access to the panel: Sylius always grants it, even to a user of the API |
+
+```yaml
+                admin_user:
+                    options:
+                        custom:
+                            -   email: 'api@example.com'
+                                username: 'api'
+                                api: true
+                                administration_access: false
+```
+
+The two access levels of Sylius 2.3 are roles: `ROLE_ADMINISTRATION_ACCESS` for the panel, `ROLE_API_ACCESS`
+for the API. The demo store has one administrator for each of them, `admin` and `api`.
+
 ### Customers
 
 | Option | Description |

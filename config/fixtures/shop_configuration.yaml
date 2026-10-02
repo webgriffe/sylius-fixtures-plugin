@@ -925,5 +925,7 @@ sylius_fixtures:
                                 locale_code: 'it_IT'
                                 first_name: 'Api'
                                 last_name: 'Webgriffe'
+                                # the API only: Sylius grants every administrator the access to the panel as well
                                 api: true
+                                administration_access: false
 

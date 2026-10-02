@@ -228,6 +228,7 @@ variants translated in a single language.
 | `category_requirement` | `match_any` (default in Sylius), `match_all` or `match_none` |
 | `translations` | `name` and `description` per locale: Sylius writes the same ones in every locale |
 | `min_delivery_time_days`, `max_delivery_time_days` | Estimated delivery time, shown at the checkout |
+| `rules` | `type` and `configuration` of every rule the method must satisfy, which Sylius cannot declare at all |
 
 ```yaml
                 shipping_method:
@@ -239,13 +240,31 @@ variants translated in a single language.
                                 zone: 'IT'
                                 category: 'bottles'
                                 category_requirement: 'match_all'
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 30
+                                    -   type: 'order_total_greater_than_or_equal'
+                                        configuration:
+                                            ecommerce:
+                                                amount: 5000
 ```
+
+The rules of Sylius are `total_weight_less_than_or_equal` and `total_weight_greater_than_or_equal`, configured
+with a `weight` in the unit of the variants, and `order_total_less_than_or_equal` and
+`order_total_greater_than_or_equal`, configured with an `amount` per channel. In the demo store the couriers
+carry up to 30 kg, the shockproof boxes up to 20 kg, and the heavier orders travel on a pallet.
+
+> Mind the gaps: a cart that no method accepts cannot be checked out, and it cannot be created by the
+> `order` fixture either.
 
 ### Orders
 
 The demo orders are created in the default locale of the channel, their addresses are generated with a faker
 localized on the country of the address instead of the American one used by Sylius, and every **shipped**
-shipment carries a tracking code, which Sylius never writes. Every address also
+shipment carries a tracking code, which Sylius never writes. They are shipped with one of the methods the
+customer could have chosen, while Sylius picks any method of the channel, whatever its zone, its categories
+and its rules. Every address also
 carries its province: the **code** of a real province where the country has them (Italy in the demo store), the
 **name** of a region as free text everywhere else.
 

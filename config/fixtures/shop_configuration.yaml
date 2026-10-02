@@ -87,6 +87,39 @@ sylius_fixtures:
                                     - 'ES'
                                     - 'SE'
                                     - 'HU'
+                            ESTERO:
+                                # every country the shop ships to but Italy, served by the European couriers
+                                name: 'Estero'
+                                countries:
+                                    - 'AT'
+                                    - 'BE'
+                                    - 'BG'
+                                    - 'HR'
+                                    - 'CY'
+                                    - 'CZ'
+                                    - 'DK'
+                                    - 'EE'
+                                    - 'FI'
+                                    - 'FR'
+                                    - 'DE'
+                                    - 'GR'
+                                    - 'IE'
+                                    - 'LV'
+                                    - 'LT'
+                                    - 'LU'
+                                    - 'MT'
+                                    - 'NL'
+                                    - 'PL'
+                                    - 'PT'
+                                    - 'RO'
+                                    - 'SK'
+                                    - 'SI'
+                                    - 'ES'
+                                    - 'SE'
+                                    - 'HU'
+                                    - 'CH'
+                                    - 'NO'
+                                    - 'GB'
                             EUROPE:
                                 name: 'Europa'
                                 countries:
@@ -320,6 +353,11 @@ sylius_fixtures:
                                 category: 'bottiglie'
                                 category_requirement: 'match_all'
                                 tax_category: 'spedizione'
+                                # a parcel of the courier carries up to 30 kg, heavier orders travel on a pallet
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 30
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -343,10 +381,14 @@ sylius_fixtures:
                                 enabled: true
                                 min_delivery_time_days: 3
                                 max_delivery_time_days: 5
-                                zone: 'EU'
+                                zone: 'ESTERO'
                                 category: 'bottiglie'
                                 category_requirement: 'match_all'
                                 tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 30
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -375,6 +417,11 @@ sylius_fixtures:
                                 category: 'fragile'
                                 category_requirement: 'match_any'
                                 tax_category: 'spedizione'
+                                # the shockproof boxes hold up to 20 kg of glass, heavier orders travel on a pallet
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 20
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -398,10 +445,14 @@ sylius_fixtures:
                                 enabled: true
                                 min_delivery_time_days: 3
                                 max_delivery_time_days: 5
-                                zone: 'EU'
+                                zone: 'ESTERO'
                                 category: 'fragile'
                                 category_requirement: 'match_any'
                                 tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_less_than_or_equal'
+                                        configuration:
+                                            weight: 20
                                 channels:
                                     - 'ecommerce'
                                 calculator:
@@ -409,6 +460,66 @@ sylius_fixtures:
                                     configuration:
                                         ecommerce:
                                             amount: 2490
+                            pallet_it:
+                                code: 'bancale_italia'
+                                name: 'Spedizione su bancale Italia'
+                                translations:
+                                    it_IT:
+                                        name: 'Spedizione su bancale Italia'
+                                        description: 'Per gli ordini oltre i 20 kg: bancale reggiato e consegna su appuntamento in 3/5 giorni lavorativi.'
+                                    en_US:
+                                        name: 'Pallet delivery, Italy'
+                                        description: 'For orders over 20 kg: strapped pallet, delivered by appointment in 3/5 working days.'
+                                    fr_FR:
+                                        name: 'Livraison sur palette Italie'
+                                        description: "Pour les commandes de plus de 20 kg : palette cerclée, livraison sur rendez-vous en 3 à 5 jours ouvrés."
+                                enabled: true
+                                min_delivery_time_days: 3
+                                max_delivery_time_days: 5
+                                zone: 'IT'
+                                # no category: bottles and glasses travel together, strapped to the pallet
+                                tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_greater_than_or_equal'
+                                        configuration:
+                                            weight: 20
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 3900
+                            pallet_abroad:
+                                code: 'bancale_estero'
+                                name: 'Spedizione su bancale Europa'
+                                translations:
+                                    it_IT:
+                                        name: 'Spedizione su bancale Europa'
+                                        description: 'Per gli ordini oltre i 20 kg: bancale reggiato e consegna su appuntamento in 5/10 giorni lavorativi.'
+                                    en_US:
+                                        name: 'Pallet delivery, Europe'
+                                        description: 'For orders over 20 kg: strapped pallet, delivered by appointment in 5/10 working days.'
+                                    fr_FR:
+                                        name: 'Livraison sur palette Europe'
+                                        description: "Pour les commandes de plus de 20 kg : palette cerclée, livraison sur rendez-vous en 5 à 10 jours ouvrés."
+                                enabled: true
+                                min_delivery_time_days: 5
+                                max_delivery_time_days: 10
+                                zone: 'ESTERO'
+                                # no category: bottles and glasses travel together, strapped to the pallet
+                                tax_category: 'spedizione'
+                                rules:
+                                    -   type: 'total_weight_greater_than_or_equal'
+                                        configuration:
+                                            weight: 20
+                                channels:
+                                    - 'ecommerce'
+                                calculator:
+                                    type: 'flat_rate'
+                                    configuration:
+                                        ecommerce:
+                                            amount: 8900
                             pickup:
                                 code: 'ritiro_in_sede'
                                 name: 'Ritiro in sede'

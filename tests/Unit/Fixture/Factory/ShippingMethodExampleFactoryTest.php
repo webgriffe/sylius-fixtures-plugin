@@ -9,6 +9,8 @@ use PHPUnit\Framework\TestCase;
 use Sylius\Bundle\CoreBundle\Fixture\Factory\ExampleFactoryInterface;
 use Sylius\Component\Core\Model\ShippingMethod;
 use Sylius\Component\Core\Model\ShippingMethodInterface;
+use Sylius\Component\Shipping\Model\ShippingMethodRule;
+use Sylius\Resource\Factory\Factory;
 use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\ShippingMethodExampleFactory;
 
 #[CoversClass(ShippingMethodExampleFactory::class)]
@@ -62,6 +64,26 @@ final class ShippingMethodExampleFactoryTest extends TestCase
         self::assertSame(2, $shippingMethod->getMaxDeliveryTimeDays());
     }
 
+    public function testItAddsTheRules(): void
+    {
+        $shippingMethod = new ShippingMethod();
+
+        $this->createFactory($shippingMethod)->create([
+            'code' => 'courier',
+            'rules' => [
+                ['type' => 'total_weight_less_than_or_equal', 'configuration' => ['weight' => 20]],
+                ['type' => 'order_total_greater_than_or_equal', 'configuration' => ['web' => ['amount' => 5000]]],
+            ],
+        ]);
+
+        $rules = $shippingMethod->getRules()->toArray();
+        self::assertCount(2, $rules);
+        self::assertSame('total_weight_less_than_or_equal', $rules[0]->getType());
+        self::assertSame(['weight' => 20], $rules[0]->getConfiguration());
+        self::assertSame($shippingMethod, $rules[0]->getShippingMethod());
+        self::assertSame(['web' => ['amount' => 5000]], $rules[1]->getConfiguration());
+    }
+
     public function testItDoesNotForwardItsOwnOptionsToTheDecoratedFactory(): void
     {
         $decoratedFactory = $this->createMock(ExampleFactoryInterface::class);
@@ -72,11 +94,12 @@ final class ShippingMethodExampleFactoryTest extends TestCase
             ->willReturn(new ShippingMethod())
         ;
 
-        (new ShippingMethodExampleFactory($decoratedFactory))->create([
+        (new ShippingMethodExampleFactory($decoratedFactory, new Factory(ShippingMethodRule::class)))->create([
             'code' => 'courier',
             'category_requirement' => 'match_any',
             'min_delivery_time_days' => 1,
             'max_delivery_time_days' => 2,
+            'rules' => [['type' => 'total_weight_less_than_or_equal', 'configuration' => ['weight' => 20]]],
             'translations' => ['it_IT' => ['name' => 'Corriere espresso']],
         ]);
     }
@@ -86,6 +109,6 @@ final class ShippingMethodExampleFactoryTest extends TestCase
         $decoratedFactory = $this->createMock(ExampleFactoryInterface::class);
         $decoratedFactory->method('create')->willReturn($shippingMethod);
 
-        return new ShippingMethodExampleFactory($decoratedFactory);
+        return new ShippingMethodExampleFactory($decoratedFactory, new Factory(ShippingMethodRule::class));
     }
 }

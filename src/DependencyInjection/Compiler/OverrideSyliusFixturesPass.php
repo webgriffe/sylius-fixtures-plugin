@@ -6,6 +6,7 @@ namespace Webgriffe\SyliusFixturesPlugin\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Reference;
 use Webgriffe\SyliusFixturesPlugin\Fixture\CatalogPromotionFixture;
 use Webgriffe\SyliusFixturesPlugin\Fixture\Factory\OrderExampleFactory;
 use Webgriffe\SyliusFixturesPlugin\Fixture\OrderFixture;
@@ -49,5 +50,20 @@ final class OverrideSyliusFixturesPass implements CompilerPassInterface
 
             $container->getDefinition($serviceId)->setClass($class);
         }
+
+        $this->injectShippingMethodsResolver($container);
+    }
+
+    /** The order factory ships the demo orders with an eligible method, see {@see OrderExampleFactory}. */
+    private function injectShippingMethodsResolver(ContainerBuilder $container): void
+    {
+        if (!$container->hasDefinition('sylius.fixture.example_factory.order')) {
+            return;
+        }
+
+        $container
+            ->getDefinition('sylius.fixture.example_factory.order')
+            ->addMethodCall('setShippingMethodsResolver', [new Reference('sylius.resolver.shipping_methods')])
+        ;
     }
 }

@@ -434,6 +434,13 @@ The lowest price is stored only when the variant is discounted, that is either:
 > Never combine the two on the same product: the catalog promotion recomputes the price from the original one,
 > overwriting the markdown.
 
+### Homepage
+
+Importing `config/config.yaml` of the plugin also replaces the banner of the shop homepage, the clothing photo of
+Sylius, with a vineyard at sunset, the name of the channel and a tagline translated in it, en and fr
+(`webgriffe_sylius_fixtures.homepage.banner_tagline`). The picture is an asset of the bundle: run
+`bin/console assets:install` after installing the plugin.
+
 ## The demo store
 
 Import the fixtures file of the plugin to get the `webgriffe` suite:

@@ -26,3 +26,9 @@ under a public domain / CC0 dedication: no attribution is legally required, it i
 | `wines/vino_rosso_2.webp` | Wine drawer (Unsplash).jpg | Christopher John Pratt nextsolution | CC0 | https://commons.wikimedia.org/wiki/File:Wine_drawer_(Unsplash).jpg |
 | `wines/vino_rosso_3.webp` | Sunset and wine (Unsplash).jpg | photo-nic.co.uk nic chiro | CC0 | https://commons.wikimedia.org/wiki/File:Sunset_and_wine_(Unsplash).jpg |
 | `wines/vino_rosso_4.webp` | Romantic dinner for one (Unsplash).jpg | Janko Ferlič thepootphotographer | CC0 | https://commons.wikimedia.org/wiki/File:Romantic_dinner_for_one_(Unsplash).jpg |
+
+## Shop
+
+| File | Original | Author | License | Source |
+|---|---|---|---|---|
+| `Resources/public/images/homepage-banner.webp` | Vineyard during sunset (Unsplash).jpg, Dienheim, Germany | Karsten Würth inf1783 | CC0 | https://commons.wikimedia.org/wiki/File:Vineyard_during_sunset_(Unsplash).jpg |

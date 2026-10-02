@@ -1,0 +1,7 @@
+sylius_twig_hooks:
+    hooks:
+        'sylius_shop.homepage.index':
+            # the clothing banner of Sylius, replaced by a vineyard fitting the demo wine shop
+            banner:
+                template: '@WebgriffeSyliusFixturesPlugin/shop/homepage/banner.html.twig'
+                priority: 300
